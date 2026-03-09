@@ -449,6 +449,20 @@ h1 span {
   transform: translateY(-4px);
 }
 
+.checkout-actions {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.checkout-actions .btn,
+.direct-checkout-grid .btn {
+  min-height: 38px;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.85rem;
+}
+
 .service h3,
 .portfolio-card h3,
 .card h3,
@@ -541,6 +555,18 @@ h1 span {
   padding-left: 1.15rem;
   display: grid;
   gap: 0.45rem;
+}
+
+.order-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.direct-checkout-grid {
+  margin-top: 0.85rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
 }
 
 .small-note {
@@ -790,5 +816,9 @@ h1 span {
 
   .resume-preview {
     height: 340px;
+  }
+
+  .direct-checkout-grid {
+    grid-template-columns: 1fr;
   }
 }

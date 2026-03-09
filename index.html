@@ -277,6 +277,10 @@
               <li>Actionable remediation checklist</li>
             </ul>
             <a class="btn btn-primary" href="#order">Order Starter</a>
+            <div class="checkout-actions">
+              <button class="btn btn-secondary checkout-btn" type="button" data-package="starter" data-provider="stripe">Stripe Checkout</button>
+              <button class="btn btn-secondary checkout-btn" type="button" data-package="starter" data-provider="paypal">PayPal Checkout</button>
+            </div>
           </article>
 
           <article class="pricing-card reveal featured-package">
@@ -288,6 +292,10 @@
               <li>Implementation roadmap + support</li>
             </ul>
             <a class="btn btn-primary" href="#order">Order Professional</a>
+            <div class="checkout-actions">
+              <button class="btn btn-secondary checkout-btn" type="button" data-package="professional" data-provider="stripe">Stripe Checkout</button>
+              <button class="btn btn-secondary checkout-btn" type="button" data-package="professional" data-provider="paypal">PayPal Checkout</button>
+            </div>
           </article>
 
           <article class="pricing-card reveal">
@@ -322,41 +330,55 @@
             <p class="small-note">Payment is processed through secure invoice links. You can choose Stripe, PayPal, or bank transfer.</p>
           </article>
 
-          <form class="card contact-form reveal" action="https://formsubmit.co/engr.aanis@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="Service Order Request">
-            <input type="hidden" name="_next" class="dynamic-next" data-anchor="order">
-            <input type="hidden" name="_template" value="table">
-            <input type="text" name="_honey" class="hidden-field" tabindex="-1" autocomplete="off">
+          <div class="order-stack">
+            <article class="card reveal dark-card">
+              <h3>Direct Checkout Setup</h3>
+              <p>Starter and Professional packages can use direct Stripe or PayPal checkout links. If a link is not configured yet, the button will prefill the order form instead of failing.</p>
+              <div class="direct-checkout-grid">
+                <button class="btn btn-secondary checkout-btn" type="button" data-package="starter" data-provider="stripe">Starter via Stripe</button>
+                <button class="btn btn-secondary checkout-btn" type="button" data-package="starter" data-provider="paypal">Starter via PayPal</button>
+                <button class="btn btn-secondary checkout-btn" type="button" data-package="professional" data-provider="stripe">Professional via Stripe</button>
+                <button class="btn btn-secondary checkout-btn" type="button" data-package="professional" data-provider="paypal">Professional via PayPal</button>
+              </div>
+              <p class="small-note" id="checkoutHelp">Real payment links can be added in `checkout-links.js` without changing the page layout.</p>
+            </article>
 
-            <label for="orderName">Name</label>
-            <input id="orderName" name="name" type="text" required>
+            <form class="card contact-form reveal" action="https://formsubmit.co/engr.aanis@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="Service Order Request">
+              <input type="hidden" name="_next" class="dynamic-next" data-anchor="order">
+              <input type="hidden" name="_template" value="table">
+              <input type="text" name="_honey" class="hidden-field" tabindex="-1" autocomplete="off">
 
-            <label for="orderEmail">Email</label>
-            <input id="orderEmail" name="email" type="email" required>
+              <label for="orderName">Name</label>
+              <input id="orderName" name="name" type="text" required>
 
-            <label for="orderPackage">Package</label>
-            <select id="orderPackage" name="package" required>
-              <option value="">Select package</option>
-              <option value="starter">Starter Security Review</option>
-              <option value="professional">Professional Infrastructure Package</option>
-              <option value="enterprise">Enterprise Security Program</option>
-            </select>
+              <label for="orderEmail">Email</label>
+              <input id="orderEmail" name="email" type="email" required>
 
-            <label for="orderPayment">Preferred Payment Method</label>
-            <select id="orderPayment" name="payment_method" required>
-              <option value="">Select method</option>
-              <option value="stripe">Stripe Invoice</option>
-              <option value="paypal">PayPal Invoice</option>
-              <option value="bank-transfer">Bank Transfer</option>
-            </select>
+              <label for="orderPackage">Package</label>
+              <select id="orderPackage" name="package" required>
+                <option value="">Select package</option>
+                <option value="starter">Starter Security Review</option>
+                <option value="professional">Professional Infrastructure Package</option>
+                <option value="enterprise">Enterprise Security Program</option>
+              </select>
 
-            <label for="orderMessage">Project Scope</label>
-            <textarea id="orderMessage" name="message" rows="5" required></textarea>
+              <label for="orderPayment">Preferred Payment Method</label>
+              <select id="orderPayment" name="payment_method" required>
+                <option value="">Select method</option>
+                <option value="stripe">Stripe Invoice</option>
+                <option value="paypal">PayPal Invoice</option>
+                <option value="bank-transfer">Bank Transfer</option>
+              </select>
 
-            <button class="btn btn-primary" type="submit">Place Order Request</button>
-            <p class="form-note">You will receive invoice and onboarding instructions by email.</p>
-            <p class="form-success auto-success" hidden>Order request sent successfully.</p>
-          </form>
+              <label for="orderMessage">Project Scope</label>
+              <textarea id="orderMessage" name="message" rows="5" required></textarea>
+
+              <button class="btn btn-primary" type="submit">Place Order Request</button>
+              <p class="form-note">You will receive invoice and onboarding instructions by email.</p>
+              <p class="form-success auto-success" hidden>Order request sent successfully.</p>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -505,6 +527,7 @@
     </div>
   </footer>
 
+  <script src="checkout-links.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

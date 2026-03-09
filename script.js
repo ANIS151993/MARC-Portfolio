@@ -102,6 +102,10 @@ counterNodes.forEach((node) => counterObserver.observe(node));
 
 const projectFilters = document.getElementById("projectFilters");
 const projectCards = document.querySelectorAll("#projectGrid .portfolio-card");
+const orderPackage = document.getElementById("orderPackage");
+const orderPayment = document.getElementById("orderPayment");
+const orderSection = document.getElementById("order");
+const checkoutHelp = document.getElementById("checkoutHelp");
 
 if (projectFilters && projectCards.length) {
   projectFilters.querySelectorAll("button").forEach((button) => {
@@ -117,6 +121,47 @@ if (projectFilters && projectCards.length) {
       });
     });
   });
+}
+
+const checkoutLinks = window.MARC_CHECKOUT_LINKS || {};
+const checkoutButtons = document.querySelectorAll(".checkout-btn");
+let configuredCheckoutCount = 0;
+
+checkoutButtons.forEach((button) => {
+  const pkg = button.getAttribute("data-package");
+  const provider = button.getAttribute("data-provider");
+  const link = checkoutLinks[pkg]?.[provider];
+
+  if (link) {
+    configuredCheckoutCount += 1;
+  }
+
+  button.addEventListener("click", () => {
+    if (orderPackage && pkg) {
+      orderPackage.value = pkg;
+    }
+
+    if (orderPayment && provider) {
+      orderPayment.value = provider;
+    }
+
+    if (link) {
+      window.open(link, "_blank", "noopener");
+      return;
+    }
+
+    if (checkoutHelp) {
+      checkoutHelp.textContent = "Direct checkout is not configured yet for this package. The order form below has been prefilled instead.";
+    }
+
+    if (orderSection) {
+      orderSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+});
+
+if (checkoutHelp && configuredCheckoutCount > 0) {
+  checkoutHelp.textContent = "Direct checkout is active for configured packages. Unconfigured buttons will fall back to the order form.";
 }
 
 const testimonials = Array.from(document.querySelectorAll(".testimonial"));
