@@ -1,10 +1,10 @@
 window.MARC_CHECKOUT_LINKS = {
   starter: {
     stripe: "",
-    paypal: ""
+    paypal: "https://paypal.me/MdAnisurRahmanC/299"
   },
   professional: {
     stripe: "",
-    paypal: ""
+    paypal: "https://paypal.me/MdAnisurRahmanC/1200"
   }
 };
