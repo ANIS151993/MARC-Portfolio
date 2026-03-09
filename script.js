@@ -106,6 +106,8 @@ const orderPackage = document.getElementById("orderPackage");
 const orderPayment = document.getElementById("orderPayment");
 const orderSection = document.getElementById("order");
 const checkoutHelp = document.getElementById("checkoutHelp");
+const planTriggers = document.querySelectorAll(".plan-trigger");
+const pricePlans = document.querySelectorAll(".price-plan");
 
 if (projectFilters && projectCards.length) {
   projectFilters.querySelectorAll("button").forEach((button) => {
@@ -122,6 +124,32 @@ if (projectFilters && projectCards.length) {
     });
   });
 }
+
+planTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    const pkg = trigger.getAttribute("data-package");
+    if (orderPackage && pkg) {
+      orderPackage.value = pkg;
+    }
+
+    if (orderPayment) {
+      orderPayment.value = "paypal";
+    }
+  });
+});
+
+pricePlans.forEach((card) => {
+  card.addEventListener("mousemove", (event) => {
+    const rect = card.getBoundingClientRect();
+    card.style.setProperty("--mx", `${event.clientX - rect.left}px`);
+    card.style.setProperty("--my", `${event.clientY - rect.top}px`);
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.style.removeProperty("--mx");
+    card.style.removeProperty("--my");
+  });
+});
 
 const checkoutLinks = window.MARC_CHECKOUT_LINKS || {};
 const checkoutButtons = document.querySelectorAll(".checkout-btn");
@@ -161,7 +189,7 @@ checkoutButtons.forEach((button) => {
 });
 
 if (checkoutHelp && configuredCheckoutCount > 0) {
-  checkoutHelp.textContent = "PayPal checkout is active for configured packages. Unconfigured buttons will fall back to the order form.";
+  checkoutHelp.textContent = "PayPal checkout is active for the configured weekly plans. If you need a bundled scope, use the order form below.";
 }
 
 const testimonials = Array.from(document.querySelectorAll(".testimonial"));
