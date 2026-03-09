@@ -9,7 +9,7 @@ This repository contains two portfolio sites:
 - `index.html` -> Job-focused portfolio
 - `styles.css` -> Job site design and responsive UI
 - `script.js` -> Job site interactions (typed text, counters, filters, slider)
-- `checkout-links.js` -> direct Stripe/PayPal checkout link config for service packages
+- `checkout-links.js` -> direct PayPal checkout link config for service packages
 - `phd/index.html` -> PhD-focused portfolio
 - `phd/styles.css` -> PhD site design
 - `phd/script.js` -> PhD interactions
@@ -23,7 +23,7 @@ This repository contains two portfolio sites:
 - Full publication section with IEEE links and pipeline status
 - GitHub highlights with repo + live project links
 - Professional services packages and order workflow
-- Payment-ready direct checkout buttons with form fallback
+- Payment-ready PayPal checkout buttons with form fallback
 - Resume center (read online + download)
 - Contact forms via FormSubmit
 - Mobile responsive and animated interactions
@@ -71,10 +71,8 @@ Forms use FormSubmit:
 Direct package checkout is configured in:
 - `checkout-links.js`
 
-Add your real payment links there:
-- `starter.stripe`
+Add or update your real payment links there:
 - `starter.paypal`
-- `professional.stripe`
 - `professional.paypal`
 
 If a link is empty, the site automatically falls back to the order form.

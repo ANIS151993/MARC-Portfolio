@@ -161,7 +161,7 @@ checkoutButtons.forEach((button) => {
 });
 
 if (checkoutHelp && configuredCheckoutCount > 0) {
-  checkoutHelp.textContent = "Direct checkout is active for configured packages. Unconfigured buttons will fall back to the order form.";
+  checkoutHelp.textContent = "PayPal checkout is active for configured packages. Unconfigured buttons will fall back to the order form.";
 }
 
 const testimonials = Array.from(document.querySelectorAll(".testimonial"));
