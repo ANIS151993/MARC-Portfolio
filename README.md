@@ -1,79 +1,73 @@
-# MARC Portfolio Website
+# MARC Portfolio (Job + PhD)
 
-Portfolio website for **Md Anisur Rahman Chowdhury** with two variants:
-- Main professional portfolio (`/`)
-- PhD-focused academic portfolio (`/phd/`)
+This repository contains two portfolio sites:
+- `https://resume.marcbd.site/` -> Job Market Portfolio
+- `https://resume.marcbd.site/phd/` -> PhD Portfolio
 
-## Files
+## Site Structure
 
-- `index.html` - main professional portfolio
-- `styles.css` - main portfolio styles
-- `script.js` - main portfolio interactions
-- `phd/index.html` - PhD-focused portfolio
-- `phd/styles.css` - PhD page styles
-- `phd/script.js` - PhD page interactions
-- `Job-Resume/Resume.pdf` - industry resume
-- `PhD-Resume/Resume of MARC.pdf` - academic/PhD resume
+- `index.html` -> Job-focused portfolio
+- `styles.css` -> Job site design and responsive UI
+- `script.js` -> Job site interactions (typed text, counters, filters, slider)
+- `phd/index.html` -> PhD-focused portfolio
+- `phd/styles.css` -> PhD site design
+- `phd/script.js` -> PhD interactions
+- `Job-Resume/Resume.pdf` -> Job resume
+- `PhD-Resume/Resume of MARC.pdf` -> PhD resume
 
-## Run Locally
+## Features Implemented
+
+- Marcbd-inspired visual style and section structure
+- Separate Job and PhD portfolio experiences
+- Full publication section with IEEE links and pipeline status
+- GitHub highlights with repo + live project links
+- Professional services packages and order workflow
+- Resume center (read online + download)
+- Contact forms via FormSubmit
+- Mobile responsive and animated interactions
+
+## Local Preview
 
 ```bash
 python3 -m http.server 8080
 ```
 
-Visit:
+Open:
 - `http://localhost:8080/`
 - `http://localhost:8080/phd/`
 
-## Contact Form Setup
+## GitHub Actions Auto-Deploy to Cloudflare
 
-Both pages use FormSubmit:
-- Main page form -> sends to `engr.aanis@gmail.com`
-- PhD page form -> sends to `engr.aanis@gmail.com`
+Workflow file:
+- `.github/workflows/deploy-cloudflare-pages.yml`
 
-FormSubmit sends an activation email the first time. Open that activation email once to enable form delivery.
+It deploys on every push to `main`.
 
-## Deploy Main Site to Cloudflare Pages
+### Required GitHub Repository Secrets
 
-1. Push this repository to GitHub:
-   - `https://github.com/ANIS151993/MARC-Portfolio.git`
-2. Cloudflare dashboard -> **Workers & Pages** -> **Create application** -> **Pages** -> **Connect to Git**
-3. Select `ANIS151993/MARC-Portfolio`
-4. Build settings:
-   - Framework preset: **None**
-   - Build command: *(empty)*
-   - Build output directory: `/`
-5. Deploy.
-6. Add custom domain: `resume.marcbd.site`
+Set these in GitHub -> Repository -> Settings -> Secrets and variables -> Actions:
 
-Live URLs:
-- `https://resume.marcbd.site/` (main)
-- `https://resume.marcbd.site/phd/` (PhD variant)
+- `CLOUDFLARE_API_TOKEN`
+- `CLOUDFLARE_ACCOUNT_ID`
+- `CLOUDFLARE_PROJECT_NAME`
 
-## Optional Dedicated PhD Subdomain
+### Cloudflare Setup
 
-If you want PhD page as its own root site (for example `phd.marcbd.site`), create a second Pages project from the same repo:
+1. Create (or use) a Cloudflare Pages project connected to this repo.
+2. Ensure the project name matches `CLOUDFLARE_PROJECT_NAME`.
+3. Add custom domain `resume.marcbd.site` in Pages settings.
+4. SSL will be managed by Cloudflare.
 
-1. Create another Cloudflare Pages project linked to this same GitHub repo.
-2. Use build settings:
-   - Framework preset: **None**
-   - Build command:
+## Contact Form Activation
 
-```bash
-mkdir -p dist && cp -r phd/* dist/ && cp -r PhD-Resume dist/
-```
-
-   - Build output directory: `dist`
-3. Add custom domain for this second project:
-   - `phd.marcbd.site` (or any subdomain you prefer)
-
-This publishes the PhD page at the root of that subdomain.
+Forms use FormSubmit:
+- First submission sends an activation email.
+- Click activation link once to enable delivery.
 
 ## Updating Content
 
-- Main profile content: `index.html`
-- PhD profile content: `phd/index.html`
-- Main styles: `styles.css`
-- PhD styles: `phd/styles.css`
+- Job portfolio content: `index.html`
+- PhD portfolio content: `phd/index.html`
+- Styling updates: `styles.css`, `phd/styles.css`
 
-Push changes to GitHub and Cloudflare Pages redeploys automatically.
+Push to `main` to trigger automatic deployment.

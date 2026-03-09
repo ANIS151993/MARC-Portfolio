@@ -18,10 +18,10 @@ if (menuToggle && mainNav) {
 const typedNode = document.getElementById("typedRoles");
 if (typedNode) {
   const roles = [
-    "Network Administrator",
-    "Cloud and Server Architect",
+    "Network Security Engineer",
+    "Cloud and Server Architecture Specialist",
     "Cybersecurity Researcher",
-    "System and Infrastructure Engineer"
+    "Systems and Infrastructure Consultant"
   ];
 
   let roleIndex = 0;
@@ -70,13 +70,14 @@ document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el))
 const counterNodes = document.querySelectorAll("[data-counter]");
 const animateCounter = (node) => {
   const target = Number(node.getAttribute("data-counter"));
+  const decimals = Number(node.getAttribute("data-decimals") || "0");
   const duration = 1300;
   const startTime = performance.now();
 
   const step = (time) => {
     const progress = Math.min((time - startTime) / duration, 1);
-    const value = Math.round(progress * target);
-    node.textContent = value.toString();
+    const value = target * progress;
+    node.textContent = value.toFixed(decimals);
     if (progress < 1) {
       requestAnimationFrame(step);
     }
@@ -99,17 +100,17 @@ const counterObserver = new IntersectionObserver(
 
 counterNodes.forEach((node) => counterObserver.observe(node));
 
-const portfolioFilters = document.getElementById("portfolioFilters");
-const portfolioCards = document.querySelectorAll("#portfolioGrid .portfolio-card");
+const projectFilters = document.getElementById("projectFilters");
+const projectCards = document.querySelectorAll("#projectGrid .portfolio-card");
 
-if (portfolioFilters && portfolioCards.length) {
-  portfolioFilters.querySelectorAll("button").forEach((button) => {
+if (projectFilters && projectCards.length) {
+  projectFilters.querySelectorAll("button").forEach((button) => {
     button.addEventListener("click", () => {
       const filter = button.getAttribute("data-filter");
-      portfolioFilters.querySelectorAll("button").forEach((b) => b.classList.remove("active"));
+      projectFilters.querySelectorAll("button").forEach((b) => b.classList.remove("active"));
       button.classList.add("active");
 
-      portfolioCards.forEach((card) => {
+      projectCards.forEach((card) => {
         const cat = card.getAttribute("data-cat") || "";
         const show = filter === "all" || cat.includes(filter);
         card.classList.toggle("hidden-card", !show);
@@ -164,8 +165,8 @@ if (nextBtn) {
   });
 }
 
-const nextField = document.getElementById("jobFormNext");
-if (nextField) {
+const dynamicNextNodes = document.querySelectorAll(".dynamic-next");
+if (dynamicNextNodes.length) {
   let path = window.location.pathname;
   if (path.endsWith(".html")) {
     path = path.slice(0, path.lastIndexOf("/") + 1);
@@ -173,14 +174,20 @@ if (nextField) {
   if (!path.endsWith("/")) {
     path += "/";
   }
-  nextField.value = `${window.location.origin}${path}?sent=1#contact`;
+
+  dynamicNextNodes.forEach((node) => {
+    const anchor = node.getAttribute("data-anchor") || "contact";
+    node.value = `${window.location.origin}${path}?sent=1#${anchor}`;
+  });
 }
 
-const successNode = document.getElementById("jobFormSuccess");
-if (successNode) {
+const autoSuccessNodes = document.querySelectorAll(".auto-success");
+if (autoSuccessNodes.length) {
   const params = new URLSearchParams(window.location.search);
   if (params.get("sent") === "1") {
-    successNode.hidden = false;
+    autoSuccessNodes.forEach((node) => {
+      node.hidden = false;
+    });
   }
 }
 

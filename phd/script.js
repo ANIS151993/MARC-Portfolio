@@ -18,10 +18,10 @@ if (menuToggle && mainNav) {
 const typedNode = document.getElementById("phdTyped");
 if (typedNode) {
   const phrases = [
-    "Serverless Security and Intelligent Firewalls",
-    "Zero-Trust Automation and Continuous Verification",
+    "Serverless Security and Intelligent Firewall Research",
+    "Physical and Cloud Network Infrastructure Security",
     "Federated Threat Intelligence for Multi-Cloud Systems",
-    "AI-Driven Intrusion Detection and Cloud Defense"
+    "Zero-Trust Security Automation and Continuous Verification"
   ];
 
   let phraseIndex = 0;
@@ -70,17 +70,14 @@ document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el))
 const counterNodes = document.querySelectorAll("[data-counter]");
 const animateCounter = (node) => {
   const target = Number(node.getAttribute("data-counter"));
+  const decimals = Number(node.getAttribute("data-decimals") || "0");
   const duration = 1250;
   const start = performance.now();
 
   const frame = (time) => {
     const progress = Math.min((time - start) / duration, 1);
-    const value = Math.round(progress * target);
-    if (target === 393) {
-      node.textContent = value === 393 ? "3.93" : (value / 100).toFixed(2);
-    } else {
-      node.textContent = String(value);
-    }
+    const value = target * progress;
+    node.textContent = value.toFixed(decimals);
     if (progress < 1) {
       requestAnimationFrame(frame);
     }
@@ -122,8 +119,8 @@ if (filterWrap && pubCards.length) {
   });
 }
 
-const nextField = document.getElementById("phdFormNext");
-if (nextField) {
+const dynamicNextNodes = document.querySelectorAll(".dynamic-next");
+if (dynamicNextNodes.length) {
   let path = window.location.pathname;
   if (path.endsWith(".html")) {
     path = path.slice(0, path.lastIndexOf("/") + 1);
@@ -131,14 +128,20 @@ if (nextField) {
   if (!path.endsWith("/")) {
     path += "/";
   }
-  nextField.value = `${window.location.origin}${path}?sent=1#contact`;
+
+  dynamicNextNodes.forEach((node) => {
+    const anchor = node.getAttribute("data-anchor") || "contact";
+    node.value = `${window.location.origin}${path}?sent=1#${anchor}`;
+  });
 }
 
-const successNode = document.getElementById("phdFormSuccess");
-if (successNode) {
+const autoSuccessNodes = document.querySelectorAll(".auto-success");
+if (autoSuccessNodes.length) {
   const params = new URLSearchParams(window.location.search);
   if (params.get("sent") === "1") {
-    successNode.hidden = false;
+    autoSuccessNodes.forEach((node) => {
+      node.hidden = false;
+    });
   }
 }
 
