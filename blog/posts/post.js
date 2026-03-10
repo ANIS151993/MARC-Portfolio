@@ -37,13 +37,13 @@ const getActionClass = (label, href = "") => {
 const renderNotFound = () => {
   document.title = "MARC | Note Not Found";
   if (postTitle) {
-    postTitle.textContent = "This note was not found.";
+    postTitle.textContent = "I could not find this note.";
   }
   if (postSummary) {
-    postSummary.textContent = "The page slug does not match a blog note. Please return to the main blog page.";
+    postSummary.textContent = "The link does not match one of my published notes. Please go back to the blog and open another note from there.";
   }
   if (heroActions) {
-    heroActions.innerHTML = '<a class="btn btn-primary" href="/blog/">Back to Blog Hub</a>';
+    heroActions.innerHTML = '<a class="btn btn-primary" href="/blog/">Back to My Blog</a>';
   }
 };
 
@@ -122,8 +122,8 @@ const renderGallery = (gallery) => {
   gallerySection.innerHTML = `
     <div class="gallery-head">
       <p class="section-kicker">Visual Walkthrough</p>
-      <h2>Preview images and supporting visuals</h2>
-      <p>This note includes a compact visual gallery so visitors can understand the project, work sample, or research direction faster.</p>
+      <h2>Images and supporting visuals</h2>
+      <p>I added a small visual gallery here so you can understand the project, work sample, or research direction faster.</p>
     </div>
     <div class="mini-gallery">
       ${gallery
@@ -183,8 +183,8 @@ const renderPost = () => {
   const primaryLink = post.resources?.[0];
   heroActions.innerHTML = `
     ${primaryLink ? `<a class="btn btn-primary" href="${primaryLink.href}"${primaryLink.href.startsWith("http") ? ' target="_blank" rel="noopener"' : ""}>${primaryLink.label}</a>` : ""}
-    <a class="btn btn-secondary" href="/blog/posts/">All Notes</a>
-    <a class="btn btn-secondary" href="/blog/">Back to Blog Hub</a>
+    <a class="btn btn-secondary" href="/blog/posts/">All My Notes</a>
+    <a class="btn btn-secondary" href="/blog/">Back to My Blog</a>
     <a class="btn btn-secondary" href="/">Main Portfolio</a>
   `;
 
@@ -251,7 +251,7 @@ const renderPost = () => {
           <div class="related-tags">
             ${related.tags.slice(0, 3).map((tag) => `<span>${tag}</span>`).join("")}
           </div>
-          <a class="link-note" href="/blog/posts/${slug}/">Read Full Note</a>
+          <a class="link-note" href="/blog/posts/${slug}/">Read My Note</a>
         </article>
       `;
     })
