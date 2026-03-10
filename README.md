@@ -1,8 +1,8 @@
 # MARC Portfolio (Job + PhD)
 
 This repository contains two portfolio sites:
-- `https://resume.marcbd.site/` -> Job Market Portfolio
-- `https://resume.marcbd.site/phd/` -> PhD Portfolio
+- `https://marcbd.site/` -> Job Market Portfolio
+- `https://marcbd.site/phd/` -> PhD Portfolio
 
 ## Site Structure
 
@@ -57,7 +57,7 @@ Set these in GitHub -> Repository -> Settings -> Secrets and variables -> Action
 
 1. Create (or use) a Cloudflare Pages project connected to this repo.
 2. Ensure the project name matches `CLOUDFLARE_PROJECT_NAME`.
-3. Add custom domain `resume.marcbd.site` in Pages settings.
+3. Add custom domain `marcbd.site` in Pages settings.
 4. SSL will be managed by Cloudflare.
 
 ## Contact Form Activation
@@ -72,8 +72,12 @@ Direct package checkout is configured in:
 - `checkout-links.js`
 
 Add or update your real payment links there:
-- `starter.paypal`
-- `professional.paypal`
+- `mail-server.paypal`
+- `file-server.paypal`
+- `web-development.paypal`
+- `ip-telephony.paypal`
+- `system-architecture.paypal`
+- `software-app-development.paypal`
 
 If a link is empty, the site automatically falls back to the order form.
 
