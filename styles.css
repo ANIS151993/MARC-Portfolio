@@ -2197,6 +2197,33 @@ h1 span {
   font-weight: 700;
 }
 
+.pipeline-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.45rem;
+}
+
+.pipeline-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0.34rem 0.64rem;
+  border-radius: 999px;
+  border: 1px solid #efc79e;
+  background: linear-gradient(135deg, #fff4e9, #f4dac0);
+  color: #7d3c04;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.pipeline-links a:hover,
+.pipeline-links a:focus-visible {
+  background: linear-gradient(135deg, #182334, #2b3b54);
+  border-color: #182334;
+  color: #fff;
+}
+
 .testimonial-shell {
   display: grid;
   grid-template-columns: auto 1fr auto;
