@@ -119,6 +119,8 @@ skillFillNodes.forEach((node) => skillObserver.observe(node));
 
 const projectFilters = document.getElementById("projectFilters");
 const projectCards = document.querySelectorAll("#projectGrid .portfolio-card");
+const workFilters = document.getElementById("workFilters");
+const workCards = document.querySelectorAll("#workGrid .work-card");
 const publicationFilters = document.getElementById("publicationFilters");
 const publicationCards = document.querySelectorAll("#publicationGrid [data-pubcat]");
 const orderPackage = document.getElementById("orderPackage");
@@ -137,6 +139,22 @@ if (projectFilters && projectCards.length) {
 
       projectCards.forEach((card) => {
         const cat = card.getAttribute("data-cat") || "";
+        const show = filter === "all" || cat.includes(filter);
+        card.classList.toggle("hidden-card", !show);
+      });
+    });
+  });
+}
+
+if (workFilters && workCards.length) {
+  workFilters.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.getAttribute("data-filter");
+      workFilters.querySelectorAll("button").forEach((b) => b.classList.remove("active"));
+      button.classList.add("active");
+
+      workCards.forEach((card) => {
+        const cat = card.getAttribute("data-workcat") || "";
         const show = filter === "all" || cat.includes(filter);
         card.classList.toggle("hidden-card", !show);
       });
