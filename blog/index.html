@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Friendly blog-style notes from Md Anisur Rahman Chowdhury covering industry expertise, latest works, portfolio projects, and research publications.">
+  <title>MARC | Work Notes and Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto+Slab:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="journal-progress" id="pageProgress" aria-hidden="true"></div>
+
+  <header class="journal-header">
+    <div class="container header-wrap">
+      <a class="brand" href="../">
+        <img src="https://marcbd.com/wp-content/uploads/2025/07/MARC-logo1.png" alt="MARC logo">
+      </a>
+      <nav class="top-links" aria-label="Blog Navigation">
+        <a href="../">Main Portfolio</a>
+        <a href="../phd/">PhD Site</a>
+        <a href="../Job-Resume/Resume.pdf" target="_blank" rel="noopener">Job Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container journal-main">
+    <aside class="chapter-rail">
+      <div class="rail-card reveal">
+        <p class="rail-label">Reader Guide</p>
+        <h2>On This Page</h2>
+        <p>I wrote this page in simple English so a recruiter, client, professor, or teammate can understand my work quickly.</p>
+        <nav class="chapter-nav" aria-label="Section Guide">
+          <a href="#intro" data-chapter-link="intro">Overview</a>
+          <a href="#expertise-notes" data-chapter-link="expertise-notes">Industry Expertise</a>
+          <a href="#latest-work-notes" data-chapter-link="latest-work-notes">Latest Works</a>
+          <a href="#project-notes" data-chapter-link="project-notes">Portfolio Projects</a>
+          <a href="#research-notes" data-chapter-link="research-notes">Research Publications</a>
+          <a href="#closing-note" data-chapter-link="closing-note">Closing Note</a>
+        </nav>
+        <div class="rail-metrics">
+          <article>
+            <strong>7+</strong>
+            <span>Years in industry</span>
+          </article>
+          <article>
+            <strong>21</strong>
+            <span>Latest work samples</span>
+          </article>
+          <article>
+            <strong>19</strong>
+            <span>Research notes here</span>
+          </article>
+        </div>
+      </div>
+    </aside>
+
+    <div class="story-flow">
+      <section id="intro" class="hero-card reveal">
+        <div class="hero-copy">
+          <p class="hero-kicker">MARC Work Notes</p>
+          <h1>A friendly guide to what I do, what I build, and what I research.</h1>
+          <p class="hero-text">This page is a simple and honest explanation of my work. Instead of short portfolio cards only, I wanted one place where I can explain my experience, client work, GitHub projects, and research papers in a more human way. If you are hiring, reviewing my profile, or thinking about collaboration, this page gives the bigger picture.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="../">Back to Main Portfolio</a>
+            <a class="btn btn-secondary" href="#project-notes">Jump to Projects</a>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <article>
+            <span class="mini-label">What You Will See</span>
+            <p>My industry expertise, selected client work, portfolio projects, and research publications explained in clear and easy language.</p>
+          </article>
+          <article>
+            <span class="mini-label">Main Focus</span>
+            <p>Physical and cloud network infrastructure, security engineering, systems administration, serverless defense, and practical AI work.</p>
+          </article>
+          <article>
+            <span class="mini-label">Why This Page Exists</span>
+            <p>The homepage is good for a quick view. This page is for people who want the full story behind the work.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="expertise-notes" class="story-section reveal">
+        <header class="story-head">
+          <p class="section-tag">Industry Expertise</p>
+          <h2>What I do in industry, in plain language.</h2>
+          <p>My background is not only research. I also spent years doing real infrastructure work in live environments. That means I understand systems that must stay up, stay secure, and stay useful for real users every day.</p>
+        </header>
+        <div id="expertiseGrid" class="expertise-note-grid"></div>
+      </section>
+
+      <section id="latest-work-notes" class="story-section reveal">
+        <header class="story-head">
+          <p class="section-tag">Latest Works</p>
+          <h2>Real client work across servers, telephony, web delivery, and architecture.</h2>
+          <p>This part covers practical work I delivered for organizations. I grouped the work by type so it is easier to read. You can use the filters to focus on the part you care about most.</p>
+        </header>
+        <div class="filter-bar" id="workFilterBar" aria-label="Latest Works Filters">
+          <button class="active" data-filter="all" type="button">All</button>
+          <button data-filter="mail" type="button">Mail Server</button>
+          <button data-filter="file" type="button">File Server</button>
+          <button data-filter="voice" type="button">IP-Telephony</button>
+          <button data-filter="web" type="button">Web Development</button>
+          <button data-filter="network" type="button">Network Architecture</button>
+          <button data-filter="cloud" type="button">Cloud Architecture</button>
+        </div>
+        <div id="worksGrid" class="work-note-grid"></div>
+      </section>
+
+      <section id="project-notes" class="story-section reveal">
+        <header class="story-head">
+          <p class="section-tag">Portfolio Projects</p>
+          <h2>Hands-on GitHub projects that show how I think and how I build.</h2>
+          <p>These projects are important because they show my own engineering ideas more directly. Some of them grew from my research. Others show how I solve practical technical problems with clear structure, reproducibility, and live demos.</p>
+        </header>
+        <div id="projectStoryGrid" class="project-story-grid"></div>
+      </section>
+
+      <section id="research-notes" class="story-section reveal">
+        <header class="story-head">
+          <p class="section-tag">Research Publications</p>
+          <h2>My papers explained in a friendlier way.</h2>
+          <p>I care about writing research that connects with real infrastructure, security, and systems problems. In this section, I explain my papers in easier language so you can quickly understand what each one is about and why it matters.</p>
+        </header>
+        <div class="filter-bar" id="publicationFilterBar" aria-label="Research Filters">
+          <button class="active" data-filter="all" type="button">All</button>
+          <button data-filter="published" type="button">Published</button>
+          <button data-filter="first-author" type="button">First Author</button>
+          <button data-filter="co-authored" type="button">Co-Authored</button>
+          <button data-filter="under-review" type="button">Under Review</button>
+          <button data-filter="in-preparation" type="button">In Preparation</button>
+        </div>
+        <div class="publication-summary-strip">
+          <article>
+            <strong>12</strong>
+            <span>Published papers</span>
+          </article>
+          <article>
+            <strong>7</strong>
+            <span>Pipeline papers</span>
+          </article>
+          <article>
+            <strong>4</strong>
+            <span>Published first-author papers</span>
+          </article>
+          <article>
+            <strong>72</strong>
+            <span>Google Scholar citations</span>
+          </article>
+        </div>
+        <div id="publicationStack" class="publication-stack"></div>
+      </section>
+
+      <section id="closing-note" class="closing-card reveal">
+        <p class="section-tag">Closing Note</p>
+        <h2>Thanks for reading the full story.</h2>
+        <p>If you reached this far, you now know more than what a short resume or one-page portfolio can show. I enjoy work that mixes infrastructure, security, systems thinking, and useful engineering. I also care about explaining technical work clearly, because good communication is part of good engineering.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:engr.aanis@gmail.com">Email Me</a>
+          <a class="btn btn-secondary" href="../#contact">Go to Contact Section</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="journal-footer">
+    <div class="container footer-wrap">
+      <p>Copyright <span id="currentYear"></span> Md Anisur Rahman Chowdhury</p>
+      <div class="footer-links">
+        <a href="../">Main Portfolio</a>
+        <a href="../phd/">PhD Site</a>
+        <a href="https://github.com/ANIS151993" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://scholar.google.com/citations?user=NQyywPoAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
