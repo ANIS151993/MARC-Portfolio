@@ -348,6 +348,15 @@ const projects = [
   }
 ];
 
+const projectDetailMap = new Map([
+  ["Serverless Intelligent Firewall", "posts/serverless-intelligent-firewall/"],
+  ["Towards a Serverless Intelligent Firewall: Cross-Cloud Adaptation", "posts/cross-cloud-firewall/"],
+  ["Autonomous Self-Learning Serverless Intelligent Firewall", "posts/autonomous-firewall/"],
+  ["DataMentor / Notebook Studio", "posts/datamentor-notebook-studio/"],
+  ["A Local Distributed Multi-Agent LLM Ensemble System for Complex Problem Solving", "posts/distributed-ai-ensemble/"],
+  ["Teaching Large Language Models to Think Twice", "posts/self-correcting-llm/"]
+]);
+
 const publications = [
   {
     categories: ["published", "first-author"],
@@ -540,6 +549,16 @@ const publications = [
   }
 ];
 
+const publicationDetailMap = new Map([
+  ["Towards a Serverless Intelligent Firewall: AI-Driven Security, and Zero-Trust Architectures", "posts/firewall-zero-trust-paper/"],
+  ["Auction-Based Dynamic Resource Allocation for Optimized Edge Computing in Distributed Networks", "posts/edge-resource-allocation-paper/"],
+  ["AI and Cloud Computing in Business Systems: A Hybrid Model for Enhancing Enterprise Resource Planning", "posts/enterprise-ai-erp-paper/"],
+  ["Deepfake Detection in MIS: Leveraging DenseNet and Multi-Scale Information for Enhanced Digital Forensics", "posts/deepfake-detection-paper/"],
+  ["Towards a Serverless Intelligent Firewall: Integrating Cross-Cloud Adaptation, AI-Driven Security, and Zero-Trust Architectures", "posts/cross-cloud-firewall-paper/"],
+  ["Teaching Large Language Models to Think Twice: A Three-Stage Framework for Self-Correcting Mathematical Reasoning", "posts/self-correcting-math-paper/"],
+  ["A Local Distributed Multi-Agent LLM Ensemble System for Complex Problem Solving", "posts/distributed-ai-paper/"]
+]);
+
 const expertiseGrid = document.getElementById("expertiseGrid");
 const worksGrid = document.getElementById("worksGrid");
 const projectStoryGrid = document.getElementById("projectStoryGrid");
@@ -609,6 +628,7 @@ const renderProjects = () => {
             <div class="project-links">
               <a href="${item.repo}" target="_blank" rel="noopener">View Repo</a>
               <a href="${item.demo}" target="_blank" rel="noopener">Open Live Demo</a>
+              ${projectDetailMap.get(item.title) ? `<a href="${projectDetailMap.get(item.title)}">Read Full Note</a>` : ""}
             </div>
           </div>
         </article>
@@ -633,7 +653,12 @@ const renderPublications = () => {
           </summary>
           <div class="publication-body">
             <p>${item.text}</p>
-            ${item.links.length ? `<div class="publication-links">${item.links.map((link) => `<a href="${link.href}" target="_blank" rel="noopener">${link.label}</a>`).join("")}</div>` : ""}
+            ${item.links.length || publicationDetailMap.get(item.title)
+              ? `<div class="publication-links">
+                  ${item.links.map((link) => `<a href="${link.href}" target="_blank" rel="noopener">${link.label}</a>`).join("")}
+                  ${publicationDetailMap.get(item.title) ? `<a href="${publicationDetailMap.get(item.title)}">Read Full Note</a>` : ""}
+                </div>`
+              : ""}
           </div>
         </details>
       `
