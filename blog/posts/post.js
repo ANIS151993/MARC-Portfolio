@@ -20,6 +20,20 @@ const contentSections = document.getElementById("contentSections");
 const resourceLinks = document.getElementById("resourceLinks");
 const relatedGrid = document.getElementById("relatedGrid");
 
+const getActionClass = (label, href = "") => {
+  const text = `${label} ${href}`.toLowerCase();
+
+  if (!href.startsWith("http") || text.includes("note") || text.includes("blog hub") || text.includes("portfolio")) {
+    return "link-note";
+  }
+
+  if (text.includes("demo") || text.includes("live") || text.includes("ieee") || text.includes("venue")) {
+    return "link-live";
+  }
+
+  return "link-source";
+};
+
 const renderNotFound = () => {
   document.title = "MARC | Note Not Found";
   if (postTitle) {
@@ -37,7 +51,7 @@ const createLinks = (links) =>
   links
     .map(
       (link) =>
-        `<a href="${link.href}"${link.href.startsWith("http") ? ' target="_blank" rel="noopener"' : ""}>${link.label}</a>`
+        `<a class="${getActionClass(link.label, link.href)}" href="${link.href}"${link.href.startsWith("http") ? ' target="_blank" rel="noopener"' : ""}>${link.label}</a>`
     )
     .join("");
 
@@ -87,6 +101,59 @@ const renderPreview = (preview) => {
   `;
 };
 
+const renderGallery = (gallery) => {
+  const currentGallery = document.getElementById("galleryShell");
+  if (currentGallery) {
+    currentGallery.remove();
+  }
+
+  if (!gallery?.length || !resourceLinks) {
+    return;
+  }
+
+  const resourceSection = resourceLinks.closest("section");
+  if (!resourceSection) {
+    return;
+  }
+
+  const gallerySection = document.createElement("section");
+  gallerySection.className = "gallery-shell reveal";
+  gallerySection.id = "galleryShell";
+  gallerySection.innerHTML = `
+    <div class="gallery-head">
+      <p class="section-kicker">Visual Walkthrough</p>
+      <h2>Preview images and supporting visuals</h2>
+      <p>This note includes a compact visual gallery so visitors can understand the project, work sample, or research direction faster.</p>
+    </div>
+    <div class="mini-gallery">
+      ${gallery
+        .map(
+          (item) => `
+            <article class="gallery-card">
+              ${item.href ? `<a class="gallery-media-link" href="${item.href}" target="_blank" rel="noopener">` : ""}
+                <div class="gallery-media">
+                  <img src="${item.src}" alt="${item.alt || item.title}">
+                </div>
+              ${item.href ? "</a>" : ""}
+              <div class="gallery-copy">
+                <h3>${item.title}</h3>
+                <p>${item.caption}</p>
+                ${
+                  item.href
+                    ? `<a class="inline-link link-live" href="${item.href}" target="_blank" rel="noopener">Open Visual</a>`
+                    : ""
+                }
+              </div>
+            </article>
+          `
+        )
+        .join("")}
+    </div>
+  `;
+
+  resourceSection.parentNode.insertBefore(gallerySection, resourceSection);
+};
+
 const renderPost = () => {
   if (!post) {
     renderNotFound();
@@ -122,6 +189,7 @@ const renderPost = () => {
   `;
 
   renderPreview(post.preview);
+  renderGallery(post.gallery);
 
   factGrid.innerHTML = post.facts
     .map(
@@ -183,7 +251,7 @@ const renderPost = () => {
           <div class="related-tags">
             ${related.tags.slice(0, 3).map((tag) => `<span>${tag}</span>`).join("")}
           </div>
-          <a href="../${slug}/">Read Full Note</a>
+          <a class="link-note" href="../${slug}/">Read Full Note</a>
         </article>
       `;
     })

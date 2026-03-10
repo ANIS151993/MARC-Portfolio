@@ -505,6 +505,8 @@ textarea {
 .work-note-copy {
   width: 100%;
   padding: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 .work-note h3,
@@ -550,16 +552,20 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 36px;
-  padding: 0.42rem 0.72rem;
+  min-height: 42px;
+  min-width: 146px;
+  padding: 0.56rem 0.94rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.14);
   color: #fff;
-  font-size: 0.8rem;
-  font-weight: 700;
-  box-shadow: 0 12px 18px rgba(15, 20, 28, 0.16);
-  transition: transform 0.22s ease, background 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  box-shadow: 0 14px 22px rgba(15, 20, 28, 0.18);
+  backdrop-filter: blur(10px);
+  transition: transform 0.22s ease, background 0.22s ease, border-color 0.22s ease, color 0.22s ease, box-shadow 0.22s ease;
 }
 
 .project-links a,
@@ -568,23 +574,26 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 38px;
-  padding: 0.48rem 0.78rem;
+  min-height: 42px;
+  min-width: 146px;
+  padding: 0.56rem 0.94rem;
   border-radius: 999px;
   border: 1px solid rgba(22, 33, 49, 0.12);
   background: linear-gradient(135deg, rgba(255, 244, 232, 0.98), rgba(245, 223, 198, 0.96));
   color: var(--navy);
-  font-size: 0.82rem;
+  font-size: 0.83rem;
   font-weight: 800;
-  box-shadow: 0 12px 20px rgba(34, 24, 15, 0.08);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  box-shadow: 0 14px 22px rgba(34, 24, 15, 0.1);
   transition: transform 0.22s ease, background 0.22s ease, border-color 0.22s ease, color 0.22s ease, box-shadow 0.22s ease;
 }
 
 .work-links a:hover,
 .work-links a:focus-visible {
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.22);
   transform: translateY(-2px);
-  box-shadow: 0 16px 24px rgba(15, 20, 28, 0.2);
+  box-shadow: 0 18px 28px rgba(15, 20, 28, 0.24);
 }
 
 .project-links a:hover,
@@ -623,6 +632,36 @@ textarea {
 .category-note-actions a.link-note {
   background: linear-gradient(135deg, var(--accent), var(--accent-deep));
   border-color: transparent;
+  color: #fff;
+}
+
+.project-links a.link-source:hover,
+.publication-links a.link-source:hover,
+.project-links a.link-source:focus-visible,
+.publication-links a.link-source:focus-visible {
+  background: linear-gradient(135deg, #ffffff, #f7e4cf);
+  color: var(--navy);
+}
+
+.project-links a.link-live:hover,
+.publication-links a.link-live:hover,
+.work-links a.link-live:hover,
+.project-links a.link-live:focus-visible,
+.publication-links a.link-live:focus-visible,
+.work-links a.link-live:focus-visible {
+  background: linear-gradient(135deg, #2a4058, #162231);
+  color: #fff;
+}
+
+.project-links a.link-note:hover,
+.publication-links a.link-note:hover,
+.work-links a.link-note:hover,
+.category-note-actions a.link-note:hover,
+.project-links a.link-note:focus-visible,
+.publication-links a.link-note:focus-visible,
+.work-links a.link-note:focus-visible,
+.category-note-actions a.link-note:focus-visible {
+  background: linear-gradient(135deg, #ff903f, #ef6611);
   color: #fff;
 }
 
@@ -703,6 +742,8 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 
 .project-pill,
@@ -813,6 +854,8 @@ textarea {
 .publication-body {
   padding: 0 1rem 1rem;
   border-top: 1px solid rgba(23, 32, 45, 0.08);
+  position: relative;
+  z-index: 1;
 }
 
 .publication-note[open] {

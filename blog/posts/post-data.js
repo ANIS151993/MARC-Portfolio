@@ -1311,3 +1311,323 @@ window.blogPostCatalog = {
     related: ["network-architecture-works", "serverless-intelligent-firewall", "cross-cloud-firewall-paper"]
   }
 };
+
+const createVisualCard = (eyebrow, title, detail, colors = ["#162131", "#ff7a1f"]) => {
+  const [dark, accent] = colors;
+  const svg = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-label="${title}">
+      <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="${dark}" />
+          <stop offset="100%" stop-color="#0f1722" />
+        </linearGradient>
+        <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="${accent}" stop-opacity="0.95" />
+          <stop offset="100%" stop-color="#ffb168" stop-opacity="0.85" />
+        </linearGradient>
+      </defs>
+      <rect width="1200" height="820" fill="url(#bg)" rx="40" />
+      <circle cx="1020" cy="120" r="190" fill="url(#accent)" opacity="0.18" />
+      <circle cx="190" cy="690" r="210" fill="url(#accent)" opacity="0.12" />
+      <rect x="72" y="86" width="250" height="54" rx="27" fill="rgba(255,255,255,0.08)" />
+      <text x="102" y="122" fill="#ffcfad" font-family="Poppins, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="2">${eyebrow}</text>
+      <text x="78" y="286" fill="#ffffff" font-family="Roboto Slab, Georgia, serif" font-size="68" font-weight="700">${title}</text>
+      <foreignObject x="78" y="346" width="910" height="230">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="color:#d8e0eb;font-family:Poppins,Arial,sans-serif;font-size:30px;line-height:1.5;">
+          ${detail}
+        </div>
+      </foreignObject>
+      <rect x="78" y="636" width="368" height="96" rx="28" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.12)" />
+      <text x="112" y="692" fill="#ffffff" font-family="Poppins, Arial, sans-serif" font-size="28" font-weight="700">MARC Research and Portfolio Notes</text>
+    </svg>
+  `;
+
+  return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
+};
+
+const noteGalleries = {
+  "firewall-zero-trust-paper": [
+    {
+      src: createVisualCard("Research Focus", "Zero Trust Firewall", "Serverless security architecture, AI-assisted detection, and careful access validation across cloud workloads."),
+      alt: "Zero Trust firewall visual card",
+      title: "Core problem space",
+      caption: "This paper sits at the intersection of cloud security engineering, Zero Trust design, and intelligent infrastructure defense."
+    },
+    {
+      src: createVisualCard("My Contribution", "Idea to Execution", "I connected security architecture, research framing, and practical system design into one coherent first-author direction.", ["#1f3044", "#ff8d38"]),
+      alt: "First-author contribution visual card",
+      title: "First-author research ownership",
+      caption: "The note explains the practical reason behind the paper, not only the formal title."
+    },
+    {
+      src: createVisualCard("Hiring Value", "Cloud Security Fit", "Relevant for cloud security engineering, infrastructure protection, Zero Trust strategy, and platform defense roles.", ["#243449", "#f06d12"]),
+      alt: "Hiring value visual card",
+      title: "Why recruiters should care",
+      caption: "The paper helps position you for cloud security, infrastructure security, and systems defense roles."
+    }
+  ],
+  "deepfake-detection-paper": [
+    {
+      src: createVisualCard("Research Focus", "Deepfake Detection", "Pattern recognition, classification logic, and trustworthy detection pipelines for manipulated media."),
+      alt: "Deepfake detection visual card",
+      title: "Detection pipeline focus",
+      caption: "This paper shows analytical thinking around detection quality, data handling, and model-supported judgment."
+    },
+    {
+      src: createVisualCard("Applied Value", "Trust and Verification", "The work supports conversations around security, digital trust, forensic workflows, and reliable automated screening.", ["#22354a", "#ff7a1f"]),
+      alt: "Trust and verification visual card",
+      title: "Why it matters",
+      caption: "The topic is relevant for AI trust, digital integrity, and secure information workflows."
+    },
+    {
+      src: createVisualCard("Role Fit", "AI and Security", "Useful for applied AI engineering, cybersecurity research, trustworthy systems, and detection-oriented analytics.", ["#183149", "#ff9a52"]),
+      alt: "Role fit visual card",
+      title: "Role alignment",
+      caption: "The content reinforces applied AI, research engineering, and security-aware data work."
+    }
+  ],
+  "enterprise-ai-erp-paper": [
+    {
+      src: createVisualCard("Enterprise Systems", "AI + ERP Integration", "Explores how intelligent models and business systems can support better workflows, operational insight, and decision support."),
+      alt: "Enterprise AI ERP visual card",
+      title: "Business systems direction",
+      caption: "The paper connects applied AI with structured enterprise operations and practical deployment thinking."
+    },
+    {
+      src: createVisualCard("Practical Use", "Operational Support", "Relevant to workflow automation, intelligent reporting, data-driven planning, and platform modernization.", ["#21374d", "#ff8a33"]),
+      alt: "Operational support visual card",
+      title: "Operational value",
+      caption: "It shows you can think beyond theory and into process improvement."
+    },
+    {
+      src: createVisualCard("Role Fit", "Applied AI Engineer", "Supports roles that mix business systems, data workflows, automation, and implementation planning.", ["#142333", "#ff9d58"]),
+      alt: "Applied AI engineer visual card",
+      title: "Why this helps hiring",
+      caption: "This direction is useful for applied AI, systems, and enterprise platform teams."
+    }
+  ],
+  "edge-resource-allocation-paper": [
+    {
+      src: createVisualCard("Distributed Systems", "Edge Resource Allocation", "Studies placement, balancing, and efficient resource use in distributed environments closer to real workloads."),
+      alt: "Edge resource allocation visual card",
+      title: "Resource strategy",
+      caption: "The paper highlights distributed systems thinking, performance awareness, and architecture-level reasoning."
+    },
+    {
+      src: createVisualCard("Infrastructure Angle", "Compute Near the Edge", "Useful for cloud infrastructure, distributed planning, and scalable service design conversations.", ["#1f3044", "#f27410"]),
+      alt: "Edge infrastructure visual card",
+      title: "Infrastructure relevance",
+      caption: "It aligns well with platform engineering, systems design, and cloud architecture roles."
+    },
+    {
+      src: createVisualCard("Role Fit", "Platform and Cloud", "The work supports platform engineering, cloud systems, and performance-aware infrastructure design.", ["#25364b", "#ff8f3f"]),
+      alt: "Platform and cloud role fit visual card",
+      title: "Role alignment",
+      caption: "Recruiters can read it as proof of systems-level thinking, not only implementation skills."
+    }
+  ],
+  "distributed-ai-paper": [
+    {
+      src: createVisualCard("Research Focus", "Distributed AI Systems", "Explores collaboration across multiple intelligent agents, orchestration logic, and complex problem solving."),
+      alt: "Distributed AI visual card",
+      title: "Multi-agent direction",
+      caption: "This paper connects well with your local distributed AI project and systems-oriented research direction."
+    },
+    {
+      src: createVisualCard("Engineering Value", "Coordination and Orchestration", "Shows how you think about distributed reasoning, structured communication, and scalable AI workflows.", ["#203246", "#ff8430"]),
+      alt: "Coordination and orchestration visual card",
+      title: "System design value",
+      caption: "It is useful for applied AI, research engineering, and platform orchestration conversations."
+    },
+    {
+      src: createVisualCard("Hiring Fit", "Applied AI and Systems", "Supports roles involving agent systems, model orchestration, distributed intelligence, and prototype engineering.", ["#172736", "#ff9b4f"]),
+      alt: "Applied AI and systems visual card",
+      title: "Why it matters",
+      caption: "The paper reinforces your fit for applied AI engineering and advanced systems research."
+    }
+  ],
+  "cross-cloud-firewall-paper": [
+    {
+      src: createVisualCard("Research Focus", "Cross-Cloud Security", "Extends firewall intelligence across multiple cloud environments where trust boundaries and policies shift."),
+      alt: "Cross-cloud security visual card",
+      title: "Cross-cloud challenge",
+      caption: "The paper frames a real security problem for distributed cloud infrastructure."
+    },
+    {
+      src: createVisualCard("Architecture", "Adaptive Protection", "Shows how security policy and architecture must evolve together when infrastructure spans more than one cloud.", ["#213446", "#ff8c35"]),
+      alt: "Adaptive protection visual card",
+      title: "Architecture and policy",
+      caption: "The work connects architecture review, platform defense, and large-scale cloud protection."
+    },
+    {
+      src: createVisualCard("Role Fit", "Cloud and Security", "Supports cloud security, infrastructure engineering, and adaptive defense positions.", ["#182838", "#ff9f55"]),
+      alt: "Cloud and security role fit visual card",
+      title: "Recruiter-facing value",
+      caption: "This paper strengthens your position for cloud security and infrastructure defense roles."
+    }
+  ],
+  "self-correcting-math-paper": [
+    {
+      src: createVisualCard("Research Focus", "Self-Correcting Reasoning", "A three-stage framework for better mathematical reasoning, reflection, and correction inside large language model workflows."),
+      alt: "Self-correcting reasoning visual card",
+      title: "LLM reasoning framework",
+      caption: "The paper shows applied research in methodology, model behavior, and improvement loops."
+    },
+    {
+      src: createVisualCard("My Role", "First-Author Ownership", "Idea, research framing, data collection, methodology, implementation, and model training all came from your direct work.", ["#243549", "#ff8740"]),
+      alt: "First-author ownership visual card",
+      title: "Direct contribution",
+      caption: "This is one of the strongest examples of your independent research leadership."
+    },
+    {
+      src: createVisualCard("Applied AI Fit", "LLM Evaluation and Design", "Useful for applied AI engineering, LLM systems, reasoning evaluation, and research engineering roles.", ["#162635", "#ffa053"]),
+      alt: "Applied AI fit visual card",
+      title: "Career relevance",
+      caption: "It positions you well for AI engineering, research engineering, and advanced model evaluation work."
+    }
+  ],
+  "mail-server-works": [
+    {
+      src: "https://marcbd.com/wp-content/uploads/2025/07/ARFGroupbd.png",
+      alt: "ARF group mail server work",
+      title: "Enterprise mail deployment",
+      caption: "A representative business email deployment showing reliable mail flow and production support.",
+      href: "https://marcbd.com/wp-content/uploads/2025/07/ARFGroupbd.png"
+    },
+    {
+      src: "https://marcbd.com/wp-content/uploads/2025/07/mail-salamgroup.png",
+      alt: "S Alam Group mail server work",
+      title: "Mail service continuity",
+      caption: "Shows how email systems were delivered with practical business continuity and communication needs in mind.",
+      href: "https://marcbd.com/wp-content/uploads/2025/07/mail-salamgroup.png"
+    },
+    {
+      src: "https://marcbd.com/wp-content/uploads/2025/07/SAlamgroup-file-server.png",
+      alt: "Associated infrastructure environment",
+      title: "Mail and infrastructure alignment",
+      caption: "Mail systems work best when they are aligned with the wider server environment and user support process.",
+      href: "https://marcbd.com/wp-content/uploads/2025/07/SAlamgroup-file-server.png"
+    }
+  ],
+  "file-server-works": [
+    {
+      src: "https://marcbd.com/wp-content/uploads/2025/07/Arf-File-Server.png",
+      alt: "ARF file server work",
+      title: "Centralized file access",
+      caption: "A representative file server deployment focused on business access, stability, and organized storage workflows.",
+      href: "https://marcbd.com/wp-content/uploads/2025/07/Arf-File-Server.png"
+    },
+    {
+      src: "https://marcbd.com/wp-content/uploads/2025/07/Cloud-SAlamgroup-file-server.png",
+      alt: "Cloud-connected file server work",
+      title: "Hybrid file service",
+      caption: "This visual supports the hybrid infrastructure side of your file and storage delivery work.",
+      href: "https://marcbd.com/wp-content/uploads/2025/07/Cloud-SAlamgroup-file-server.png"
+    },
+    {
+      src: "https://marcbd.com/wp-content/uploads/2025/07/SAlamgroup-file-server.png",
+      alt: "S Alam Group file server work",
+      title: "Operational file workflow",
+      caption: "The work reflects practical systems administration and real organizational file-sharing needs.",
+      href: "https://marcbd.com/wp-content/uploads/2025/07/SAlamgroup-file-server.png"
+    }
+  ],
+  "ip-telephony-works": [
+    {
+      src: "https://marcbd.com/wp-content/uploads/2025/07/IP-Phone.png",
+      alt: "IP phone infrastructure",
+      title: "IP phone endpoint layer",
+      caption: "Shows the practical endpoint side of VoIP and enterprise telephony implementation work.",
+      href: "https://marcbd.com/wp-content/uploads/2025/07/IP-Phone.png"
+    },
+    {
+      src: "https://marcbd.com/wp-content/uploads/2025/07/Issabel1.avif",
+      alt: "Issabel telephony platform",
+      title: "Telephony platform support",
+      caption: "Represents the PBX and service management side of your telephony delivery work.",
+      href: "https://marcbd.com/wp-content/uploads/2025/07/Issabel1.avif"
+    },
+    {
+      src: "https://marcbd.com/wp-content/uploads/2025/07/hq720.jpg",
+      alt: "Voice communication infrastructure",
+      title: "Communication reliability",
+      caption: "Telephony work is not only hardware. It is also about reliable communication flow for teams and offices.",
+      href: "https://marcbd.com/wp-content/uploads/2025/07/hq720.jpg"
+    }
+  ],
+  "web-development-works": [
+    {
+      src: "https://marcbd.com/wp-content/uploads/2025/07/Steelhead-Inn.png",
+      alt: "Steelhead Inn website",
+      title: "Public-facing web delivery",
+      caption: "Represents the website delivery side of your client work with a clear public-facing interface.",
+      href: "https://marcbd.com/wp-content/uploads/2025/07/Steelhead-Inn.png"
+    },
+    {
+      src: "https://marcbd.com/wp-content/uploads/2025/07/Inherentbd.png",
+      alt: "Inherent site work",
+      title: "Business website build",
+      caption: "Shows practical website work for brand presence, information delivery, and business communication.",
+      href: "https://marcbd.com/wp-content/uploads/2025/07/Inherentbd.png"
+    },
+    {
+      src: "https://marcbd.com/wp-content/uploads/2025/07/Savolabd.png",
+      alt: "Savola site work",
+      title: "Interface and delivery quality",
+      caption: "This visual supports the user-facing side of your portfolio and delivery background.",
+      href: "https://marcbd.com/wp-content/uploads/2025/07/Savolabd.png"
+    }
+  ],
+  "network-architecture-works": [
+    {
+      src: "https://marcbd.com/wp-content/uploads/2025/07/SAG-Agrabad-Corporate-Office-Network-Topology.png",
+      alt: "Corporate office network topology",
+      title: "Corporate office topology",
+      caption: "Shows clear network planning and structured topology design for an enterprise office environment.",
+      href: "https://marcbd.com/wp-content/uploads/2025/07/SAG-Agrabad-Corporate-Office-Network-Topology.png"
+    },
+    {
+      src: "https://marcbd.com/wp-content/uploads/2025/07/ARF-Group-Factory-Network-Topology.jpg",
+      alt: "Factory network topology",
+      title: "Factory network planning",
+      caption: "Represents physical network infrastructure thinking for industrial or factory operations.",
+      href: "https://marcbd.com/wp-content/uploads/2025/07/ARF-Group-Factory-Network-Topology.jpg"
+    },
+    {
+      src: "https://marcbd.com/wp-content/uploads/2025/07/SAG-Factory.png",
+      alt: "Factory infrastructure layout",
+      title: "Infrastructure visibility",
+      caption: "Supports your fit for network infrastructure, systems administration, and enterprise operations work.",
+      href: "https://marcbd.com/wp-content/uploads/2025/07/SAG-Factory.png"
+    }
+  ],
+  "cloud-architecture-works": [
+    {
+      src: "https://marcbd.com/wp-content/uploads/2025/07/AWS-Cloud-Architechture.png",
+      alt: "AWS cloud architecture",
+      title: "AWS-oriented design",
+      caption: "Shows structured cloud planning, service relationships, and scalable architecture thinking.",
+      href: "https://marcbd.com/wp-content/uploads/2025/07/AWS-Cloud-Architechture.png"
+    },
+    {
+      src: "https://marcbd.com/wp-content/uploads/2025/07/Cloud-Architechture.png",
+      alt: "Cloud architecture diagram",
+      title: "Scalable cloud structure",
+      caption: "Supports your positioning for cloud engineering and cloud security engineering roles.",
+      href: "https://marcbd.com/wp-content/uploads/2025/07/Cloud-Architechture.png"
+    },
+    {
+      src: "https://marcbd.com/wp-content/uploads/2025/07/Cloud-SAlamgroup-file-server.png",
+      alt: "Cloud-connected service environment",
+      title: "Architecture to implementation",
+      caption: "Helps connect abstract architecture planning with real service delivery and systems work.",
+      href: "https://marcbd.com/wp-content/uploads/2025/07/Cloud-SAlamgroup-file-server.png"
+    }
+  ]
+};
+
+Object.entries(noteGalleries).forEach(([slug, gallery]) => {
+  if (window.blogPostCatalog[slug]) {
+    window.blogPostCatalog[slug].gallery = gallery;
+  }
+});

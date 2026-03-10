@@ -58,12 +58,24 @@
         <h2>Filter by content type</h2>
         <p>Use these filters if you want to focus on projects, research papers, or latest works delivery notes.</p>
       </header>
+      <div class="search-shell">
+        <label class="search-label" for="noteSearch">Search notes by title, topic, keyword, or role fit</label>
+        <div class="search-row">
+          <input id="noteSearch" type="search" placeholder="Search cloud security, Zero Trust, network design, research, demos...">
+          <button class="btn btn-secondary" id="clearSearch" type="button">Clear Search</button>
+        </div>
+      </div>
       <div class="filter-bar" id="noteFilters" aria-label="Note Filters">
         <button class="active" data-filter="all" type="button">All</button>
         <button data-filter="project" type="button">Projects</button>
         <button data-filter="paper" type="button">Papers</button>
         <button data-filter="work" type="button">Latest Works</button>
       </div>
+      <div class="tag-filter-shell">
+        <p class="mini-label">Popular tags</p>
+        <div class="tag-filter-bar" id="tagFilters" aria-label="Tag Filters"></div>
+      </div>
+      <p class="result-summary" id="resultSummary">Showing all notes.</p>
       <div class="notes-grid" id="notesGrid"></div>
     </section>
   </main>
