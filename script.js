@@ -19,9 +19,10 @@ const typedNode = document.getElementById("typedRoles");
 if (typedNode) {
   const roles = [
     "Network Security Engineer",
-    "Cloud and Server Architecture Specialist",
+    "Systems Administrator",
+    "Cloud Infrastructure Engineer",
     "Cybersecurity Researcher",
-    "Systems and Infrastructure Consultant"
+    "IT Infrastructure Specialist"
   ];
 
   let roleIndex = 0;
@@ -99,6 +100,22 @@ const counterObserver = new IntersectionObserver(
 );
 
 counterNodes.forEach((node) => counterObserver.observe(node));
+
+const skillFillNodes = document.querySelectorAll(".skill-fill[data-level]");
+const skillObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const level = entry.target.getAttribute("data-level") || "0";
+        entry.target.style.width = `${level}%`;
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.35 }
+);
+
+skillFillNodes.forEach((node) => skillObserver.observe(node));
 
 const projectFilters = document.getElementById("projectFilters");
 const projectCards = document.querySelectorAll("#projectGrid .portfolio-card");
