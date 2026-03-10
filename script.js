@@ -119,6 +119,8 @@ skillFillNodes.forEach((node) => skillObserver.observe(node));
 
 const projectFilters = document.getElementById("projectFilters");
 const projectCards = document.querySelectorAll("#projectGrid .portfolio-card");
+const publicationFilters = document.getElementById("publicationFilters");
+const publicationCards = document.querySelectorAll("#publicationGrid [data-pubcat]");
 const orderPackage = document.getElementById("orderPackage");
 const orderPayment = document.getElementById("orderPayment");
 const orderSection = document.getElementById("order");
@@ -135,6 +137,22 @@ if (projectFilters && projectCards.length) {
 
       projectCards.forEach((card) => {
         const cat = card.getAttribute("data-cat") || "";
+        const show = filter === "all" || cat.includes(filter);
+        card.classList.toggle("hidden-card", !show);
+      });
+    });
+  });
+}
+
+if (publicationFilters && publicationCards.length) {
+  publicationFilters.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.getAttribute("data-filter");
+      publicationFilters.querySelectorAll("button").forEach((b) => b.classList.remove("active"));
+      button.classList.add("active");
+
+      publicationCards.forEach((card) => {
+        const cat = card.getAttribute("data-pubcat") || "";
         const show = filter === "all" || cat.includes(filter);
         card.classList.toggle("hidden-card", !show);
       });
