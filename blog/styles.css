@@ -342,9 +342,10 @@ textarea {
 }
 
 .btn-secondary {
-  background: rgba(24, 35, 52, 0.06);
-  border-color: rgba(24, 35, 52, 0.12);
+  background: linear-gradient(135deg, rgba(255, 244, 232, 0.98), rgba(245, 223, 198, 0.96));
+  border-color: rgba(24, 35, 52, 0.14);
   color: var(--navy);
+  box-shadow: 0 12px 22px rgba(34, 24, 15, 0.08);
 }
 
 .btn-secondary:hover,
@@ -430,6 +431,35 @@ textarea {
   color: #fff;
 }
 
+.work-category-note-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: 0 0 1rem;
+}
+
+.work-category-note {
+  padding: 1rem;
+  border-radius: 22px;
+  border: 1px solid rgba(23, 32, 45, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 239, 229, 0.96));
+  box-shadow: 0 18px 30px rgba(44, 31, 18, 0.08);
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
+}
+
+.work-category-note:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 122, 31, 0.22);
+  box-shadow: 0 24px 34px rgba(44, 31, 18, 0.12);
+}
+
+.category-note-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+}
+
 .work-note-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -508,16 +538,15 @@ textarea {
 
 .work-links,
 .project-links,
-.publication-links {
+.publication-links,
+.category-note-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: 0.8rem;
 }
 
-.work-links a,
-.project-links a,
-.publication-links a {
+.work-links a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -529,16 +558,72 @@ textarea {
   color: #fff;
   font-size: 0.8rem;
   font-weight: 700;
-  transition: transform 0.22s ease, background 0.22s ease, border-color 0.22s ease;
+  box-shadow: 0 12px 18px rgba(15, 20, 28, 0.16);
+  transition: transform 0.22s ease, background 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.project-links a,
+.publication-links a,
+.category-note-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0.48rem 0.78rem;
+  border-radius: 999px;
+  border: 1px solid rgba(22, 33, 49, 0.12);
+  background: linear-gradient(135deg, rgba(255, 244, 232, 0.98), rgba(245, 223, 198, 0.96));
+  color: var(--navy);
+  font-size: 0.82rem;
+  font-weight: 800;
+  box-shadow: 0 12px 20px rgba(34, 24, 15, 0.08);
+  transition: transform 0.22s ease, background 0.22s ease, border-color 0.22s ease, color 0.22s ease, box-shadow 0.22s ease;
 }
 
 .work-links a:hover,
+.work-links a:focus-visible {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 24px rgba(15, 20, 28, 0.2);
+}
+
 .project-links a:hover,
 .publication-links a:hover,
-.work-links a:focus-visible,
+.category-note-actions a:hover,
 .project-links a:focus-visible,
-.publication-links a:focus-visible {
-  background: rgba(255, 255, 255, 0.18);
+.publication-links a:focus-visible,
+.category-note-actions a:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(255, 122, 31, 0.22);
+  box-shadow: 0 16px 24px rgba(34, 24, 15, 0.12);
+}
+
+.project-links a.link-live,
+.publication-links a.link-live,
+.work-links a.link-live {
+  background: linear-gradient(135deg, #1f3044, #101925);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.project-links a.link-source,
+.publication-links a.link-source,
+.work-links a.link-soft {
+  background: linear-gradient(135deg, rgba(255, 244, 232, 0.98), rgba(245, 223, 198, 0.96));
+  color: var(--navy);
+}
+
+.work-links a.link-soft {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.project-links a.link-note,
+.publication-links a.link-note,
+.work-links a.link-note,
+.category-note-actions a.link-note {
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+  border-color: transparent;
+  color: #fff;
 }
 
 .project-story-grid {
@@ -810,7 +895,8 @@ textarea {
   .project-story,
   .publication-summary-strip,
   .work-note-grid,
-  .expertise-note-grid {
+  .expertise-note-grid,
+  .work-category-note-grid {
     grid-template-columns: 1fr;
   }
 
@@ -853,7 +939,8 @@ textarea {
 
   .work-note-grid,
   .expertise-note-grid,
-  .publication-summary-strip {
+  .publication-summary-strip,
+  .work-category-note-grid {
     grid-template-columns: 1fr;
   }
 
@@ -870,6 +957,7 @@ textarea {
   .work-links,
   .project-links,
   .publication-links,
+  .category-note-actions,
   .top-links,
   .filter-bar {
     flex-direction: column;
@@ -879,6 +967,7 @@ textarea {
   .work-links a,
   .project-links a,
   .publication-links a,
+  .category-note-actions a,
   .filter-bar button,
   .top-links a {
     width: 100%;

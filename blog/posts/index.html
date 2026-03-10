@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="All detailed blog notes from Md Anisur Rahman Chowdhury covering projects, research papers, and latest works categories.">
+  <title>MARC | All Notes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto+Slab:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="notes.css">
+</head>
+<body>
+  <div class="notes-progress" id="pageProgress" aria-hidden="true"></div>
+
+  <header class="notes-header">
+    <div class="container header-wrap">
+      <a class="brand" href="../../">
+        <img src="https://marcbd.com/wp-content/uploads/2025/07/MARC-logo1.png" alt="MARC logo">
+      </a>
+      <nav class="top-nav" aria-label="All Notes Navigation">
+        <a href="../">Blog Hub</a>
+        <a href="../../">Main Portfolio</a>
+        <a href="../../phd/">PhD Site</a>
+        <a href="../../Job-Resume/Resume.pdf" target="_blank" rel="noopener">Job Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container notes-main">
+    <section class="notes-hero reveal">
+      <div class="hero-copy">
+        <p class="section-kicker">Detailed Notes Library</p>
+        <h1>All project notes, paper notes, and latest-work notes in one place.</h1>
+        <p>This page collects the full notes from my blog so recruiters, hiring managers, collaborators, and technical readers can browse everything without jumping around the site manually.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="../">Back to Blog Hub</a>
+          <a class="btn btn-secondary" href="#noteFilters">Filter Notes</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <article>
+          <span class="mini-label">What is here</span>
+          <p>Detailed project notes, first-author research notes, and category notes for latest works.</p>
+        </article>
+        <article>
+          <span class="mini-label">Why it helps</span>
+          <p>It gives visitors a clean way to understand the bigger story behind my portfolio without reading only short cards.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="metric-strip reveal" id="metricStrip"></section>
+
+    <section class="notes-shell reveal">
+      <header class="notes-head">
+        <p class="section-kicker">Browse Notes</p>
+        <h2>Filter by content type</h2>
+        <p>Use these filters if you want to focus on projects, research papers, or latest works delivery notes.</p>
+      </header>
+      <div class="filter-bar" id="noteFilters" aria-label="Note Filters">
+        <button class="active" data-filter="all" type="button">All</button>
+        <button data-filter="project" type="button">Projects</button>
+        <button data-filter="paper" type="button">Papers</button>
+        <button data-filter="work" type="button">Latest Works</button>
+      </div>
+      <div class="notes-grid" id="notesGrid"></div>
+    </section>
+  </main>
+
+  <footer class="notes-footer">
+    <div class="container footer-wrap">
+      <p>Copyright <span id="currentYear"></span> Md Anisur Rahman Chowdhury</p>
+      <div class="footer-links">
+        <a href="../">Blog Hub</a>
+        <a href="../../">Main Portfolio</a>
+        <a href="../../phd/">PhD Site</a>
+        <a href="https://github.com/ANIS151993" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="post-data.js"></script>
+  <script src="notes.js"></script>
+</body>
+</html>

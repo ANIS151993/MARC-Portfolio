@@ -889,5 +889,425 @@ window.blogPostCatalog = {
       { label: "See Related Project", href: "../distributed-ai-ensemble/" }
     ],
     related: ["distributed-ai-ensemble", "self-correcting-math-paper", "datamentor-notebook-studio"]
+  },
+  "mail-server-works": {
+    type: "Latest Works Note",
+    kicker: "Latest Works Category",
+    title: "Mail Server Deployments and Business Email Infrastructure",
+    summary: "This note explains the mail server work in my portfolio, including business email setup, domain-based communication, administration, deliverability controls, and day-to-day operational support.",
+    metaDescription: "Detailed note on mail server deployments by Md Anisur Rahman Chowdhury covering business email infrastructure, deliverability, administration, and secure communication systems.",
+    tags: ["Mail Server", "Business Email", "System Administration", "Deliverability", "Infrastructure Support"],
+    facts: [
+      { label: "Showcased Work", value: "4 representative mail server deployments" },
+      { label: "Main Skills", value: "Mail administration, domain email setup, user management, secure communication workflows" },
+      { label: "Best Fit Roles", value: "Systems Administrator, Infrastructure Engineer, Messaging Administrator" }
+    ],
+    sidebarStats: [
+      { value: "4", label: "Mail projects" },
+      { value: "Admin", label: "Operational focus" },
+      { value: "Business", label: "Production use" }
+    ],
+    preview: {
+      type: "image",
+      label: "Representative Work Snapshot",
+      src: "https://marcbd.com/wp-content/uploads/2025/07/ARFGroupbd.png",
+      alt: "ARF Group mail server administration panel",
+      title: "Business Email Delivery and Administration",
+      note: "The mail server work in my portfolio is about giving organizations a stable and professional communication system that people can rely on every day."
+    },
+    sections: [
+      {
+        heading: "What this category covers",
+        text: "These projects are about business email systems. In simple words, I helped organizations move from informal or limited communication setups into more structured company mail environments.",
+        bullets: [
+          "Company-branded domain email improves trust and communication quality.",
+          "Mail platforms need more than setup. They also need administration and continuity.",
+          "This work fits naturally with my systems and infrastructure profile."
+        ]
+      },
+      {
+        heading: "What I delivered",
+        text: "The mail server category includes work around account setup, domain integration, day-to-day administration, and the operational side of keeping the service useful for real teams.",
+        bullets: [
+          "User and domain management for business communication.",
+          "Mail-service organization and controlled administration.",
+          "Support for production communication needs instead of only lab-style configuration."
+        ]
+      },
+      {
+        heading: "Why employers may care",
+        text: "Mail systems are still a core business service. This work shows that I can support systems people actually depend on, and that I understand production responsibility as well as technical setup.",
+        bullets: [
+          "Relevant for systems administration and infrastructure support roles.",
+          "Shows experience with services that affect everyday business operations.",
+          "Demonstrates reliability-minded enterprise IT work."
+        ]
+      },
+      {
+        heading: "How it connects to my wider profile",
+        text: "These deployments complement my work in file services, network architecture, cloud research, and security. They show that my portfolio includes practical service delivery, not only research or demos.",
+        bullets: [
+          "Supports my hybrid profile across operations and engineering.",
+          "Strengthens my fit for enterprise IT and infrastructure teams.",
+          "Shows direct experience with user-facing production systems."
+        ]
+      }
+    ],
+    resources: [
+      { label: "Open ARF Mail Server", href: "http://mail.arfgroupbd.com" },
+      { label: "Open S. Alam Group Mail Server", href: "http://mail.s.alamgroupbd.com" },
+      { label: "Back to Blog Hub", href: "../../" }
+    ],
+    related: ["file-server-works", "network-architecture-works", "cloud-architecture-works"]
+  },
+  "file-server-works": {
+    type: "Latest Works Note",
+    kicker: "Latest Works Category",
+    title: "File Server Delivery and Shared Storage Infrastructure",
+    summary: "This note explains the file server work in my portfolio, where the main goal was structured storage, controlled file access, and easier collaboration for business teams.",
+    metaDescription: "Detailed note on file server delivery and shared storage infrastructure by Md Anisur Rahman Chowdhury.",
+    tags: ["File Server", "Shared Storage", "Access Control", "Enterprise IT", "Service Delivery"],
+    facts: [
+      { label: "Showcased Work", value: "4 representative file server deployments" },
+      { label: "Main Skills", value: "Centralized storage, structured access, operational support, service continuity" },
+      { label: "Best Fit Roles", value: "Systems Administrator, Infrastructure Engineer, IT Operations" }
+    ],
+    sidebarStats: [
+      { value: "4", label: "File projects" },
+      { value: "Storage", label: "Core service" },
+      { value: "Teams", label: "Collaboration focus" }
+    ],
+    preview: {
+      type: "image",
+      label: "Representative Work Snapshot",
+      src: "https://marcbd.com/wp-content/uploads/2025/07/Arf-File-Server.png",
+      alt: "ARF file server interface",
+      title: "Centralized File Access for Business Teams",
+      note: "The file server work in my portfolio is about helping organizations store, organize, and share important business files with less confusion and better control."
+    },
+    sections: [
+      {
+        heading: "What this category is really about",
+        text: "File servers may sound simple, but for real organizations they matter a lot. Teams need one place to store important files, access them safely, and avoid chaos caused by scattered copies and weak structure.",
+        bullets: [
+          "Central storage improves organization and workflow consistency.",
+          "Controlled access helps reduce confusion and operational risk.",
+          "This kind of work supports real daily business needs."
+        ]
+      },
+      {
+        heading: "What I delivered",
+        text: "The work in this category focused on structured storage access, shared file use, and dependable business support. My role was not only technical setup, but also making the service practical for the organization.",
+        bullets: [
+          "Centralized file handling for business teams.",
+          "Easier sharing with more controlled structure.",
+          "Operational thinking around maintainability and dependability."
+        ]
+      },
+      {
+        heading: "Why it is useful for hiring conversations",
+        text: "This category shows that I understand one of the less glamorous but highly important parts of enterprise IT. Good infrastructure work often means delivering a dependable service that stays useful long after setup.",
+        bullets: [
+          "Relevant for infrastructure, systems administration, and operations roles.",
+          "Shows production support thinking, not just build-and-leave work.",
+          "Strengthens my profile in practical enterprise service delivery."
+        ]
+      },
+      {
+        heading: "How it fits the rest of my portfolio",
+        text: "These file services connect naturally with my mail systems work, network support, and wider hybrid infrastructure background. Together they show that I can support the services that keep organizations moving.",
+        bullets: [
+          "Complements mail, VoIP, and system administration experience.",
+          "Supports my 7+ years enterprise IT positioning.",
+          "Adds more depth to my operations and infrastructure profile."
+        ]
+      }
+    ],
+    resources: [
+      { label: "Open ARF File Server", href: "http://file.arfgroupbd.com" },
+      { label: "Open S. Alam Group File Server", href: "http://file.s.alamgroupbd.com" },
+      { label: "Back to Blog Hub", href: "../../" }
+    ],
+    related: ["mail-server-works", "network-architecture-works", "cloud-architecture-works"]
+  },
+  "ip-telephony-works": {
+    type: "Latest Works Note",
+    kicker: "Latest Works Category",
+    title: "IP-Telephony and Voice Communication Infrastructure",
+    summary: "This note explains the IP-telephony work in my portfolio, where the focus was business voice communication, internal coordination, and infrastructure support for day-to-day operations.",
+    metaDescription: "Detailed note on IP-telephony and voice communication infrastructure work by Md Anisur Rahman Chowdhury.",
+    tags: ["IP Telephony", "VoIP", "Business Communication", "Infrastructure Support", "Enterprise IT"],
+    facts: [
+      { label: "Showcased Work", value: "3 representative IP-telephony environments" },
+      { label: "Main Skills", value: "Voice systems support, business communication infrastructure, practical service delivery" },
+      { label: "Best Fit Roles", value: "Systems Administrator, IT Support Engineer, Infrastructure Engineer" }
+    ],
+    sidebarStats: [
+      { value: "3", label: "Voice projects" },
+      { value: "VoIP", label: "Communication stack" },
+      { value: "Internal", label: "Operational use" }
+    ],
+    preview: {
+      type: "image",
+      label: "Representative Work Snapshot",
+      src: "https://marcbd.com/wp-content/uploads/2025/07/IP-Phone.png",
+      alt: "IP phone setup illustration",
+      title: "Business Voice Systems and Internal Communication",
+      note: "The IP-telephony work in my portfolio shows that my infrastructure experience includes voice systems as well as servers, networking, and security."
+    },
+    sections: [
+      {
+        heading: "Why this category matters",
+        text: "A lot of people think only about data networks, but organizations also need dependable voice communication. This work shows that I understand infrastructure as a full operational environment, not only one technical layer.",
+        bullets: [
+          "Voice systems are part of business continuity and coordination.",
+          "Infrastructure support often includes communication systems too.",
+          "This category adds breadth to my practical enterprise experience."
+        ]
+      },
+      {
+        heading: "What I delivered",
+        text: "The work included IP-based telephony setups that supported internal communication and day-to-day business use. In simple terms, I helped make voice communication easier and more structured for organizations.",
+        bullets: [
+          "Operational telephony support for business environments.",
+          "Infrastructure-minded thinking about communication systems.",
+          "Focus on practical service usefulness rather than flashy presentation."
+        ]
+      },
+      {
+        heading: "Why it supports my profile",
+        text: "This category shows range. It proves that I can work across messaging, file services, networking, telephony, and broader enterprise infrastructure instead of staying inside one narrow technical box.",
+        bullets: [
+          "Supports my systems administration and IT operations fit.",
+          "Shows broad infrastructure experience in real business settings.",
+          "Useful for employers who need someone comfortable across service layers."
+        ]
+      },
+      {
+        heading: "What it says about my work style",
+        text: "I care about the services people actually use, not only back-end diagrams. Voice systems are a good example of infrastructure that becomes visible only when it breaks, so dependable delivery matters.",
+        bullets: [
+          "Shows service-minded engineering and operations support.",
+          "Strengthens my enterprise IT credibility.",
+          "Complements my networking and systems background well."
+        ]
+      }
+    ],
+    resources: [
+      { label: "Voice Work Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/IP-Phone.png" },
+      { label: "Additional Telephony Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/Issabel1.avif" },
+      { label: "Back to Blog Hub", href: "../../" }
+    ],
+    related: ["mail-server-works", "network-architecture-works", "file-server-works"]
+  },
+  "web-development-works": {
+    type: "Latest Works Note",
+    kicker: "Latest Works Category",
+    title: "Business Website Delivery and Web Presence Projects",
+    summary: "This note covers the web development work in my portfolio, where the goal was to give businesses a clean and useful online presence with clear communication and brand visibility.",
+    metaDescription: "Detailed note on business website delivery and web presence projects by Md Anisur Rahman Chowdhury.",
+    tags: ["Web Development", "Business Websites", "Public-Facing Platforms", "Brand Presence", "Digital Delivery"],
+    facts: [
+      { label: "Showcased Work", value: "5 representative website projects" },
+      { label: "Main Skills", value: "Business-facing website delivery, presentation clarity, public web presence support" },
+      { label: "Best Fit Roles", value: "Web Engineer, Solutions Engineer, Full-Stack Developer, IT Generalist" }
+    ],
+    sidebarStats: [
+      { value: "5", label: "Web projects" },
+      { value: "Public", label: "Facing systems" },
+      { value: "Brand", label: "Presentation focus" }
+    ],
+    preview: {
+      type: "image",
+      label: "Representative Work Snapshot",
+      src: "https://marcbd.com/wp-content/uploads/2025/07/Steelhead-Inn.png",
+      alt: "Steelhead Inn website screenshot",
+      title: "Practical Business Websites with Clear Messaging",
+      note: "The web work in my portfolio focuses on giving businesses a clear online presence that visitors can understand quickly and trust more easily."
+    },
+    sections: [
+      {
+        heading: "What this work is about",
+        text: "These projects are not abstract design experiments. They are practical business websites built to help visitors understand a company, its services, and its public identity with less confusion.",
+        bullets: [
+          "The main goal is clarity, not visual noise.",
+          "A business website should communicate quickly and cleanly.",
+          "This work complements my infrastructure profile with public web delivery experience."
+        ]
+      },
+      {
+        heading: "What I delivered",
+        text: "The projects in this category include different business websites, each designed to act as a simple digital front door. The focus was on readable presentation, brand communication, and usable public access.",
+        bullets: [
+          "Clear web presence for businesses and brands.",
+          "Structured presentation of services and identity.",
+          "Support for trust, visibility, and communication."
+        ]
+      },
+      {
+        heading: "Why it matters for my profile",
+        text: "This category shows that I can move between enterprise infrastructure work and client-facing web delivery. That range is useful for roles where technical people also need to think about usability and presentation.",
+        bullets: [
+          "Supports a broader engineer or technical consultant profile.",
+          "Shows flexibility across back-end and front-facing work.",
+          "Adds practical web delivery evidence to my portfolio."
+        ]
+      },
+      {
+        heading: "Why teams may care",
+        text: "These projects are useful examples for companies that need someone who can both understand technical systems and present services clearly in a public-facing way.",
+        bullets: [
+          "Relevant for full-stack, solutions, and technical delivery conversations.",
+          "Shows ability to support business outcomes, not only technical tasks.",
+          "Complements my larger systems and security background well."
+        ]
+      }
+    ],
+    resources: [
+      { label: "Open Steelhead Inn", href: "http://steelheadinn.us" },
+      { label: "Open Old MARCBD Site", href: "http://marcbd.com" },
+      { label: "Back to Blog Hub", href: "../../" }
+    ],
+    related: ["cloud-architecture-works", "datamentor-notebook-studio", "enterprise-ai-erp-paper"]
+  },
+  "network-architecture-works": {
+    type: "Latest Works Note",
+    kicker: "Latest Works Category",
+    title: "Network Architecture Design and Topology Planning",
+    summary: "This note explains the network architecture work in my portfolio, including topology planning, structured connectivity design, and infrastructure thinking for enterprise and factory environments.",
+    metaDescription: "Detailed note on network architecture design and topology planning by Md Anisur Rahman Chowdhury.",
+    tags: ["Network Architecture", "Topology Design", "Enterprise Networking", "Routing and Switching", "Infrastructure Planning"],
+    facts: [
+      { label: "Showcased Work", value: "3 representative network architecture designs" },
+      { label: "Main Skills", value: "Topology planning, enterprise connectivity, routing and switching design, infrastructure structure" },
+      { label: "Best Fit Roles", value: "Network Engineer, Network Security Engineer, Infrastructure Architect" }
+    ],
+    sidebarStats: [
+      { value: "3", label: "Architecture designs" },
+      { value: "Topology", label: "Planning core" },
+      { value: "Enterprise", label: "Production context" }
+    ],
+    preview: {
+      type: "image",
+      label: "Representative Work Snapshot",
+      src: "https://marcbd.com/wp-content/uploads/2025/07/SAG-Agrabad-Corporate-Office-Network-Topology.png",
+      alt: "S Alam Group network topology diagram",
+      title: "Planned Connectivity for Real Organizations",
+      note: "These network architecture projects show how I think before implementation: structure first, then stability, then security, then future growth."
+    },
+    sections: [
+      {
+        heading: "Why this category is important",
+        text: "A strong network does not start with random devices. It starts with structure. These designs show how I think about network planning before deployment and support work begin.",
+        bullets: [
+          "Topology design helps make implementation clearer and safer.",
+          "Good planning reduces later operational pain.",
+          "This category fits my routing, switching, and infrastructure background directly."
+        ]
+      },
+      {
+        heading: "What I focused on",
+        text: "The designs in this category focus on clear network structure for offices and operational environments. In easy language, the goal is to create a network that people can build, understand, and maintain more effectively.",
+        bullets: [
+          "Enterprise and factory environments need different planning details.",
+          "Clear topology helps security and troubleshooting later.",
+          "This work shows planning discipline, not only implementation skill."
+        ]
+      },
+      {
+        heading: "Why it supports hiring value",
+        text: "This category is especially useful for network engineering and infrastructure roles because it shows how I think at the design level, not only at the device-configuration level.",
+        bullets: [
+          "Supports network engineer and infrastructure architect positioning.",
+          "Demonstrates structured thinking around connectivity and scale.",
+          "Links naturally with my security and operations experience."
+        ]
+      },
+      {
+        heading: "How it fits my wider portfolio",
+        text: "These architecture designs connect the practical support work in my career with the cloud and security research I do now. They show that my foundation is in real network structure, not only theory.",
+        bullets: [
+          "Strong link to physical and cloud network infrastructure focus.",
+          "Complements firewall, VPN, routing, and switching experience.",
+          "Adds visual proof of planning ability in live environments."
+        ]
+      }
+    ],
+    resources: [
+      { label: "Open S. Alam Topology Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/SAG-Agrabad-Corporate-Office-Network-Topology.png" },
+      { label: "Open ARF Topology Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/ARF-Group-Factory-Network-Topology.jpg" },
+      { label: "Back to Blog Hub", href: "../../" }
+    ],
+    related: ["cloud-architecture-works", "mail-server-works", "cross-cloud-firewall"]
+  },
+  "cloud-architecture-works": {
+    type: "Latest Works Note",
+    kicker: "Latest Works Category",
+    title: "Cloud Architecture Planning and Security-Oriented Design",
+    summary: "This note covers the cloud architecture work in my portfolio, where the focus was service structure, cloud planning, and security-aware design for scalable modern systems.",
+    metaDescription: "Detailed note on cloud architecture planning and security-oriented design by Md Anisur Rahman Chowdhury.",
+    tags: ["Cloud Architecture", "Scalability", "Service Design", "Security Planning", "Modern Infrastructure"],
+    facts: [
+      { label: "Showcased Work", value: "2 representative cloud architecture designs" },
+      { label: "Main Skills", value: "Cloud planning, service structure, scalability thinking, security-aware design" },
+      { label: "Best Fit Roles", value: "Cloud Engineer, Cloud Security Engineer, Infrastructure Architect" }
+    ],
+    sidebarStats: [
+      { value: "2", label: "Cloud designs" },
+      { value: "Architecture", label: "Planning focus" },
+      { value: "Security", label: "Research link" }
+    ],
+    preview: {
+      type: "image",
+      label: "Representative Work Snapshot",
+      src: "https://marcbd.com/wp-content/uploads/2025/07/AWS-Cloud-Architechture.png",
+      alt: "AWS cloud architecture diagram",
+      title: "Structured Cloud Design with Security in Mind",
+      note: "The cloud architecture work in my portfolio sits close to my research direction. It shows how I think about structure, scale, and protection in modern infrastructure."
+    },
+    sections: [
+      {
+        heading: "Why this category matters",
+        text: "Cloud architecture is not only about putting services online. It is about designing how they connect, how they scale, and how they stay secure when the environment grows more complex.",
+        bullets: [
+          "Cloud planning affects performance, cost, and security together.",
+          "A clear architecture helps teams build with more confidence.",
+          "This category is closely connected to my research identity."
+        ]
+      },
+      {
+        heading: "What I focused on",
+        text: "The work here focuses on structured cloud design and the relationship between system architecture and security behavior. In easy English, I wanted the cloud plans to be understandable, scalable, and realistic.",
+        bullets: [
+          "Service relationships and traffic flow matter in cloud planning.",
+          "Security has to be part of the design, not added later.",
+          "The AWS-oriented work connects directly to my serverless security direction."
+        ]
+      },
+      {
+        heading: "Why it supports my job profile",
+        text: "This category helps show why I fit cloud infrastructure and cloud security roles. It connects my hands-on career background with the direction of my recent research and GitHub projects.",
+        bullets: [
+          "Supports cloud engineer and cloud security engineer positioning.",
+          "Shows thinking at the architecture level, not only support level.",
+          "Bridges practical work and research-backed direction."
+        ]
+      },
+      {
+        heading: "How it connects to the rest of my work",
+        text: "The cloud architecture category is one of the clearest bridges between my latest works, my GitHub firewall projects, and my first-author research in serverless intelligent security.",
+        bullets: [
+          "Direct link to serverless firewall research and Zero Trust themes.",
+          "Supports multi-cloud and distributed systems conversations.",
+          "Strengthens the overall logic of my portfolio story."
+        ]
+      }
+    ],
+    resources: [
+      { label: "Open AWS Architecture Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/AWS-Cloud-Architechture.png" },
+      { label: "Open Cloud Architecture Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/Cloud-Architechture.png" },
+      { label: "Back to Blog Hub", href: "../../" }
+    ],
+    related: ["network-architecture-works", "serverless-intelligent-firewall", "cross-cloud-firewall-paper"]
   }
 };

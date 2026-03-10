@@ -20,6 +20,7 @@
       </a>
       <nav class="top-links" aria-label="Blog Navigation">
         <a href="../">Main Portfolio</a>
+        <a href="posts/">All Notes</a>
         <a href="../phd/">PhD Site</a>
         <a href="../Job-Resume/Resume.pdf" target="_blank" rel="noopener">Job Resume</a>
       </nav>
@@ -65,6 +66,7 @@
           <p class="hero-text">This page is a simple and honest explanation of my work. Instead of short portfolio cards only, I wanted one place where I can explain my experience, client work, GitHub projects, and research papers in a more human way. If you are hiring, reviewing my profile, or thinking about collaboration, this page gives the bigger picture.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="../">Back to Main Portfolio</a>
+            <a class="btn btn-secondary" href="posts/">Browse All Notes</a>
             <a class="btn btn-secondary" href="#project-notes">Jump to Projects</a>
           </div>
         </div>
@@ -97,7 +99,7 @@
         <header class="story-head">
           <p class="section-tag">Latest Works</p>
           <h2>Real client work across servers, telephony, web delivery, and architecture.</h2>
-          <p>This part covers practical work I delivered for organizations. I grouped the work by type so it is easier to read. You can use the filters to focus on the part you care about most.</p>
+          <p>This part covers practical work I delivered for organizations. I grouped the work by type so it is easier to read. You can use the filters to focus on the part you care about most, and the category notes give you a longer explanation for each service area.</p>
         </header>
         <div class="filter-bar" id="workFilterBar" aria-label="Latest Works Filters">
           <button class="active" data-filter="all" type="button">All</button>
@@ -108,6 +110,7 @@
           <button data-filter="network" type="button">Network Architecture</button>
           <button data-filter="cloud" type="button">Cloud Architecture</button>
         </div>
+        <div id="workCategoryNoteGrid" class="work-category-note-grid"></div>
         <div id="worksGrid" class="work-note-grid"></div>
       </section>
 

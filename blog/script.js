@@ -267,6 +267,60 @@ const works = [
   }
 ];
 
+const workDetailMap = new Map([
+  ["mail", "posts/mail-server-works/"],
+  ["file", "posts/file-server-works/"],
+  ["voice", "posts/ip-telephony-works/"],
+  ["web", "posts/web-development-works/"],
+  ["network", "posts/network-architecture-works/"],
+  ["cloud", "posts/cloud-architecture-works/"]
+]);
+
+const workCategoryNotes = [
+  {
+    category: "mail",
+    label: "Mail Server",
+    title: "Business Email Infrastructure",
+    text: "Read the longer note about production mail systems, domain-based communication, and operational administration.",
+    href: "posts/mail-server-works/"
+  },
+  {
+    category: "file",
+    label: "File Server",
+    title: "Shared Storage and Access Control",
+    text: "Read the note about structured storage, file access, and dependable collaboration support for business teams.",
+    href: "posts/file-server-works/"
+  },
+  {
+    category: "voice",
+    label: "IP-Telephony",
+    title: "Voice Infrastructure and VoIP",
+    text: "Read the note about business voice communication systems and practical telephony support work.",
+    href: "posts/ip-telephony-works/"
+  },
+  {
+    category: "web",
+    label: "Web Development",
+    title: "Business Website Delivery",
+    text: "Read the note about public-facing websites, brand clarity, and practical web delivery for businesses.",
+    href: "posts/web-development-works/"
+  },
+  {
+    category: "network",
+    label: "Network Architecture",
+    title: "Topology Planning and Design",
+    text: "Read the note about enterprise network structure, planning discipline, and topology design thinking.",
+    href: "posts/network-architecture-works/"
+  },
+  {
+    category: "cloud",
+    label: "Cloud Architecture",
+    title: "Security-Oriented Cloud Planning",
+    text: "Read the note about scalable cloud design, service structure, and security-aware architecture planning.",
+    href: "posts/cloud-architecture-works/"
+  }
+];
+
 const projects = [
   {
     label: "Cloud Security Engineering",
@@ -561,12 +615,19 @@ const publicationDetailMap = new Map([
 
 const expertiseGrid = document.getElementById("expertiseGrid");
 const worksGrid = document.getElementById("worksGrid");
+const workCategoryNoteGrid = document.getElementById("workCategoryNoteGrid");
 const projectStoryGrid = document.getElementById("projectStoryGrid");
 const publicationStack = document.getElementById("publicationStack");
 const workFilterBar = document.getElementById("workFilterBar");
 const publicationFilterBar = document.getElementById("publicationFilterBar");
 const progressBar = document.getElementById("pageProgress");
 const yearNode = document.getElementById("currentYear");
+
+const renderExternalAction = (label, href, className = "") =>
+  `<a${className ? ` class="${className}"` : ""} href="${href}" target="_blank" rel="noopener">${label}</a>`;
+
+const renderInternalAction = (label, href, className = "") =>
+  `<a${className ? ` class="${className}"` : ""} href="${href}">${label}</a>`;
 
 const renderExpertise = () => {
   expertiseGrid.innerHTML = expertiseNotes
@@ -596,9 +657,39 @@ const renderWorks = () => {
               <h3>${item.title}</h3>
               <p>${item.description}</p>
               <div class="work-links">
-                ${item.links.map((link) => `<a href="${link.href}" target="_blank" rel="noopener">${link.label}</a>`).join("")}
+                ${item.links
+                  .map((link) =>
+                    renderExternalAction(
+                      link.label,
+                      link.href,
+                      link.label.includes("Open") ? "link-live" : "link-soft"
+                    )
+                  )
+                  .join("")}
+                ${workDetailMap.get(item.category) ? renderInternalAction("Read Category Note", workDetailMap.get(item.category), "link-note") : ""}
               </div>
             </div>
+          </div>
+        </article>
+      `
+    )
+    .join("");
+};
+
+const renderWorkCategoryNotes = () => {
+  if (!workCategoryNoteGrid) {
+    return;
+  }
+
+  workCategoryNoteGrid.innerHTML = workCategoryNotes
+    .map(
+      (item) => `
+        <article class="work-category-note reveal" data-worknote="${item.category}">
+          <p class="section-tag">${item.label}</p>
+          <h3>${item.title}</h3>
+          <p>${item.text}</p>
+          <div class="category-note-actions">
+            <a class="link-note" href="${item.href}">Read Full Category Note</a>
           </div>
         </article>
       `
@@ -626,9 +717,9 @@ const renderProjects = () => {
               ${item.points.map((point) => `<li>${point}</li>`).join("")}
             </ul>
             <div class="project-links">
-              <a href="${item.repo}" target="_blank" rel="noopener">View Repo</a>
-              <a href="${item.demo}" target="_blank" rel="noopener">Open Live Demo</a>
-              ${projectDetailMap.get(item.title) ? `<a href="${projectDetailMap.get(item.title)}">Read Full Note</a>` : ""}
+              ${renderExternalAction("View Repo", item.repo, "link-source")}
+              ${renderExternalAction("Open Live Demo", item.demo, "link-live")}
+              ${projectDetailMap.get(item.title) ? renderInternalAction("Read Full Note", projectDetailMap.get(item.title), "link-note") : ""}
             </div>
           </div>
         </article>
@@ -655,8 +746,16 @@ const renderPublications = () => {
             <p>${item.text}</p>
             ${item.links.length || publicationDetailMap.get(item.title)
               ? `<div class="publication-links">
-                  ${item.links.map((link) => `<a href="${link.href}" target="_blank" rel="noopener">${link.label}</a>`).join("")}
-                  ${publicationDetailMap.get(item.title) ? `<a href="${publicationDetailMap.get(item.title)}">Read Full Note</a>` : ""}
+                  ${item.links
+                    .map((link) =>
+                      renderExternalAction(
+                        link.label,
+                        link.href,
+                        link.label === "IEEE Xplore" || link.label === "Venue" ? "link-live" : "link-source"
+                      )
+                    )
+                    .join("")}
+                  ${publicationDetailMap.get(item.title) ? renderInternalAction("Read Full Note", publicationDetailMap.get(item.title), "link-note") : ""}
                 </div>`
               : ""}
           </div>
@@ -683,6 +782,7 @@ const setupReveal = () => {
 
 const setupWorkFilters = () => {
   const cards = () => document.querySelectorAll("#worksGrid .work-note");
+  const noteCards = () => document.querySelectorAll("#workCategoryNoteGrid .work-category-note");
   if (!workFilterBar) {
     return;
   }
@@ -695,6 +795,12 @@ const setupWorkFilters = () => {
 
       cards().forEach((card) => {
         const category = card.getAttribute("data-workcat") || "";
+        const show = filter === "all" || category.includes(filter);
+        card.classList.toggle("hidden-card", !show);
+      });
+
+      noteCards().forEach((card) => {
+        const category = card.getAttribute("data-worknote") || "";
         const show = filter === "all" || category.includes(filter);
         card.classList.toggle("hidden-card", !show);
       });
@@ -773,6 +879,7 @@ if (yearNode) {
 }
 
 renderExpertise();
+renderWorkCategoryNotes();
 renderWorks();
 renderProjects();
 renderPublications();

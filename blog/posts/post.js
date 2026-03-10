@@ -59,6 +59,22 @@ const renderPreview = (preview) => {
     return;
   }
 
+  if (preview.type === "image") {
+    previewCard.innerHTML = `
+      <article class="preview-card preview-image-card reveal">
+        <div class="preview-image-frame">
+          <img src="${preview.src}" alt="${preview.alt || post.title}">
+        </div>
+        <div class="preview-image-copy">
+          <p class="preview-label">${preview.label}</p>
+          <h2>${preview.title}</h2>
+          <p>${preview.note}</p>
+        </div>
+      </article>
+    `;
+    return;
+  }
+
   previewCard.innerHTML = `
     <article class="preview-card preview-citation reveal">
       <p class="preview-label">${preview.label}</p>
@@ -100,6 +116,7 @@ const renderPost = () => {
   const primaryLink = post.resources?.[0];
   heroActions.innerHTML = `
     ${primaryLink ? `<a class="btn btn-primary" href="${primaryLink.href}"${primaryLink.href.startsWith("http") ? ' target="_blank" rel="noopener"' : ""}>${primaryLink.label}</a>` : ""}
+    <a class="btn btn-secondary" href="../">All Notes</a>
     <a class="btn btn-secondary" href="../../">Back to Blog Hub</a>
     <a class="btn btn-secondary" href="../../../">Main Portfolio</a>
   `;
