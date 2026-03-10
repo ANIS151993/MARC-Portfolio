@@ -63,7 +63,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "Open Live Demo", href: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-1/" },
       { label: "View Source Repo", href: "https://github.com/ANIS151993/Serverless-Intelligent-Firewall-Research-1.git" },
-      { label: "Related IEEE Paper", href: "../firewall-zero-trust-paper/" }
+      { label: "Related IEEE Paper", href: "/blog/posts/firewall-zero-trust-paper/" }
     ],
     related: ["cross-cloud-firewall", "autonomous-firewall", "firewall-zero-trust-paper"]
   },
@@ -131,7 +131,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "Open Live Demo", href: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-2/" },
       { label: "View Source Repo", href: "https://github.com/ANIS151993/Serverless-Intelligent-Firewall-Research-2.git" },
-      { label: "Read Related Paper Note", href: "../cross-cloud-firewall-paper/" }
+      { label: "Read Related Paper Note", href: "/blog/posts/cross-cloud-firewall-paper/" }
     ],
     related: ["serverless-intelligent-firewall", "autonomous-firewall", "cross-cloud-firewall-paper"]
   },
@@ -199,7 +199,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "Open Live Demo", href: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-3/" },
       { label: "View Source Repo", href: "https://github.com/ANIS151993/Serverless-Intelligent-Firewall-Research-3.git" },
-      { label: "Read Paper Pipeline Context", href: "../cross-cloud-firewall-paper/" }
+      { label: "Read Paper Pipeline Context", href: "/blog/posts/cross-cloud-firewall-paper/" }
     ],
     related: ["serverless-intelligent-firewall", "cross-cloud-firewall", "self-correcting-llm"]
   },
@@ -267,7 +267,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "Open Live Demo", href: "https://anis151993.github.io/Notebook-Studio/" },
       { label: "View Source Repo", href: "https://github.com/ANIS151993/Notebook-Studio.git" },
-      { label: "Back to Blog Hub", href: "../../" }
+      { label: "Back to Blog Hub", href: "/blog/" }
     ],
     related: ["distributed-ai-ensemble", "self-correcting-llm", "enterprise-ai-erp-paper"]
   },
@@ -335,7 +335,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "Open Live Demo", href: "https://anis151993.github.io/Distributed-AI/" },
       { label: "View Source Repo", href: "https://github.com/ANIS151993/Distributed-AI.git" },
-      { label: "Read Related Paper Note", href: "../distributed-ai-paper/" }
+      { label: "Read Related Paper Note", href: "/blog/posts/distributed-ai-paper/" }
     ],
     related: ["self-correcting-llm", "datamentor-notebook-studio", "distributed-ai-paper"]
   },
@@ -403,7 +403,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "Open Live Demo", href: "https://anis151993.github.io/Self-Correcting-LLM-localhost/" },
       { label: "View Source Repo", href: "https://github.com/ANIS151993/Self-Correcting-LLM-localhost.git" },
-      { label: "Read Related Paper Note", href: "../self-correcting-math-paper/" }
+      { label: "Read Related Paper Note", href: "/blog/posts/self-correcting-math-paper/" }
     ],
     related: ["distributed-ai-ensemble", "datamentor-notebook-studio", "self-correcting-math-paper"]
   },
@@ -471,7 +471,7 @@ window.blogPostCatalog = {
     ],
     resources: [
       { label: "Open IEEE Xplore", href: "https://ieeexplore.ieee.org/abstract/document/11261452/" },
-      { label: "See Related Project", href: "../serverless-intelligent-firewall/" },
+      { label: "See Related Project", href: "/blog/posts/serverless-intelligent-firewall/" },
       { label: "View Google Scholar", href: "https://scholar.google.com/citations?user=NQyywPoAAAAJ" }
     ],
     related: ["serverless-intelligent-firewall", "cross-cloud-firewall-paper", "autonomous-firewall"]
@@ -541,7 +541,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "Open IEEE Xplore", href: "https://ieeexplore.ieee.org/abstract/document/11294238/" },
       { label: "View Google Scholar", href: "https://scholar.google.com/citations?user=NQyywPoAAAAJ" },
-      { label: "Back to Blog Hub", href: "../../" }
+      { label: "Back to Blog Hub", href: "/blog/" }
     ],
     related: ["enterprise-ai-erp-paper", "distributed-ai-paper", "cross-cloud-firewall"]
   },
@@ -610,7 +610,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "Open IEEE Xplore", href: "https://ieeexplore.ieee.org/abstract/document/11295090/" },
       { label: "View Google Scholar", href: "https://scholar.google.com/citations?user=NQyywPoAAAAJ" },
-      { label: "See Data Workflow Project", href: "../datamentor-notebook-studio/" }
+      { label: "See Data Workflow Project", href: "/blog/posts/datamentor-notebook-studio/" }
     ],
     related: ["datamentor-notebook-studio", "edge-resource-allocation-paper", "deepfake-detection-paper"]
   },
@@ -679,7 +679,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "Open IEEE Xplore", href: "https://ieeexplore.ieee.org/abstract/document/11381812/" },
       { label: "View Google Scholar", href: "https://scholar.google.com/citations?user=NQyywPoAAAAJ" },
-      { label: "Back to Blog Hub", href: "../../" }
+      { label: "Back to Blog Hub", href: "/blog/" }
     ],
     related: ["enterprise-ai-erp-paper", "self-correcting-math-paper", "self-correcting-llm"]
   },
@@ -746,7 +746,7 @@ window.blogPostCatalog = {
       }
     ],
     resources: [
-      { label: "See Related Project", href: "../cross-cloud-firewall/" },
+      { label: "See Related Project", href: "/blog/posts/cross-cloud-firewall/" },
       { label: "Open Project Repo", href: "https://github.com/ANIS151993/Serverless-Intelligent-Firewall-Research-2.git" },
       { label: "Open Project Demo", href: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-2/" }
     ],
@@ -886,7 +886,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "View Source Repo", href: "https://github.com/ANIS151993/Distributed-AI.git" },
       { label: "Open Live Demo", href: "https://anis151993.github.io/Distributed-AI/" },
-      { label: "See Related Project", href: "../distributed-ai-ensemble/" }
+      { label: "See Related Project", href: "/blog/posts/distributed-ai-ensemble/" }
     ],
     related: ["distributed-ai-ensemble", "self-correcting-math-paper", "datamentor-notebook-studio"]
   },
@@ -956,7 +956,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "Open ARF Mail Server", href: "http://mail.arfgroupbd.com" },
       { label: "Open S. Alam Group Mail Server", href: "http://mail.s.alamgroupbd.com" },
-      { label: "Back to Blog Hub", href: "../../" }
+      { label: "Back to Blog Hub", href: "/blog/" }
     ],
     related: ["file-server-works", "network-architecture-works", "cloud-architecture-works"]
   },
@@ -1026,7 +1026,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "Open ARF File Server", href: "http://file.arfgroupbd.com" },
       { label: "Open S. Alam Group File Server", href: "http://file.s.alamgroupbd.com" },
-      { label: "Back to Blog Hub", href: "../../" }
+      { label: "Back to Blog Hub", href: "/blog/" }
     ],
     related: ["mail-server-works", "network-architecture-works", "cloud-architecture-works"]
   },
@@ -1096,7 +1096,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "Voice Work Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/IP-Phone.png" },
       { label: "Additional Telephony Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/Issabel1.avif" },
-      { label: "Back to Blog Hub", href: "../../" }
+      { label: "Back to Blog Hub", href: "/blog/" }
     ],
     related: ["mail-server-works", "network-architecture-works", "file-server-works"]
   },
@@ -1166,7 +1166,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "Open Steelhead Inn", href: "http://steelheadinn.us" },
       { label: "Open Old MARCBD Site", href: "http://marcbd.com" },
-      { label: "Back to Blog Hub", href: "../../" }
+      { label: "Back to Blog Hub", href: "/blog/" }
     ],
     related: ["cloud-architecture-works", "datamentor-notebook-studio", "enterprise-ai-erp-paper"]
   },
@@ -1236,7 +1236,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "Open S. Alam Topology Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/SAG-Agrabad-Corporate-Office-Network-Topology.png" },
       { label: "Open ARF Topology Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/ARF-Group-Factory-Network-Topology.jpg" },
-      { label: "Back to Blog Hub", href: "../../" }
+      { label: "Back to Blog Hub", href: "/blog/" }
     ],
     related: ["cloud-architecture-works", "mail-server-works", "cross-cloud-firewall"]
   },
@@ -1306,7 +1306,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "Open AWS Architecture Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/AWS-Cloud-Architechture.png" },
       { label: "Open Cloud Architecture Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/Cloud-Architechture.png" },
-      { label: "Back to Blog Hub", href: "../../" }
+      { label: "Back to Blog Hub", href: "/blog/" }
     ],
     related: ["network-architecture-works", "serverless-intelligent-firewall", "cross-cloud-firewall-paper"]
   }

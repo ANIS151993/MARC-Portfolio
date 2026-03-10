@@ -268,12 +268,12 @@ const works = [
 ];
 
 const workDetailMap = new Map([
-  ["mail", "posts/mail-server-works/"],
-  ["file", "posts/file-server-works/"],
-  ["voice", "posts/ip-telephony-works/"],
-  ["web", "posts/web-development-works/"],
-  ["network", "posts/network-architecture-works/"],
-  ["cloud", "posts/cloud-architecture-works/"]
+  ["mail", "/blog/posts/mail-server-works/"],
+  ["file", "/blog/posts/file-server-works/"],
+  ["voice", "/blog/posts/ip-telephony-works/"],
+  ["web", "/blog/posts/web-development-works/"],
+  ["network", "/blog/posts/network-architecture-works/"],
+  ["cloud", "/blog/posts/cloud-architecture-works/"]
 ]);
 
 const workCategoryNotes = [
@@ -282,42 +282,42 @@ const workCategoryNotes = [
     label: "Mail Server",
     title: "Business Email Infrastructure",
     text: "Read the longer note about production mail systems, domain-based communication, and operational administration.",
-    href: "posts/mail-server-works/"
+    href: "/blog/posts/mail-server-works/"
   },
   {
     category: "file",
     label: "File Server",
     title: "Shared Storage and Access Control",
     text: "Read the note about structured storage, file access, and dependable collaboration support for business teams.",
-    href: "posts/file-server-works/"
+    href: "/blog/posts/file-server-works/"
   },
   {
     category: "voice",
     label: "IP-Telephony",
     title: "Voice Infrastructure and VoIP",
     text: "Read the note about business voice communication systems and practical telephony support work.",
-    href: "posts/ip-telephony-works/"
+    href: "/blog/posts/ip-telephony-works/"
   },
   {
     category: "web",
     label: "Web Development",
     title: "Business Website Delivery",
     text: "Read the note about public-facing websites, brand clarity, and practical web delivery for businesses.",
-    href: "posts/web-development-works/"
+    href: "/blog/posts/web-development-works/"
   },
   {
     category: "network",
     label: "Network Architecture",
     title: "Topology Planning and Design",
     text: "Read the note about enterprise network structure, planning discipline, and topology design thinking.",
-    href: "posts/network-architecture-works/"
+    href: "/blog/posts/network-architecture-works/"
   },
   {
     category: "cloud",
     label: "Cloud Architecture",
     title: "Security-Oriented Cloud Planning",
     text: "Read the note about scalable cloud design, service structure, and security-aware architecture planning.",
-    href: "posts/cloud-architecture-works/"
+    href: "/blog/posts/cloud-architecture-works/"
   }
 ];
 
@@ -403,12 +403,12 @@ const projects = [
 ];
 
 const projectDetailMap = new Map([
-  ["Serverless Intelligent Firewall", "posts/serverless-intelligent-firewall/"],
-  ["Towards a Serverless Intelligent Firewall: Cross-Cloud Adaptation", "posts/cross-cloud-firewall/"],
-  ["Autonomous Self-Learning Serverless Intelligent Firewall", "posts/autonomous-firewall/"],
-  ["DataMentor / Notebook Studio", "posts/datamentor-notebook-studio/"],
-  ["A Local Distributed Multi-Agent LLM Ensemble System for Complex Problem Solving", "posts/distributed-ai-ensemble/"],
-  ["Teaching Large Language Models to Think Twice", "posts/self-correcting-llm/"]
+  ["Serverless Intelligent Firewall", "/blog/posts/serverless-intelligent-firewall/"],
+  ["Towards a Serverless Intelligent Firewall: Cross-Cloud Adaptation", "/blog/posts/cross-cloud-firewall/"],
+  ["Autonomous Self-Learning Serverless Intelligent Firewall", "/blog/posts/autonomous-firewall/"],
+  ["DataMentor / Notebook Studio", "/blog/posts/datamentor-notebook-studio/"],
+  ["A Local Distributed Multi-Agent LLM Ensemble System for Complex Problem Solving", "/blog/posts/distributed-ai-ensemble/"],
+  ["Teaching Large Language Models to Think Twice", "/blog/posts/self-correcting-llm/"]
 ]);
 
 const publications = [
@@ -604,13 +604,13 @@ const publications = [
 ];
 
 const publicationDetailMap = new Map([
-  ["Towards a Serverless Intelligent Firewall: AI-Driven Security, and Zero-Trust Architectures", "posts/firewall-zero-trust-paper/"],
-  ["Auction-Based Dynamic Resource Allocation for Optimized Edge Computing in Distributed Networks", "posts/edge-resource-allocation-paper/"],
-  ["AI and Cloud Computing in Business Systems: A Hybrid Model for Enhancing Enterprise Resource Planning", "posts/enterprise-ai-erp-paper/"],
-  ["Deepfake Detection in MIS: Leveraging DenseNet and Multi-Scale Information for Enhanced Digital Forensics", "posts/deepfake-detection-paper/"],
-  ["Towards a Serverless Intelligent Firewall: Integrating Cross-Cloud Adaptation, AI-Driven Security, and Zero-Trust Architectures", "posts/cross-cloud-firewall-paper/"],
-  ["Teaching Large Language Models to Think Twice: A Three-Stage Framework for Self-Correcting Mathematical Reasoning", "posts/self-correcting-math-paper/"],
-  ["A Local Distributed Multi-Agent LLM Ensemble System for Complex Problem Solving", "posts/distributed-ai-paper/"]
+  ["Towards a Serverless Intelligent Firewall: AI-Driven Security, and Zero-Trust Architectures", "/blog/posts/firewall-zero-trust-paper/"],
+  ["Auction-Based Dynamic Resource Allocation for Optimized Edge Computing in Distributed Networks", "/blog/posts/edge-resource-allocation-paper/"],
+  ["AI and Cloud Computing in Business Systems: A Hybrid Model for Enhancing Enterprise Resource Planning", "/blog/posts/enterprise-ai-erp-paper/"],
+  ["Deepfake Detection in MIS: Leveraging DenseNet and Multi-Scale Information for Enhanced Digital Forensics", "/blog/posts/deepfake-detection-paper/"],
+  ["Towards a Serverless Intelligent Firewall: Integrating Cross-Cloud Adaptation, AI-Driven Security, and Zero-Trust Architectures", "/blog/posts/cross-cloud-firewall-paper/"],
+  ["Teaching Large Language Models to Think Twice: A Three-Stage Framework for Self-Correcting Mathematical Reasoning", "/blog/posts/self-correcting-math-paper/"],
+  ["A Local Distributed Multi-Agent LLM Ensemble System for Complex Problem Solving", "/blog/posts/distributed-ai-paper/"]
 ]);
 
 const expertiseGrid = document.getElementById("expertiseGrid");

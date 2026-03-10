@@ -43,7 +43,7 @@ const renderNotFound = () => {
     postSummary.textContent = "The page slug does not match a blog note. Please return to the main blog page.";
   }
   if (heroActions) {
-    heroActions.innerHTML = '<a class="btn btn-primary" href="../../">Back to Blog Hub</a>';
+    heroActions.innerHTML = '<a class="btn btn-primary" href="/blog/">Back to Blog Hub</a>';
   }
 };
 
@@ -183,9 +183,9 @@ const renderPost = () => {
   const primaryLink = post.resources?.[0];
   heroActions.innerHTML = `
     ${primaryLink ? `<a class="btn btn-primary" href="${primaryLink.href}"${primaryLink.href.startsWith("http") ? ' target="_blank" rel="noopener"' : ""}>${primaryLink.label}</a>` : ""}
-    <a class="btn btn-secondary" href="../">All Notes</a>
-    <a class="btn btn-secondary" href="../../">Back to Blog Hub</a>
-    <a class="btn btn-secondary" href="../../../">Main Portfolio</a>
+    <a class="btn btn-secondary" href="/blog/posts/">All Notes</a>
+    <a class="btn btn-secondary" href="/blog/">Back to Blog Hub</a>
+    <a class="btn btn-secondary" href="/">Main Portfolio</a>
   `;
 
   renderPreview(post.preview);
@@ -251,7 +251,7 @@ const renderPost = () => {
           <div class="related-tags">
             ${related.tags.slice(0, 3).map((tag) => `<span>${tag}</span>`).join("")}
           </div>
-          <a class="link-note" href="../${slug}/">Read Full Note</a>
+          <a class="link-note" href="/blog/posts/${slug}/">Read Full Note</a>
         </article>
       `;
     })

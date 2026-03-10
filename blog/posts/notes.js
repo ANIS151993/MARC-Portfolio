@@ -138,8 +138,8 @@ const renderNotes = () => {
               ${note.tags.slice(0, 5).map((tag) => `<span>${tag}</span>`).join("")}
             </div>
             <div class="note-actions">
-              <a class="note-link" href="./${note.slug}/">Open Note</a>
-              <a class="blog-link" href="../">Back to Blog Hub</a>
+              <a class="note-link" href="/blog/posts/${note.slug}/">Open Note</a>
+              <a class="blog-link" href="/blog/">Back to Blog Hub</a>
             </div>
           </article>
         `
