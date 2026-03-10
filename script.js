@@ -125,7 +125,6 @@ const orderSection = document.getElementById("order");
 const checkoutHelp = document.getElementById("checkoutHelp");
 const planTriggers = document.querySelectorAll(".plan-trigger");
 const pricePlans = document.querySelectorAll(".price-plan");
-const interactiveCards = document.querySelectorAll(".interactive-card");
 
 if (projectFilters && projectCards.length) {
   projectFilters.querySelectorAll("button").forEach((button) => {
@@ -170,7 +169,6 @@ const attachPointerGlow = (card) => {
 };
 
 pricePlans.forEach(attachPointerGlow);
-interactiveCards.forEach(attachPointerGlow);
 
 const checkoutLinks = window.MARC_CHECKOUT_LINKS || {};
 const checkoutButtons = document.querySelectorAll(".checkout-btn");
