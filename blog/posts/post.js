@@ -176,7 +176,7 @@ const renderPost = () => {
   heroKicker.textContent = post.kicker;
   postTitle.textContent = post.title;
   postSummary.textContent = post.summary;
-  previewLabel.textContent = post.preview?.label || "Overview";
+  previewLabel.textContent = post.preview?.label || "A quick look";
 
   tagCloud.innerHTML = post.tags.map((tag) => `<span>${tag}</span>`).join("");
 

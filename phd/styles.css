@@ -277,6 +277,17 @@ h1 {
   opacity: 0.75;
 }
 
+.section-copy {
+  max-width: 760px;
+  margin: 0.7rem auto 0;
+  color: #4e5a6e;
+  line-height: 1.72;
+}
+
+.section-copy-dark {
+  color: #d4dced;
+}
+
 .split-grid,
 .resume-grid {
   display: grid;
@@ -382,6 +393,38 @@ h1 {
   margin: 0;
   line-height: 1.66;
   color: #dce3f1;
+}
+
+.focus-card p + p {
+  margin-top: 0.78rem;
+}
+
+.focus-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.focus-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffe0c9;
+  font-weight: 700;
+  transition: background 0.22s ease, border-color 0.22s ease, transform 0.22s ease, color 0.22s ease;
+}
+
+.focus-links a:hover,
+.focus-links a:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(255, 180, 128, 0.48);
+  background: rgba(255, 119, 32, 0.16);
+  color: #fff5eb;
 }
 
 .pub-card.hidden-card {

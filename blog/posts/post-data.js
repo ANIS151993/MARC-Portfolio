@@ -33,7 +33,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "What is inside the system",
+        heading: "What I actually put into the system",
         text: "The project is built around serverless security logic and Zero Trust principles. Instead of assuming every request is safe, the system is designed to check, verify, and decide based on context.",
         bullets: [
           "Serverless design keeps the architecture lightweight and cloud-oriented.",
@@ -42,7 +42,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "My personal contribution",
+        heading: "What I personally handled",
         text: "This is not only a concept I described. I shaped the idea, worked on the research direction, structured the demo, and used it as a foundation for broader firewall research and publication work.",
         bullets: [
           "I drove the security idea and the project direction.",
@@ -51,8 +51,8 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "Why it matters for hiring and collaboration",
-        text: "I use this project to show that I can think at the level of architecture, security policy, and system behavior at the same time. It is relevant for teams working on cloud defense, infrastructure protection, serverless platforms, and security engineering.",
+        heading: "Why I still point people to this project",
+        text: "I use this project to show that I can think at the level of architecture, security policy, and system behavior at the same time. I think it speaks most clearly to teams working on cloud defense, infrastructure protection, serverless platforms, and security engineering.",
         bullets: [
           "Shows architecture thinking, not only coding.",
           "Demonstrates security reasoning in a cloud-native context.",
@@ -92,7 +92,7 @@ window.blogPostCatalog = {
     },
     sections: [
       {
-        heading: "The problem behind this project",
+        heading: "The problem that kept bothering me",
         text: "Many organizations do not stay inside one cloud anymore. They use mixed environments, and that creates a security gap. A static firewall design can become too narrow when workloads, policies, and trust boundaries move across platforms.",
         bullets: [
           "Different cloud environments create different assumptions and security surfaces.",
@@ -101,7 +101,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "What I explored here",
+        heading: "What I wanted to test",
         text: "I extended the original serverless firewall idea into a cross-cloud model. The main goal was to study how policy, trust, and protective behavior can stay effective when infrastructure is distributed.",
         bullets: [
           "Cross-cloud adaptation is the core design question.",
@@ -110,7 +110,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "How this connects to my research",
+        heading: "How it fits into my bigger research direction",
         text: "I tie this project closely to one of my under-review first-author papers. It shows how I use GitHub and live demos to support deeper research work, not only to showcase code.",
         bullets: [
           "The project supports my serverless intelligent firewall research pipeline.",
@@ -119,8 +119,8 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "Why teams may care about it",
-        text: "I see this work as relevant for teams dealing with hybrid and multi-cloud operations, infrastructure security, architecture review, and modern policy enforcement.",
+        heading: "Why I think teams care about it",
+        text: "I think this work speaks most clearly to teams dealing with hybrid and multi-cloud operations, infrastructure security, architecture review, and modern policy enforcement.",
         bullets: [
           "Shows understanding of distributed infrastructure risk.",
           "Supports hiring conversations around cloud defense and platform security.",
@@ -160,7 +160,7 @@ window.blogPostCatalog = {
     },
     sections: [
       {
-        heading: "The main idea",
+        heading: "The idea I kept coming back to",
         text: "Traditional firewall logic can become outdated when threats change quickly. In this version, I asked whether a defensive system can learn from incoming intelligence and improve its own decisions over time.",
         bullets: [
           "The design moves toward self-learning security behavior.",
@@ -169,7 +169,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "What makes it different",
+        heading: "What changed in this version",
         text: "This version is not only about filtering traffic. It is about combining threat feeds, machine learning ideas, and Zero Trust architecture into a stronger protection model.",
         bullets: [
           "REST API-driven threat feeds help the design stay responsive.",
@@ -178,7 +178,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "My role and ownership",
+        heading: "What I personally owned",
         text: "This is one of the projects where my research direction, systems interest, and engineering identity come together most clearly. I drove the concept and used it as part of my in-preparation journal direction.",
         bullets: [
           "I shaped the research idea and the practical framing of the project.",
@@ -187,7 +187,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "Why it matters",
+        heading: "Why I still point to this work",
         text: "For employers and collaborators, this project shows that I do not stop at a working demo. I keep asking how the system should evolve when the real environment becomes more dynamic and more complex.",
         bullets: [
           "Strong fit for advanced cloud security and defensive research work.",
@@ -228,7 +228,7 @@ window.blogPostCatalog = {
     },
     sections: [
       {
-        heading: "Why I care about this kind of project",
+        heading: "Why I cared enough to build this",
         text: "A lot of technical work becomes hard to trust because it is not easy to repeat. I care about reproducibility because it makes research, analysis, and reporting more reliable for other people too.",
         bullets: [
           "A useful workflow should be easy to run again later.",
@@ -246,7 +246,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "How it fits my wider profile",
+        heading: "How it fits the bigger picture for me",
         text: "I use this project to show that my work is not limited to security. I also think a lot about process quality, reproducibility, and how to make technical systems easier for teams to use and trust.",
         bullets: [
           "Adds data workflow engineering to my broader portfolio.",
@@ -255,7 +255,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "Practical value",
+        heading: "Where I think it helps",
         text: "I think this kind of project matters for people who need consistent data handling, cleaner analysis flow, and technical outputs that others can review later without confusion.",
         bullets: [
           "Helps technical teams standardize repeatable tasks.",
@@ -267,7 +267,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "Open Live Demo", href: "https://anis151993.github.io/Notebook-Studio/" },
       { label: "View Source Repo", href: "https://github.com/ANIS151993/Notebook-Studio.git" },
-      { label: "Back to Blog Hub", href: "/blog/" }
+      { label: "Back to My Blog", href: "/blog/" }
     ],
     related: ["distributed-ai-ensemble", "self-correcting-llm", "enterprise-ai-erp-paper"]
   },
@@ -296,7 +296,7 @@ window.blogPostCatalog = {
     },
     sections: [
       {
-        heading: "The question behind the project",
+        heading: "The question I kept coming back to",
         text: "Sometimes one model is not the best way to solve a hard problem. I wanted to explore whether a team of local agents could split work, check one another, and collaborate more effectively.",
         bullets: [
           "The project treats AI as a system, not only a single model output.",
@@ -305,7 +305,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "What the system demonstrates",
+        heading: "What I wanted the system to show",
         text: "In this project, I focused on orchestration, collaboration, and structured reasoning across multiple agents. It shows how work can be divided and combined in a more thoughtful way.",
         bullets: [
           "Task splitting supports specialized reasoning steps.",
@@ -314,7 +314,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "Why I like this work",
+        heading: "Why I still like this work",
         text: "I like this project because it sits between AI and systems engineering. It is not only about model prompts. It is about design, coordination, control flow, and how a technical system behaves when several parts work together.",
         bullets: [
           "It supports my profile as both a builder and a researcher.",
@@ -323,8 +323,8 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "Where I see this being useful",
-        text: "This kind of work is relevant for teams exploring local AI systems, multi-agent coordination, advanced reasoning workflows, and private or controllable AI environments.",
+        heading: "Where I think this can help",
+        text: "I think this kind of work will matter most to teams exploring local AI systems, multi-agent coordination, advanced reasoning workflows, and private or controllable AI environments.",
         bullets: [
           "Relevant for AI tooling and research groups.",
           "Useful for distributed systems and orchestration conversations.",
@@ -364,7 +364,7 @@ window.blogPostCatalog = {
     },
     sections: [
       {
-        heading: "Why this problem matters",
+        heading: "Why I kept coming back to this problem",
         text: "Large language models can sound sure even when the answer is wrong. That creates a trust problem. I wanted to explore whether a staged review process could improve reasoning quality before the final answer is shown.",
         bullets: [
           "Reliability matters more in tasks where mistakes are costly.",
@@ -373,16 +373,16 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "How the framework works",
-        text: "The central idea is a three-stage process where the model first attempts an answer, then revisits the reasoning, and then produces a cleaner final output. In easy English, it is like teaching the system to pause and check itself.",
+        heading: "How I structured the framework",
+        text: "The central idea is a three-stage process where the model first attempts an answer, then revisits the reasoning, and then produces a cleaner final output. I think of it as teaching the system to pause and check itself.",
         bullets: [
           "Stage-based review helps expose weak reasoning earlier.",
           "The framework is designed to reduce overconfident wrong answers.",
-          "The project is useful for trust-focused AI experimentation."
+          "I think the project is especially useful for trust-focused AI experimentation."
         ]
       },
       {
-        heading: "My role and project ownership",
+        heading: "What I personally handled",
         text: "This is my idea and one of the projects where I handled the concept, methodology direction, implementation framing, and practical explanation very directly. It also connects to one of my under-review papers.",
         bullets: [
           "I drove the research question and technical framing.",
@@ -391,7 +391,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "Why it matters beyond this demo",
+        heading: "Why I think it matters beyond the demo",
         text: "The bigger point is not only mathematics. The bigger point is trustworthy AI. If models can learn to review themselves better, we can build systems that are more dependable in education, analysis, and decision support tasks.",
         bullets: [
           "Useful for trustworthy AI and reasoning-evaluation discussions.",
@@ -433,7 +433,7 @@ window.blogPostCatalog = {
     },
     sections: [
       {
-        heading: "Research question",
+        heading: "The question I wanted to answer",
         text: "In this paper, I asked how we can move from static firewall logic toward a more intelligent and cloud-native protection model. I wanted to explore how cloud defense can become smarter without depending on blind trust.",
         bullets: [
           "Zero Trust is central because modern cloud systems should verify more and assume less.",
@@ -442,7 +442,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "Main contribution",
+        heading: "What I was trying to show",
         text: "The contribution is not just a concept title. The paper frames an intelligent firewall model for cloud-native settings and explains why AI-driven security logic and Zero Trust controls can work well together.",
         bullets: [
           "Presents a serverless intelligent firewall direction for cloud workloads.",
@@ -451,7 +451,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "My role in this paper",
+        heading: "What I personally handled",
         text: "I am the first author of this paper. The core idea came from my own research direction, and I contributed to the research, data collection, methodology, and implementation framing.",
         bullets: [
           "I shaped the paper around my cloud security research interest.",
@@ -460,7 +460,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "Why it matters",
+        heading: "Why I still point to this work",
         text: "I care about this paper because it explains my profile clearly: I work on physical and cloud network infrastructure security, and I care about security models that can survive modern, distributed environments.",
         bullets: [
           "Strong fit for cloud security and infrastructure research.",
@@ -502,7 +502,7 @@ window.blogPostCatalog = {
     },
     sections: [
       {
-        heading: "The core problem",
+        heading: "The problem I wanted to solve",
         text: "Edge environments often face a simple operational problem: too many requests, limited resources, and the need to make fair and efficient decisions quickly. In this paper, I studied that challenge in a structured way.",
         bullets: [
           "Resource allocation matters for both performance and stability.",
@@ -511,8 +511,8 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "What the paper contributes",
-        text: "The work explores a dynamic resource-allocation approach using an auction-based model. In easy language, it tries to help the system decide who should get limited resources and when.",
+        heading: "What I was trying to show",
+        text: "The work explores a dynamic resource-allocation approach using an auction-based model. The main goal is to help the system decide who should get limited resources and when.",
         bullets: [
           "Looks at fairness and optimization together.",
           "Connects infrastructure behavior with computational efficiency.",
@@ -520,7 +520,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "My role",
+        heading: "What I personally handled",
         text: "I am the first author on this work, and the paper reflects my interest in systems that behave intelligently under constraints. I handled the main idea direction, research work, and technical framing.",
         bullets: [
           "The paper extends my systems and architecture profile.",
@@ -529,7 +529,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "Why it is important",
+        heading: "Why I still care about this work",
         text: "I care about this paper because good infrastructure is not only about security. It is also about efficient use of resources, careful scheduling, and stronger platform behavior under load.",
         bullets: [
           "Relevant for edge computing and distributed-platform teams.",
@@ -541,7 +541,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "Open IEEE Xplore", href: "https://ieeexplore.ieee.org/abstract/document/11294238/" },
       { label: "View Google Scholar", href: "https://scholar.google.com/citations?user=NQyywPoAAAAJ" },
-      { label: "Back to Blog Hub", href: "/blog/" }
+      { label: "Back to My Blog", href: "/blog/" }
     ],
     related: ["enterprise-ai-erp-paper", "distributed-ai-paper", "cross-cloud-firewall"]
   },
@@ -571,7 +571,7 @@ window.blogPostCatalog = {
     },
     sections: [
       {
-        heading: "What the paper asks",
+        heading: "The question behind the paper",
         text: "Enterprise systems are often large, slow to adapt, and hard to improve. In this paper, I asked how AI and cloud computing can be combined in a more practical way to make ERP systems stronger and more useful.",
         bullets: [
           "ERP platforms support important business workflows.",
@@ -580,8 +580,8 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "Main idea",
-        text: "The paper proposes a hybrid model where AI and cloud resources work together to improve enterprise resource planning. In simple English, the goal is to make business systems more responsive and more intelligent.",
+        heading: "The idea I kept building on",
+        text: "The paper proposes a hybrid model where AI and cloud resources work together to improve enterprise resource planning. The goal is to make business systems more responsive and more intelligent.",
         bullets: [
           "Connects analytics, adaptability, and cloud delivery.",
           "Explores how enterprise software can gain practical value from AI.",
@@ -589,7 +589,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "My contribution",
+        heading: "What I personally contributed",
         text: "I am the first author on this paper, and it reflects my direct role in shaping the idea and translating it into a publishable research model.",
         bullets: [
           "I contributed to the idea, methodology, and research framing.",
@@ -598,7 +598,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "Why this work is useful",
+        heading: "Why I think this work matters",
         text: "I think this paper matters for teams that work on enterprise platforms, cloud migration, applied AI, and business systems engineering.",
         bullets: [
           "Shows fit for enterprise software and cloud-platform conversations.",
@@ -640,7 +640,7 @@ window.blogPostCatalog = {
     },
     sections: [
       {
-        heading: "Why this topic matters",
+        heading: "Why this topic stayed with me",
         text: "Manipulated media is becoming a bigger problem for trust, security, and information systems. In this paper, I looked at how detection can be improved so organizations can respond more effectively.",
         bullets: [
           "Deepfakes are a growing challenge in digital environments.",
@@ -649,7 +649,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "What the paper explores",
+        heading: "What I explored in the paper",
         text: "In this work, I used deep-learning-based analysis, including DenseNet and multi-scale information, to improve detection performance. The goal was to help the system notice more than one kind of clue when checking suspicious content.",
         bullets: [
           "Uses model design and multi-scale information to improve analysis.",
@@ -658,7 +658,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "My role",
+        heading: "What I personally handled",
         text: "I am the first author on the paper, and it reflects my direct involvement in the research direction, the technical framing, and the larger message of the work.",
         bullets: [
           "I used this work to extend my first-author publication profile.",
@@ -667,7 +667,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "Why it supports my profile",
+        heading: "Why it strengthens my direction",
         text: "I use this paper to show that my work can move between infrastructure security and broader security analytics. That range helps in roles that value technical depth plus flexibility.",
         bullets: [
           "Relevant for digital forensics and AI security discussions.",
@@ -679,7 +679,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "Open IEEE Xplore", href: "https://ieeexplore.ieee.org/abstract/document/11381812/" },
       { label: "View Google Scholar", href: "https://scholar.google.com/citations?user=NQyywPoAAAAJ" },
-      { label: "Back to Blog Hub", href: "/blog/" }
+      { label: "Back to My Blog", href: "/blog/" }
     ],
     related: ["enterprise-ai-erp-paper", "self-correcting-math-paper", "self-correcting-llm"]
   },
@@ -709,7 +709,7 @@ window.blogPostCatalog = {
     },
     sections: [
       {
-        heading: "Why this paper exists",
+        heading: "Why I kept working on this paper",
         text: "The published firewall paper gave me a strong base, but real organizations often work across more than one cloud. In this paper, I respond to that real-world complexity.",
         bullets: [
           "Security assumptions change across cloud environments.",
@@ -718,7 +718,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "What is new here",
+        heading: "What I changed in this version",
         text: "In this work, I bring together cross-cloud adaptation, AI-driven security logic, and Zero Trust architecture. The main question is how a smart firewall can stay effective when the environment is no longer simple.",
         bullets: [
           "Extends the intelligent firewall into a distributed cloud context.",
@@ -727,7 +727,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "My role",
+        heading: "What I personally handled",
         text: "I am the first author, and this is one of the papers where my idea ownership is very clear. I carried the research direction and the practical framing around adaptive cloud security.",
         bullets: [
           "The paper grew directly from my project and research pipeline.",
@@ -736,7 +736,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "Why it matters",
+        heading: "Why I still point to this work",
         text: "I think this paper is important for cloud security teams, platform engineers, and researchers dealing with distributed infrastructure, policy enforcement, and security automation.",
         bullets: [
           "Shows depth in multi-cloud security thinking.",
@@ -778,7 +778,7 @@ window.blogPostCatalog = {
     },
     sections: [
       {
-        heading: "Research question",
+        heading: "The question I wanted to answer",
         text: "The paper asks whether large language models can become more reliable if they check their own reasoning before producing a final answer. I focused on mathematical reasoning because it gives a clear way to measure mistakes and improvements.",
         bullets: [
           "Mathematics is a good test area for reasoning quality.",
@@ -787,8 +787,8 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "Main framework",
-        text: "The core of the work is a three-stage self-correction framework. In easy English, the model first tries, then reviews, then refines. That extra reflection step is the heart of the paper.",
+        heading: "The framework I ended up with",
+        text: "The core of the work is a three-stage self-correction framework. The model first tries, then reviews, then refines. That extra reflection step is the heart of the paper.",
         bullets: [
           "The framework is designed to reduce confident but wrong outputs.",
           "It helps make reasoning more deliberate and auditable.",
@@ -796,7 +796,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "My role",
+        heading: "What I personally handled",
         text: "This is my idea and one of the papers where my ownership is very direct. I handled the research idea, data collection, methodology, model training direction, and implementation framing.",
         bullets: [
           "I built the work from concept to practical explanation.",
@@ -805,7 +805,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "Why this paper matters",
+        heading: "Why I still care about this paper",
         text: "I care about this paper because many people are excited about AI, but fewer focus enough on reliability. I want my work to help build systems that are useful and careful at the same time.",
         bullets: [
           "Relevant for trustworthy AI and evaluation-focused research.",
@@ -847,7 +847,7 @@ window.blogPostCatalog = {
     },
     sections: [
       {
-        heading: "Why this paper matters",
+        heading: "Why I still care about this paper",
         text: "A lot of AI work still treats one model as the whole system. I wanted to study a more distributed approach where several agents collaborate on complex tasks.",
         bullets: [
           "Complex tasks often benefit from more than one viewpoint.",
@@ -856,7 +856,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "What the paper studies",
+        heading: "What I studied in this paper",
         text: "In this paper, I look at local distributed agent design, task division, coordination, and problem-solving quality. The main question is how a team of models can work together more effectively.",
         bullets: [
           "Focuses on orchestration and collaboration between agents.",
@@ -865,7 +865,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "My contribution",
+        heading: "What I personally contributed",
         text: "I am the first author and the main driver of the idea. The work also connects directly to my GitHub project, which helps make the architecture more visible and easier to discuss.",
         bullets: [
           "I shaped the research direction and practical framing.",
@@ -874,7 +874,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "Why it supports my profile",
+        heading: "Why it strengthens my direction",
         text: "I think this paper strengthens my fit for research and engineering roles involving AI systems, orchestration, infrastructure-aware model deployment, and distributed architecture.",
         bullets: [
           "Useful for AI system design conversations.",
@@ -917,7 +917,7 @@ window.blogPostCatalog = {
     },
     sections: [
       {
-        heading: "What this category covers",
+        heading: "What I was really doing in this work",
         text: "These projects are about business email systems. I helped organizations move from informal or limited communication setups into more structured company mail environments.",
         bullets: [
           "Company-branded domain email improves trust and communication quality.",
@@ -926,7 +926,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "What I delivered",
+        heading: "What I personally handled",
         text: "In this mail server category, I cover account setup, domain integration, day-to-day administration, and the operational side of keeping the service dependable for real teams.",
         bullets: [
           "User and domain management for business communication.",
@@ -935,7 +935,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "Why employers may care",
+        heading: "Why I still include this in my portfolio",
         text: "Mail systems are still a core business service. I use this work to show that I can support systems people actually depend on, and that I understand production responsibility as well as technical setup.",
         bullets: [
           "Relevant for systems administration and infrastructure support roles.",
@@ -944,7 +944,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "How it connects to my wider profile",
+        heading: "How it fits the bigger picture for me",
         text: "These deployments complement my work in file services, network architecture, cloud research, and security. They show that my portfolio includes practical service delivery, not only research or demos.",
         bullets: [
           "Supports my hybrid profile across operations and engineering.",
@@ -956,7 +956,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "Open ARF Mail Server", href: "http://mail.arfgroupbd.com" },
       { label: "Open S. Alam Group Mail Server", href: "http://mail.s.alamgroupbd.com" },
-      { label: "Back to Blog Hub", href: "/blog/" }
+      { label: "Back to My Blog", href: "/blog/" }
     ],
     related: ["file-server-works", "network-architecture-works", "cloud-architecture-works"]
   },
@@ -987,7 +987,7 @@ window.blogPostCatalog = {
     },
     sections: [
       {
-        heading: "What this category is really about",
+        heading: "What this work was really about",
         text: "File servers may sound simple, but for real organizations they matter a lot. Teams need one place to store important files, access them safely, and avoid chaos caused by scattered copies and weak structure.",
         bullets: [
           "Central storage improves organization and workflow consistency.",
@@ -996,7 +996,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "What I delivered",
+        heading: "What I personally handled",
         text: "The work in this category focused on structured storage access, shared file use, and dependable business support. My role was not only technical setup, but also making the service practical for the organization.",
         bullets: [
           "Centralized file handling for business teams.",
@@ -1005,7 +1005,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "Why this matters in hiring conversations",
+        heading: "Why I mention this in hiring conversations",
         text: "I think this category shows that I understand one of the less glamorous but highly important parts of enterprise IT. Good infrastructure work often means delivering a dependable service that stays valuable long after setup.",
         bullets: [
           "Relevant for infrastructure, systems administration, and operations roles.",
@@ -1014,7 +1014,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "How it fits the rest of my portfolio",
+        heading: "How it fits the rest of my work",
         text: "These file services connect naturally with my mail systems work, network support, and wider hybrid infrastructure background. Together they show that I can support the services that keep organizations moving.",
         bullets: [
           "Complements mail, VoIP, and system administration experience.",
@@ -1026,7 +1026,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "Open ARF File Server", href: "http://file.arfgroupbd.com" },
       { label: "Open S. Alam Group File Server", href: "http://file.s.alamgroupbd.com" },
-      { label: "Back to Blog Hub", href: "/blog/" }
+      { label: "Back to My Blog", href: "/blog/" }
     ],
     related: ["mail-server-works", "network-architecture-works", "cloud-architecture-works"]
   },
@@ -1057,7 +1057,7 @@ window.blogPostCatalog = {
     },
     sections: [
       {
-        heading: "Why this category matters",
+        heading: "Why I still include this work",
         text: "A lot of people think only about data networks, but organizations also need dependable voice communication. I use this work to show that I understand infrastructure as a full operational environment, not only one technical layer.",
         bullets: [
           "Voice systems are part of business continuity and coordination.",
@@ -1066,7 +1066,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "What I delivered",
+        heading: "What I personally handled",
         text: "The work included IP-based telephony setups that supported internal communication and day-to-day business use. I helped make voice communication easier and more structured for organizations.",
         bullets: [
           "Operational telephony support for business environments.",
@@ -1075,7 +1075,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "Why it supports my profile",
+        heading: "Why it strengthens my direction",
         text: "I use this category to show range. It proves that I can work across messaging, file services, networking, telephony, and broader enterprise infrastructure instead of staying inside one narrow technical box.",
         bullets: [
           "Supports my systems administration and IT operations fit.",
@@ -1096,7 +1096,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "Voice Work Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/IP-Phone.png" },
       { label: "Additional Telephony Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/Issabel1.avif" },
-      { label: "Back to Blog Hub", href: "/blog/" }
+      { label: "Back to My Blog", href: "/blog/" }
     ],
     related: ["mail-server-works", "network-architecture-works", "file-server-works"]
   },
@@ -1127,7 +1127,7 @@ window.blogPostCatalog = {
     },
     sections: [
       {
-        heading: "What this work is about",
+        heading: "What I wanted this work to do",
         text: "These projects are not abstract design experiments. They are practical business websites built to help visitors understand a company, its services, and its public identity with less confusion.",
         bullets: [
           "The main goal is clarity, not visual noise.",
@@ -1136,7 +1136,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "What I delivered",
+        heading: "What I personally handled",
         text: "The projects in this category include different business websites, each designed to act as a simple digital front door. The focus was on readable presentation, brand communication, and usable public access.",
         bullets: [
           "Clear web presence for businesses and brands.",
@@ -1145,7 +1145,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "Why it matters for my profile",
+        heading: "Why it matters for the direction I am building",
         text: "I use this category to show that I can move between enterprise infrastructure work and client-facing web delivery. That range matters in roles where technical people also need to think about usability and presentation.",
         bullets: [
           "Supports a broader engineer or technical consultant profile.",
@@ -1154,7 +1154,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "Why teams may care",
+        heading: "Why I think teams care about it",
         text: "I think these projects are good examples for companies that need someone who can both understand technical systems and present services clearly in a public-facing way.",
         bullets: [
           "Relevant for full-stack, solutions, and technical delivery conversations.",
@@ -1166,7 +1166,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "Open Steelhead Inn", href: "http://steelheadinn.us" },
       { label: "Open Old MARCBD Site", href: "http://marcbd.com" },
-      { label: "Back to Blog Hub", href: "/blog/" }
+      { label: "Back to My Blog", href: "/blog/" }
     ],
     related: ["cloud-architecture-works", "datamentor-notebook-studio", "enterprise-ai-erp-paper"]
   },
@@ -1197,7 +1197,7 @@ window.blogPostCatalog = {
     },
     sections: [
       {
-        heading: "Why this category is important",
+        heading: "Why I still point to this work",
         text: "A strong network does not start with random devices. It starts with structure. These designs show how I think about network planning before deployment and support work begin.",
         bullets: [
           "Topology design helps make implementation clearer and safer.",
@@ -1206,8 +1206,8 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "What I focused on",
-        text: "The designs in this category focus on clear network structure for offices and operational environments. In easy language, the goal is to create a network that people can build, understand, and maintain more effectively.",
+        heading: "What I paid most attention to",
+        text: "The designs in this category focus on clear network structure for offices and operational environments. The goal is to create a network that people can build, understand, and maintain more effectively.",
         bullets: [
           "Enterprise and factory environments need different planning details.",
           "Clear topology helps security and troubleshooting later.",
@@ -1215,7 +1215,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "Why it supports hiring value",
+        heading: "Why I think it helps in hiring conversations",
         text: "I think this category matters for network engineering and infrastructure roles because it shows how I think at the design level, not only at the device-configuration level.",
         bullets: [
           "Supports network engineer and infrastructure architect positioning.",
@@ -1224,7 +1224,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "How it fits my wider portfolio",
+        heading: "How it fits the bigger picture for me",
         text: "These architecture designs connect the practical support work in my career with the cloud and security research I do now. They show that my foundation is in real network structure, not only theory.",
         bullets: [
           "Strong link to physical and cloud network infrastructure focus.",
@@ -1236,7 +1236,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "Open S. Alam Topology Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/SAG-Agrabad-Corporate-Office-Network-Topology.png" },
       { label: "Open ARF Topology Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/ARF-Group-Factory-Network-Topology.jpg" },
-      { label: "Back to Blog Hub", href: "/blog/" }
+      { label: "Back to My Blog", href: "/blog/" }
     ],
     related: ["cloud-architecture-works", "mail-server-works", "cross-cloud-firewall"]
   },
@@ -1267,7 +1267,7 @@ window.blogPostCatalog = {
     },
     sections: [
       {
-        heading: "Why this category matters",
+        heading: "Why I still include this work",
         text: "Cloud architecture is not only about putting services online. It is about designing how they connect, how they scale, and how they stay secure when the environment grows more complex.",
         bullets: [
           "Cloud planning affects performance, cost, and security together.",
@@ -1276,8 +1276,8 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "What I focused on",
-        text: "The work here focuses on structured cloud design and the relationship between system architecture and security behavior. In easy English, I wanted the cloud plans to be understandable, scalable, and realistic.",
+        heading: "What I paid most attention to",
+        text: "The work here focuses on structured cloud design and the relationship between system architecture and security behavior. I wanted the cloud plans to be understandable, scalable, and realistic.",
         bullets: [
           "Service relationships and traffic flow matter in cloud planning.",
           "Security has to be part of the design, not added later.",
@@ -1285,7 +1285,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "Why it supports my job profile",
+        heading: "Why it supports the path I am building",
         text: "I use this category to show why I fit cloud infrastructure and cloud security roles. It connects my hands-on career background with the direction of my recent research and GitHub projects.",
         bullets: [
           "Supports cloud engineer and cloud security engineer positioning.",
@@ -1294,7 +1294,7 @@ window.blogPostCatalog = {
         ]
       },
       {
-        heading: "How it connects to the rest of my work",
+        heading: "How it connects to the rest of what I do",
         text: "The cloud architecture category is one of the clearest bridges between my latest works, my GitHub firewall projects, and my first-author research in serverless intelligent security.",
         bullets: [
           "Direct link to serverless firewall research and Zero Trust themes.",
@@ -1306,7 +1306,7 @@ window.blogPostCatalog = {
     resources: [
       { label: "Open AWS Architecture Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/AWS-Cloud-Architechture.png" },
       { label: "Open Cloud Architecture Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/Cloud-Architechture.png" },
-      { label: "Back to Blog Hub", href: "/blog/" }
+      { label: "Back to My Blog", href: "/blog/" }
     ],
     related: ["network-architecture-works", "serverless-intelligent-firewall", "cross-cloud-firewall-paper"]
   }
