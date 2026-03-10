@@ -125,6 +125,7 @@ const orderSection = document.getElementById("order");
 const checkoutHelp = document.getElementById("checkoutHelp");
 const planTriggers = document.querySelectorAll(".plan-trigger");
 const pricePlans = document.querySelectorAll(".price-plan");
+const interactiveCards = document.querySelectorAll(".interactive-card");
 
 if (projectFilters && projectCards.length) {
   projectFilters.querySelectorAll("button").forEach((button) => {
@@ -155,7 +156,7 @@ planTriggers.forEach((trigger) => {
   });
 });
 
-pricePlans.forEach((card) => {
+const attachPointerGlow = (card) => {
   card.addEventListener("mousemove", (event) => {
     const rect = card.getBoundingClientRect();
     card.style.setProperty("--mx", `${event.clientX - rect.left}px`);
@@ -166,7 +167,10 @@ pricePlans.forEach((card) => {
     card.style.removeProperty("--mx");
     card.style.removeProperty("--my");
   });
-});
+};
+
+pricePlans.forEach(attachPointerGlow);
+interactiveCards.forEach(attachPointerGlow);
 
 const checkoutLinks = window.MARC_CHECKOUT_LINKS || {};
 const checkoutButtons = document.querySelectorAll(".checkout-btn");
