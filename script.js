@@ -187,6 +187,7 @@ const workSliderMeta = document.getElementById("workSliderMeta");
 const workSliderCount = document.getElementById("workSliderCount");
 const workSliderCategory = document.getElementById("workSliderCategory");
 const workProgressBar = document.getElementById("workProgressBar");
+const workSliderThumbs = document.getElementById("workSliderThumbs");
 const publicationFilters = document.getElementById("publicationFilters");
 const publicationCards = document.querySelectorAll("#publicationGrid [data-pubcat]");
 const orderPackage = document.getElementById("orderPackage");
@@ -199,6 +200,47 @@ let activeWorkFilter = "all";
 let visibleWorkCards = [];
 let workIndex = 0;
 let workSliderTimer = null;
+
+const renderWorkThumbnails = () => {
+  if (!workSliderThumbs) {
+    return;
+  }
+
+  workSliderThumbs.innerHTML = "";
+
+  if (!visibleWorkCards.length) {
+    return;
+  }
+
+  const fragment = document.createDocumentFragment();
+
+  visibleWorkCards.forEach((card, index) => {
+    const thumb = document.createElement("button");
+    const image = card.style.getPropertyValue("--work-image");
+    const title = card.querySelector("h3")?.textContent || `Work ${index + 1}`;
+    const category = card.querySelector(".work-category")?.textContent || "Latest Works";
+    const active = index === workIndex;
+
+    thumb.type = "button";
+    thumb.className = "work-thumb";
+    thumb.style.setProperty("--thumb-image", image);
+    thumb.setAttribute("aria-label", `Show ${title}`);
+    thumb.setAttribute("title", `${title} (${category})`);
+    thumb.setAttribute("aria-pressed", String(active));
+    thumb.classList.toggle("active", active);
+    thumb.innerHTML = `<span>${index + 1}</span>`;
+
+    thumb.addEventListener("click", () => {
+      workIndex = index;
+      syncWorkSlider();
+      restartWorkSliderTimer();
+    });
+
+    fragment.appendChild(thumb);
+  });
+
+  workSliderThumbs.appendChild(fragment);
+};
 
 if (projectFilters && projectCards.length) {
   projectFilters.querySelectorAll("button").forEach((button) => {
@@ -250,6 +292,7 @@ const syncWorkSlider = () => {
     if (workProgressBar) {
       workProgressBar.style.width = "0%";
     }
+    renderWorkThumbnails();
     return;
   }
 
@@ -290,6 +333,12 @@ const syncWorkSlider = () => {
   }
   if (workNextBtn) {
     workNextBtn.disabled = visibleWorkCards.length <= 1;
+  }
+  renderWorkThumbnails();
+
+  const activeThumb = workSliderThumbs?.querySelector(".work-thumb.active");
+  if (activeThumb) {
+    activeThumb.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
   }
 };
 
