@@ -3093,7 +3093,7 @@ h1 span {
 
 .publications-slider-shell {
   position: relative;
-  max-width: 780px;
+  max-width: 820px;
   margin: 0 auto;
   padding: 1rem;
   border-radius: 24px;
@@ -3219,7 +3219,7 @@ h1 span {
 
 .publications-slider-stage {
   position: relative;
-  max-width: 620px;
+  max-width: 580px;
   margin: 0 auto;
   overflow: hidden;
   aspect-ratio: 1 / 1;
@@ -3981,7 +3981,7 @@ h1 span {
 
 .blog-slider-stage {
   position: relative;
-  max-width: 620px;
+  max-width: 580px;
   margin: 0 auto;
   overflow: hidden;
   aspect-ratio: 1 / 1;
