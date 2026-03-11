@@ -150,6 +150,88 @@ JOB_RESUME_NETWORK_SECURITY = {
     ],
 }
 
+JOB_RESUME_SYSTEMS_ADMINISTRATOR = {
+    **JOB_RESUME,
+    "title": "Systems Administrator | Linux, Windows Server, and Enterprise Infrastructure",
+    "subtitle": "Targeted resume for systems administration roles across Linux, Windows Server, Active Directory, mail and file services, monitoring, and production support.",
+    "summary": [
+        "Systems Administrator with 7+ years of experience across enterprise IT and ISP environments supporting production servers, infrastructure services, user access, and day-to-day operations.",
+        "Hands-on background in Linux and Windows Server administration, Active Directory, DNS, DHCP, mail systems, file services, IP-PBX, monitoring, troubleshooting, and hybrid business infrastructure.",
+        "Graduate Research Assistant at Gannon University who brings research-backed knowledge in cloud security, serverless systems, and secure automation to practical systems operations work.",
+    ],
+    "expertise": [
+        "Linux and Windows Server Administration",
+        "Active Directory, User Provisioning, and Access Control",
+        "DNS, DHCP, and Core Infrastructure Services",
+        "Mail Server and File Server Administration",
+        "IP-PBX and VoIP Infrastructure",
+        "Infrastructure Monitoring and Troubleshooting",
+        "LAN/WAN Operations and Network Support",
+        "Virtualization and Service Continuity",
+        "Production Support and Incident Resolution",
+        "Python, Java, JavaScript, C++, PL/SQL, JSON",
+        "Cloud-Connected Infrastructure",
+        "CCNA, JNCIA, and MTCNA",
+    ],
+    "contributions": [
+        "Administered enterprise server, communication, and identity platforms used by 500+ users across business operations.",
+        "Maintained production mail, file, telephony, and monitoring systems with a strong focus on uptime, access control, and operational continuity.",
+        "Worked across both systems administration and network operations, giving strong cross-functional judgment in troubleshooting and support.",
+        "Brings practical infrastructure experience into current cloud-security and automation work without losing an operations-first mindset.",
+    ],
+    "projects": [
+        {
+            "name": "Secure Mail and File Infrastructure Operations",
+            "detail": "Production work across mail services, file services, directory administration, and business communication systems with a focus on service continuity and secure access.",
+        },
+        {
+            "name": "DataMentor / Notebook Studio",
+            "detail": "A reproducible workflow system that reflects my interest in clean operational processes, repeatable analysis, and practical automation.",
+        },
+    ],
+}
+
+JOB_RESUME_CLOUD_SECURITY = {
+    **JOB_RESUME,
+    "title": "Cloud Security Engineer | Serverless Security and Hybrid Infrastructure Defense",
+    "subtitle": "Targeted resume for cloud security engineering roles across serverless systems, Zero Trust, hybrid infrastructure, threat detection, and secure automation.",
+    "summary": [
+        "Cloud Security Engineer profile built on 7+ years of enterprise IT and ISP experience, combined with active research in serverless security, Zero Trust, and cross-cloud protection.",
+        "Hands-on background in firewall operations, network security, Linux and Windows Server administration, Active Directory, routing and switching, and cloud-connected infrastructure support.",
+        "Graduate Research Assistant at Gannon University developing first-author work in intelligent firewall systems, distributed infrastructure protection, and deployable cloud defense models.",
+    ],
+    "expertise": [
+        "Cloud Security and Hybrid Infrastructure Protection",
+        "Serverless Security and Zero Trust Concepts",
+        "Firewall Policy Management and Threat Detection",
+        "Identity Access Control and Active Directory",
+        "Routing, Switching, VPN, NAT, and ACL",
+        "Linux and Windows Server Administration",
+        "AWS Fundamentals: Lambda, WAF, EC2, IAM, S3",
+        "Secure Automation and Python Scripting",
+        "Distributed Infrastructure Defense",
+        "Research-Backed Security Engineering",
+        "Incident Response and Infrastructure Troubleshooting",
+        "CCNA, JNCIA, and MTCNA",
+    ],
+    "contributions": [
+        "Connected production infrastructure experience with current research in serverless intelligent firewalls, Zero Trust enforcement, and federated threat intelligence.",
+        "Built public security projects that show cloud-native firewall behavior, cross-cloud adaptation, and deployable threat-defense ideas.",
+        "Brings practical experience in secure operations, access control, troubleshooting, and service reliability to cloud-focused security work.",
+        "Works comfortably at the boundary between infrastructure operations, security engineering, and research-driven implementation.",
+    ],
+    "projects": [
+        {
+            "name": "Serverless Intelligent Firewall Research Series",
+            "detail": "Three connected cloud-security projects exploring adaptive firewall behavior, cross-cloud protection, threat intelligence integration, and federated Zero Trust enforcement.",
+        },
+        {
+            "name": "Cloud Security and Automation Workflows",
+            "detail": "Public and research-aligned work focused on serverless systems, secure automation, notebook-driven analysis, and deployable cloud defense thinking.",
+        },
+    ],
+}
+
 PHD_RESUME = {
     "title": "Researcher in Cloud Security, Serverless Systems, and Network Infrastructure Protection",
     "subtitle": "Graduate Research Assistant building first-author work in serverless security, Zero Trust architecture, physical and cloud network infrastructure security, and deployable AI-assisted defense systems.",

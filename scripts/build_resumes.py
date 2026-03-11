@@ -14,7 +14,14 @@ from xml.sax.saxutils import escape
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from resume_src.resume_data import JOB_RESUME, JOB_RESUME_NETWORK_SECURITY, PHD_RESUME, SHARED
+from resume_src.resume_data import (
+    JOB_RESUME,
+    JOB_RESUME_CLOUD_SECURITY,
+    JOB_RESUME_NETWORK_SECURITY,
+    JOB_RESUME_SYSTEMS_ADMINISTRATOR,
+    PHD_RESUME,
+    SHARED,
+)
 
 PDF_CSS = """
 @page {
@@ -478,24 +485,36 @@ def phd_docx_lines() -> list[tuple[str, str]]:
 def main() -> None:
     job_html_path = ROOT / "Job-Resume" / "resume-source.html"
     job_targeted_html_path = ROOT / "Job-Resume" / "network-security-resume-source.html"
+    job_sysadmin_html_path = ROOT / "Job-Resume" / "systems-administrator-resume-source.html"
+    job_cloud_html_path = ROOT / "Job-Resume" / "cloud-security-engineer-resume-source.html"
     phd_html_path = ROOT / "PhD-Resume" / "resume-source.html"
     job_pdf_path = ROOT / "Job-Resume" / "Resume.pdf"
     job_targeted_pdf_path = ROOT / "Job-Resume" / "Resume-Network-Security-Engineer.pdf"
+    job_sysadmin_pdf_path = ROOT / "Job-Resume" / "Resume-Systems-Administrator.pdf"
+    job_cloud_pdf_path = ROOT / "Job-Resume" / "Resume-Cloud-Security-Engineer.pdf"
     phd_pdf_path = ROOT / "PhD-Resume" / "Resume of MARC.pdf"
     job_docx_path = ROOT / "Job-Resume" / "Resume.docx"
     job_targeted_docx_path = ROOT / "Job-Resume" / "Resume-Network-Security-Engineer.docx"
+    job_sysadmin_docx_path = ROOT / "Job-Resume" / "Resume-Systems-Administrator.docx"
+    job_cloud_docx_path = ROOT / "Job-Resume" / "Resume-Cloud-Security-Engineer.docx"
     phd_docx_path = ROOT / "PhD-Resume" / "Resume of MARC.docx"
 
     write_text(job_html_path, render_job_html(JOB_RESUME, "Job Resume"))
     write_text(job_targeted_html_path, render_job_html(JOB_RESUME_NETWORK_SECURITY, "Network Security Engineer Resume"))
+    write_text(job_sysadmin_html_path, render_job_html(JOB_RESUME_SYSTEMS_ADMINISTRATOR, "Systems Administrator Resume"))
+    write_text(job_cloud_html_path, render_job_html(JOB_RESUME_CLOUD_SECURITY, "Cloud Security Engineer Resume"))
     write_text(phd_html_path, render_phd_html())
 
     render_pdf(job_html_path, job_pdf_path)
     render_pdf(job_targeted_html_path, job_targeted_pdf_path)
+    render_pdf(job_sysadmin_html_path, job_sysadmin_pdf_path)
+    render_pdf(job_cloud_html_path, job_cloud_pdf_path)
     render_pdf(phd_html_path, phd_pdf_path)
 
     replace_docx_document(job_docx_path, job_docx_path, job_docx_lines(JOB_RESUME))
     replace_docx_document(job_docx_path, job_targeted_docx_path, job_docx_lines(JOB_RESUME_NETWORK_SECURITY))
+    replace_docx_document(job_docx_path, job_sysadmin_docx_path, job_docx_lines(JOB_RESUME_SYSTEMS_ADMINISTRATOR))
+    replace_docx_document(job_docx_path, job_cloud_docx_path, job_docx_lines(JOB_RESUME_CLOUD_SECURITY))
     replace_docx_document(phd_docx_path, phd_docx_path, phd_docx_lines())
 
 
