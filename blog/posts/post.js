@@ -19,6 +19,54 @@ const sidebarMeta = document.getElementById("sidebarMeta");
 const contentSections = document.getElementById("contentSections");
 const resourceLinks = document.getElementById("resourceLinks");
 const relatedGrid = document.getElementById("relatedGrid");
+const contextShell = document.getElementById("contextShell");
+
+const getGroup = (note) => {
+  if (note?.type?.includes("Project")) return "project";
+  if (note?.type?.includes("Paper")) return "paper";
+  return "background";
+};
+
+const NOTE_META = {
+  project: {
+    displayType: "Research Project",
+    previewLabel: "Research Build Preview",
+    contextKicker: "Research Fit",
+    contextTitle: "How this project fits my research path",
+    contextText: "I use project notes to show that the research direction is not only theoretical. These builds let me test, explain, and refine the ideas in a form that a reviewer can inspect directly.",
+    bullets: [
+      "The system view matters because I want my research to stay close to implementation, not only paper language.",
+      "A working build helps show how I think about architecture, security logic, and design tradeoffs together.",
+      "I treat these project notes as evidence of how I move from a question to a technical system."
+    ]
+  },
+  paper: {
+    displayType: "Publication Note",
+    previewLabel: "Publication Snapshot",
+    contextKicker: "Research Fit",
+    contextTitle: "How this publication fits my research path",
+    contextText: "I use publication notes to explain the actual research question, the reason I worked on it, and how the paper connects back to the broader direction I want to keep building in a PhD.",
+    bullets: [
+      "The publication note gives more context than a citation line or title alone can provide.",
+      "I want a professor or admissions reviewer to see both the technical topic and the reason it matters to my larger research path.",
+      "When a paper connects to a demo or system build, I keep that link visible here."
+    ]
+  },
+  background: {
+    displayType: "Systems Background",
+    previewLabel: "Systems Snapshot",
+    contextKicker: "Research Fit",
+    contextTitle: "Why this systems background still matters to my research",
+    contextText: "These notes show the operational and infrastructure experience that shaped the questions I care about in research. I keep them in the archive because they explain where many of my cloud security and systems ideas came from.",
+    bullets: [
+      "Real infrastructure work helped me see which problems matter outside a paper or lab setting.",
+      "I keep these notes because my research direction grew out of practical systems, network, and security work.",
+      "They provide context for why I care about cloud defense, trust boundaries, reliability, and secure architecture."
+    ]
+  }
+};
+
+const getMeta = (note) => NOTE_META[getGroup(note)] || NOTE_META.background;
 
 const getActionClass = (label, href = "") => {
   const text = `${label} ${href}`.toLowerCase();
@@ -35,16 +83,32 @@ const getActionClass = (label, href = "") => {
 };
 
 const renderNotFound = () => {
-  document.title = "MARC | Note Not Found";
+  document.title = "MARC | Research Note Not Found";
   if (postTitle) {
-    postTitle.textContent = "I could not find this note.";
+    postTitle.textContent = "I could not find this research note.";
   }
   if (postSummary) {
-    postSummary.textContent = "The link does not match one of my published notes. Please go back to the blog and open another note from there.";
+    postSummary.textContent = "The link does not match one of my published research notes. Please go back to the research blog or the note library and open another note from there.";
   }
   if (heroActions) {
-    heroActions.innerHTML = '<a class="btn btn-primary" href="/blog/">Back to My Blog</a>';
+    heroActions.innerHTML = `
+      <a class="btn btn-primary" href="/blog/">Back to Research Blog</a>
+      <a class="btn btn-secondary" href="/blog/posts/">Open Research Notes</a>
+    `;
   }
+
+  [tagCloud, factGrid, contextShell, contentSections, sidebarMeta, sectionNav].forEach((node) => {
+    if (node) {
+      node.innerHTML = "";
+    }
+  });
+
+  [previewCard, resourceLinks, relatedGrid].forEach((node) => {
+    const section = node?.closest("section");
+    if (section) {
+      section.hidden = true;
+    }
+  });
 };
 
 const createLinks = (links) =>
@@ -123,7 +187,7 @@ const renderGallery = (gallery) => {
     <div class="gallery-head">
       <p class="section-kicker">Visual Walkthrough</p>
       <h2>Images and supporting visuals</h2>
-      <p>I added a small visual gallery here so you can understand the project, work sample, or research direction faster.</p>
+      <p>I added a small visual gallery here so the note is easier to scan and the system or research direction is easier to understand.</p>
     </div>
     <div class="mini-gallery">
       ${gallery
@@ -154,11 +218,30 @@ const renderGallery = (gallery) => {
   resourceSection.parentNode.insertBefore(gallerySection, resourceSection);
 };
 
+const renderContext = (note) => {
+  if (!contextShell) {
+    return;
+  }
+
+  const meta = getMeta(note);
+
+  contextShell.innerHTML = `
+    <p class="section-kicker">${meta.contextKicker}</p>
+    <h2>${meta.contextTitle}</h2>
+    <p>${meta.contextText}</p>
+    <ul>
+      ${meta.bullets.map((bullet) => `<li>${bullet}</li>`).join("")}
+    </ul>
+  `;
+};
+
 const renderPost = () => {
   if (!post) {
     renderNotFound();
     return;
   }
+
+  const meta = getMeta(post);
 
   document.title = `MARC | ${post.title}`;
   const metaDescription = document.querySelector('meta[name="description"]');
@@ -170,25 +253,26 @@ const renderPost = () => {
     yearNode.textContent = String(new Date().getFullYear());
   }
 
-  sidebarLabel.textContent = post.type;
+  sidebarLabel.textContent = meta.displayType;
   sidebarTitle.textContent = post.title;
   sidebarSummary.textContent = post.summary;
   heroKicker.textContent = post.kicker;
   postTitle.textContent = post.title;
   postSummary.textContent = post.summary;
-  previewLabel.textContent = post.preview?.label || "A quick look";
+  previewLabel.textContent = post.preview?.label || meta.previewLabel;
 
   tagCloud.innerHTML = post.tags.map((tag) => `<span>${tag}</span>`).join("");
 
   const primaryLink = post.resources?.[0];
   heroActions.innerHTML = `
     ${primaryLink ? `<a class="btn btn-primary" href="${primaryLink.href}"${primaryLink.href.startsWith("http") ? ' target="_blank" rel="noopener"' : ""}>${primaryLink.label}</a>` : ""}
-    <a class="btn btn-secondary" href="/blog/posts/">All My Notes</a>
-    <a class="btn btn-secondary" href="/blog/">Back to My Blog</a>
-    <a class="btn btn-secondary" href="/">Main Portfolio</a>
+    <a class="btn btn-secondary" href="/blog/posts/">All Research Notes</a>
+    <a class="btn btn-secondary" href="/blog/">Back to Research Blog</a>
+    <a class="btn btn-secondary" href="/phd/">Back to PhD Site</a>
   `;
 
   renderPreview(post.preview);
+  renderContext(post);
   renderGallery(post.gallery);
 
   factGrid.innerHTML = post.facts
@@ -245,13 +329,13 @@ const renderPost = () => {
 
       return `
         <article class="related-card reveal">
-          <p class="section-kicker">${related.type}</p>
+          <p class="section-kicker">${getMeta(related).displayType}</p>
           <h3>${related.title}</h3>
           <p>${related.summary}</p>
           <div class="related-tags">
             ${related.tags.slice(0, 3).map((tag) => `<span>${tag}</span>`).join("")}
           </div>
-          <a class="link-note" href="/blog/posts/${slug}/">Read My Note</a>
+          <a class="link-note" href="/blog/posts/${slug}/">Read Note</a>
         </article>
       `;
     })
