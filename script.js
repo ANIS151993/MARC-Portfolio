@@ -246,6 +246,69 @@ let visibleWorkCards = [];
 let workIndex = 0;
 let workSliderTimer = null;
 
+const getShowcaseItemsPerView = () => (window.innerWidth <= 900 ? 1 : 2);
+
+const getShowcaseLaneCount = (cards) => {
+  if (!cards.length) {
+    return 0;
+  }
+  return Math.ceil(cards.length / getShowcaseItemsPerView());
+};
+
+const getShowcaseLaneCards = (cards, laneIndex) => {
+  const itemsPerView = getShowcaseItemsPerView();
+  const start = laneIndex * itemsPerView;
+  return cards.slice(start, start + itemsPerView);
+};
+
+const getShowcaseRangeText = (laneIndex, total) => {
+  if (!total) {
+    return "0 / 0";
+  }
+
+  const itemsPerView = getShowcaseItemsPerView();
+  const start = laneIndex * itemsPerView + 1;
+  const end = Math.min(total, start + itemsPerView - 1);
+  return start === end ? `${start} / ${total}` : `${start}-${end} / ${total}`;
+};
+
+const buildLaneTitle = (laneCards, selector, fallback, maxLength = 86) => {
+  const titles = laneCards
+    .map((card) => card.querySelector(selector)?.textContent?.trim())
+    .filter(Boolean);
+
+  if (!titles.length) {
+    return fallback;
+  }
+
+  const combined = titles.join(" + ");
+  return titles.length > 1 && combined.length <= maxLength ? combined : titles[0];
+};
+
+const getPairingText = (secondaryText) => (secondaryText ? `Paired with ${secondaryText}` : "");
+
+const markActiveLaneCards = (allCards, visibleCards, activeLaneCards) => {
+  allCards.forEach((card) => {
+    const visible = visibleCards.includes(card);
+    const lanePosition = activeLaneCards.indexOf(card);
+    const active = lanePosition !== -1;
+
+    card.classList.toggle("active-slide", active);
+    card.classList.toggle("active-slide-primary", lanePosition === 0);
+    card.classList.toggle("active-slide-secondary", lanePosition === 1);
+    card.classList.remove("is-solo");
+    card.setAttribute("aria-hidden", String(!active));
+
+    if (!visible) {
+      card.setAttribute("aria-hidden", "true");
+    }
+  });
+
+  if (getShowcaseItemsPerView() === 2 && visibleCards.length % 2 === 1) {
+    visibleCards[visibleCards.length - 1]?.classList.add("is-solo");
+  }
+};
+
 const renderProjectThumbnails = () => {
   if (!projectSliderThumbs) {
     return;
@@ -253,28 +316,40 @@ const renderProjectThumbnails = () => {
 
   projectSliderThumbs.innerHTML = "";
 
-  if (!visibleProjectCards.length) {
+  const laneCount = getShowcaseLaneCount(visibleProjectCards);
+
+  if (!laneCount) {
     return;
   }
 
   const fragment = document.createDocumentFragment();
 
-  visibleProjectCards.forEach((card, index) => {
+  Array.from({ length: laneCount }).forEach((_, laneIndex) => {
+    const laneCards = getShowcaseLaneCards(visibleProjectCards, laneIndex);
     const thumb = document.createElement("button");
-    const shortName = card.querySelector(".project-short-name")?.textContent?.trim() || `P-${index + 1}`;
-    const title = card.querySelector("h3")?.textContent || `Project ${index + 1}`;
-    const active = index === projectIndex;
+    const shortNames = laneCards
+      .map((card) => card.querySelector(".project-short-name")?.textContent?.trim())
+      .filter(Boolean);
+    const title = laneCards
+      .map((card) => card.querySelector("h3")?.textContent?.trim())
+      .filter(Boolean)
+      .join(" + ");
+    const fallbackLabel = getShowcaseRangeText(laneIndex, visibleProjectCards.length).split(" / ")[0];
+    const label = shortNames.length > 1 && shortNames.join(" + ").length <= 18
+      ? shortNames.join(" + ")
+      : (shortNames[0] || fallbackLabel);
+    const active = laneIndex === projectIndex;
 
     thumb.type = "button";
     thumb.className = "project-thumb";
-    thumb.setAttribute("aria-label", `Show ${title}`);
+    thumb.setAttribute("aria-label", `Show ${title || `Project lane ${laneIndex + 1}`}`);
     thumb.setAttribute("title", title);
     thumb.setAttribute("aria-pressed", String(active));
     thumb.classList.toggle("active", active);
-    thumb.innerHTML = `<span>${shortName}</span>`;
+    thumb.innerHTML = `<span>${label}</span>`;
 
     thumb.addEventListener("click", () => {
-      projectIndex = index;
+      projectIndex = laneIndex;
       syncProjectSlider();
       restartProjectSliderTimer();
     });
@@ -304,30 +379,34 @@ const renderPublicationThumbnails = () => {
 
   publicationSliderThumbs.innerHTML = "";
 
-  if (!visiblePublicationCards.length) {
+  const laneCount = getShowcaseLaneCount(visiblePublicationCards);
+
+  if (!laneCount) {
     return;
   }
 
   const fragment = document.createDocumentFragment();
 
-  visiblePublicationCards.forEach((card, index) => {
+  Array.from({ length: laneCount }).forEach((_, laneIndex) => {
+    const laneCards = getShowcaseLaneCards(visiblePublicationCards, laneIndex);
     const thumb = document.createElement("button");
-    const tagLabel = card.classList.contains("publication-pipeline")
-      ? "Pipeline"
-      : (card.querySelector(".publication-tags span")?.textContent || `Pub ${index + 1}`);
-    const title = card.querySelector("h3")?.textContent || `Publication ${index + 1}`;
-    const active = index === publicationIndex;
+    const title = laneCards
+      .map((card) => card.querySelector("h3")?.textContent?.trim())
+      .filter(Boolean)
+      .join(" + ");
+    const active = laneIndex === publicationIndex;
+    const label = getShowcaseRangeText(laneIndex, visiblePublicationCards.length).split(" / ")[0];
 
     thumb.type = "button";
     thumb.className = "publication-thumb";
-    thumb.setAttribute("aria-label", `Show ${title}`);
+    thumb.setAttribute("aria-label", `Show ${title || `Publication lane ${laneIndex + 1}`}`);
     thumb.setAttribute("title", title);
     thumb.setAttribute("aria-pressed", String(active));
     thumb.classList.toggle("active", active);
-    thumb.innerHTML = `<span>${tagLabel.slice(0, 8)}</span>`;
+    thumb.innerHTML = `<span>${label}</span>`;
 
     thumb.addEventListener("click", () => {
-      publicationIndex = index;
+      publicationIndex = laneIndex;
       syncPublicationSlider();
       restartPublicationSliderTimer();
     });
@@ -345,27 +424,40 @@ const renderBlogThumbnails = () => {
 
   blogSliderThumbs.innerHTML = "";
 
-  if (!blogCards.length) {
+  const laneCount = getShowcaseLaneCount(blogCards);
+
+  if (!laneCount) {
     return;
   }
 
   const fragment = document.createDocumentFragment();
 
-  blogCards.forEach((card, index) => {
+  Array.from({ length: laneCount }).forEach((_, laneIndex) => {
+    const laneCards = getShowcaseLaneCards(blogCards, laneIndex);
     const thumb = document.createElement("button");
-    const label = card.querySelector(".blog-lane-label")?.textContent || `Blog ${index + 1}`;
-    const active = index === blogIndex;
+    const laneLabels = laneCards
+      .map((card) => card.querySelector(".blog-lane-label")?.textContent?.trim().split(/\s+/)[0])
+      .filter(Boolean);
+    const title = laneCards
+      .map((card) => card.querySelector("h3")?.textContent?.trim())
+      .filter(Boolean)
+      .join(" + ");
+    const fallbackLabel = getShowcaseRangeText(laneIndex, blogCards.length).split(" / ")[0];
+    const label = laneLabels.length > 1 && laneLabels.join(" + ").length <= 18
+      ? laneLabels.join(" + ")
+      : (laneLabels[0] || fallbackLabel);
+    const active = laneIndex === blogIndex;
 
     thumb.type = "button";
     thumb.className = "blog-thumb";
-    thumb.setAttribute("aria-label", `Show ${label}`);
-    thumb.setAttribute("title", label);
+    thumb.setAttribute("aria-label", `Show ${title || `Blog lane ${laneIndex + 1}`}`);
+    thumb.setAttribute("title", title);
     thumb.setAttribute("aria-pressed", String(active));
     thumb.classList.toggle("active", active);
-    thumb.innerHTML = `<span>${label.slice(0, 8)}</span>`;
+    thumb.innerHTML = `<span>${label}</span>`;
 
     thumb.addEventListener("click", () => {
-      blogIndex = index;
+      blogIndex = laneIndex;
       syncBlogSlider();
       restartBlogSliderTimer();
     });
@@ -383,30 +475,37 @@ const renderWorkThumbnails = () => {
 
   workSliderThumbs.innerHTML = "";
 
-  if (!visibleWorkCards.length) {
+  const laneCount = getShowcaseLaneCount(visibleWorkCards);
+
+  if (!laneCount) {
     return;
   }
 
   const fragment = document.createDocumentFragment();
 
-  visibleWorkCards.forEach((card, index) => {
+  Array.from({ length: laneCount }).forEach((_, laneIndex) => {
+    const laneCards = getShowcaseLaneCards(visibleWorkCards, laneIndex);
     const thumb = document.createElement("button");
-    const image = card.style.getPropertyValue("--work-image");
-    const title = card.querySelector("h3")?.textContent || `Work ${index + 1}`;
-    const category = card.querySelector(".work-category")?.textContent || "Latest Works";
-    const active = index === workIndex;
+    const primaryCard = laneCards[0];
+    const image = primaryCard?.style.getPropertyValue("--work-image");
+    const title = laneCards
+      .map((card) => card.querySelector("h3")?.textContent?.trim())
+      .filter(Boolean)
+      .join(" + ");
+    const active = laneIndex === workIndex;
+    const label = getShowcaseRangeText(laneIndex, visibleWorkCards.length).split(" / ")[0];
 
     thumb.type = "button";
     thumb.className = "work-thumb";
     thumb.style.setProperty("--thumb-image", image);
-    thumb.setAttribute("aria-label", `Show ${title}`);
-    thumb.setAttribute("title", `${title} (${category})`);
+    thumb.setAttribute("aria-label", `Show ${title || `Work lane ${laneIndex + 1}`}`);
+    thumb.setAttribute("title", title);
     thumb.setAttribute("aria-pressed", String(active));
     thumb.classList.toggle("active", active);
-    thumb.innerHTML = `<span>${index + 1}</span>`;
+    thumb.innerHTML = `<span>${label}</span>`;
 
     thumb.addEventListener("click", () => {
-      workIndex = index;
+      workIndex = laneIndex;
       syncWorkSlider();
       restartWorkSliderTimer();
     });
@@ -459,22 +558,21 @@ const syncProjectSlider = () => {
     return;
   }
 
-  if (projectIndex >= visibleProjectCards.length) {
+  const laneCount = getShowcaseLaneCount(visibleProjectCards);
+
+  if (projectIndex >= laneCount) {
     projectIndex = 0;
   }
 
-  const activeCard = visibleProjectCards[projectIndex];
+  const activeLaneCards = getShowcaseLaneCards(visibleProjectCards, projectIndex);
+  const primaryCard = activeLaneCards[0];
+  const secondaryTitle = activeLaneCards[1]?.querySelector("h3")?.textContent?.trim() || "";
   projectGrid.style.transform = `translateX(-${projectIndex * 100}%)`;
+  markActiveLaneCards(projectCards, visibleProjectCards, activeLaneCards);
 
-  projectCards.forEach((card) => {
-    const active = card === activeCard;
-    card.classList.toggle("active-slide", active);
-    card.setAttribute("aria-hidden", String(!active));
-  });
-
-  const title = activeCard.querySelector("h3")?.textContent || "Featured Project";
-  const role = activeCard.querySelector(".project-role")?.textContent || "Portfolio Project";
-  const summary = activeCard.querySelector(".project-content > p:not(.project-role)")?.textContent || "";
+  const title = buildLaneTitle(activeLaneCards, "h3", "Featured Project");
+  const role = primaryCard?.querySelector(".project-role")?.textContent || "Portfolio Project";
+  const summary = primaryCard?.querySelector(".project-content > p:not(.project-role)")?.textContent || "";
   const category = activeProjectFilter === "all"
     ? "Portfolio Projects"
     : (projectFilters?.querySelector("button.active")?.textContent || "Portfolio Projects");
@@ -483,22 +581,24 @@ const syncProjectSlider = () => {
     projectSliderTitle.textContent = title;
   }
   if (projectSliderMeta) {
-    projectSliderMeta.textContent = summary ? `${role} | ${summary}` : role;
+    projectSliderMeta.textContent = secondaryTitle
+      ? `${role} | Paired with ${secondaryTitle}`
+      : (summary ? `${role} | ${summary}` : role);
   }
   if (projectSliderCount) {
-    projectSliderCount.textContent = `${projectIndex + 1} / ${visibleProjectCards.length}`;
+    projectSliderCount.textContent = getShowcaseRangeText(projectIndex, visibleProjectCards.length);
   }
   if (projectSliderCategory) {
     projectSliderCategory.textContent = category;
   }
   if (projectProgressBar) {
-    projectProgressBar.style.width = `${((projectIndex + 1) / visibleProjectCards.length) * 100}%`;
+    projectProgressBar.style.width = `${((projectIndex + 1) / laneCount) * 100}%`;
   }
   if (projectPrevBtn) {
-    projectPrevBtn.disabled = visibleProjectCards.length <= 1;
+    projectPrevBtn.disabled = laneCount <= 1;
   }
   if (projectNextBtn) {
-    projectNextBtn.disabled = visibleProjectCards.length <= 1;
+    projectNextBtn.disabled = laneCount <= 1;
   }
 
   renderProjectThumbnails();
@@ -510,10 +610,11 @@ const syncProjectSlider = () => {
 };
 
 const cycleProjectSlider = (direction) => {
-  if (!visibleProjectCards.length) {
+  const laneCount = getShowcaseLaneCount(visibleProjectCards);
+  if (!laneCount) {
     return;
   }
-  projectIndex = (projectIndex + direction + visibleProjectCards.length) % visibleProjectCards.length;
+  projectIndex = (projectIndex + direction + laneCount) % laneCount;
   syncProjectSlider();
 };
 
@@ -522,7 +623,7 @@ const restartProjectSliderTimer = () => {
     clearInterval(projectSliderTimer);
   }
 
-  if (visibleProjectCards.length > 1) {
+  if (getShowcaseLaneCount(visibleProjectCards) > 1) {
     projectSliderTimer = setInterval(() => cycleProjectSlider(1), 7500);
   }
 };
@@ -612,26 +713,25 @@ const syncPublicationSlider = () => {
     return;
   }
 
-  if (publicationIndex >= visiblePublicationCards.length) {
+  const laneCount = getShowcaseLaneCount(visiblePublicationCards);
+
+  if (publicationIndex >= laneCount) {
     publicationIndex = 0;
   }
 
-  const activeCard = visiblePublicationCards[publicationIndex];
+  const activeLaneCards = getShowcaseLaneCards(visiblePublicationCards, publicationIndex);
+  const primaryCard = activeLaneCards[0];
+  const secondaryTitle = activeLaneCards[1]?.querySelector("h3")?.textContent?.trim() || "";
   publicationGrid.style.transform = `translateX(-${publicationIndex * 100}%)`;
+  markActiveLaneCards(publicationCards, visiblePublicationCards, activeLaneCards);
 
-  publicationCards.forEach((card) => {
-    const active = card === activeCard;
-    card.classList.toggle("active-slide", active);
-    card.setAttribute("aria-hidden", String(!active));
-  });
-
-  const title = activeCard.querySelector("h3")?.textContent || "Featured Publication";
-  const meta = activeCard.classList.contains("publication-pipeline")
-    ? (activeCard.querySelector(".pill")?.textContent || "Research Pipeline")
-    : (activeCard.querySelector(".publication-meta")?.textContent || "Research Publication");
-  const summary = activeCard.classList.contains("publication-pipeline")
-    ? (activeCard.querySelector(".publication-pipeline-head p:last-child")?.textContent || "")
-    : (activeCard.querySelector("p:not(.publication-meta)")?.textContent || "");
+  const title = buildLaneTitle(activeLaneCards, "h3", "Featured Publication", 110);
+  const meta = primaryCard?.classList.contains("publication-pipeline")
+    ? (primaryCard.querySelector(".pill")?.textContent || "Research Pipeline")
+    : (primaryCard?.querySelector(".publication-meta")?.textContent || "Research Publication");
+  const summary = primaryCard?.classList.contains("publication-pipeline")
+    ? (primaryCard.querySelector(".publication-pipeline-head p:last-child")?.textContent || "")
+    : (primaryCard?.querySelector("p:not(.publication-meta)")?.textContent || "");
   const category = activePublicationFilter === "all"
     ? "Research Publications"
     : (publicationFilters?.querySelector("button.active")?.textContent || "Research Publications");
@@ -640,22 +740,24 @@ const syncPublicationSlider = () => {
     publicationSliderTitle.textContent = title;
   }
   if (publicationSliderMeta) {
-    publicationSliderMeta.textContent = summary ? `${meta} | ${summary}` : meta;
+    publicationSliderMeta.textContent = secondaryTitle
+      ? `${meta} | Paired with ${secondaryTitle}`
+      : (summary ? `${meta} | ${summary}` : meta);
   }
   if (publicationSliderCount) {
-    publicationSliderCount.textContent = `${publicationIndex + 1} / ${visiblePublicationCards.length}`;
+    publicationSliderCount.textContent = getShowcaseRangeText(publicationIndex, visiblePublicationCards.length);
   }
   if (publicationSliderCategory) {
     publicationSliderCategory.textContent = category;
   }
   if (publicationProgressBar) {
-    publicationProgressBar.style.width = `${((publicationIndex + 1) / visiblePublicationCards.length) * 100}%`;
+    publicationProgressBar.style.width = `${((publicationIndex + 1) / laneCount) * 100}%`;
   }
   if (publicationPrevBtn) {
-    publicationPrevBtn.disabled = visiblePublicationCards.length <= 1;
+    publicationPrevBtn.disabled = laneCount <= 1;
   }
   if (publicationNextBtn) {
-    publicationNextBtn.disabled = visiblePublicationCards.length <= 1;
+    publicationNextBtn.disabled = laneCount <= 1;
   }
 
   renderPublicationThumbnails();
@@ -667,10 +769,11 @@ const syncPublicationSlider = () => {
 };
 
 const cyclePublicationSlider = (direction) => {
-  if (!visiblePublicationCards.length) {
+  const laneCount = getShowcaseLaneCount(visiblePublicationCards);
+  if (!laneCount) {
     return;
   }
-  publicationIndex = (publicationIndex + direction + visiblePublicationCards.length) % visiblePublicationCards.length;
+  publicationIndex = (publicationIndex + direction + laneCount) % laneCount;
   syncPublicationSlider();
 };
 
@@ -679,7 +782,7 @@ const restartPublicationSliderTimer = () => {
     clearInterval(publicationSliderTimer);
   }
 
-  if (visiblePublicationCards.length > 1) {
+  if (getShowcaseLaneCount(visiblePublicationCards) > 1) {
     publicationSliderTimer = setInterval(() => cyclePublicationSlider(1), 7600);
   }
 };
@@ -689,43 +792,44 @@ const syncBlogSlider = () => {
     return;
   }
 
-  if (blogIndex >= blogCards.length) {
+  const laneCount = getShowcaseLaneCount(blogCards);
+
+  if (blogIndex >= laneCount) {
     blogIndex = 0;
   }
 
-  const activeCard = blogCards[blogIndex];
+  const activeLaneCards = getShowcaseLaneCards(blogCards, blogIndex);
+  const primaryCard = activeLaneCards[0];
+  const secondaryLabel = activeLaneCards[1]?.querySelector(".blog-lane-label")?.textContent?.trim() || "";
   blogSliderGrid.style.transform = `translateX(-${blogIndex * 100}%)`;
+  markActiveLaneCards(blogCards, blogCards, activeLaneCards);
 
-  blogCards.forEach((card, index) => {
-    const active = index === blogIndex;
-    card.classList.toggle("active-slide", active);
-    card.setAttribute("aria-hidden", String(!active));
-  });
-
-  const label = activeCard.querySelector(".blog-lane-label")?.textContent || "Blog and Insights";
-  const title = activeCard.querySelector("h3")?.textContent || "Featured Reading Lane";
-  const summary = activeCard.querySelector(".blog-lane-body > p:not(.blog-lane-label)")?.textContent || "";
+  const label = primaryCard?.querySelector(".blog-lane-label")?.textContent || "Blog and Insights";
+  const title = buildLaneTitle(activeLaneCards, "h3", "Featured Reading Lane");
+  const summary = primaryCard?.querySelector(".blog-lane-body > p:not(.blog-lane-label)")?.textContent || "";
 
   if (blogSliderTitle) {
     blogSliderTitle.textContent = title;
   }
   if (blogSliderMeta) {
-    blogSliderMeta.textContent = summary ? `${label} | ${summary}` : label;
+    blogSliderMeta.textContent = secondaryLabel
+      ? `${label} | Paired with ${secondaryLabel}`
+      : (summary ? `${label} | ${summary}` : label);
   }
   if (blogSliderCount) {
-    blogSliderCount.textContent = `${blogIndex + 1} / ${blogCards.length}`;
+    blogSliderCount.textContent = getShowcaseRangeText(blogIndex, blogCards.length);
   }
   if (blogSliderCategory) {
     blogSliderCategory.textContent = label;
   }
   if (blogProgressBar) {
-    blogProgressBar.style.width = `${((blogIndex + 1) / blogCards.length) * 100}%`;
+    blogProgressBar.style.width = `${((blogIndex + 1) / laneCount) * 100}%`;
   }
   if (blogPrevBtn) {
-    blogPrevBtn.disabled = blogCards.length <= 1;
+    blogPrevBtn.disabled = laneCount <= 1;
   }
   if (blogNextBtn) {
-    blogNextBtn.disabled = blogCards.length <= 1;
+    blogNextBtn.disabled = laneCount <= 1;
   }
 
   renderBlogThumbnails();
@@ -737,10 +841,11 @@ const syncBlogSlider = () => {
 };
 
 const cycleBlogSlider = (direction) => {
-  if (!blogCards.length) {
+  const laneCount = getShowcaseLaneCount(blogCards);
+  if (!laneCount) {
     return;
   }
-  blogIndex = (blogIndex + direction + blogCards.length) % blogCards.length;
+  blogIndex = (blogIndex + direction + laneCount) % laneCount;
   syncBlogSlider();
 };
 
@@ -749,7 +854,7 @@ const restartBlogSliderTimer = () => {
     clearInterval(blogSliderTimer);
   }
 
-  if (blogCards.length > 1) {
+  if (getShowcaseLaneCount(blogCards) > 1) {
     blogSliderTimer = setInterval(() => cycleBlogSlider(1), 7800);
   }
 };
@@ -792,43 +897,42 @@ const syncWorkSlider = () => {
     return;
   }
 
-  if (workIndex >= visibleWorkCards.length) {
+  const laneCount = getShowcaseLaneCount(visibleWorkCards);
+
+  if (workIndex >= laneCount) {
     workIndex = 0;
   }
 
-  const activeCard = visibleWorkCards[workIndex];
+  const activeLaneCards = getShowcaseLaneCards(visibleWorkCards, workIndex);
+  const primaryCard = activeLaneCards[0];
+  const secondaryTitle = activeLaneCards[1]?.querySelector("h3")?.textContent?.trim() || "";
   workGrid.style.transform = `translateX(-${workIndex * 100}%)`;
+  markActiveLaneCards(workCards, visibleWorkCards, activeLaneCards);
 
-  workCards.forEach((card) => {
-    const active = card === activeCard;
-    card.classList.toggle("active-slide", active);
-    card.setAttribute("aria-hidden", String(!active));
-  });
-
-  const title = activeCard.querySelector("h3")?.textContent || "Latest Delivery";
-  const category = activeCard.querySelector(".work-category")?.textContent || "Latest Works";
-  const summary = activeCard.querySelector(".work-card-content p:not(.work-category)")?.textContent || "";
+  const title = buildLaneTitle(activeLaneCards, "h3", "Latest Delivery");
+  const category = primaryCard?.querySelector(".work-category")?.textContent || "Latest Works";
+  const summary = primaryCard?.querySelector(".work-card-content p:not(.work-category)")?.textContent || "";
 
   if (workSliderTitle) {
     workSliderTitle.textContent = title;
   }
   if (workSliderMeta) {
-    workSliderMeta.textContent = summary;
+    workSliderMeta.textContent = secondaryTitle ? `Paired with ${secondaryTitle}` : summary;
   }
   if (workSliderCount) {
-    workSliderCount.textContent = `${workIndex + 1} / ${visibleWorkCards.length}`;
+    workSliderCount.textContent = getShowcaseRangeText(workIndex, visibleWorkCards.length);
   }
   if (workSliderCategory) {
     workSliderCategory.textContent = category;
   }
   if (workProgressBar) {
-    workProgressBar.style.width = `${((workIndex + 1) / visibleWorkCards.length) * 100}%`;
+    workProgressBar.style.width = `${((workIndex + 1) / laneCount) * 100}%`;
   }
   if (workPrevBtn) {
-    workPrevBtn.disabled = visibleWorkCards.length <= 1;
+    workPrevBtn.disabled = laneCount <= 1;
   }
   if (workNextBtn) {
-    workNextBtn.disabled = visibleWorkCards.length <= 1;
+    workNextBtn.disabled = laneCount <= 1;
   }
   renderWorkThumbnails();
 
@@ -839,10 +943,11 @@ const syncWorkSlider = () => {
 };
 
 const cycleWorkSlider = (direction) => {
-  if (!visibleWorkCards.length) {
+  const laneCount = getShowcaseLaneCount(visibleWorkCards);
+  if (!laneCount) {
     return;
   }
-  workIndex = (workIndex + direction + visibleWorkCards.length) % visibleWorkCards.length;
+  workIndex = (workIndex + direction + laneCount) % laneCount;
   syncWorkSlider();
 };
 
@@ -851,7 +956,7 @@ const restartWorkSliderTimer = () => {
     clearInterval(workSliderTimer);
   }
 
-  if (visibleWorkCards.length > 1) {
+  if (getShowcaseLaneCount(visibleWorkCards) > 1) {
     workSliderTimer = setInterval(() => cycleWorkSlider(1), 7000);
   }
 };
@@ -972,6 +1077,28 @@ if (blogSliderShell) {
     restartBlogSliderTimer();
   });
 }
+
+let showcaseResizeFrame = null;
+window.addEventListener("resize", () => {
+  if (showcaseResizeFrame) {
+    cancelAnimationFrame(showcaseResizeFrame);
+  }
+
+  showcaseResizeFrame = requestAnimationFrame(() => {
+    if (workCards.length) {
+      syncWorkSlider();
+    }
+    if (projectCards.length) {
+      syncProjectSlider();
+    }
+    if (publicationCards.length) {
+      syncPublicationSlider();
+    }
+    if (blogCards.length) {
+      syncBlogSlider();
+    }
+  });
+});
 
 planTriggers.forEach((trigger) => {
   trigger.addEventListener("click", () => {
