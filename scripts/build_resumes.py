@@ -14,12 +14,12 @@ from xml.sax.saxutils import escape
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from resume_src.resume_data import JOB_RESUME, PHD_RESUME, SHARED
+from resume_src.resume_data import JOB_RESUME, JOB_RESUME_NETWORK_SECURITY, PHD_RESUME, SHARED
 
 PDF_CSS = """
 @page {
-  size: Letter;
-  margin: 0.55in;
+  size: A4;
+  margin: 0.62in;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -30,6 +30,10 @@ body {
 }
 .resume {
   width: 100%;
+}
+.resume p,
+.resume li {
+  text-align: justify;
 }
 header {
   border-bottom: 2px solid #c95d14;
@@ -50,10 +54,12 @@ h1 {
 .subtitle {
   font-size: 10.4pt;
   margin: 0 0 8px;
+  text-align: center;
 }
 .contact, .links {
   font-size: 9.6pt;
   margin: 2px 0;
+  text-align: center;
 }
 .section {
   margin: 0 0 14px;
@@ -103,6 +109,7 @@ li {
 .entry-meta {
   color: #526074;
   font-size: 9.7pt;
+  text-align: left;
 }
 .compact-list li {
   margin-bottom: 3px;
@@ -167,13 +174,12 @@ def render_key_value_map(data: dict[str, str]) -> str:
     return '<ul class="compact-list">' + ''.join(items) + '</ul>'
 
 
-def render_job_html() -> str:
-    d = JOB_RESUME
+def render_job_html(d: dict[str, object], html_title: str) -> str:
     return f"""<!doctype html>
 <html lang=\"en\">
 <head>
   <meta charset=\"utf-8\">
-  <title>Job Resume | Md Anisur Rahman Chowdhury</title>
+  <title>{escape(html_title)} | Md Anisur Rahman Chowdhury</title>
   <style>{PDF_CSS}</style>
 </head>
 <body>
@@ -341,12 +347,26 @@ def build_docx_body(lines: list[tuple[str, str]]) -> str:
         elif kind == "subheading":
             xml.append(para(text, bold=True, size=18, spacing_before=80, spacing_after=40))
         elif kind == "meta":
-            xml.append(para(text, size=16, spacing_after=70))
+            xml.append(para(text, size=16, spacing_after=70, align="both"))
         elif kind == "bullet":
-            xml.append(para(f"- {text}", size=18, spacing_after=50))
+            xml.append(para(f"- {text}", size=18, spacing_after=50, align="both"))
         else:
-            xml.append(para(text, size=18, spacing_after=70))
+            xml.append(para(text, size=18, spacing_after=70, align="both"))
     return "".join(xml)
+
+
+def normalize_sectpr(sectpr: str) -> str:
+    pgsz = '<w:pgSz w:w="11906" w:h="16838"/>'
+    pgmar = '<w:pgMar w:top="900" w:right="900" w:bottom="900" w:left="900" w:header="360" w:footer="360" w:gutter="0"/>'
+    if "<w:pgSz" in sectpr:
+        sectpr = re.sub(r"<w:pgSz[^>]*/>", pgsz, sectpr)
+    else:
+        sectpr = sectpr.replace("</w:sectPr>", pgsz + "</w:sectPr>")
+    if "<w:pgMar" in sectpr:
+        sectpr = re.sub(r"<w:pgMar[^>]*/>", pgmar, sectpr)
+    else:
+        sectpr = sectpr.replace("</w:sectPr>", pgmar + "</w:sectPr>")
+    return sectpr
 
 
 def replace_docx_document(template_path: Path, output_path: Path, lines: list[tuple[str, str]]) -> None:
@@ -356,7 +376,7 @@ def replace_docx_document(template_path: Path, output_path: Path, lines: list[tu
         sectpr_match = re.search(r"(<w:sectPr[\s\S]*?</w:sectPr>)", original)
         if not sectpr_match:
             raise RuntimeError(f"Could not find sectPr in {template_path}")
-        suffix = sectpr_match.group(1) + "</w:body></w:document>"
+        suffix = normalize_sectpr(sectpr_match.group(1)) + "</w:body></w:document>"
         body = build_docx_body(lines)
         new_xml = prefix + body + suffix
 
@@ -383,8 +403,7 @@ def render_pdf(html_path: Path, pdf_path: Path) -> None:
     subprocess.run([os.path.expanduser("~/.local/bin/weasyprint"), str(html_path), str(pdf_path)], check=True)
 
 
-def job_docx_lines() -> list[tuple[str, str]]:
-    d = JOB_RESUME
+def job_docx_lines(d: dict[str, object]) -> list[tuple[str, str]]:
     lines = [
         ("name", SHARED["name"]),
         ("title", d["title"]),
@@ -458,19 +477,25 @@ def phd_docx_lines() -> list[tuple[str, str]]:
 
 def main() -> None:
     job_html_path = ROOT / "Job-Resume" / "resume-source.html"
+    job_targeted_html_path = ROOT / "Job-Resume" / "network-security-resume-source.html"
     phd_html_path = ROOT / "PhD-Resume" / "resume-source.html"
     job_pdf_path = ROOT / "Job-Resume" / "Resume.pdf"
+    job_targeted_pdf_path = ROOT / "Job-Resume" / "Resume-Network-Security-Engineer.pdf"
     phd_pdf_path = ROOT / "PhD-Resume" / "Resume of MARC.pdf"
     job_docx_path = ROOT / "Job-Resume" / "Resume.docx"
+    job_targeted_docx_path = ROOT / "Job-Resume" / "Resume-Network-Security-Engineer.docx"
     phd_docx_path = ROOT / "PhD-Resume" / "Resume of MARC.docx"
 
-    write_text(job_html_path, render_job_html())
+    write_text(job_html_path, render_job_html(JOB_RESUME, "Job Resume"))
+    write_text(job_targeted_html_path, render_job_html(JOB_RESUME_NETWORK_SECURITY, "Network Security Engineer Resume"))
     write_text(phd_html_path, render_phd_html())
 
     render_pdf(job_html_path, job_pdf_path)
+    render_pdf(job_targeted_html_path, job_targeted_pdf_path)
     render_pdf(phd_html_path, phd_pdf_path)
 
-    replace_docx_document(job_docx_path, job_docx_path, job_docx_lines())
+    replace_docx_document(job_docx_path, job_docx_path, job_docx_lines(JOB_RESUME))
+    replace_docx_document(job_docx_path, job_targeted_docx_path, job_docx_lines(JOB_RESUME_NETWORK_SECURITY))
     replace_docx_document(phd_docx_path, phd_docx_path, phd_docx_lines())
 
 

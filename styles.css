@@ -1609,6 +1609,35 @@ h1 span {
   margin-bottom: 0.95rem;
 }
 
+.resume-variant-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: -0.15rem 0 0.95rem;
+}
+
+.resume-variant-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.58rem 0.82rem;
+  border-radius: 10px;
+  border: 1px solid rgba(15, 62, 86, 0.14);
+  background: rgba(15, 62, 86, 0.05);
+  color: #184862;
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+}
+
+.resume-variant-links a:hover {
+  transform: translateY(-2px);
+  border-color: rgba(201, 93, 20, 0.35);
+  background: rgba(201, 93, 20, 0.08);
+  color: #8f4212;
+}
+
 .resume-preview-shell {
   overflow: hidden;
   border: 1px solid #e3d8ca;
@@ -3199,6 +3228,10 @@ h1 span {
 
   .blog-lane-actions .btn,
   .blog-spotlight-actions .btn {
+    width: 100%;
+  }
+
+  .resume-variant-links a {
     width: 100%;
   }
 

@@ -109,6 +109,47 @@ JOB_RESUME = {
     },
 }
 
+JOB_RESUME_NETWORK_SECURITY = {
+    **JOB_RESUME,
+    "title": "Network Security Engineer | Firewall, VPN, and Infrastructure Defense",
+    "subtitle": "Targeted resume for network security engineering roles across firewall operations, secure routing, VPN, access control, and hybrid infrastructure protection.",
+    "summary": [
+        "Network Security Engineer with 7+ years of experience across ISP operations, enterprise IT, and production infrastructure support.",
+        "Hands-on background in firewall policy administration, VPN, NAT, ACL, routing and switching, Linux and Windows Server administration, Active Directory, monitoring, and secure network troubleshooting.",
+        "Graduate Research Assistant at Gannon University extending practical industry experience into serverless security, Zero Trust enforcement, cross-cloud protection, and deployable network defense research.",
+    ],
+    "expertise": [
+        "Firewall Policy Management and Access Control",
+        "VPN, NAT, ACL, and Network Segmentation",
+        "Routing and Switching",
+        "Network Security Engineering",
+        "Cisco, MikroTik, Juniper, Fortinet, and Cyberoam",
+        "Linux and Windows Server Administration",
+        "Active Directory and Identity Access Control",
+        "Mail, File, and IP-PBX Infrastructure",
+        "Network Monitoring and Incident Troubleshooting",
+        "Hybrid Infrastructure Security",
+        "Cloud Security and Zero Trust Concepts",
+        "CCNA, JNCIA, and MTCNA",
+    ],
+    "contributions": [
+        "Supported 100+ enterprise accounts and 500+ users across customer, ISP, and enterprise network environments.",
+        "Configured and maintained firewall policies, NAT, ACLs, VPN tunnels, bandwidth control, load balancing, and WAN failover for real business networks.",
+        "Connected hands-on network operations experience with current research in serverless firewalls, Zero Trust, and cloud network defense.",
+        "Brings a practical security mindset shaped by production incidents, uptime responsibility, and infrastructure troubleshooting under pressure.",
+    ],
+    "projects": [
+        {
+            "name": "Serverless Intelligent Firewall Research Series",
+            "detail": "Three connected security projects focused on adaptive firewall behavior, cross-cloud protection, threat intelligence integration, and federated Zero Trust enforcement.",
+        },
+        {
+            "name": "Secure Mail and Infrastructure Operations",
+            "detail": "Production work across mail services, file services, Active Directory, IP-PBX, and business network administration with a strong focus on secure access and service continuity.",
+        },
+    ],
+}
+
 PHD_RESUME = {
     "title": "Researcher in Cloud Security, Serverless Systems, and Network Infrastructure Protection",
     "subtitle": "Graduate Research Assistant building first-author work in serverless security, Zero Trust architecture, physical and cloud network infrastructure security, and deployable AI-assisted defense systems.",
