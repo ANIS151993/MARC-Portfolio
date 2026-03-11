@@ -65,6 +65,17 @@ body.page-phd .resume-center-hero .resume-center-copy h3 {
   color: #f4f8fe;
 }
 
+body.page-phd .about-intro .pill,
+body.page-phd .publication-showcase .pill,
+body.page-phd .resume-center-hero .pill {
+  background: linear-gradient(135deg, rgba(72, 168, 255, 0.22), rgba(255, 119, 32, 0.18));
+  border-color: rgba(143, 212, 255, 0.32);
+  color: #f8fbff;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 10px 20px rgba(8, 12, 19, 0.18);
+}
+
 body.page-phd .about-intro .about-copy p,
 body.page-phd .publication-showcase .publication-summary p,
 body.page-phd .resume-center-hero .resume-center-copy p,
