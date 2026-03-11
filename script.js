@@ -1,5 +1,19 @@
 const menuToggle = document.getElementById("menuToggle");
 const mainNav = document.getElementById("mainNav");
+const siteHeader = document.querySelector(".site-header");
+const sectionNavLinks = mainNav ? Array.from(mainNav.querySelectorAll('a[href^="#"]')) : [];
+
+const setActiveNavLink = (sectionId) => {
+  sectionNavLinks.forEach((link) => {
+    const active = link.getAttribute("href") === `#${sectionId}`;
+    link.classList.toggle("active", active);
+    if (active) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+};
 
 if (menuToggle && mainNav) {
   menuToggle.addEventListener("click", () => {
@@ -9,10 +23,53 @@ if (menuToggle && mainNav) {
 
   mainNav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
+      const target = link.getAttribute("href") || "";
+      if (target.startsWith("#")) {
+        setActiveNavLink(target.slice(1));
+      }
       mainNav.classList.remove("open");
       menuToggle.setAttribute("aria-expanded", "false");
     });
   });
+}
+
+if (siteHeader) {
+  const syncHeaderState = () => {
+    siteHeader.classList.toggle("scrolled", window.scrollY > 20);
+  };
+
+  window.addEventListener("scroll", syncHeaderState, { passive: true });
+  syncHeaderState();
+}
+
+if (sectionNavLinks.length) {
+  const trackedSections = sectionNavLinks
+    .map((link) => {
+      const target = link.getAttribute("href") || "";
+      return document.querySelector(target);
+    })
+    .filter(Boolean);
+
+  if (trackedSections.length) {
+    const navObserver = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visible?.target?.id) {
+          setActiveNavLink(visible.target.id);
+        }
+      },
+      {
+        rootMargin: "-22% 0px -58% 0px",
+        threshold: [0.2, 0.35, 0.55]
+      }
+    );
+
+    trackedSections.forEach((section) => navObserver.observe(section));
+    setActiveNavLink(trackedSections[0].id);
+  }
 }
 
 const typedNode = document.getElementById("typedRoles");
