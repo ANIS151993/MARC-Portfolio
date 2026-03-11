@@ -3559,6 +3559,11 @@ h1 span {
     linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(248, 240, 230, 0.98));
 }
 
+.publication-pipeline-standalone {
+  max-width: 1000px;
+  margin: 1rem auto 0;
+}
+
 .publication-pipeline-head p:last-child {
   margin-bottom: 0;
 }

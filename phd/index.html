@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto+Slab:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=20260311twoup2">
-  <link rel="stylesheet" href="/phd/styles.css?v=20260311twoup2">
+  <link rel="stylesheet" href="/styles.css?v=20260311twoup3">
+  <link rel="stylesheet" href="/phd/styles.css?v=20260311twoup3">
 </head>
 <body class="page-phd">
   <header class="site-header" id="top">
@@ -360,7 +360,6 @@
           <button data-filter="published">Published</button>
           <button data-filter="first-author">First Author</button>
           <button data-filter="co-authored">Collaborative</button>
-          <button data-filter="pipeline">Pipeline</button>
         </div>
 
         <div class="publications-slider-shell reveal">
@@ -556,62 +555,6 @@
                 </div>
               </article>
 
-              <article class="publication-pipeline card reveal interactive-card" data-pubcat="pipeline">
-                <div class="publication-pipeline-head">
-                  <p class="pill">Research Pipeline</p>
-                  <h3>Under Review and In Preparation</h3>
-                  <p>This is the part of my current research agenda that I am actively moving forward now. Most of it stays close to cloud security, Zero Trust automation, federated intelligence, reliable LLM systems, and AI-assisted infrastructure defense.</p>
-                </div>
-                <div class="pipeline-columns">
-                  <div class="pipeline-group">
-                    <h4>Under Review</h4>
-                    <ul class="pipeline-list">
-                      <li>
-                        <strong>Towards a Serverless Intelligent Firewall: Integrating Cross-Cloud Adaptation, AI-Driven Security, and Zero-Trust Architectures</strong>
-                        <span>IEEE SmartCloud 2026</span>
-                      </li>
-                      <li>
-                        <strong>Federated Threat Intelligence for Multi-Cloud Security: A Privacy-Preserving AI Approach</strong>
-                        <span>IEEE IC3ECSBHI 2026</span>
-                      </li>
-                      <li>
-                        <strong>Continuous Verification in Zero Trust Security: A Model for Secure Automation</strong>
-                        <span>IEEE IC3ECSBHI 2026</span>
-                      </li>
-                      <li>
-                        <strong>Teaching Large Language Models to Think Twice: A Three-Stage Framework for Self-Correcting Mathematical Reasoning</strong>
-                        <span>CAC'26 | American CSE Draft Submission</span>
-                        <div class="pipeline-links">
-                          <a href="https://american-cse.org/drafts" target="_blank" rel="noopener">Venue</a>
-                          <a href="https://github.com/ANIS151993/Self-Correcting-LLM-localhost.git" target="_blank" rel="noopener">Repo</a>
-                          <a href="https://anis151993.github.io/Self-Correcting-LLM-localhost/" target="_blank" rel="noopener">Webpage</a>
-                        </div>
-                      </li>
-                      <li>
-                        <strong>A Local Distributed Multi-Agent LLM Ensemble System for Complex Problem Solving</strong>
-                        <span>Under Review</span>
-                        <div class="pipeline-links">
-                          <a href="https://github.com/ANIS151993/Distributed-AI.git" target="_blank" rel="noopener">Repo</a>
-                          <a href="https://anis151993.github.io/Distributed-AI/" target="_blank" rel="noopener">Webpage</a>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="pipeline-group">
-                    <h4>In Preparation</h4>
-                    <ul class="pipeline-list">
-                      <li>
-                        <strong>Autonomous Self-Learning Serverless Intelligent Firewall: Integrating REST API-Driven Open-Source Threat Intelligence, Multi-Paradigm Machine Learning, and Federated Zero-Trust Architectures</strong>
-                        <span>Target: Q1 Journal</span>
-                      </li>
-                      <li>
-                        <strong>Building a Team of AI Models: A Literature Review on Distributed Agent Networks</strong>
-                        <span>Target: Conference Submission</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </article>
             </div>
           </div>
 
@@ -626,6 +569,63 @@
           </div>
           <div class="publications-slider-thumbs" id="publicationSliderThumbs" aria-label="Research Publication Thumbnails"></div>
         </div>
+
+        <article class="publication-pipeline card reveal interactive-card publication-pipeline-standalone" id="publicationPipeline">
+          <div class="publication-pipeline-head">
+            <p class="pill">Research Pipeline</p>
+            <h3>Under Review and In Preparation</h3>
+            <p>This is the part of my current research agenda that I am actively moving forward now. Most of it stays close to cloud security, Zero Trust automation, federated intelligence, reliable LLM systems, and AI-assisted infrastructure defense.</p>
+          </div>
+          <div class="pipeline-columns">
+            <div class="pipeline-group">
+              <h4>Under Review</h4>
+              <ul class="pipeline-list">
+                <li>
+                  <strong>Towards a Serverless Intelligent Firewall: Integrating Cross-Cloud Adaptation, AI-Driven Security, and Zero-Trust Architectures</strong>
+                  <span>IEEE SmartCloud 2026</span>
+                </li>
+                <li>
+                  <strong>Federated Threat Intelligence for Multi-Cloud Security: A Privacy-Preserving AI Approach</strong>
+                  <span>IEEE IC3ECSBHI 2026</span>
+                </li>
+                <li>
+                  <strong>Continuous Verification in Zero Trust Security: A Model for Secure Automation</strong>
+                  <span>IEEE IC3ECSBHI 2026</span>
+                </li>
+                <li>
+                  <strong>Teaching Large Language Models to Think Twice: A Three-Stage Framework for Self-Correcting Mathematical Reasoning</strong>
+                  <span>CAC'26 | American CSE Draft Submission</span>
+                  <div class="pipeline-links">
+                    <a href="https://american-cse.org/drafts" target="_blank" rel="noopener">Venue</a>
+                    <a href="https://github.com/ANIS151993/Self-Correcting-LLM-localhost.git" target="_blank" rel="noopener">Repo</a>
+                    <a href="https://anis151993.github.io/Self-Correcting-LLM-localhost/" target="_blank" rel="noopener">Webpage</a>
+                  </div>
+                </li>
+                <li>
+                  <strong>A Local Distributed Multi-Agent LLM Ensemble System for Complex Problem Solving</strong>
+                  <span>Under Review</span>
+                  <div class="pipeline-links">
+                    <a href="https://github.com/ANIS151993/Distributed-AI.git" target="_blank" rel="noopener">Repo</a>
+                    <a href="https://anis151993.github.io/Distributed-AI/" target="_blank" rel="noopener">Webpage</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="pipeline-group">
+              <h4>In Preparation</h4>
+              <ul class="pipeline-list">
+                <li>
+                  <strong>Autonomous Self-Learning Serverless Intelligent Firewall: Integrating REST API-Driven Open-Source Threat Intelligence, Multi-Paradigm Machine Learning, and Federated Zero-Trust Architectures</strong>
+                  <span>Target: Q1 Journal</span>
+                </li>
+                <li>
+                  <strong>Building a Team of AI Models: A Literature Review on Distributed Agent Networks</strong>
+                  <span>Target: Conference Submission</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
