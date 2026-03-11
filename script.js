@@ -177,7 +177,16 @@ skillFillNodes.forEach((node) => skillObserver.observe(node));
 const projectFilters = document.getElementById("projectFilters");
 const projectCards = document.querySelectorAll("#projectGrid .portfolio-card");
 const workFilters = document.getElementById("workFilters");
-const workCards = document.querySelectorAll("#workGrid .work-card");
+const workGrid = document.getElementById("workGrid");
+const workCards = Array.from(document.querySelectorAll("#workGrid .work-card"));
+const workSliderShell = document.querySelector(".works-slider-shell");
+const workPrevBtn = document.getElementById("workPrev");
+const workNextBtn = document.getElementById("workNext");
+const workSliderTitle = document.getElementById("workSliderTitle");
+const workSliderMeta = document.getElementById("workSliderMeta");
+const workSliderCount = document.getElementById("workSliderCount");
+const workSliderCategory = document.getElementById("workSliderCategory");
+const workProgressBar = document.getElementById("workProgressBar");
 const publicationFilters = document.getElementById("publicationFilters");
 const publicationCards = document.querySelectorAll("#publicationGrid [data-pubcat]");
 const orderPackage = document.getElementById("orderPackage");
@@ -186,6 +195,10 @@ const orderSection = document.getElementById("order");
 const checkoutHelp = document.getElementById("checkoutHelp");
 const planTriggers = document.querySelectorAll(".plan-trigger");
 const pricePlans = document.querySelectorAll(".price-plan");
+let activeWorkFilter = "all";
+let visibleWorkCards = [];
+let workIndex = 0;
+let workSliderTimer = null;
 
 if (projectFilters && projectCards.length) {
   projectFilters.querySelectorAll("button").forEach((button) => {
@@ -203,19 +216,141 @@ if (projectFilters && projectCards.length) {
   });
 }
 
+const syncWorkSlider = () => {
+  if (!workGrid || !workCards.length) {
+    return;
+  }
+
+  visibleWorkCards = workCards.filter((card) => {
+    const cat = card.getAttribute("data-workcat") || "";
+    return activeWorkFilter === "all" || cat.includes(activeWorkFilter);
+  });
+
+  workCards.forEach((card) => {
+    const visible = visibleWorkCards.includes(card);
+    card.classList.toggle("hidden-card", !visible);
+  });
+
+  if (!visibleWorkCards.length) {
+    if (workGrid) {
+      workGrid.style.transform = "translateX(0)";
+    }
+    if (workSliderTitle) {
+      workSliderTitle.textContent = "No work found";
+    }
+    if (workSliderMeta) {
+      workSliderMeta.textContent = "Try another category filter.";
+    }
+    if (workSliderCount) {
+      workSliderCount.textContent = "0 / 0";
+    }
+    if (workSliderCategory) {
+      workSliderCategory.textContent = "Latest Works";
+    }
+    if (workProgressBar) {
+      workProgressBar.style.width = "0%";
+    }
+    return;
+  }
+
+  if (workIndex >= visibleWorkCards.length) {
+    workIndex = 0;
+  }
+
+  const activeCard = visibleWorkCards[workIndex];
+  workGrid.style.transform = `translateX(-${workIndex * 100}%)`;
+
+  workCards.forEach((card) => {
+    const active = card === activeCard;
+    card.classList.toggle("active-slide", active);
+    card.setAttribute("aria-hidden", String(!active));
+  });
+
+  const title = activeCard.querySelector("h3")?.textContent || "Latest Delivery";
+  const category = activeCard.querySelector(".work-category")?.textContent || "Latest Works";
+  const summary = activeCard.querySelector(".work-card-content p:not(.work-category)")?.textContent || "";
+
+  if (workSliderTitle) {
+    workSliderTitle.textContent = title;
+  }
+  if (workSliderMeta) {
+    workSliderMeta.textContent = summary;
+  }
+  if (workSliderCount) {
+    workSliderCount.textContent = `${workIndex + 1} / ${visibleWorkCards.length}`;
+  }
+  if (workSliderCategory) {
+    workSliderCategory.textContent = category;
+  }
+  if (workProgressBar) {
+    workProgressBar.style.width = `${((workIndex + 1) / visibleWorkCards.length) * 100}%`;
+  }
+  if (workPrevBtn) {
+    workPrevBtn.disabled = visibleWorkCards.length <= 1;
+  }
+  if (workNextBtn) {
+    workNextBtn.disabled = visibleWorkCards.length <= 1;
+  }
+};
+
+const cycleWorkSlider = (direction) => {
+  if (!visibleWorkCards.length) {
+    return;
+  }
+  workIndex = (workIndex + direction + visibleWorkCards.length) % visibleWorkCards.length;
+  syncWorkSlider();
+};
+
+const restartWorkSliderTimer = () => {
+  if (workSliderTimer) {
+    clearInterval(workSliderTimer);
+  }
+
+  if (visibleWorkCards.length > 1) {
+    workSliderTimer = setInterval(() => cycleWorkSlider(1), 7000);
+  }
+};
+
 if (workFilters && workCards.length) {
   workFilters.querySelectorAll("button").forEach((button) => {
     button.addEventListener("click", () => {
-      const filter = button.getAttribute("data-filter");
+      const filter = button.getAttribute("data-filter") || "all";
+      activeWorkFilter = filter;
+      workIndex = 0;
       workFilters.querySelectorAll("button").forEach((b) => b.classList.remove("active"));
       button.classList.add("active");
-
-      workCards.forEach((card) => {
-        const cat = card.getAttribute("data-workcat") || "";
-        const show = filter === "all" || cat.includes(filter);
-        card.classList.toggle("hidden-card", !show);
-      });
+      syncWorkSlider();
+      restartWorkSliderTimer();
     });
+  });
+
+  syncWorkSlider();
+  restartWorkSliderTimer();
+}
+
+if (workPrevBtn) {
+  workPrevBtn.addEventListener("click", () => {
+    cycleWorkSlider(-1);
+    restartWorkSliderTimer();
+  });
+}
+
+if (workNextBtn) {
+  workNextBtn.addEventListener("click", () => {
+    cycleWorkSlider(1);
+    restartWorkSliderTimer();
+  });
+}
+
+if (workSliderShell) {
+  workSliderShell.addEventListener("mouseenter", () => {
+    if (workSliderTimer) {
+      clearInterval(workSliderTimer);
+    }
+  });
+
+  workSliderShell.addEventListener("mouseleave", () => {
+    restartWorkSliderTimer();
   });
 }
 
