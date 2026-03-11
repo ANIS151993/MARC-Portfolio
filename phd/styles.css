@@ -176,3 +176,15 @@ body.page-phd .blog-topic-strip a {
     min-height: 440px;
   }
 }
+
+@media (max-width: 760px) {
+  body.page-phd .publication-showcase,
+  body.page-phd .resume-center-hero,
+  body.page-phd .about-intro {
+    padding: 1rem;
+  }
+
+  body.page-phd .resume-grid-single .resume-preview-shell {
+    min-height: 380px;
+  }
+}

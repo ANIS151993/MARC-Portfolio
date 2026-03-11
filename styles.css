@@ -5423,3 +5423,201 @@ body.page-phd .publication-thumb.active {
     content: "Single";
   }
 }
+
+@media (max-width: 980px) {
+  .container {
+    width: min(calc(100% - 1.25rem), 100%);
+  }
+
+  .section {
+    padding: 72px 0;
+  }
+
+  .hero-grid {
+    gap: 1.1rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+  }
+
+  .hero-stats article,
+  .publication-metric-row article,
+  .resume-center-stats article {
+    padding: 1rem;
+  }
+
+  .section-head {
+    margin-bottom: 1.35rem;
+  }
+
+  .project-showcase,
+  .publication-showcase,
+  .resume-center-hero,
+  .about-intro,
+  .expertise-showcase {
+    padding: 1.05rem;
+  }
+
+  .profile-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .publication-metric-row,
+  .resume-center-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .price-list-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .resume-preview-shell {
+    min-height: 440px;
+  }
+
+  .resume-preview {
+    height: 320px;
+  }
+
+  .footer-wrap {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: min(calc(100% - 1rem), 100%);
+  }
+
+  section[id] {
+    scroll-margin-top: 82px;
+  }
+
+  .section {
+    padding: 64px 0;
+  }
+
+  .hero {
+    padding-top: 82px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.05rem, 9vw, 3rem);
+  }
+
+  .hero-text,
+  .section-intro {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .hero-cta,
+  .resume-actions,
+  .publication-summary-actions,
+  .pricing-actions,
+  .resume-variant-links,
+  .blog-spotlight-actions {
+    flex-direction: column;
+  }
+
+  .hero-cta .btn,
+  .resume-actions .btn,
+  .publication-summary-actions .btn,
+  .pricing-actions .btn,
+  .resume-variant-links a,
+  .blog-spotlight-actions .btn {
+    width: 100%;
+  }
+
+  .hero-stats,
+  .publication-metric-row,
+  .resume-center-stats,
+  .price-list-grid,
+  .profile-links {
+    grid-template-columns: 1fr;
+  }
+
+  .project-showcase,
+  .publication-showcase,
+  .resume-center-hero,
+  .about-intro,
+  .expertise-showcase {
+    gap: 0.85rem;
+    padding: 1rem;
+  }
+
+  .section-light .profile-links a {
+    min-height: 78px;
+  }
+
+  .resume-preview-shell {
+    min-height: 380px;
+  }
+
+  .resume-preview {
+    height: 280px;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    font-size: 16px;
+  }
+
+  .footer-wrap {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .nav-wrap {
+    min-height: 70px;
+    gap: 0.5rem;
+  }
+
+  .brand {
+    width: 120px;
+  }
+
+  .main-nav {
+    padding: 0.7rem 0.85rem;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 36px;
+  }
+
+  .section-head h2 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+
+  .hero-stats article,
+  .resume-center-stats article,
+  .publication-metric-row article,
+  .project-signal,
+  .publication-focus-grid article,
+  .about-callouts article {
+    padding: 0.85rem;
+  }
+
+  .testimonial-shell {
+    gap: 0.65rem;
+  }
+
+  .testimonial-track {
+    min-height: 280px;
+  }
+}

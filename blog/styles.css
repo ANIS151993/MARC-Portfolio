@@ -1017,6 +1017,81 @@ textarea {
   }
 }
 
+@media (max-width: 980px) {
+  .container {
+    width: min(calc(100% - 1.25rem), 100%);
+  }
+
+  .journal-main {
+    gap: 1rem;
+    padding: 1.1rem 0 1.8rem;
+  }
+
+  .hero-card,
+  .story-section,
+  .closing-card,
+  .rail-card,
+  .project-story {
+    padding: 1.05rem;
+  }
+
+  .top-links a {
+    flex: 1 1 calc(50% - 0.75rem);
+    justify-content: center;
+  }
+
+  .project-frame {
+    height: 280px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(calc(100% - 1rem), 100%);
+  }
+
+  .journal-main {
+    padding: 1rem 0 1.5rem;
+  }
+
+  .header-wrap {
+    padding: 0.65rem 0;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .top-links {
+    width: 100%;
+  }
+
+  .top-links a,
+  .btn,
+  .work-links a,
+  .project-links a,
+  .publication-links a,
+  .category-note-actions a,
+  .filter-bar button {
+    width: 100%;
+  }
+
+  .hero-card,
+  .story-section,
+  .closing-card,
+  .rail-card,
+  .project-story {
+    padding: 0.95rem;
+  }
+
+  .hero-card h1,
+  .story-head h2 {
+    font-size: clamp(1.65rem, 7vw, 2.2rem);
+  }
+
+  .project-frame {
+    height: 220px;
+  }
+}
+
 body.page-research-blog {
   background:
     radial-gradient(circle at top left, rgba(72, 168, 255, 0.12), rgba(72, 168, 255, 0) 24%),
