@@ -1340,9 +1340,9 @@ h1 span {
 
 .projects-slider-shell {
   position: relative;
-  max-width: 700px;
+  max-width: 820px;
   margin: 0 auto;
-  padding: 0.9rem;
+  padding: 1rem;
   border-radius: 24px;
   background:
     radial-gradient(circle at top right, rgba(255, 122, 31, 0.16), rgba(255, 122, 31, 0) 28%),
@@ -1373,7 +1373,7 @@ h1 span {
   align-items: flex-end;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.95rem;
 }
 
 .projects-slider-label {
@@ -1399,14 +1399,14 @@ h1 span {
 .projects-slider-intro h3 {
   margin: 0;
   color: #f5f8fd;
-  font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+  font-size: clamp(1.2rem, 2.3vw, 1.72rem);
 }
 
 .projects-slider-intro p:last-child {
   margin: 0.28rem 0 0;
-  max-width: 54ch;
+  max-width: 58ch;
   color: #c4cedb;
-  font-size: 0.92rem;
+  font-size: 0.94rem;
 }
 
 .projects-slider-controls {
@@ -1420,15 +1420,15 @@ h1 span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 108px;
+  min-width: 114px;
   width: auto;
-  min-height: 42px;
+  min-height: 44px;
   padding: 0 0.9rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.06);
   color: #eff4fb;
-  font-size: 0.74rem;
+  font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1478,11 +1478,11 @@ h1 span {
 
 .projects-slider-stage {
   position: relative;
-  max-width: 500px;
+  max-width: 580px;
   margin: 0 auto;
   overflow: hidden;
   aspect-ratio: 1 / 1;
-  border-radius: 20px;
+  border-radius: 22px;
   background: linear-gradient(135deg, #0c131d, #121b28 52%, #0f161f);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
@@ -1504,8 +1504,8 @@ h1 span {
 .projects-slider-stage::after {
   top: 14px;
   right: 14px;
-  width: 76px;
-  height: 76px;
+  width: 88px;
+  height: 88px;
   border-top: 1px solid rgba(255, 183, 135, 0.46);
   border-right: 1px solid rgba(255, 183, 135, 0.46);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 32% 0);
@@ -1531,7 +1531,7 @@ h1 span {
   min-width: 100%;
   height: 100%;
   padding: 0;
-  border-radius: 20px;
+  border-radius: 22px;
   overflow: hidden;
   border: none;
   background:
@@ -1553,18 +1553,18 @@ h1 span {
 
 .projects-slider-stage .project-preview-shell {
   height: 100%;
-  padding: 0.72rem 0.72rem 0;
+  padding: 0.82rem 0.82rem 0;
 }
 
 .projects-slider-stage .project-browser-bar {
-  min-height: 30px;
+  min-height: 32px;
 }
 
 .projects-slider-stage .project-preview {
-  height: calc(100% - 30px);
-  min-height: calc(100% - 30px);
+  height: calc(100% - 32px);
+  min-height: calc(100% - 32px);
   aspect-ratio: auto;
-  border-radius: 0 0 16px 16px;
+  border-radius: 0 0 18px 18px;
 }
 
 .projects-slider-stage .project-preview::after {
@@ -1578,32 +1578,32 @@ h1 span {
 }
 
 .projects-slider-stage .project-preview-copy {
-  left: 0.78rem;
-  right: 0.78rem;
-  bottom: 0.78rem;
+  left: 0.88rem;
+  right: 0.88rem;
+  bottom: 0.88rem;
 }
 
 .projects-slider-stage .project-content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 0.85rem 0.85rem 0.9rem;
+  padding: 0.95rem 0.95rem 1rem;
 }
 
 .projects-slider-stage .project-role {
   color: #ffbc84;
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   margin-bottom: 0.34rem;
 }
 
 .projects-slider-stage .portfolio-card h3 {
-  font-size: 1.06rem;
+  font-size: 1.14rem;
   margin-bottom: 0.34rem;
 }
 
 .projects-slider-stage .portfolio-card p {
-  font-size: 0.88rem;
-  line-height: 1.55;
+  font-size: 0.9rem;
+  line-height: 1.58;
 }
 
 .projects-slider-stage .project-tags {
@@ -1612,24 +1612,24 @@ h1 span {
 }
 
 .projects-slider-stage .project-tags span {
-  padding: 0.28rem 0.54rem;
-  font-size: 0.7rem;
+  padding: 0.3rem 0.58rem;
+  font-size: 0.72rem;
 }
 
 .projects-slider-stage .project-actions {
   margin-top: auto;
-  padding-top: 0.7rem;
+  padding-top: 0.8rem;
   gap: 0.45rem;
 }
 
 .projects-slider-stage .project-link {
-  min-height: 36px;
+  min-height: 38px;
   border-radius: 999px;
   padding: 0.5rem 0.75rem;
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 255, 255, 0.12);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
-  font-size: 0.75rem;
+  font-size: 0.78rem;
 }
 
 .projects-slider-stage .project-link:hover,
@@ -1719,8 +1719,8 @@ h1 span {
 .project-thumb {
   position: relative;
   flex: 0 0 auto;
-  min-width: 60px;
-  height: 48px;
+  min-width: 66px;
+  height: 54px;
   display: inline-grid;
   place-items: center;
   padding: 0.45rem 0.7rem;
@@ -1746,7 +1746,7 @@ h1 span {
 .project-thumb span {
   position: relative;
   z-index: 1;
-  font-size: 0.65rem;
+  font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -2315,9 +2315,9 @@ h1 span {
 
 .works-slider-shell {
   position: relative;
-  max-width: 580px;
+  max-width: 680px;
   margin: 0 auto;
-  padding: 0.9rem;
+  padding: 1rem;
   border-radius: 24px;
   background:
     radial-gradient(circle at top right, rgba(255, 122, 31, 0.16), rgba(255, 122, 31, 0) 28%),
@@ -2348,7 +2348,7 @@ h1 span {
   align-items: flex-end;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.95rem;
 }
 
 .works-slider-label {
@@ -2374,14 +2374,14 @@ h1 span {
 .works-slider-intro h3 {
   margin: 0;
   color: #172131;
-  font-size: clamp(1.12rem, 2vw, 1.48rem);
+  font-size: clamp(1.18rem, 2.1vw, 1.56rem);
 }
 
 .works-slider-intro p:last-child {
   margin: 0.28rem 0 0;
-  max-width: 50ch;
+  max-width: 54ch;
   color: #576272;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
 }
 
 .works-slider-controls {
@@ -2395,15 +2395,15 @@ h1 span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 104px;
+  min-width: 110px;
   width: auto;
-  height: 40px;
+  height: 42px;
   padding: 0 0.85rem;
   border-radius: 999px;
   border: 1px solid rgba(25, 37, 56, 0.14);
   background: rgba(255, 255, 255, 0.74);
   color: #162132;
-  font-size: 0.74rem;
+  font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -2456,11 +2456,11 @@ h1 span {
 
 .works-slider-stage {
   position: relative;
-  max-width: 380px;
+  max-width: 460px;
   margin: 0 auto;
   overflow: hidden;
   aspect-ratio: 1 / 1;
-  border-radius: 18px;
+  border-radius: 20px;
   background: linear-gradient(135deg, #0f1722, #172232 52%, #10161f);
   border: 1px solid rgba(20, 31, 44, 0.16);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
@@ -2482,8 +2482,8 @@ h1 span {
 .works-slider-stage::after {
   top: 12px;
   right: 12px;
-  width: 64px;
-  height: 64px;
+  width: 78px;
+  height: 78px;
   border-top: 1px solid rgba(255, 183, 135, 0.5);
   border-right: 1px solid rgba(255, 183, 135, 0.5);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 0);
@@ -2502,7 +2502,7 @@ h1 span {
   position: relative;
   flex: 0 0 100%;
   height: 100%;
-  border-radius: 18px;
+  border-radius: 20px;
   overflow: hidden;
   border: none;
   box-shadow: none;
@@ -2557,8 +2557,8 @@ h1 span {
 .work-card-surface::before {
   content: "";
   position: absolute;
-  inset: 10px;
-  border-radius: 16px;
+  inset: 12px;
+  border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   clip-path: polygon(0 0, 84% 0, 100% 14%, 100% 100%, 0 100%);
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), transparent 34%);
@@ -2567,14 +2567,14 @@ h1 span {
 }
 
 .work-card-content {
-  width: calc(100% - 1rem);
+  width: calc(100% - 1.2rem);
   min-height: auto;
-  margin: 0 0.5rem 0.5rem;
-  padding: 0.78rem 0.8rem 0.8rem;
+  margin: 0 0.6rem 0.6rem;
+  padding: 0.9rem 0.92rem 0.9rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  border-radius: 16px;
+  border-radius: 18px;
   clip-path: polygon(0 0, 86% 0, 100% 18%, 100% 100%, 0 100%);
   background:
     linear-gradient(180deg, rgba(14, 20, 30, 0.56), rgba(11, 18, 27, 0.84)),
@@ -2590,24 +2590,24 @@ h1 span {
   margin: 0 0 0.55rem;
   color: #ffffff;
   line-height: 1.2;
-  font-size: clamp(1rem, 1.7vw, 1.32rem);
+  font-size: clamp(1.08rem, 1.8vw, 1.42rem);
 }
 
 .work-card p {
   color: #edf2f7;
-  line-height: 1.52;
-  font-size: 0.84rem;
+  line-height: 1.56;
+  font-size: 0.88rem;
 }
 
 .work-card .work-category {
   display: inline-block;
   margin: 0 0 0.55rem;
-  padding: 0.28rem 0.56rem;
+  padding: 0.3rem 0.6rem;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.16);
   color: #fff0e1;
-  font-size: 0.66rem;
+  font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -2630,15 +2630,15 @@ h1 span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 34px;
-  padding: 0.44rem 0.72rem;
+  min-height: 36px;
+  padding: 0.48rem 0.76rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)),
     rgba(255, 255, 255, 0.06);
   color: #ffffff;
-  font-size: 0.74rem;
+  font-size: 0.76rem;
   font-weight: 700;
   backdrop-filter: blur(10px);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
@@ -2733,8 +2733,8 @@ h1 span {
 .work-thumb {
   position: relative;
   flex: 0 0 auto;
-  width: 46px;
-  height: 46px;
+  width: 52px;
+  height: 52px;
   display: inline-grid;
   place-items: end start;
   padding: 0.45rem;
@@ -2762,14 +2762,14 @@ h1 span {
 .work-thumb span {
   position: relative;
   z-index: 1;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   display: inline-grid;
   place-items: center;
   border-radius: 999px;
   background: rgba(9, 15, 22, 0.62);
   border: 1px solid rgba(255, 255, 255, 0.16);
-  font-size: 0.62rem;
+  font-size: 0.66rem;
   font-weight: 800;
 }
 
