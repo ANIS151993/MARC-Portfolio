@@ -3,26 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="All of my detailed notes about projects, research papers, and latest works categories in one place.">
-  <title>MARC | All Notes</title>
+  <meta name="description" content="Research note library from Md Anisur Rahman Chowdhury covering research projects, publication notes, and the systems background behind the research direction.">
+  <title>MARC | Research Note Library</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto+Slab:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/blog/posts/notes.css">
+  <link rel="stylesheet" href="/blog/posts/notes.css?v=20260311researchnotes1">
 </head>
-<body>
+<body class="page-research-notes">
   <div class="notes-progress" id="pageProgress" aria-hidden="true"></div>
 
   <header class="notes-header">
     <div class="container header-wrap">
-      <a class="brand" href="/">
+      <a class="brand" href="/phd/">
         <img src="https://marcbd.com/wp-content/uploads/2025/07/MARC-logo1.png" alt="MARC logo">
       </a>
-      <nav class="top-nav" aria-label="All Notes Navigation">
-        <a href="/blog/">My Blog</a>
-        <a href="/">Main Portfolio</a>
+      <nav class="top-nav" aria-label="Research Notes Navigation">
         <a href="/phd/">PhD Site</a>
-        <a href="/Job-Resume/MARC-Resume.pdf?v=20260311marc1" target="_blank" rel="noopener">Job Resume</a>
+        <a href="/blog/">Research Blog</a>
+        <a href="/">Main Portfolio</a>
+        <a href="/PhD-Resume/Resume%20of%20MARC.pdf?v=20260311phd2" target="_blank" rel="noopener">PhD Resume</a>
       </nav>
     </div>
   </header>
@@ -30,22 +30,26 @@
   <main class="container notes-main">
     <section class="notes-hero reveal">
       <div class="hero-copy">
-        <p class="section-kicker">Detailed Notes Library</p>
-        <h1>I keep all of my project notes, paper notes, and latest-work notes here in one place.</h1>
-        <p>I made this page so visitors can read through everything without jumping around the site too much. If you want the longer version of my projects, papers, or work categories, this is the easiest place to browse them.</p>
+        <p class="section-kicker">Research Note Library</p>
+        <h1>I keep the longer version of my research work here, along with the systems background that shaped it.</h1>
+        <p>I built this page so a professor, admissions reviewer, or research collaborator can read across my research projects, publication notes, and the infrastructure background behind those ideas without jumping through too many separate pages.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="/blog/">Back to My Blog</a>
+          <a class="btn btn-primary" href="/blog/">Back to Research Blog</a>
           <a class="btn btn-secondary" href="#noteFilters">Filter Notes</a>
         </div>
       </div>
       <div class="hero-panel">
         <article>
           <span class="mini-label">What is here</span>
-          <p>You will find detailed project notes, first-author research notes, and category notes for my latest works here.</p>
+          <p>You will find research project notes, publication notes, and systems-background notes that explain the practical side behind my research direction.</p>
         </article>
         <article>
           <span class="mini-label">Why it helps</span>
-          <p>It helps if you want to understand the bigger story behind my portfolio instead of reading only short summaries.</p>
+          <p>My research did not come from nowhere. A lot of it grew out of real work in networks, cloud systems, security operations, and infrastructure design, so I want that connection to stay visible.</p>
+        </article>
+        <article>
+          <span class="mini-label">Best way to use it</span>
+          <p>If you want the quickest path, start with the publication notes or the research projects. If you want the fuller story, include the systems-background notes too.</p>
         </article>
       </div>
     </section>
@@ -55,21 +59,21 @@
     <section class="notes-shell reveal">
       <header class="notes-head">
         <p class="section-kicker">Browse Notes</p>
-        <h2>Filter the notes the way you want</h2>
-        <p>You can focus on projects, research papers, or latest works depending on what you want to read first.</p>
+        <h2>Read the research path from systems background to published work</h2>
+        <p>You can focus on research projects, publications, or the practical systems notes that shaped the questions I keep working on in security, cloud infrastructure, and dependable AI systems.</p>
       </header>
       <div class="search-shell">
-        <label class="search-label" for="noteSearch">Search notes by title, topic, keyword, or role fit</label>
+        <label class="search-label" for="noteSearch">Search notes by title, topic, keyword, research area, or system focus</label>
         <div class="search-row">
-          <input id="noteSearch" type="search" placeholder="Search cloud security, Zero Trust, network design, research, demos...">
+          <input id="noteSearch" type="search" placeholder="Search firewall, Zero Trust, serverless, distributed AI, infrastructure, cloud architecture...">
           <button class="btn btn-secondary" id="clearSearch" type="button">Clear Search</button>
         </div>
       </div>
       <div class="filter-bar" id="noteFilters" aria-label="Note Filters">
-        <button class="active" data-filter="all" type="button">All</button>
-        <button data-filter="project" type="button">Projects</button>
-        <button data-filter="paper" type="button">Papers</button>
-        <button data-filter="work" type="button">Latest Works</button>
+        <button class="active" data-filter="all" type="button">All Notes</button>
+        <button data-filter="project" type="button">Research Projects</button>
+        <button data-filter="paper" type="button">Publications</button>
+        <button data-filter="background" type="button">Systems Background</button>
       </div>
       <div class="tag-filter-shell">
         <p class="mini-label">Popular tags</p>
@@ -84,15 +88,17 @@
     <div class="container footer-wrap">
       <p>Copyright <span id="currentYear"></span> Md Anisur Rahman Chowdhury</p>
       <div class="footer-links">
-        <a href="/blog/">My Blog</a>
-        <a href="/">Main Portfolio</a>
+        <a href="/blog/">Research Blog</a>
         <a href="/phd/">PhD Site</a>
+        <a href="/PhD-Resume/Resume%20of%20MARC.pdf?v=20260311phd2" target="_blank" rel="noopener">PhD Resume</a>
+        <a href="https://scholar.google.com/citations?user=NQyywPoAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="/">Main Portfolio</a>
         <a href="https://github.com/ANIS151993" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
   </footer>
 
-  <script src="/blog/posts/post-data.js"></script>
-  <script src="/blog/posts/notes.js"></script>
+  <script src="/blog/posts/post-data.js?v=20260311researchnotes1"></script>
+  <script src="/blog/posts/notes.js?v=20260311researchnotes1"></script>
 </body>
 </html>

@@ -224,7 +224,21 @@ button { font: inherit; }
   font-weight: 600;
 }
 .notes-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.95rem; }
-.note-card { display: grid; align-content: start; gap: 0.85rem; }
+.note-card {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 0.85rem;
+}
+.note-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, rgba(255, 122, 31, 0.9), rgba(72, 168, 255, 0.72));
+}
 .note-card h3 { margin: 0; font-family: "Roboto Slab", serif; }
 .empty-state {
   grid-column: 1 / -1;
@@ -295,4 +309,57 @@ button { font: inherit; }
   .search-row { flex-direction: column; }
   .notes-hero, .notes-shell { padding: 1rem; }
   .notes-grid, .metric-strip { grid-template-columns: 1fr; }
+}
+
+body.page-research-notes {
+  background:
+    radial-gradient(circle at top left, rgba(72, 168, 255, 0.12), rgba(72, 168, 255, 0) 24%),
+    radial-gradient(circle at bottom right, rgba(255, 122, 31, 0.1), rgba(255, 122, 31, 0) 22%),
+    linear-gradient(180deg, #fbf7f0, #f1ebe2 62%, #ece4d8);
+}
+
+body.page-research-notes .notes-header {
+  background: rgba(245, 240, 232, 0.86);
+}
+
+body.page-research-notes .top-nav a:hover,
+body.page-research-notes .top-nav a:focus-visible {
+  background: #162235;
+}
+
+body.page-research-notes .notes-hero {
+  background:
+    radial-gradient(circle at top right, rgba(72, 168, 255, 0.18), rgba(72, 168, 255, 0) 24%),
+    radial-gradient(circle at bottom left, rgba(255, 122, 31, 0.14), rgba(255, 122, 31, 0) 22%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.97), rgba(242, 236, 228, 0.98));
+}
+
+body.page-research-notes .hero-panel article {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(246, 239, 228, 0.92));
+}
+
+body.page-research-notes .metric-strip article {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(246, 239, 228, 0.96));
+}
+
+body.page-research-notes .notes-shell {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(245, 238, 228, 0.98));
+}
+
+body.page-research-notes .note-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(247, 239, 228, 0.96));
+}
+
+body.page-research-notes .tag-filter-bar button.active {
+  background: linear-gradient(135deg, #162235, #0e1724);
+}
+
+body.page-research-notes .note-actions a.note-link {
+  background: linear-gradient(135deg, #162235, #0d1621);
+}
+
+body.page-research-notes .note-actions a.blog-link:hover,
+body.page-research-notes .note-actions a.blog-link:focus-visible {
+  border-color: rgba(72, 168, 255, 0.3);
+  color: #132033;
 }

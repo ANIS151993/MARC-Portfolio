@@ -21,10 +21,32 @@ const state = {
 
 let revealObserver;
 
+const GROUP_META = {
+  all: {
+    label: "all notes",
+    summaryLabel: "all detailed notes"
+  },
+  project: {
+    label: "research projects",
+    summaryLabel: "research project notes",
+    cardLabel: "Research Project"
+  },
+  paper: {
+    label: "publications",
+    summaryLabel: "publication notes",
+    cardLabel: "Publication Note"
+  },
+  background: {
+    label: "systems background",
+    summaryLabel: "systems-background notes",
+    cardLabel: "Systems Background"
+  }
+};
+
 const getGroup = (note) => {
   if (note.type.includes("Project")) return "project";
   if (note.type.includes("Paper")) return "paper";
-  return "work";
+  return "background";
 };
 
 const normalize = (value) => String(value || "").trim().toLowerCase();
@@ -42,12 +64,13 @@ const getSearchText = (note) =>
 
 const notesWithSearch = notes.map((note) => ({
   ...note,
+  tags: note.tags || [],
   group: getGroup(note),
   searchText: getSearchText(note)
 }));
 
 const orderedNotes = notesWithSearch.sort((a, b) => {
-  const order = { project: 0, paper: 1, work: 2 };
+  const order = { project: 0, paper: 1, background: 2 };
   return order[a.group] - order[b.group] || a.title.localeCompare(b.title);
 });
 
@@ -74,13 +97,13 @@ const escapeHtml = (value) =>
 const renderMetrics = () => {
   const projectCount = orderedNotes.filter((note) => note.group === "project").length;
   const paperCount = orderedNotes.filter((note) => note.group === "paper").length;
-  const workCount = orderedNotes.filter((note) => note.group === "work").length;
+  const backgroundCount = orderedNotes.filter((note) => note.group === "background").length;
 
   metricStrip.innerHTML = `
     <article class="reveal"><strong>${orderedNotes.length}</strong><span>Total detailed notes</span></article>
-    <article class="reveal"><strong>${projectCount}</strong><span>Project notes</span></article>
-    <article class="reveal"><strong>${paperCount}</strong><span>Paper notes</span></article>
-    <article class="reveal"><strong>${workCount}</strong><span>Latest works notes</span></article>
+    <article class="reveal"><strong>${projectCount}</strong><span>Research project notes</span></article>
+    <article class="reveal"><strong>${paperCount}</strong><span>Publication notes</span></article>
+    <article class="reveal"><strong>${backgroundCount}</strong><span>Systems background notes</span></article>
   `;
 };
 
@@ -119,7 +142,7 @@ const renderNotes = () => {
       <article class="empty-state reveal">
         <p class="section-kicker">No exact match</p>
         <h3>No notes match the current search and filters.</h3>
-        <p>Try a broader word like cloud, network, security, research, serverless, or Zero Trust.</p>
+        <p>Try a broader term like cloud security, serverless, Zero Trust, distributed AI, infrastructure, or research workflow.</p>
       </article>
     `;
   } else {
@@ -127,19 +150,19 @@ const renderNotes = () => {
       .map(
         (note) => `
           <article class="note-card reveal" data-notegroup="${note.group}">
-            <p class="section-kicker">${note.type}</p>
+            <p class="section-kicker">${GROUP_META[note.group].cardLabel}</p>
             <h3>${note.title}</h3>
             <p>${note.summary}</p>
             <div class="note-meta">
               <span>${note.kicker}</span>
-              <span>${note.facts[0].value}</span>
+              <span>${note.facts?.[0]?.value || "Detailed note"}</span>
             </div>
             <div class="tag-cloud">
               ${note.tags.slice(0, 5).map((tag) => `<span>${tag}</span>`).join("")}
             </div>
             <div class="note-actions">
-              <a class="note-link" href="/blog/posts/${note.slug}/">Read My Note</a>
-              <a class="blog-link" href="/blog/">Back to My Blog</a>
+              <a class="note-link" href="/blog/posts/${note.slug}/">Read Note</a>
+              <a class="blog-link" href="/blog/">Open Research Blog</a>
             </div>
           </article>
         `
@@ -149,12 +172,12 @@ const renderNotes = () => {
 
   if (resultSummary) {
     const parts = [];
-    if (state.group !== "all") parts.push(state.group);
+    if (state.group !== "all") parts.push(GROUP_META[state.group].label);
     if (state.tag !== "all") parts.push(state.tag);
     if (state.query) parts.push(`search "${state.query}"`);
     resultSummary.textContent = parts.length
       ? `Showing ${filteredNotes.length} matching notes for ${parts.join(" + ")}.`
-      : `Showing all ${orderedNotes.length} notes.`;
+      : `Showing all ${orderedNotes.length} detailed notes.`;
   }
 
   observeReveals();
