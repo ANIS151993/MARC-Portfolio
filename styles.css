@@ -1525,7 +1525,7 @@ h1 span {
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: minmax(0, 0.56fr) minmax(0, 0.44fr);
+  grid-template-rows: minmax(0, 0.52fr) minmax(0, 0.48fr);
   align-items: stretch;
   flex: 0 0 100%;
   min-width: 100%;
@@ -1553,7 +1553,7 @@ h1 span {
 
 .projects-slider-stage .project-preview-shell {
   height: 100%;
-  padding: 0.82rem 0.82rem 0;
+  padding: 0.75rem 0.75rem 0;
 }
 
 .projects-slider-stage .project-browser-bar {
@@ -1578,58 +1578,58 @@ h1 span {
 }
 
 .projects-slider-stage .project-preview-copy {
-  left: 0.88rem;
-  right: 0.88rem;
-  bottom: 0.88rem;
+  left: 0.8rem;
+  right: 0.8rem;
+  bottom: 0.8rem;
 }
 
 .projects-slider-stage .project-content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 0.95rem 0.95rem 1rem;
+  padding: 0.82rem 0.82rem 0.9rem;
 }
 
 .projects-slider-stage .project-role {
   color: #ffbc84;
   font-size: 0.72rem;
-  margin-bottom: 0.34rem;
+  margin-bottom: 0.28rem;
 }
 
 .projects-slider-stage .portfolio-card h3 {
-  font-size: 1.14rem;
-  margin-bottom: 0.34rem;
+  font-size: 1.08rem;
+  margin-bottom: 0.28rem;
 }
 
 .projects-slider-stage .portfolio-card p {
-  font-size: 0.9rem;
-  line-height: 1.58;
+  font-size: 0.84rem;
+  line-height: 1.5;
 }
 
 .projects-slider-stage .project-tags {
-  margin-top: 0.6rem;
-  gap: 0.38rem;
+  margin-top: 0.45rem;
+  gap: 0.32rem;
 }
 
 .projects-slider-stage .project-tags span {
-  padding: 0.3rem 0.58rem;
-  font-size: 0.72rem;
+  padding: 0.26rem 0.5rem;
+  font-size: 0.68rem;
 }
 
 .projects-slider-stage .project-actions {
   margin-top: auto;
-  padding-top: 0.8rem;
-  gap: 0.45rem;
+  padding-top: 0.62rem;
+  gap: 0.36rem;
 }
 
 .projects-slider-stage .project-link {
-  min-height: 38px;
+  min-height: 34px;
   border-radius: 999px;
-  padding: 0.5rem 0.75rem;
+  padding: 0.42rem 0.64rem;
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 255, 255, 0.12);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
-  font-size: 0.78rem;
+  font-size: 0.74rem;
 }
 
 .projects-slider-stage .project-link:hover,
@@ -5132,10 +5132,14 @@ h1 span {
 
 .works-slider-stage,
 .publications-slider-stage,
-.projects-slider-stage,
 .blog-slider-stage {
   max-width: var(--showcase-stage-width);
   aspect-ratio: 2.04 / 1;
+}
+
+.projects-slider-stage {
+  max-width: var(--showcase-stage-width);
+  aspect-ratio: 1.9 / 1;
 }
 
 .works-slider-footer,
