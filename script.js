@@ -254,6 +254,18 @@ const renderProjectThumbnails = () => {
   projectSliderThumbs.appendChild(fragment);
 };
 
+const scrollThumbStrip = (strip, thumb) => {
+  if (!strip || !thumb) {
+    return;
+  }
+
+  const targetLeft = thumb.offsetLeft - (strip.clientWidth - thumb.clientWidth) / 2;
+  const maxLeft = Math.max(0, strip.scrollWidth - strip.clientWidth);
+  const left = Math.min(Math.max(0, targetLeft), maxLeft);
+
+  strip.scrollTo({ left, behavior: "smooth" });
+};
+
 const renderWorkThumbnails = () => {
   if (!workSliderThumbs) {
     return;
@@ -383,7 +395,7 @@ const syncProjectSlider = () => {
 
   const activeThumb = projectSliderThumbs?.querySelector(".project-thumb.active");
   if (activeThumb) {
-    activeThumb.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+    scrollThumbStrip(projectSliderThumbs, activeThumb);
   }
 };
 
@@ -528,7 +540,7 @@ const syncWorkSlider = () => {
 
   const activeThumb = workSliderThumbs?.querySelector(".work-thumb.active");
   if (activeThumb) {
-    activeThumb.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+    scrollThumbStrip(workSliderThumbs, activeThumb);
   }
 };
 
