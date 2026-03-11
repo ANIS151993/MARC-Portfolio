@@ -365,6 +365,10 @@ const scrollThumbStrip = (strip, thumb) => {
     return;
   }
 
+  if (strip.scrollWidth <= strip.clientWidth + 4) {
+    return;
+  }
+
   const targetLeft = thumb.offsetLeft - (strip.clientWidth - thumb.clientWidth) / 2;
   const maxLeft = Math.max(0, strip.scrollWidth - strip.clientWidth);
   const left = Math.min(Math.max(0, targetLeft), maxLeft);
