@@ -74,7 +74,11 @@ if (sectionNavLinks.length) {
 
 const typedNode = document.getElementById("typedRoles");
 if (typedNode) {
-  const roles = [
+  const customRoles = (typedNode.getAttribute("data-typed-items") || "")
+    .split("|")
+    .map((item) => item.trim())
+    .filter(Boolean);
+  const roles = customRoles.length ? customRoles : [
     "Network Security Engineer",
     "Systems Administrator",
     "Cloud Infrastructure Engineer",
