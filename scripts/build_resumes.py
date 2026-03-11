@@ -23,7 +23,7 @@ from resume_src.resume_data import (
     SHARED,
 )
 
-PDF_CSS = """
+JOB_PDF_CSS = """
 @page {
   size: A4;
   margin: 0.62in;
@@ -136,6 +136,105 @@ li {
 }
 """
 
+PHD_PDF_CSS = """
+@page {
+  size: A4;
+  margin: 0.5in;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2430;
+  font-size: 10.35pt;
+  line-height: 1.27;
+  margin: 0;
+}
+.resume {
+  width: 100%;
+}
+.resume p,
+.resume li {
+  text-align: justify;
+}
+header {
+  border-bottom: 2px solid #c95d14;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+h1 {
+  font-size: 19.5pt;
+  margin: 0 0 2px;
+  letter-spacing: 0.2px;
+}
+.title {
+  font-size: 11.2pt;
+  font-weight: 700;
+  color: #7a3310;
+  margin: 0 0 4px;
+}
+.subtitle {
+  font-size: 10pt;
+  margin: 0 0 6px;
+  text-align: center;
+}
+.contact, .links {
+  font-size: 9.35pt;
+  margin: 1px 0;
+  text-align: center;
+}
+.section {
+  margin: 0 0 10px;
+}
+.section-title {
+  font-size: 10.6pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: #0f3e56;
+  border-bottom: 1px solid #d7dce3;
+  padding-bottom: 3px;
+  margin: 0 0 6px;
+}
+p, ul {
+  margin: 0 0 5px;
+}
+ul {
+  padding-left: 15px;
+}
+li {
+  margin: 0 0 2px;
+}
+.keywords {
+  margin-top: 0;
+}
+.keyword-paragraph {
+  margin: 0;
+  text-align: justify;
+}
+.entry {
+  margin: 0 0 7px;
+  page-break-inside: avoid;
+}
+.entry-head {
+  display: block;
+  margin-bottom: 3px;
+}
+.entry-title {
+  font-weight: 700;
+}
+.entry-meta {
+  color: #526074;
+  font-size: 9.35pt;
+  text-align: left;
+}
+.compact-list li {
+  margin-bottom: 2px;
+}
+.footer-note {
+  color: #526074;
+  font-size: 9pt;
+}
+"""
+
 
 def join_contact() -> str:
     return f"{SHARED['location']} | {SHARED['phone']} | {' | '.join(SHARED['emails'])}"
@@ -185,7 +284,7 @@ def render_job_html(d: dict[str, object], html_title: str) -> str:
 <head>
   <meta charset=\"utf-8\">
   <title>{escape(html_title)} | Md Anisur Rahman Chowdhury</title>
-  <style>{PDF_CSS}</style>
+  <style>{JOB_PDF_CSS}</style>
 </head>
 <body>
   <main class=\"resume resume-job\">
@@ -249,7 +348,7 @@ def render_phd_html() -> str:
 <head>
   <meta charset=\"utf-8\">
   <title>PhD Resume | Md Anisur Rahman Chowdhury</title>
-  <style>{PDF_CSS}</style>
+  <style>{PHD_PDF_CSS}</style>
 </head>
 <body>
   <main class=\"resume resume-phd\">
@@ -313,6 +412,11 @@ def render_phd_html() -> str:
     </section>
 
     <section class=\"section\">
+      <h2 class=\"section-title\">Research Strengths</h2>
+      {ul(d['research_strengths'], 'compact-list')}
+    </section>
+
+    <section class=\"section\">
       <h2 class=\"section-title\">Research Goal</h2>
       <p>{escape(d['research_goal'])}</p>
     </section>
@@ -322,7 +426,15 @@ def render_phd_html() -> str:
 """
 
 
-def para(text: str, *, bold: bool = False, size: int = 22, spacing_before: int = 0, spacing_after: int = 120, align: str = "left") -> str:
+def para(
+    text: str,
+    *,
+    bold: bool = False,
+    size: int = 22,
+    spacing_before: int = 0,
+    spacing_after: int = 120,
+    align: str = "left",
+) -> str:
     align_xml = f'<w:jc w:val="{align}"/>' if align != "left" else ""
     rpr = []
     if bold:
@@ -338,31 +450,97 @@ def para(text: str, *, bold: bool = False, size: int = 22, spacing_before: int =
     )
 
 
-def build_docx_body(lines: list[tuple[str, str]]) -> str:
+def build_docx_body(lines: list[tuple[str, str]], *, variant: str = "job") -> str:
     xml = []
+    if variant == "phd":
+        sizes = {
+            "name": 28,
+            "title": 20,
+            "contact": 16,
+            "heading": 18,
+            "subheading": 17,
+            "meta": 15,
+            "bullet": 17,
+            "normal": 17,
+        }
+        spacing = {
+            "name_after": 60,
+            "title_after": 90,
+            "contact_after": 55,
+            "heading_before": 90,
+            "heading_after": 55,
+            "subheading_before": 55,
+            "subheading_after": 25,
+            "meta_after": 40,
+            "bullet_after": 28,
+            "normal_after": 42,
+        }
+    else:
+        sizes = {
+            "name": 30,
+            "title": 22,
+            "contact": 18,
+            "heading": 20,
+            "subheading": 18,
+            "meta": 16,
+            "bullet": 18,
+            "normal": 18,
+        }
+        spacing = {
+            "name_after": 80,
+            "title_after": 120,
+            "contact_after": 80,
+            "heading_before": 140,
+            "heading_after": 90,
+            "subheading_before": 80,
+            "subheading_after": 40,
+            "meta_after": 70,
+            "bullet_after": 50,
+            "normal_after": 70,
+        }
     for kind, text in lines:
         if kind == "name":
-            xml.append(para(text, bold=True, size=30, spacing_after=80, align="center"))
+            xml.append(para(text, bold=True, size=sizes["name"], spacing_after=spacing["name_after"], align="center"))
         elif kind == "title":
-            xml.append(para(text, bold=True, size=22, spacing_after=120, align="center"))
+            xml.append(para(text, bold=True, size=sizes["title"], spacing_after=spacing["title_after"], align="center"))
         elif kind == "contact":
-            xml.append(para(text, size=18, spacing_after=80, align="center"))
+            xml.append(para(text, size=sizes["contact"], spacing_after=spacing["contact_after"], align="center"))
         elif kind == "heading":
-            xml.append(para(text.upper(), bold=True, size=20, spacing_before=140, spacing_after=90))
+            xml.append(
+                para(
+                    text.upper(),
+                    bold=True,
+                    size=sizes["heading"],
+                    spacing_before=spacing["heading_before"],
+                    spacing_after=spacing["heading_after"],
+                )
+            )
         elif kind == "subheading":
-            xml.append(para(text, bold=True, size=18, spacing_before=80, spacing_after=40))
+            xml.append(
+                para(
+                    text,
+                    bold=True,
+                    size=sizes["subheading"],
+                    spacing_before=spacing["subheading_before"],
+                    spacing_after=spacing["subheading_after"],
+                )
+            )
         elif kind == "meta":
-            xml.append(para(text, size=16, spacing_after=70, align="both"))
+            xml.append(para(text, size=sizes["meta"], spacing_after=spacing["meta_after"], align="both"))
         elif kind == "bullet":
-            xml.append(para(f"- {text}", size=18, spacing_after=50, align="both"))
+            xml.append(para(f"- {text}", size=sizes["bullet"], spacing_after=spacing["bullet_after"], align="both"))
         else:
-            xml.append(para(text, size=18, spacing_after=70, align="both"))
+            xml.append(para(text, size=sizes["normal"], spacing_after=spacing["normal_after"], align="both"))
     return "".join(xml)
 
 
-def normalize_sectpr(sectpr: str) -> str:
+def normalize_sectpr(sectpr: str, *, margin_twips: int = 900) -> str:
     pgsz = '<w:pgSz w:w="11906" w:h="16838"/>'
-    pgmar = '<w:pgMar w:top="900" w:right="900" w:bottom="900" w:left="900" w:header="360" w:footer="360" w:gutter="0"/>'
+    pgmar = (
+        f'<w:pgMar w:top="{margin_twips}" w:right="{margin_twips}" '
+        f'w:bottom="{margin_twips}" w:left="{margin_twips}" '
+        'w:header="360" w:footer="360" w:gutter="0"/>'
+    )
     if "<w:pgSz" in sectpr:
         sectpr = re.sub(r"<w:pgSz[^>]*/>", pgsz, sectpr)
     else:
@@ -374,15 +552,22 @@ def normalize_sectpr(sectpr: str) -> str:
     return sectpr
 
 
-def replace_docx_document(template_path: Path, output_path: Path, lines: list[tuple[str, str]]) -> None:
+def replace_docx_document(
+    template_path: Path,
+    output_path: Path,
+    lines: list[tuple[str, str]],
+    *,
+    variant: str = "job",
+    margin_twips: int = 900,
+) -> None:
     with zipfile.ZipFile(template_path, "r") as zin:
         original = zin.read("word/document.xml").decode("utf-8")
         prefix = original.split("<w:body>", 1)[0] + "<w:body>"
         sectpr_match = re.search(r"(<w:sectPr[\s\S]*?</w:sectPr>)", original)
         if not sectpr_match:
             raise RuntimeError(f"Could not find sectPr in {template_path}")
-        suffix = normalize_sectpr(sectpr_match.group(1)) + "</w:body></w:document>"
-        body = build_docx_body(lines)
+        suffix = normalize_sectpr(sectpr_match.group(1), margin_twips=margin_twips) + "</w:body></w:document>"
+        body = build_docx_body(lines, variant=variant)
         new_xml = prefix + body + suffix
 
         with tempfile.NamedTemporaryFile(delete=False, suffix=".docx") as tmp:
@@ -475,6 +660,8 @@ def phd_docx_lines() -> list[tuple[str, str]]:
     lines += [("heading", "Technical Tools for Research")]
     for key, value in d["technical_tools"].items():
         lines.append(("bullet", f"{key}: {value}"))
+    lines += [("heading", "Research Strengths")]
+    lines += [("bullet", item) for item in d["research_strengths"]]
     lines += [("heading", "Research Goal")]
     lines.append(("normal", d["research_goal"]))
     return lines
@@ -509,11 +696,29 @@ def main() -> None:
     render_pdf(job_cloud_html_path, job_cloud_pdf_path)
     render_pdf(phd_html_path, phd_pdf_path)
 
-    replace_docx_document(job_docx_path, job_docx_path, job_docx_lines(JOB_RESUME))
-    replace_docx_document(job_docx_path, job_targeted_docx_path, job_docx_lines(JOB_RESUME_NETWORK_SECURITY))
-    replace_docx_document(job_docx_path, job_sysadmin_docx_path, job_docx_lines(JOB_RESUME_SYSTEMS_ADMINISTRATOR))
-    replace_docx_document(job_docx_path, job_cloud_docx_path, job_docx_lines(JOB_RESUME_CLOUD_SECURITY))
-    replace_docx_document(phd_docx_path, phd_docx_path, phd_docx_lines())
+    replace_docx_document(job_docx_path, job_docx_path, job_docx_lines(JOB_RESUME), variant="job", margin_twips=900)
+    replace_docx_document(
+        job_docx_path,
+        job_targeted_docx_path,
+        job_docx_lines(JOB_RESUME_NETWORK_SECURITY),
+        variant="job",
+        margin_twips=900,
+    )
+    replace_docx_document(
+        job_docx_path,
+        job_sysadmin_docx_path,
+        job_docx_lines(JOB_RESUME_SYSTEMS_ADMINISTRATOR),
+        variant="job",
+        margin_twips=900,
+    )
+    replace_docx_document(
+        job_docx_path,
+        job_cloud_docx_path,
+        job_docx_lines(JOB_RESUME_CLOUD_SECURITY),
+        variant="job",
+        margin_twips=900,
+    )
+    replace_docx_document(phd_docx_path, phd_docx_path, phd_docx_lines(), variant="phd", margin_twips=720)
 
 
 if __name__ == "__main__":

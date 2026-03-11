@@ -234,12 +234,12 @@ JOB_RESUME_CLOUD_SECURITY = {
 
 PHD_RESUME = {
     "title": "Researcher in Cloud Security, Serverless Systems, and Network Infrastructure Protection",
-    "subtitle": "Graduate Research Assistant building first-author work in serverless security, Zero Trust architecture, physical and cloud network infrastructure security, and deployable AI-assisted defense systems.",
+    "subtitle": "Graduate Research Assistant developing first-author and collaborative research in cloud security, serverless systems, Zero Trust architecture, physical and cloud network infrastructure protection, and practical AI-assisted defense.",
     "profile": [
-        "Graduate Research Assistant in the Computer and Information Science Department at Gannon University with a research direction centered on physical and cloud network infrastructure security.",
-        "Research work combines system design, methodology development, data collection, model training, implementation, experimentation, and academic writing across cloud security, Zero Trust, distributed systems, and AI-assisted infrastructure defense.",
-        "Published first-author and co-authored work spans serverless security, edge computing, enterprise AI, IoT intrusion detection, digital forensics, adaptive network security, and applied intelligent systems.",
-        "Earlier industry experience in enterprise IT and ISP operations keeps the research agenda grounded in deployable systems rather than abstract security models alone.",
+        "Graduate Research Assistant in the Computer and Information Science Department at Gannon University working on cloud security, serverless systems, Zero Trust enforcement, and physical and cloud network infrastructure protection.",
+        "First-author work covers the full research cycle: problem framing, literature review, methodology design, data collection, prototype implementation, experimental evaluation, and manuscript preparation.",
+        "Published first-author and co-authored work spans serverless security, edge computing, AI-enabled business systems, IoT intrusion detection, adaptive network security, digital forensics, and applied intelligent systems.",
+        "Seven years of enterprise IT and ISP experience keep the research direction grounded in deployable systems, measurable performance, and operational security requirements.",
     ],
     "research_interests": [
         "Physical and cloud network infrastructure security",
@@ -272,9 +272,9 @@ PHD_RESUME = {
             "dates": "Aug 2025 - Present",
             "bullets": [
                 "Conduct research under Dr. Kefei Wang on cloud systems, AI-driven security, distributed infrastructure protection, and secure network design.",
-                "Lead first-author work from research idea through methodology, implementation, evaluation, and manuscript preparation.",
-                "Develop research prototypes and reproducible systems around serverless firewalls, Zero Trust automation, threat intelligence integration, and distributed AI models.",
-                "Support academic collaboration through co-authored publications and technical research communication.",
+                "Lead first-author studies from idea formation through methodology design, implementation, evaluation, and manuscript preparation.",
+                "Build reproducible research prototypes around serverless firewalls, Zero Trust automation, threat intelligence integration, distributed AI, and dependable LLM workflows.",
+                "Prepare technical writing, experimental summaries, and publication-ready material for conference and journal submission.",
             ],
         },
         {
@@ -284,12 +284,13 @@ PHD_RESUME = {
             "dates": "Aug 2025 - Dec 2025",
             "bullets": [
                 "Delivered practical instruction in network defense, firewall configuration, threat detection, and vulnerability management.",
-                "Strengthened teaching and technical communication skills that support research mentoring and academic presentation work.",
+                "Strengthened teaching, mentoring, and technical communication skills that support research presentation and academic collaboration.",
             ],
         },
     ],
     "collaboration": [
-        "Co-authored research projects with Dr. Kefei Wang include AI and Cloud Computing in Business Systems, Cloud-Based CRM Systems Enhanced by AI and Graph Theory, Auction-Based Dynamic Resource Allocation for Optimized Edge Computing in Distributed Networks, and Towards a Serverless Intelligent Firewall: Integrating Cross-Cloud Adaptation, AI-Driven Security, and Zero-Trust Architectures.",
+        "Co-authored research with Dr. Kefei Wang on AI-enabled enterprise systems, cloud-based CRM optimization, edge resource allocation, and serverless firewall architectures.",
+        "Contribute literature review, experiment planning, implementation support, results analysis, and manuscript refinement in collaborative projects.",
     ],
     "research_systems": [
         {
@@ -342,5 +343,11 @@ PHD_RESUME = {
         "Security and Networking": "firewalls, VPN, Active Directory, Zero Trust concepts, threat intelligence pipelines, traffic analysis, distributed network design",
         "Data and Evaluation": "data collection, preprocessing, model training, experimental analysis, reproducible notebooks, technical reporting",
     },
-    "research_goal": "Seeking a fully funded PhD position for Fall 2026 in cloud security, serverless systems, network infrastructure protection, or closely related cybersecurity research areas, with the goal of building deployable work that matters to both academia and industry.",
+    "research_strengths": [
+        "First-author ownership across problem framing, literature review, methodology design, implementation, evaluation, and manuscript development.",
+        "Research agenda grounded in cloud security, serverless systems, Zero Trust architecture, federated defense, and physical and cloud network infrastructure protection.",
+        "Ability to translate seven years of enterprise IT and ISP experience into research questions with operational relevance and deployable outcomes.",
+        "Comfort working in collaborative research settings that require reproducible systems, careful experimentation, and clear technical communication.",
+    ],
+    "research_goal": "Seeking a fully funded PhD position for Fall 2026 in cloud security, serverless systems, network infrastructure protection, or a closely related cybersecurity area. Long-term research goal is to produce rigorous work that advances academic knowledge while improving how real systems are designed, secured, and operated.",
 }
