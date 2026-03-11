@@ -891,424 +891,424 @@ window.blogPostCatalog = {
     related: ["distributed-ai-ensemble", "self-correcting-math-paper", "datamentor-notebook-studio"]
   },
   "mail-server-works": {
-    type: "Latest Works Note",
-    kicker: "Latest Works Category",
-    title: "Mail Server Deployments and Business Email Infrastructure",
-    summary: "In this note, I explain the mail server work in my portfolio, including business email setup, domain-based communication, administration, deliverability controls, and day-to-day operational support.",
-    metaDescription: "Detailed note on mail server deployments by Md Anisur Rahman Chowdhury covering business email infrastructure, deliverability, administration, and secure communication systems.",
-    tags: ["Mail Server", "Business Email", "System Administration", "Deliverability", "Infrastructure Support"],
+    type: "Systems Background Note",
+    kicker: "Operational Systems Background",
+    title: "Mail Infrastructure, Identity, and Service Continuity",
+    summary: "I keep this note because a lot of my later interest in trust, policy, and dependable infrastructure came from real mail-service work, where identity, deliverability, and communication continuity mattered every day.",
+    metaDescription: "Research-connected systems background note on mail infrastructure, identity, deliverability, and operational continuity by Md Anisur Rahman Chowdhury.",
+    tags: ["Mail Infrastructure", "Identity and Trust", "Service Continuity", "Systems Administration", "Communication Security"],
     facts: [
-      { label: "Showcased Work", value: "4 representative mail server deployments" },
-      { label: "Main Skills", value: "Mail administration, domain email setup, user management, secure communication workflows" },
-      { label: "Best Fit Roles", value: "Systems Administrator, Infrastructure Engineer, Messaging Administrator" }
+      { label: "Research Bridge", value: "Identity, continuity, and controlled communication in production systems" },
+      { label: "Main Skills", value: "Mail administration, domain integration, deliverability control, account governance, service continuity" },
+      { label: "Why I Keep It Here", value: "It shaped how I think about trust boundaries, reliability, and user-facing infrastructure." }
     ],
     sidebarStats: [
-      { value: "4", label: "Mail projects" },
-      { value: "Admin", label: "Operational focus" },
-      { value: "Business", label: "Production use" }
+      { value: "4", label: "Mail deployments" },
+      { value: "Trust", label: "Identity layer" },
+      { value: "Continuity", label: "Operational focus" }
     ],
     preview: {
       type: "image",
-      label: "Representative Work Snapshot",
+      label: "Operational Snapshot",
       src: "https://marcbd.com/wp-content/uploads/2025/07/ARFGroupbd.png",
       alt: "ARF Group mail server administration panel",
-      title: "Business Email Delivery and Administration",
-      note: "In these mail server projects, I focused on giving organizations a stable and professional communication system that people can rely on every day."
+      title: "Production Mail Service with Governance and Stability",
+      note: "This work mattered because email is one of the clearest places where identity, reliability, access, and trust meet in a live production service."
     },
     sections: [
       {
-        heading: "What I was really doing in this work",
-        text: "These projects are about business email systems. I helped organizations move from informal or limited communication setups into more structured company mail environments.",
+        heading: "Why I still keep this operational work in my research archive",
+        text: "Mail systems taught me early that infrastructure is not only about configuration. It is about identity, policy, continuity, and what happens when people depend on a service every day.",
         bullets: [
-          "Company-branded domain email improves trust and communication quality.",
-          "Mail platforms need more than setup. They also need administration and continuity.",
-          "I think this work fits naturally with my systems and infrastructure profile."
+          "Mail is a practical example of how trust is enforced through identities, domains, and service controls.",
+          "A production mail service needs continuity, governance, and clear ownership, not only initial setup.",
+          "This is one of the places where my later interest in secure infrastructure became more concrete."
         ]
       },
       {
-        heading: "What I personally handled",
-        text: "In this mail server category, I cover account setup, domain integration, day-to-day administration, and the operational side of keeping the service dependable for real teams.",
+        heading: "What I learned from handling real mail services",
+        text: "The work itself included account setup, domain integration, administration, and keeping the service dependable for real users. What stayed with me was how quickly communication breaks down when identity or operational discipline is weak.",
         bullets: [
-          "User and domain management for business communication.",
-          "Mail-service organization and controlled administration.",
-          "Support for production communication needs instead of only lab-style configuration."
+          "User and domain management made the identity layer visible in day-to-day operations.",
+          "Deliverability and continuity showed me that reliability is a design problem as much as an admin problem.",
+          "This kind of work made me more careful about policy, accountability, and service ownership."
         ]
       },
       {
-        heading: "Why I still include this in my portfolio",
-        text: "Mail systems are still a core business service. I use this work to show that I can support systems people actually depend on, and that I understand production responsibility as well as technical setup.",
+        heading: "How it shaped the research questions I care about now",
+        text: "Later, when I started focusing more on cloud security, Zero Trust thinking, and dependable infrastructure, I was already carrying these operational lessons with me. The setting changed, but the underlying questions about trust and continuity stayed familiar.",
         bullets: [
-          "Relevant for systems administration and infrastructure support roles.",
-          "Shows experience with services that affect everyday business operations.",
-          "Demonstrates reliability-minded enterprise IT work."
+          "It pushed me to care about systems that verify, control, and protect instead of assuming everything is safe.",
+          "It gave me a practical reason to care about trustworthy service behavior, not only theoretical security claims.",
+          "It remains part of the story behind how I think about infrastructure protection."
         ]
       },
       {
-        heading: "How it fits the bigger picture for me",
-        text: "These deployments complement my work in file services, network architecture, cloud research, and security. They show that my portfolio includes practical service delivery, not only research or demos.",
+        heading: "Why I still point people to this note",
+        text: "I do not keep this here to present mail administration as my research topic. I keep it here because it shows where part of my security and systems thinking came from: real services, real users, and real operational responsibility.",
         bullets: [
-          "Supports my hybrid profile across operations and engineering.",
-          "Strengthens my fit for enterprise IT and infrastructure teams.",
-          "Shows direct experience with user-facing production systems."
+          "It shows that my research direction did not grow in isolation from real infrastructure work.",
+          "It adds operational depth to the research-facing side of my portfolio.",
+          "It helps explain why I care about controlled, dependable systems."
         ]
       }
     ],
     resources: [
       { label: "Open ARF Mail Server", href: "http://mail.arfgroupbd.com" },
       { label: "Open S. Alam Group Mail Server", href: "http://mail.s.alamgroupbd.com" },
-      { label: "Back to My Blog", href: "/blog/" }
+      { label: "Read Network Architecture Note", href: "/blog/posts/network-architecture-works/" }
     ],
-    related: ["file-server-works", "network-architecture-works", "cloud-architecture-works"]
+    related: ["network-architecture-works", "cloud-architecture-works", "firewall-zero-trust-paper"]
   },
   "file-server-works": {
-    type: "Latest Works Note",
-    kicker: "Latest Works Category",
-    title: "File Server Delivery and Shared Storage Infrastructure",
-    summary: "In this note, I explain the file server work in my portfolio, where my main goal was structured storage, controlled file access, and easier collaboration for business teams.",
-    metaDescription: "Detailed note on file server delivery and shared storage infrastructure by Md Anisur Rahman Chowdhury.",
-    tags: ["File Server", "Shared Storage", "Access Control", "Enterprise IT", "Service Delivery"],
+    type: "Systems Background Note",
+    kicker: "Operational Systems Background",
+    title: "Shared Storage, Access Control, and Service Dependability",
+    summary: "I keep this note because real file-service work taught me a lot about permissions, controlled access, information flow, and why dependable infrastructure matters long after a system is deployed.",
+    metaDescription: "Research-connected systems background note on shared storage, access control, and dependable file-service infrastructure by Md Anisur Rahman Chowdhury.",
+    tags: ["Shared Storage", "Access Control", "Service Dependability", "Systems Administration", "Information Governance"],
     facts: [
-      { label: "Showcased Work", value: "4 representative file server deployments" },
-      { label: "Main Skills", value: "Centralized storage, structured access, operational support, service continuity" },
-      { label: "Best Fit Roles", value: "Systems Administrator, Infrastructure Engineer, IT Operations" }
+      { label: "Research Bridge", value: "Permissions, governance, and dependable access in production environments" },
+      { label: "Main Skills", value: "Centralized storage, access design, operational support, continuity planning, service structure" },
+      { label: "Why I Keep It Here", value: "It influenced how I think about control, coordination, and reliable infrastructure behavior." }
     ],
     sidebarStats: [
-      { value: "4", label: "File projects" },
-      { value: "Storage", label: "Core service" },
-      { value: "Teams", label: "Collaboration focus" }
+      { value: "4", label: "Storage deployments" },
+      { value: "Access", label: "Control layer" },
+      { value: "Dependability", label: "Operational focus" }
     ],
     preview: {
       type: "image",
-      label: "Representative Work Snapshot",
+      label: "Operational Snapshot",
       src: "https://marcbd.com/wp-content/uploads/2025/07/Arf-File-Server.png",
       alt: "ARF file server interface",
-      title: "Centralized File Access for Business Teams",
-      note: "In these file server projects, I focused on helping organizations store, organize, and share important business files with less confusion and better control."
+      title: "Structured File Access with Governance in Mind",
+      note: "This work stayed important to me because it made access control, storage discipline, and day-to-day dependability visible in a very practical way."
     },
     sections: [
       {
-        heading: "What this work was really about",
-        text: "File servers may sound simple, but for real organizations they matter a lot. Teams need one place to store important files, access them safely, and avoid chaos caused by scattered copies and weak structure.",
+        heading: "Why I still keep file-service work inside a research-facing portfolio",
+        text: "Shared storage looks routine from the outside, but it raises real questions about access, organization, accountability, and reliability. Those questions stayed with me well beyond the original deployments.",
         bullets: [
-          "Central storage improves organization and workflow consistency.",
-          "Controlled access helps reduce confusion and operational risk.",
-          "This kind of work supports real daily business needs."
+          "A storage service becomes valuable only when access is clear and dependable.",
+          "Permissions and structure shape how people trust and use the system.",
+          "This was one of the practical places where infrastructure governance became real for me."
         ]
       },
       {
-        heading: "What I personally handled",
-        text: "The work in this category focused on structured storage access, shared file use, and dependable business support. My role was not only technical setup, but also making the service practical for the organization.",
+        heading: "What I learned from building and supporting these systems",
+        text: "The technical work included centralized storage, structured sharing, and keeping the service practical for real teams. The deeper lesson was that usable infrastructure needs both technical order and human clarity.",
         bullets: [
-          "Centralized file handling for business teams.",
-          "Easier sharing with more controlled structure.",
-          "Operational thinking around maintainability and dependability."
+          "Centralized storage reduced confusion only when the access model was disciplined.",
+          "Operational support mattered because a service like this has value only when people can rely on it.",
+          "This work strengthened my interest in infrastructure that remains understandable after deployment."
         ]
       },
       {
-        heading: "Why I mention this in hiring conversations",
-        text: "I think this category shows that I understand one of the less glamorous but highly important parts of enterprise IT. Good infrastructure work often means delivering a dependable service that stays valuable long after setup.",
+        heading: "How it connects to the research path I built later",
+        text: "When I began working more seriously on cloud security, reproducibility, and trustworthy systems, I already had experience seeing how weak structure or weak access design could create operational problems. The file-service work gave those ideas a concrete starting point.",
         bullets: [
-          "Relevant for infrastructure, systems administration, and operations roles.",
-          "Shows production support thinking, not just build-and-leave work.",
-          "Strengthens my profile in practical enterprise service delivery."
+          "It made access boundaries and coordination feel like system design issues, not small admin details.",
+          "It helped explain why I care about dependable workflow support and cleaner system behavior.",
+          "It still supports the broader logic behind my infrastructure and research interests."
         ]
       },
       {
-        heading: "How it fits the rest of my work",
-        text: "These file services connect naturally with my mail systems work, network support, and wider hybrid infrastructure background. Together they show that I can support the services that keep organizations moving.",
+        heading: "Why this note still belongs in the archive",
+        text: "I keep it here because it shows the operational foundation behind the research side of my portfolio. It reminds a reader that my later work on security and systems did not start only from papers. It also came from supporting the services organizations needed every day.",
         bullets: [
-          "Complements mail, VoIP, and system administration experience.",
-          "Supports my 7+ years enterprise IT positioning.",
-          "Adds more depth to my operations and infrastructure profile."
+          "It adds production realism to the rest of the research archive.",
+          "It helps connect infrastructure operations with the research direction I now emphasize.",
+          "It shows that dependable service delivery is part of how I learned to think."
         ]
       }
     ],
     resources: [
       { label: "Open ARF File Server", href: "http://file.arfgroupbd.com" },
       { label: "Open S. Alam Group File Server", href: "http://file.s.alamgroupbd.com" },
-      { label: "Back to My Blog", href: "/blog/" }
+      { label: "Read DataMentor Note", href: "/blog/posts/datamentor-notebook-studio/" }
     ],
-    related: ["mail-server-works", "network-architecture-works", "cloud-architecture-works"]
+    related: ["mail-server-works", "network-architecture-works", "datamentor-notebook-studio"]
   },
   "ip-telephony-works": {
-    type: "Latest Works Note",
-    kicker: "Latest Works Category",
-    title: "IP-Telephony and Voice Communication Infrastructure",
-    summary: "In this note, I explain the IP-telephony work in my portfolio, where the focus was business voice communication, internal coordination, and infrastructure support for day-to-day operations.",
-    metaDescription: "Detailed note on IP-telephony and voice communication infrastructure work by Md Anisur Rahman Chowdhury.",
-    tags: ["IP Telephony", "VoIP", "Business Communication", "Infrastructure Support", "Enterprise IT"],
+    type: "Systems Background Note",
+    kicker: "Operational Systems Background",
+    title: "IP Telephony, Real-Time Service Reliability, and Communication Networks",
+    summary: "I keep this note because voice systems taught me to think about infrastructure as a live service where continuity, segmentation, and reliability matter immediately, not after the fact.",
+    metaDescription: "Research-connected systems background note on IP telephony, service reliability, and communication infrastructure by Md Anisur Rahman Chowdhury.",
+    tags: ["IP Telephony", "Service Reliability", "Network Segmentation", "Operational Continuity", "Communication Systems"],
     facts: [
-      { label: "Showcased Work", value: "3 representative IP-telephony environments" },
-      { label: "Main Skills", value: "Voice systems support, business communication infrastructure, practical service delivery" },
-      { label: "Best Fit Roles", value: "Systems Administrator, IT Support Engineer, Infrastructure Engineer" }
+      { label: "Research Bridge", value: "Real-time service continuity, segmentation, and dependable infrastructure behavior" },
+      { label: "Main Skills", value: "Voice systems support, communication infrastructure, operational continuity, service coordination" },
+      { label: "Why I Keep It Here", value: "It reinforced my interest in infrastructure that has to stay reliable under real operational use." }
     ],
     sidebarStats: [
-      { value: "3", label: "Voice projects" },
-      { value: "VoIP", label: "Communication stack" },
-      { value: "Internal", label: "Operational use" }
+      { value: "3", label: "Voice environments" },
+      { value: "Real-Time", label: "Service pressure" },
+      { value: "Continuity", label: "Operational focus" }
     ],
     preview: {
       type: "image",
-      label: "Representative Work Snapshot",
+      label: "Operational Snapshot",
       src: "https://marcbd.com/wp-content/uploads/2025/07/IP-Phone.png",
       alt: "IP phone setup illustration",
-      title: "Business Voice Systems and Internal Communication",
-      note: "This part of my portfolio shows that my infrastructure experience includes voice systems as well as servers, networking, and security."
+      title: "Voice Infrastructure That Has to Work in Real Time",
+      note: "Voice systems pushed me to think about availability, internal coordination, and operational reliability as part of the infrastructure story, not as separate concerns."
     },
     sections: [
       {
-        heading: "Why I still include this work",
-        text: "A lot of people think only about data networks, but organizations also need dependable voice communication. I use this work to show that I understand infrastructure as a full operational environment, not only one technical layer.",
+        heading: "Why voice infrastructure still matters in my archive",
+        text: "IP telephony made infrastructure feel very immediate. When a communication system fails, people notice it right away. That pressure taught me to value continuity, clarity, and support discipline in a different way.",
         bullets: [
-          "Voice systems are part of business continuity and coordination.",
-          "Infrastructure support often includes communication systems too.",
-          "I use this category to add more breadth to my practical enterprise experience."
+          "Voice services expose the operational cost of unreliable infrastructure very quickly.",
+          "They made service availability feel like a visible design responsibility.",
+          "This work helped me think about systems as living environments instead of isolated components."
         ]
       },
       {
-        heading: "What I personally handled",
-        text: "The work included IP-based telephony setups that supported internal communication and day-to-day business use. I helped make voice communication easier and more structured for organizations.",
+        heading: "What I learned from supporting these environments",
+        text: "The work included IP-based telephony setups for internal communication and routine business use. What stayed with me was how much good communication depends on predictable infrastructure behavior.",
         bullets: [
-          "Operational telephony support for business environments.",
-          "Infrastructure-minded thinking about communication systems.",
-          "Focus on practical service usefulness rather than flashy presentation."
+          "Real-time services make continuity and troubleshooting discipline more important.",
+          "Communication systems taught me to think more carefully about service dependencies.",
+          "This background supported my broader interest in dependable systems and protected infrastructure."
         ]
       },
       {
-        heading: "Why it strengthens my direction",
-        text: "I use this category to show range. It proves that I can work across messaging, file services, networking, telephony, and broader enterprise infrastructure instead of staying inside one narrow technical box.",
+        heading: "How it connects to the research direction I later built",
+        text: "Even though telephony is not my research topic, the experience still shaped how I think about infrastructure reliability. Later, when I moved toward cloud systems and security research, I already had experience seeing how fragile service chains can become in practice.",
         bullets: [
-          "Supports my systems administration and IT operations fit.",
-          "Shows broad infrastructure experience in real business settings.",
-          "Useful for employers who need someone comfortable across service layers."
+          "It added operational realism to my later interest in secure and resilient systems.",
+          "It reinforced the idea that infrastructure must be designed around real usage, not only ideal conditions.",
+          "It remains part of the systems background behind my research path."
         ]
       },
       {
-        heading: "What it says about my work style",
-        text: "I care about the services people actually use, not only back-end diagrams. Voice systems are a good example of infrastructure that becomes visible only when it breaks, so dependable delivery matters.",
+        heading: "Why I still point to this note",
+        text: "I keep it here because it shows that my infrastructure background includes service layers people actually feel when they succeed or fail. That matters to me because a lot of my later research interests still come back to reliability, trust, and operational reality.",
         bullets: [
-          "Shows service-minded engineering and operations support.",
-          "Strengthens my enterprise IT credibility.",
-          "Complements my networking and systems background well."
+          "It shows breadth without losing the research narrative.",
+          "It helps explain why I care about dependable infrastructure behavior.",
+          "It adds one more real-world layer behind the research-facing side of the portfolio."
         ]
       }
     ],
     resources: [
       { label: "Voice Work Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/IP-Phone.png" },
       { label: "Additional Telephony Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/Issabel1.avif" },
-      { label: "Back to My Blog", href: "/blog/" }
+      { label: "Read Network Architecture Note", href: "/blog/posts/network-architecture-works/" }
     ],
-    related: ["mail-server-works", "network-architecture-works", "file-server-works"]
+    related: ["network-architecture-works", "mail-server-works", "cloud-architecture-works"]
   },
   "web-development-works": {
-    type: "Latest Works Note",
-    kicker: "Latest Works Category",
-    title: "Business Website Delivery and Web Presence Projects",
-    summary: "In this note, I cover the web development work in my portfolio, where the goal was to give businesses a clean and useful online presence with clear communication and brand visibility.",
-    metaDescription: "Detailed note on business website delivery and web presence projects by Md Anisur Rahman Chowdhury.",
-    tags: ["Web Development", "Business Websites", "Public-Facing Platforms", "Brand Presence", "Digital Delivery"],
+    type: "Systems Background Note",
+    kicker: "Operational Systems Background",
+    title: "Web Delivery, Technical Communication, and Public-Facing Systems",
+    summary: "I keep this note because building public-facing websites taught me how to present technical ideas clearly, turn systems into understandable interfaces, and make complex work easier for people to read and trust.",
+    metaDescription: "Research-connected systems background note on web delivery, technical communication, and public-facing systems by Md Anisur Rahman Chowdhury.",
+    tags: ["Web Delivery", "Technical Communication", "Public Interfaces", "Prototype Design", "Digital Presentation"],
     facts: [
-      { label: "Showcased Work", value: "5 representative website projects" },
-      { label: "Main Skills", value: "Business-facing website delivery, presentation clarity, public web presence support" },
-      { label: "Best Fit Roles", value: "Web Engineer, Solutions Engineer, Full-Stack Developer, IT Generalist" }
+      { label: "Research Bridge", value: "Clear technical communication, visible prototypes, and usable public interfaces" },
+      { label: "Main Skills", value: "Public web delivery, technical presentation, interface clarity, explainable system framing" },
+      { label: "Why I Keep It Here", value: "It shaped how I present research systems and make technical work easier to understand." }
     ],
     sidebarStats: [
-      { value: "5", label: "Web projects" },
-      { value: "Public", label: "Facing systems" },
-      { value: "Brand", label: "Presentation focus" }
+      { value: "5", label: "Web builds" },
+      { value: "Public", label: "Interface layer" },
+      { value: "Clarity", label: "Communication focus" }
     ],
     preview: {
       type: "image",
-      label: "Representative Work Snapshot",
+      label: "Operational Snapshot",
       src: "https://marcbd.com/wp-content/uploads/2025/07/Steelhead-Inn.png",
       alt: "Steelhead Inn website screenshot",
-      title: "Practical Business Websites with Clear Messaging",
-      note: "In these web projects, I focused on giving businesses a clear online presence that visitors can understand quickly and trust more easily."
+      title: "Public Interfaces That Make Systems Easier to Read",
+      note: "This work matters in my archive because it taught me that good technical work also needs good explanation, clear interfaces, and a readable public layer."
     },
     sections: [
       {
-        heading: "What I wanted this work to do",
-        text: "These projects are not abstract design experiments. They are practical business websites built to help visitors understand a company, its services, and its public identity with less confusion.",
+        heading: "Why I still keep web work inside a research-focused archive",
+        text: "Web delivery is not the same as my security research, but it shaped something important for me: the ability to turn a technical system into something another person can quickly understand and trust.",
         bullets: [
-          "The main goal is clarity, not visual noise.",
-          "A business website should communicate quickly and cleanly.",
-          "I think this work complements my infrastructure profile with public web delivery experience."
+          "A system that cannot be explained clearly is harder to evaluate, trust, and improve.",
+          "Public interfaces taught me to care about readability, hierarchy, and clean technical storytelling.",
+          "That matters now when I present research demos, project notes, and portfolio systems."
         ]
       },
       {
-        heading: "What I personally handled",
-        text: "The projects in this category include different business websites, each designed to act as a simple digital front door. The focus was on readable presentation, brand communication, and usable public access.",
+        heading: "What I learned from building these sites",
+        text: "The actual projects were public-facing sites for businesses and services. The deeper lesson was that design, explanation, and structure all affect whether technical work feels credible to another person.",
         bullets: [
-          "Clear web presence for businesses and brands.",
-          "Structured presentation of services and identity.",
-          "Support for trust, visibility, and communication."
+          "Clarity matters more than decoration when a visitor needs to understand a system fast.",
+          "A good interface reduces friction between technical work and human understanding.",
+          "This experience helped me build stronger research demos and clearer portfolio explanations later."
         ]
       },
       {
-        heading: "Why it matters for the direction I am building",
-        text: "I use this category to show that I can move between enterprise infrastructure work and client-facing web delivery. That range matters in roles where technical people also need to think about usability and presentation.",
+        heading: "How it supports the direction I built later",
+        text: "When I started publishing papers and building research demos, I already understood that presentation matters. A project or paper becomes more persuasive when the interface, structure, and explanation help people see the core idea quickly.",
         bullets: [
-          "Supports a broader engineer or technical consultant profile.",
-          "Shows flexibility across back-end and front-facing work.",
-          "Adds practical web delivery evidence to my portfolio."
+          "It helped me make research systems more visible and easier to inspect.",
+          "It supports the way I now build public demos and portfolio explanations.",
+          "It adds a communication layer to the more technical parts of my background."
         ]
       },
       {
-        heading: "Why I think teams care about it",
-        text: "I think these projects are good examples for companies that need someone who can both understand technical systems and present services clearly in a public-facing way.",
+        heading: "Why I still point to this note",
+        text: "I keep it here because it shows that I do not think only in back-end terms. I also care about how a system is presented, how a human reads it, and how technical work is explained in a credible way.",
         bullets: [
-          "Relevant for full-stack, solutions, and technical delivery conversations.",
-          "Shows ability to support business outcomes, not only technical tasks.",
-          "Complements my larger systems and security background well."
+          "It gives context for why my project demos and research pages are built the way they are.",
+          "It shows that communication is part of my engineering practice, not an afterthought.",
+          "It helps connect public-facing delivery with research visibility."
         ]
       }
     ],
     resources: [
       { label: "Open Steelhead Inn", href: "http://steelheadinn.us" },
       { label: "Open Old MARCBD Site", href: "http://marcbd.com" },
-      { label: "Back to My Blog", href: "/blog/" }
+      { label: "Read DataMentor Note", href: "/blog/posts/datamentor-notebook-studio/" }
     ],
-    related: ["cloud-architecture-works", "datamentor-notebook-studio", "enterprise-ai-erp-paper"]
+    related: ["datamentor-notebook-studio", "enterprise-ai-erp-paper", "self-correcting-llm"]
   },
   "network-architecture-works": {
-    type: "Latest Works Note",
-    kicker: "Latest Works Category",
-    title: "Network Architecture Design and Topology Planning",
-    summary: "In this note, I explain the network architecture work in my portfolio, including topology planning, structured connectivity design, and infrastructure thinking for enterprise and factory environments.",
-    metaDescription: "Detailed note on network architecture design and topology planning by Md Anisur Rahman Chowdhury.",
-    tags: ["Network Architecture", "Topology Design", "Enterprise Networking", "Routing and Switching", "Infrastructure Planning"],
+    type: "Systems Background Note",
+    kicker: "Operational Systems Background",
+    title: "Network Architecture as the Foundation of My Security Thinking",
+    summary: "I keep this note because topology design, segmentation, and network structure are some of the clearest operational roots behind my later interest in Zero Trust, firewall design, and secure infrastructure research.",
+    metaDescription: "Research-connected systems background note on network architecture, segmentation, and infrastructure design by Md Anisur Rahman Chowdhury.",
+    tags: ["Network Architecture", "Segmentation", "Trust Boundaries", "Routing and Switching", "Infrastructure Design"],
     facts: [
-      { label: "Showcased Work", value: "3 representative network architecture designs" },
-      { label: "Main Skills", value: "Topology planning, enterprise connectivity, routing and switching design, infrastructure structure" },
-      { label: "Best Fit Roles", value: "Network Engineer, Network Security Engineer, Infrastructure Architect" }
+      { label: "Research Bridge", value: "Segmentation, trust boundaries, and secure network structure" },
+      { label: "Main Skills", value: "Topology planning, connectivity design, routing and switching structure, security-aware architecture" },
+      { label: "Why I Keep It Here", value: "It is one of the clearest practical foundations behind my current research direction." }
     ],
     sidebarStats: [
-      { value: "3", label: "Architecture designs" },
-      { value: "Topology", label: "Planning core" },
-      { value: "Enterprise", label: "Production context" }
+      { value: "3", label: "Topology designs" },
+      { value: "Segmentation", label: "Security lens" },
+      { value: "Foundation", label: "Research link" }
     ],
     preview: {
       type: "image",
-      label: "Representative Work Snapshot",
+      label: "Design Snapshot",
       src: "https://marcbd.com/wp-content/uploads/2025/07/SAG-Agrabad-Corporate-Office-Network-Topology.png",
       alt: "S Alam Group network topology diagram",
-      title: "Planned Connectivity for Real Organizations",
-      note: "These network architecture projects show how I think before implementation: structure first, then stability, then security, then future growth."
+      title: "Topology, Structure, and Trust Boundaries Before Deployment",
+      note: "This is one of the strongest bridges between my hands-on background and my later research in infrastructure security, Zero Trust, and cloud-aware defense."
     },
     sections: [
       {
-        heading: "Why I still point to this work",
-        text: "A strong network does not start with random devices. It starts with structure. These designs show how I think about network planning before deployment and support work begin.",
+        heading: "Why this note is one of the strongest bridges to my research",
+        text: "A lot of the security questions I care about now became easier to articulate after spending time with real topology design. Network architecture made trust boundaries, traffic paths, and segmentation feel concrete.",
         bullets: [
-          "Topology design helps make implementation clearer and safer.",
-          "Good planning reduces later operational pain.",
-          "I see this category as a direct fit with my routing, switching, and infrastructure background."
+          "Good structure influences security long before a specific control is configured.",
+          "Topology planning makes it easier to see where trust should be reduced or enforced.",
+          "This was part of the path that later pulled me toward Zero Trust and intelligent firewall ideas."
         ]
       },
       {
-        heading: "What I paid most attention to",
-        text: "The designs in this category focus on clear network structure for offices and operational environments. The goal is to create a network that people can build, understand, and maintain more effectively.",
+        heading: "What I learned from designing real network structure",
+        text: "The actual work focused on office and operational environments that needed clear connectivity planning. What stayed with me was how much later stability, troubleshooting, and protection depend on early structural decisions.",
         bullets: [
-          "Enterprise and factory environments need different planning details.",
-          "Clear topology helps security and troubleshooting later.",
-          "I use this work to show planning discipline, not only implementation skill."
+          "Enterprise and factory environments expose different risk and segmentation needs.",
+          "A clean topology helps both operations and security instead of forcing them apart.",
+          "This work taught me to respect architecture as more than a diagram. It is a control surface."
         ]
       },
       {
-        heading: "Why I think it helps in hiring conversations",
-        text: "I think this category matters for network engineering and infrastructure roles because it shows how I think at the design level, not only at the device-configuration level.",
+        heading: "How it shaped the questions I ask in research",
+        text: "When I started thinking more seriously about cloud security and serverless defense, I was already used to asking structural questions first. Where are the boundaries? What depends on what? How should trust move through the system? The network work trained that instinct.",
         bullets: [
-          "Supports network engineer and infrastructure architect positioning.",
-          "Demonstrates structured thinking around connectivity and scale.",
-          "Links naturally with my security and operations experience."
+          "It made my later security research more architecture-aware from the beginning.",
+          "It connected operational network design with larger questions about adaptive protection.",
+          "It still explains why my research direction stays close to real infrastructure."
         ]
       },
       {
-        heading: "How it fits the bigger picture for me",
-        text: "These architecture designs connect the practical support work in my career with the cloud and security research I do now. They show that my foundation is in real network structure, not only theory.",
+        heading: "Why I still point a reader to this note",
+        text: "I keep this note because it makes the foundation visible. If someone wants to understand why I care so much about physical and cloud network infrastructure security, this is one of the first places I would point them.",
         bullets: [
-          "Strong link to physical and cloud network infrastructure focus.",
-          "Complements firewall, VPN, routing, and switching experience.",
-          "Adds visual proof of planning ability in live environments."
+          "It shows the physical-network side of the story behind my research.",
+          "It makes the connection between planning, security, and later cloud research easier to see.",
+          "It adds real design evidence behind the research-facing portfolio."
         ]
       }
     ],
     resources: [
       { label: "Open S. Alam Topology Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/SAG-Agrabad-Corporate-Office-Network-Topology.png" },
       { label: "Open ARF Topology Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/ARF-Group-Factory-Network-Topology.jpg" },
-      { label: "Back to My Blog", href: "/blog/" }
+      { label: "Read Cross-Cloud Firewall Note", href: "/blog/posts/cross-cloud-firewall/" }
     ],
-    related: ["cloud-architecture-works", "mail-server-works", "cross-cloud-firewall"]
+    related: ["cloud-architecture-works", "cross-cloud-firewall", "firewall-zero-trust-paper"]
   },
   "cloud-architecture-works": {
-    type: "Latest Works Note",
-    kicker: "Latest Works Category",
-    title: "Cloud Architecture Planning and Security-Oriented Design",
-    summary: "In this note, I cover the cloud architecture work in my portfolio, where the focus was service structure, cloud planning, and security-aware design for scalable modern systems.",
-    metaDescription: "Detailed note on cloud architecture planning and security-oriented design by Md Anisur Rahman Chowdhury.",
-    tags: ["Cloud Architecture", "Scalability", "Service Design", "Security Planning", "Modern Infrastructure"],
+    type: "Systems Background Note",
+    kicker: "Operational Systems Background",
+    title: "Cloud Architecture as the Bridge to My Research Direction",
+    summary: "I keep this note because cloud architecture is where my operational background and my research direction come together most clearly. It connects service design, distributed trust, and security-by-design in one place.",
+    metaDescription: "Research-connected systems background note on cloud architecture, distributed trust, and security-aware service design by Md Anisur Rahman Chowdhury.",
+    tags: ["Cloud Architecture", "Security by Design", "Distributed Trust", "Service Relationships", "Modern Infrastructure"],
     facts: [
-      { label: "Showcased Work", value: "2 representative cloud architecture designs" },
-      { label: "Main Skills", value: "Cloud planning, service structure, scalability thinking, security-aware design" },
-      { label: "Best Fit Roles", value: "Cloud Engineer, Cloud Security Engineer, Infrastructure Architect" }
+      { label: "Research Bridge", value: "Distributed cloud design, service trust, and security-by-design" },
+      { label: "Main Skills", value: "Cloud planning, service relationships, scalability thinking, security-aware architecture" },
+      { label: "Why I Keep It Here", value: "It is the clearest operational bridge into my serverless and cloud-security research." }
     ],
     sidebarStats: [
       { value: "2", label: "Cloud designs" },
-      { value: "Architecture", label: "Planning focus" },
-      { value: "Security", label: "Research link" }
+      { value: "Bridge", label: "Research link" },
+      { value: "Security", label: "Design lens" }
     ],
     preview: {
       type: "image",
-      label: "Representative Work Snapshot",
+      label: "Design Snapshot",
       src: "https://marcbd.com/wp-content/uploads/2025/07/AWS-Cloud-Architechture.png",
       alt: "AWS cloud architecture diagram",
-      title: "Structured Cloud Design with Security in Mind",
-      note: "This cloud architecture work sits close to my research direction. It shows how I think about structure, scale, and protection in modern infrastructure."
+      title: "Cloud Structure, Service Flow, and Security by Design",
+      note: "This note sits closest to my research path because it shows how architecture, trust, and protection start to merge in modern distributed systems."
     },
     sections: [
       {
-        heading: "Why I still include this work",
-        text: "Cloud architecture is not only about putting services online. It is about designing how they connect, how they scale, and how they stay secure when the environment grows more complex.",
+        heading: "Why this note sits so close to my research direction",
+        text: "Cloud architecture is the point where my earlier infrastructure background and my later research questions overlap most clearly. Once systems become distributed, structure, trust, scale, and protection all have to be thought about together.",
         bullets: [
-          "Cloud planning affects performance, cost, and security together.",
-          "A clear architecture helps teams build with more confidence.",
-          "I see this category as closely connected to my research identity."
+          "A cloud design makes security part of the system story from the start.",
+          "Service relationships matter because trust moves through those relationships.",
+          "This was one of the clearest paths into my serverless and intelligent-firewall work."
         ]
       },
       {
-        heading: "What I paid most attention to",
-        text: "The work here focuses on structured cloud design and the relationship between system architecture and security behavior. I wanted the cloud plans to be understandable, scalable, and realistic.",
+        heading: "What I learned from thinking at the cloud-architecture level",
+        text: "The work focused on structured cloud design, realistic service flow, and security-aware planning. What stayed with me was how easily weak assumptions can spread when a distributed system has not been designed carefully.",
         bullets: [
-          "Service relationships and traffic flow matter in cloud planning.",
-          "Security has to be part of the design, not added later.",
-          "The AWS-oriented work connects directly to my serverless security direction."
+          "Traffic flow and service relationships make architecture inseparable from security.",
+          "Security by design is far more useful than security added after the structure is fixed.",
+          "This experience kept pulling me toward cloud-native protection questions."
         ]
       },
       {
-        heading: "Why it supports the path I am building",
-        text: "I use this category to show why I fit cloud infrastructure and cloud security roles. It connects my hands-on career background with the direction of my recent research and GitHub projects.",
+        heading: "How it fed directly into the work I do now",
+        text: "When I later focused on serverless firewall ideas, cross-cloud adaptation, and Zero Trust thinking, this cloud-architecture background made that shift feel natural. The research was new, but the system questions were already familiar.",
         bullets: [
-          "Supports cloud engineer and cloud security engineer positioning.",
-          "Shows thinking at the architecture level, not only support level.",
-          "Bridges practical work and research-backed direction."
+          "It gave me a practical lens for thinking about distributed trust and adaptive protection.",
+          "It connects the operational side of my career with my published and pipeline research.",
+          "It remains one of the best notes for understanding the logic behind my project and paper choices."
         ]
       },
       {
-        heading: "How it connects to the rest of what I do",
-        text: "The cloud architecture category is one of the clearest bridges between my latest works, my GitHub firewall projects, and my first-author research in serverless intelligent security.",
+        heading: "Why I still point readers to this note",
+        text: "If someone wants the shortest explanation of how my operations background became a research direction, I would send them here. This note makes the bridge visible between architecture work, cloud security interest, and the research path I am still building.",
         bullets: [
-          "Direct link to serverless firewall research and Zero Trust themes.",
-          "Supports multi-cloud and distributed systems conversations.",
-          "Strengthens the overall logic of my portfolio story."
+          "It is the clearest operational bridge to my serverless firewall research.",
+          "It supports the way I talk about cloud security, Zero Trust, and distributed systems now.",
+          "It ties the practical and research-facing sides of the portfolio together."
         ]
       }
     ],
     resources: [
       { label: "Open AWS Architecture Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/AWS-Cloud-Architechture.png" },
       { label: "Open Cloud Architecture Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/Cloud-Architechture.png" },
-      { label: "Back to My Blog", href: "/blog/" }
+      { label: "Read Serverless Firewall Note", href: "/blog/posts/serverless-intelligent-firewall/" }
     ],
-    related: ["network-architecture-works", "serverless-intelligent-firewall", "cross-cloud-firewall-paper"]
+    related: ["serverless-intelligent-firewall", "cross-cloud-firewall", "cross-cloud-firewall-paper"]
   }
 };
 
