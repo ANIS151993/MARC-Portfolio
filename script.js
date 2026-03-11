@@ -175,7 +175,17 @@ const skillObserver = new IntersectionObserver(
 skillFillNodes.forEach((node) => skillObserver.observe(node));
 
 const projectFilters = document.getElementById("projectFilters");
-const projectCards = document.querySelectorAll("#projectGrid .portfolio-card");
+const projectGrid = document.getElementById("projectGrid");
+const projectCards = Array.from(document.querySelectorAll("#projectGrid .portfolio-card"));
+const projectSliderShell = document.querySelector(".projects-slider-shell");
+const projectPrevBtn = document.getElementById("projectPrev");
+const projectNextBtn = document.getElementById("projectNext");
+const projectSliderTitle = document.getElementById("projectSliderTitle");
+const projectSliderMeta = document.getElementById("projectSliderMeta");
+const projectSliderCount = document.getElementById("projectSliderCount");
+const projectSliderCategory = document.getElementById("projectSliderCategory");
+const projectProgressBar = document.getElementById("projectProgressBar");
+const projectSliderThumbs = document.getElementById("projectSliderThumbs");
 const workFilters = document.getElementById("workFilters");
 const workGrid = document.getElementById("workGrid");
 const workCards = Array.from(document.querySelectorAll("#workGrid .work-card"));
@@ -196,10 +206,53 @@ const orderSection = document.getElementById("order");
 const checkoutHelp = document.getElementById("checkoutHelp");
 const planTriggers = document.querySelectorAll(".plan-trigger");
 const pricePlans = document.querySelectorAll(".price-plan");
+let activeProjectFilter = "all";
+let visibleProjectCards = [];
+let projectIndex = 0;
+let projectSliderTimer = null;
 let activeWorkFilter = "all";
 let visibleWorkCards = [];
 let workIndex = 0;
 let workSliderTimer = null;
+
+const renderProjectThumbnails = () => {
+  if (!projectSliderThumbs) {
+    return;
+  }
+
+  projectSliderThumbs.innerHTML = "";
+
+  if (!visibleProjectCards.length) {
+    return;
+  }
+
+  const fragment = document.createDocumentFragment();
+
+  visibleProjectCards.forEach((card, index) => {
+    const thumb = document.createElement("button");
+    const shortName = card.querySelector(".project-short-name")?.textContent?.trim() || `P-${index + 1}`;
+    const title = card.querySelector("h3")?.textContent || `Project ${index + 1}`;
+    const active = index === projectIndex;
+
+    thumb.type = "button";
+    thumb.className = "project-thumb";
+    thumb.setAttribute("aria-label", `Show ${title}`);
+    thumb.setAttribute("title", title);
+    thumb.setAttribute("aria-pressed", String(active));
+    thumb.classList.toggle("active", active);
+    thumb.innerHTML = `<span>${shortName}</span>`;
+
+    thumb.addEventListener("click", () => {
+      projectIndex = index;
+      syncProjectSlider();
+      restartProjectSliderTimer();
+    });
+
+    fragment.appendChild(thumb);
+  });
+
+  projectSliderThumbs.appendChild(fragment);
+};
 
 const renderWorkThumbnails = () => {
   if (!workSliderThumbs) {
@@ -242,19 +295,156 @@ const renderWorkThumbnails = () => {
   workSliderThumbs.appendChild(fragment);
 };
 
+const syncProjectSlider = () => {
+  if (!projectGrid || !projectCards.length) {
+    return;
+  }
+
+  visibleProjectCards = projectCards.filter((card) => {
+    const cat = card.getAttribute("data-cat") || "";
+    return activeProjectFilter === "all" || cat.includes(activeProjectFilter);
+  });
+
+  projectCards.forEach((card) => {
+    const visible = visibleProjectCards.includes(card);
+    card.classList.toggle("hidden-card", !visible);
+  });
+
+  if (!visibleProjectCards.length) {
+    projectGrid.style.transform = "translateX(0)";
+    if (projectSliderTitle) {
+      projectSliderTitle.textContent = "No project found";
+    }
+    if (projectSliderMeta) {
+      projectSliderMeta.textContent = "Try another filter to load a different project set.";
+    }
+    if (projectSliderCount) {
+      projectSliderCount.textContent = "0 / 0";
+    }
+    if (projectSliderCategory) {
+      projectSliderCategory.textContent = "Portfolio Projects";
+    }
+    if (projectProgressBar) {
+      projectProgressBar.style.width = "0%";
+    }
+    if (projectPrevBtn) {
+      projectPrevBtn.disabled = true;
+    }
+    if (projectNextBtn) {
+      projectNextBtn.disabled = true;
+    }
+    renderProjectThumbnails();
+    return;
+  }
+
+  if (projectIndex >= visibleProjectCards.length) {
+    projectIndex = 0;
+  }
+
+  const activeCard = visibleProjectCards[projectIndex];
+  projectGrid.style.transform = `translateX(-${projectIndex * 100}%)`;
+
+  projectCards.forEach((card) => {
+    const active = card === activeCard;
+    card.classList.toggle("active-slide", active);
+    card.setAttribute("aria-hidden", String(!active));
+  });
+
+  const title = activeCard.querySelector("h3")?.textContent || "Featured Project";
+  const role = activeCard.querySelector(".project-role")?.textContent || "Portfolio Project";
+  const summary = activeCard.querySelector(".project-content > p:not(.project-role)")?.textContent || "";
+  const category = activeProjectFilter === "all"
+    ? "Portfolio Projects"
+    : (projectFilters?.querySelector("button.active")?.textContent || "Portfolio Projects");
+
+  if (projectSliderTitle) {
+    projectSliderTitle.textContent = title;
+  }
+  if (projectSliderMeta) {
+    projectSliderMeta.textContent = summary ? `${role} | ${summary}` : role;
+  }
+  if (projectSliderCount) {
+    projectSliderCount.textContent = `${projectIndex + 1} / ${visibleProjectCards.length}`;
+  }
+  if (projectSliderCategory) {
+    projectSliderCategory.textContent = category;
+  }
+  if (projectProgressBar) {
+    projectProgressBar.style.width = `${((projectIndex + 1) / visibleProjectCards.length) * 100}%`;
+  }
+  if (projectPrevBtn) {
+    projectPrevBtn.disabled = visibleProjectCards.length <= 1;
+  }
+  if (projectNextBtn) {
+    projectNextBtn.disabled = visibleProjectCards.length <= 1;
+  }
+
+  renderProjectThumbnails();
+
+  const activeThumb = projectSliderThumbs?.querySelector(".project-thumb.active");
+  if (activeThumb) {
+    activeThumb.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+  }
+};
+
+const cycleProjectSlider = (direction) => {
+  if (!visibleProjectCards.length) {
+    return;
+  }
+  projectIndex = (projectIndex + direction + visibleProjectCards.length) % visibleProjectCards.length;
+  syncProjectSlider();
+};
+
+const restartProjectSliderTimer = () => {
+  if (projectSliderTimer) {
+    clearInterval(projectSliderTimer);
+  }
+
+  if (visibleProjectCards.length > 1) {
+    projectSliderTimer = setInterval(() => cycleProjectSlider(1), 7500);
+  }
+};
+
 if (projectFilters && projectCards.length) {
   projectFilters.querySelectorAll("button").forEach((button) => {
     button.addEventListener("click", () => {
-      const filter = button.getAttribute("data-filter");
+      const filter = button.getAttribute("data-filter") || "all";
+      activeProjectFilter = filter;
+      projectIndex = 0;
       projectFilters.querySelectorAll("button").forEach((b) => b.classList.remove("active"));
       button.classList.add("active");
-
-      projectCards.forEach((card) => {
-        const cat = card.getAttribute("data-cat") || "";
-        const show = filter === "all" || cat.includes(filter);
-        card.classList.toggle("hidden-card", !show);
-      });
+      syncProjectSlider();
+      restartProjectSliderTimer();
     });
+  });
+
+  syncProjectSlider();
+  restartProjectSliderTimer();
+}
+
+if (projectPrevBtn) {
+  projectPrevBtn.addEventListener("click", () => {
+    cycleProjectSlider(-1);
+    restartProjectSliderTimer();
+  });
+}
+
+if (projectNextBtn) {
+  projectNextBtn.addEventListener("click", () => {
+    cycleProjectSlider(1);
+    restartProjectSliderTimer();
+  });
+}
+
+if (projectSliderShell) {
+  projectSliderShell.addEventListener("mouseenter", () => {
+    if (projectSliderTimer) {
+      clearInterval(projectSliderTimer);
+    }
+  });
+
+  projectSliderShell.addEventListener("mouseleave", () => {
+    restartProjectSliderTimer();
   });
 }
 

@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto+Slab:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260311works5">
+  <link rel="stylesheet" href="styles.css?v=20260311projects1">
 </head>
 <body>
   <header class="site-header" id="top">
@@ -795,7 +795,31 @@
           <button data-filter="data">Data Automation</button>
         </div>
 
-        <div class="portfolio-grid" id="projectGrid">
+        <div class="projects-slider-shell reveal">
+          <div class="projects-slider-topbar">
+            <div class="projects-slider-intro">
+              <p class="projects-slider-label">Project Showcase</p>
+              <h3 id="projectSliderTitle">Featured Project</h3>
+              <p id="projectSliderMeta">A focused look at one project at a time.</p>
+            </div>
+            <div class="projects-slider-controls" aria-label="Portfolio Project Controls">
+              <button id="projectPrev" class="slider-btn project-slider-btn" type="button" aria-label="Show previous project">
+                <span class="project-slider-inline">
+                  <span aria-hidden="true">&#8592;</span>
+                  <span>Prev</span>
+                </span>
+              </button>
+              <button id="projectNext" class="slider-btn project-slider-btn" type="button" aria-label="Show next project">
+                <span class="project-slider-inline">
+                  <span>Next</span>
+                  <span aria-hidden="true">&#8594;</span>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="projects-slider-stage">
+            <div class="portfolio-grid" id="projectGrid">
           <article class="portfolio-card reveal interactive-card" data-cat="security">
             <div class="project-preview-shell">
               <div class="project-browser-bar" aria-hidden="true">
@@ -999,6 +1023,19 @@
               </div>
             </div>
           </article>
+            </div>
+          </div>
+
+          <div class="projects-slider-footer">
+            <div class="projects-slider-progress" aria-hidden="true">
+              <span id="projectProgressBar"></span>
+            </div>
+            <div class="projects-slider-status">
+              <p id="projectSliderCount">1 / 1</p>
+              <p id="projectSliderCategory">Portfolio Projects</p>
+            </div>
+          </div>
+          <div class="projects-slider-thumbs" id="projectSliderThumbs" aria-label="Portfolio Project Thumbnails"></div>
         </div>
       </div>
     </section>
@@ -1922,6 +1959,6 @@
   </footer>
 
   <script src="checkout-links.js"></script>
-  <script src="script.js?v=20260311works3"></script>
+  <script src="script.js?v=20260311projects1"></script>
 </body>
 </html>
