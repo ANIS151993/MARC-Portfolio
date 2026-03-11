@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto+Slab:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260311showcase4">
+  <link rel="stylesheet" href="styles.css?v=20260311sectionfx1">
 </head>
 <body>
   <header class="site-header" id="top">
@@ -1106,7 +1106,31 @@
           <button data-filter="pipeline">Pipeline</button>
         </div>
 
-        <div class="publication-grid" id="publicationGrid">
+        <div class="publications-slider-shell reveal">
+          <div class="publications-slider-topbar">
+            <div class="publications-slider-intro">
+              <p class="publications-slider-label">Research Showcase</p>
+              <h3 id="publicationSliderTitle">Featured Publication</h3>
+              <p id="publicationSliderMeta">A closer look at one paper or pipeline item at a time.</p>
+            </div>
+            <div class="publications-slider-controls" aria-label="Research Publication Controls">
+              <button id="publicationPrev" class="slider-btn publication-slider-btn" type="button" aria-label="Show previous publication">
+                <span class="publication-slider-inline">
+                  <span aria-hidden="true">&#8592;</span>
+                  <span>Prev</span>
+                </span>
+              </button>
+              <button id="publicationNext" class="slider-btn publication-slider-btn" type="button" aria-label="Show next publication">
+                <span class="publication-slider-inline">
+                  <span>Next</span>
+                  <span aria-hidden="true">&#8594;</span>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="publications-slider-stage">
+            <div class="publication-grid" id="publicationGrid">
           <article class="publication-card card reveal interactive-card" data-pubcat="published first-author">
             <p class="publication-meta">First Author | IEEE CSCloud 2025 | Nov 7, 2025</p>
             <h3>Towards a Serverless Intelligent Firewall: AI-Driven Security, and Zero-Trust Architectures</h3>
@@ -1331,6 +1355,19 @@
               </div>
             </div>
           </article>
+            </div>
+          </div>
+
+          <div class="publications-slider-footer">
+            <div class="publications-slider-progress" aria-hidden="true">
+              <span id="publicationProgressBar"></span>
+            </div>
+            <div class="publications-slider-status">
+              <p id="publicationSliderCount">1 / 1</p>
+              <p id="publicationSliderCategory">Research Publications</p>
+            </div>
+          </div>
+          <div class="publications-slider-thumbs" id="publicationSliderThumbs" aria-label="Research Publication Thumbnails"></div>
         </div>
       </div>
     </section>
@@ -1483,7 +1520,31 @@
           </div>
         </article>
 
-        <div class="blog-home-grid">
+        <div class="blog-slider-shell reveal">
+          <div class="blog-slider-topbar">
+            <div class="blog-slider-intro">
+              <p class="blog-slider-label">Blog Showcase</p>
+              <h3 id="blogSliderTitle">Featured Reading Lane</h3>
+              <p id="blogSliderMeta">One part of the blog at a time, with the same compact reading flow as the rest of the site.</p>
+            </div>
+            <div class="blog-slider-controls" aria-label="Blog Showcase Controls">
+              <button id="blogPrev" class="slider-btn blog-slider-btn" type="button" aria-label="Show previous blog lane">
+                <span class="blog-slider-inline">
+                  <span aria-hidden="true">&#8592;</span>
+                  <span>Prev</span>
+                </span>
+              </button>
+              <button id="blogNext" class="slider-btn blog-slider-btn" type="button" aria-label="Show next blog lane">
+                <span class="blog-slider-inline">
+                  <span>Next</span>
+                  <span aria-hidden="true">&#8594;</span>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="blog-slider-stage">
+            <div class="blog-home-grid" id="blogSliderGrid">
           <article class="blog-lane-card reveal interactive-card">
             <div class="blog-lane-visual blog-lane-visual-expertise">
               <span class="blog-lane-count">4 Tracks</span>
@@ -1590,6 +1651,19 @@
               </div>
             </div>
           </article>
+            </div>
+          </div>
+
+          <div class="blog-slider-footer">
+            <div class="blog-slider-progress" aria-hidden="true">
+              <span id="blogProgressBar"></span>
+            </div>
+            <div class="blog-slider-status">
+              <p id="blogSliderCount">1 / 1</p>
+              <p id="blogSliderCategory">Blog and Insights</p>
+            </div>
+          </div>
+          <div class="blog-slider-thumbs" id="blogSliderThumbs" aria-label="Blog Showcase Thumbnails"></div>
         </div>
 
         <article class="blog-archive-panel reveal interactive-card">
@@ -1959,6 +2033,6 @@
   </footer>
 
   <script src="checkout-links.js"></script>
-  <script src="script.js?v=20260311scrollfix1"></script>
+  <script src="script.js?v=20260311sectionfx1"></script>
 </body>
 </html>

@@ -186,6 +186,29 @@ const projectSliderCount = document.getElementById("projectSliderCount");
 const projectSliderCategory = document.getElementById("projectSliderCategory");
 const projectProgressBar = document.getElementById("projectProgressBar");
 const projectSliderThumbs = document.getElementById("projectSliderThumbs");
+const publicationFilters = document.getElementById("publicationFilters");
+const publicationGrid = document.getElementById("publicationGrid");
+const publicationCards = Array.from(document.querySelectorAll("#publicationGrid > [data-pubcat]"));
+const publicationSliderShell = document.querySelector(".publications-slider-shell");
+const publicationPrevBtn = document.getElementById("publicationPrev");
+const publicationNextBtn = document.getElementById("publicationNext");
+const publicationSliderTitle = document.getElementById("publicationSliderTitle");
+const publicationSliderMeta = document.getElementById("publicationSliderMeta");
+const publicationSliderCount = document.getElementById("publicationSliderCount");
+const publicationSliderCategory = document.getElementById("publicationSliderCategory");
+const publicationProgressBar = document.getElementById("publicationProgressBar");
+const publicationSliderThumbs = document.getElementById("publicationSliderThumbs");
+const blogSliderGrid = document.getElementById("blogSliderGrid");
+const blogCards = Array.from(document.querySelectorAll("#blogSliderGrid .blog-lane-card"));
+const blogSliderShell = document.querySelector(".blog-slider-shell");
+const blogPrevBtn = document.getElementById("blogPrev");
+const blogNextBtn = document.getElementById("blogNext");
+const blogSliderTitle = document.getElementById("blogSliderTitle");
+const blogSliderMeta = document.getElementById("blogSliderMeta");
+const blogSliderCount = document.getElementById("blogSliderCount");
+const blogSliderCategory = document.getElementById("blogSliderCategory");
+const blogProgressBar = document.getElementById("blogProgressBar");
+const blogSliderThumbs = document.getElementById("blogSliderThumbs");
 const workFilters = document.getElementById("workFilters");
 const workGrid = document.getElementById("workGrid");
 const workCards = Array.from(document.querySelectorAll("#workGrid .work-card"));
@@ -198,8 +221,6 @@ const workSliderCount = document.getElementById("workSliderCount");
 const workSliderCategory = document.getElementById("workSliderCategory");
 const workProgressBar = document.getElementById("workProgressBar");
 const workSliderThumbs = document.getElementById("workSliderThumbs");
-const publicationFilters = document.getElementById("publicationFilters");
-const publicationCards = document.querySelectorAll("#publicationGrid [data-pubcat]");
 const orderPackage = document.getElementById("orderPackage");
 const orderPayment = document.getElementById("orderPayment");
 const orderSection = document.getElementById("order");
@@ -210,6 +231,12 @@ let activeProjectFilter = "all";
 let visibleProjectCards = [];
 let projectIndex = 0;
 let projectSliderTimer = null;
+let activePublicationFilter = "all";
+let visiblePublicationCards = [];
+let publicationIndex = 0;
+let publicationSliderTimer = null;
+let blogIndex = 0;
+let blogSliderTimer = null;
 let activeWorkFilter = "all";
 let visibleWorkCards = [];
 let workIndex = 0;
@@ -264,6 +291,85 @@ const scrollThumbStrip = (strip, thumb) => {
   const left = Math.min(Math.max(0, targetLeft), maxLeft);
 
   strip.scrollTo({ left, behavior: "smooth" });
+};
+
+const renderPublicationThumbnails = () => {
+  if (!publicationSliderThumbs) {
+    return;
+  }
+
+  publicationSliderThumbs.innerHTML = "";
+
+  if (!visiblePublicationCards.length) {
+    return;
+  }
+
+  const fragment = document.createDocumentFragment();
+
+  visiblePublicationCards.forEach((card, index) => {
+    const thumb = document.createElement("button");
+    const tagLabel = card.classList.contains("publication-pipeline")
+      ? "Pipeline"
+      : (card.querySelector(".publication-tags span")?.textContent || `Pub ${index + 1}`);
+    const title = card.querySelector("h3")?.textContent || `Publication ${index + 1}`;
+    const active = index === publicationIndex;
+
+    thumb.type = "button";
+    thumb.className = "publication-thumb";
+    thumb.setAttribute("aria-label", `Show ${title}`);
+    thumb.setAttribute("title", title);
+    thumb.setAttribute("aria-pressed", String(active));
+    thumb.classList.toggle("active", active);
+    thumb.innerHTML = `<span>${tagLabel.slice(0, 8)}</span>`;
+
+    thumb.addEventListener("click", () => {
+      publicationIndex = index;
+      syncPublicationSlider();
+      restartPublicationSliderTimer();
+    });
+
+    fragment.appendChild(thumb);
+  });
+
+  publicationSliderThumbs.appendChild(fragment);
+};
+
+const renderBlogThumbnails = () => {
+  if (!blogSliderThumbs) {
+    return;
+  }
+
+  blogSliderThumbs.innerHTML = "";
+
+  if (!blogCards.length) {
+    return;
+  }
+
+  const fragment = document.createDocumentFragment();
+
+  blogCards.forEach((card, index) => {
+    const thumb = document.createElement("button");
+    const label = card.querySelector(".blog-lane-label")?.textContent || `Blog ${index + 1}`;
+    const active = index === blogIndex;
+
+    thumb.type = "button";
+    thumb.className = "blog-thumb";
+    thumb.setAttribute("aria-label", `Show ${label}`);
+    thumb.setAttribute("title", label);
+    thumb.setAttribute("aria-pressed", String(active));
+    thumb.classList.toggle("active", active);
+    thumb.innerHTML = `<span>${label.slice(0, 8)}</span>`;
+
+    thumb.addEventListener("click", () => {
+      blogIndex = index;
+      syncBlogSlider();
+      restartBlogSliderTimer();
+    });
+
+    fragment.appendChild(thumb);
+  });
+
+  blogSliderThumbs.appendChild(fragment);
 };
 
 const renderWorkThumbnails = () => {
@@ -460,6 +566,190 @@ if (projectSliderShell) {
   });
 }
 
+const syncPublicationSlider = () => {
+  if (!publicationGrid || !publicationCards.length) {
+    return;
+  }
+
+  visiblePublicationCards = publicationCards.filter((card) => {
+    const cat = card.getAttribute("data-pubcat") || "";
+    return activePublicationFilter === "all" || cat.includes(activePublicationFilter);
+  });
+
+  publicationCards.forEach((card) => {
+    const visible = visiblePublicationCards.includes(card);
+    card.classList.toggle("hidden-card", !visible);
+  });
+
+  if (!visiblePublicationCards.length) {
+    publicationGrid.style.transform = "translateX(0)";
+    if (publicationSliderTitle) {
+      publicationSliderTitle.textContent = "No publication found";
+    }
+    if (publicationSliderMeta) {
+      publicationSliderMeta.textContent = "Try another filter to load a different part of the research portfolio.";
+    }
+    if (publicationSliderCount) {
+      publicationSliderCount.textContent = "0 / 0";
+    }
+    if (publicationSliderCategory) {
+      publicationSliderCategory.textContent = "Research Publications";
+    }
+    if (publicationProgressBar) {
+      publicationProgressBar.style.width = "0%";
+    }
+    if (publicationPrevBtn) {
+      publicationPrevBtn.disabled = true;
+    }
+    if (publicationNextBtn) {
+      publicationNextBtn.disabled = true;
+    }
+    renderPublicationThumbnails();
+    return;
+  }
+
+  if (publicationIndex >= visiblePublicationCards.length) {
+    publicationIndex = 0;
+  }
+
+  const activeCard = visiblePublicationCards[publicationIndex];
+  publicationGrid.style.transform = `translateX(-${publicationIndex * 100}%)`;
+
+  publicationCards.forEach((card) => {
+    const active = card === activeCard;
+    card.classList.toggle("active-slide", active);
+    card.setAttribute("aria-hidden", String(!active));
+  });
+
+  const title = activeCard.querySelector("h3")?.textContent || "Featured Publication";
+  const meta = activeCard.classList.contains("publication-pipeline")
+    ? (activeCard.querySelector(".pill")?.textContent || "Research Pipeline")
+    : (activeCard.querySelector(".publication-meta")?.textContent || "Research Publication");
+  const summary = activeCard.classList.contains("publication-pipeline")
+    ? (activeCard.querySelector(".publication-pipeline-head p:last-child")?.textContent || "")
+    : (activeCard.querySelector("p:not(.publication-meta)")?.textContent || "");
+  const category = activePublicationFilter === "all"
+    ? "Research Publications"
+    : (publicationFilters?.querySelector("button.active")?.textContent || "Research Publications");
+
+  if (publicationSliderTitle) {
+    publicationSliderTitle.textContent = title;
+  }
+  if (publicationSliderMeta) {
+    publicationSliderMeta.textContent = summary ? `${meta} | ${summary}` : meta;
+  }
+  if (publicationSliderCount) {
+    publicationSliderCount.textContent = `${publicationIndex + 1} / ${visiblePublicationCards.length}`;
+  }
+  if (publicationSliderCategory) {
+    publicationSliderCategory.textContent = category;
+  }
+  if (publicationProgressBar) {
+    publicationProgressBar.style.width = `${((publicationIndex + 1) / visiblePublicationCards.length) * 100}%`;
+  }
+  if (publicationPrevBtn) {
+    publicationPrevBtn.disabled = visiblePublicationCards.length <= 1;
+  }
+  if (publicationNextBtn) {
+    publicationNextBtn.disabled = visiblePublicationCards.length <= 1;
+  }
+
+  renderPublicationThumbnails();
+
+  const activeThumb = publicationSliderThumbs?.querySelector(".publication-thumb.active");
+  if (activeThumb) {
+    scrollThumbStrip(publicationSliderThumbs, activeThumb);
+  }
+};
+
+const cyclePublicationSlider = (direction) => {
+  if (!visiblePublicationCards.length) {
+    return;
+  }
+  publicationIndex = (publicationIndex + direction + visiblePublicationCards.length) % visiblePublicationCards.length;
+  syncPublicationSlider();
+};
+
+const restartPublicationSliderTimer = () => {
+  if (publicationSliderTimer) {
+    clearInterval(publicationSliderTimer);
+  }
+
+  if (visiblePublicationCards.length > 1) {
+    publicationSliderTimer = setInterval(() => cyclePublicationSlider(1), 7600);
+  }
+};
+
+const syncBlogSlider = () => {
+  if (!blogSliderGrid || !blogCards.length) {
+    return;
+  }
+
+  if (blogIndex >= blogCards.length) {
+    blogIndex = 0;
+  }
+
+  const activeCard = blogCards[blogIndex];
+  blogSliderGrid.style.transform = `translateX(-${blogIndex * 100}%)`;
+
+  blogCards.forEach((card, index) => {
+    const active = index === blogIndex;
+    card.classList.toggle("active-slide", active);
+    card.setAttribute("aria-hidden", String(!active));
+  });
+
+  const label = activeCard.querySelector(".blog-lane-label")?.textContent || "Blog and Insights";
+  const title = activeCard.querySelector("h3")?.textContent || "Featured Reading Lane";
+  const summary = activeCard.querySelector(".blog-lane-body > p:not(.blog-lane-label)")?.textContent || "";
+
+  if (blogSliderTitle) {
+    blogSliderTitle.textContent = title;
+  }
+  if (blogSliderMeta) {
+    blogSliderMeta.textContent = summary ? `${label} | ${summary}` : label;
+  }
+  if (blogSliderCount) {
+    blogSliderCount.textContent = `${blogIndex + 1} / ${blogCards.length}`;
+  }
+  if (blogSliderCategory) {
+    blogSliderCategory.textContent = label;
+  }
+  if (blogProgressBar) {
+    blogProgressBar.style.width = `${((blogIndex + 1) / blogCards.length) * 100}%`;
+  }
+  if (blogPrevBtn) {
+    blogPrevBtn.disabled = blogCards.length <= 1;
+  }
+  if (blogNextBtn) {
+    blogNextBtn.disabled = blogCards.length <= 1;
+  }
+
+  renderBlogThumbnails();
+
+  const activeThumb = blogSliderThumbs?.querySelector(".blog-thumb.active");
+  if (activeThumb) {
+    scrollThumbStrip(blogSliderThumbs, activeThumb);
+  }
+};
+
+const cycleBlogSlider = (direction) => {
+  if (!blogCards.length) {
+    return;
+  }
+  blogIndex = (blogIndex + direction + blogCards.length) % blogCards.length;
+  syncBlogSlider();
+};
+
+const restartBlogSliderTimer = () => {
+  if (blogSliderTimer) {
+    clearInterval(blogSliderTimer);
+  }
+
+  if (blogCards.length > 1) {
+    blogSliderTimer = setInterval(() => cycleBlogSlider(1), 7800);
+  }
+};
+
 const syncWorkSlider = () => {
   if (!workGrid || !workCards.length) {
     return;
@@ -608,16 +898,74 @@ if (workSliderShell) {
 if (publicationFilters && publicationCards.length) {
   publicationFilters.querySelectorAll("button").forEach((button) => {
     button.addEventListener("click", () => {
-      const filter = button.getAttribute("data-filter");
+      const filter = button.getAttribute("data-filter") || "all";
+      activePublicationFilter = filter;
+      publicationIndex = 0;
       publicationFilters.querySelectorAll("button").forEach((b) => b.classList.remove("active"));
       button.classList.add("active");
-
-      publicationCards.forEach((card) => {
-        const cat = card.getAttribute("data-pubcat") || "";
-        const show = filter === "all" || cat.includes(filter);
-        card.classList.toggle("hidden-card", !show);
-      });
+      syncPublicationSlider();
+      restartPublicationSliderTimer();
     });
+  });
+
+  syncPublicationSlider();
+  restartPublicationSliderTimer();
+}
+
+if (publicationPrevBtn) {
+  publicationPrevBtn.addEventListener("click", () => {
+    cyclePublicationSlider(-1);
+    restartPublicationSliderTimer();
+  });
+}
+
+if (publicationNextBtn) {
+  publicationNextBtn.addEventListener("click", () => {
+    cyclePublicationSlider(1);
+    restartPublicationSliderTimer();
+  });
+}
+
+if (publicationSliderShell) {
+  publicationSliderShell.addEventListener("mouseenter", () => {
+    if (publicationSliderTimer) {
+      clearInterval(publicationSliderTimer);
+    }
+  });
+
+  publicationSliderShell.addEventListener("mouseleave", () => {
+    restartPublicationSliderTimer();
+  });
+}
+
+if (blogCards.length) {
+  syncBlogSlider();
+  restartBlogSliderTimer();
+}
+
+if (blogPrevBtn) {
+  blogPrevBtn.addEventListener("click", () => {
+    cycleBlogSlider(-1);
+    restartBlogSliderTimer();
+  });
+}
+
+if (blogNextBtn) {
+  blogNextBtn.addEventListener("click", () => {
+    cycleBlogSlider(1);
+    restartBlogSliderTimer();
+  });
+}
+
+if (blogSliderShell) {
+  blogSliderShell.addEventListener("mouseenter", () => {
+    if (blogSliderTimer) {
+      clearInterval(blogSliderTimer);
+    }
+  });
+
+  blogSliderShell.addEventListener("mouseleave", () => {
+    restartBlogSliderTimer();
   });
 }
 
