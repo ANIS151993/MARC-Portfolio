@@ -1016,3 +1016,36 @@ textarea {
     width: 100%;
   }
 }
+
+body.page-research-blog {
+  background:
+    radial-gradient(circle at top left, rgba(72, 168, 255, 0.12), rgba(72, 168, 255, 0) 24%),
+    radial-gradient(circle at bottom right, rgba(255, 122, 31, 0.1), rgba(255, 122, 31, 0) 22%),
+    linear-gradient(180deg, #fbf7f0, #f1ebe2 62%, #ece4d8);
+}
+
+body.page-research-blog .journal-header {
+  background: rgba(245, 240, 232, 0.86);
+}
+
+body.page-research-blog .rail-card {
+  background: linear-gradient(180deg, rgba(22, 34, 52, 0.98), rgba(13, 20, 31, 0.98));
+}
+
+body.page-research-blog .hero-card {
+  background:
+    radial-gradient(circle at top right, rgba(72, 168, 255, 0.18), rgba(72, 168, 255, 0) 24%),
+    radial-gradient(circle at bottom left, rgba(255, 122, 31, 0.14), rgba(255, 122, 31, 0) 22%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.97), rgba(242, 236, 228, 0.98));
+}
+
+body.page-research-blog .work-note::before {
+  background:
+    linear-gradient(180deg, rgba(12, 16, 24, 0.06), rgba(12, 16, 24, 0.18) 32%, rgba(12, 16, 24, 0.8) 100%),
+    linear-gradient(125deg, rgba(72, 168, 255, 0.16), rgba(72, 168, 255, 0) 44%);
+}
+
+body.page-research-blog .top-links a:hover,
+body.page-research-blog .top-links a:focus-visible {
+  background: #162235;
+}

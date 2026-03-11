@@ -1,351 +1,185 @@
 const expertiseNotes = [
   {
-    label: "Physical Network Infrastructure",
-    title: "I know how live networks behave in the real world.",
-    text: "A lot of my industry experience comes from networks that had to work every day for real users. I worked with routing, switching, VPN, failover, and enterprise connectivity in environments where downtime was a real business problem.",
+    label: "Cloud Security Focus",
+    title: "Cloud security is the center of the research path I want to keep building.",
+    text: "A lot of my current work comes back to one question: how do we protect cloud systems in a way that is technically strong, operationally realistic, and not limited to static security models? That is why cloud security keeps appearing across both my papers and my projects.",
     points: [
-      "I supported enterprise and ISP-style networking using Cisco, MikroTik, Juniper, Fortinet, and Cyberoam devices.",
-      "I worked on routing, switching, NAT, ACLs, VPN tunnels, and connectivity troubleshooting for business networks.",
-      "I understand that a good network is not only fast. It also has to be stable, secure, and easy to maintain."
+      "I keep working on cloud-native defense ideas because they fit both research depth and real operational need.",
+      "The firewall research, threat intelligence direction, and distributed infrastructure work all connect back to this same interest.",
+      "I care most about systems that can actually be studied, implemented, evaluated, and improved over time."
     ]
   },
   {
-    label: "Security Engineering",
-    title: "My security work is practical, not only theoretical.",
-    text: "I enjoy security work because it sits at the center of trust. In industry, I worked on firewall policies, segmented access, secure remote connectivity, and incident support. In research, I kept pushing deeper into Zero Trust and intelligent defense.",
+    label: "Serverless and Zero Trust",
+    title: "Serverless defense and Zero Trust security became one of my strongest first-author directions.",
+    text: "I care about these two areas together because they force a system to make careful trust decisions in environments that change quickly. That makes them a good place to study both architecture and defense logic at the same time.",
     points: [
-      "I worked on firewall rule management, secure access control, and operational hardening in enterprise environments.",
-      "I care about defense-in-depth, not single-point security. Good security needs layers, monitoring, and good operational habits.",
-      "My research on serverless firewalls, federated intelligence, and secure automation comes from this same mindset."
+      "My firewall papers and builds explore how Zero Trust ideas can be enforced more actively in cloud-native systems.",
+      "I am interested in continuous verification, policy-aware security, and security behavior that adapts to changing conditions.",
+      "This direction stays close to the kind of security engineering problems I want to study in a PhD."
     ]
   },
   {
-    label: "Hybrid Infrastructure Operations",
-    title: "I am comfortable with both system administration and service delivery.",
-    text: "My background includes Linux and Windows server work, Active Directory, mail systems, IP-PBX, and business-critical infrastructure support. I like work where systems, users, and operations all connect together.",
+    label: "Distributed Systems and AI",
+    title: "I am also interested in dependable AI when it behaves like part of a larger system.",
+    text: "My AI-related work is not only about model output. I care about what happens when models have to coordinate, review themselves, or operate as part of a broader architecture. That is why I keep returning to distributed agents, reliability, and evaluation quality.",
     points: [
-      "I supported Linux and Windows Server environments, identity management, enterprise messaging, and service continuity.",
-      "I worked with mail platforms, VoIP systems, monitoring tools, and infrastructure used by large teams.",
-      "This gives me a balanced view: not only how to build a system, but also how to run it well after deployment."
+      "The distributed AI and self-correcting LLM work both come from this systems-oriented view of AI.",
+      "I want AI work that is careful, testable, and honest about trust and failure.",
+      "This interest fits naturally with my larger background in networks, systems, and infrastructure protection."
     ]
   },
   {
-    label: "Research and Automation",
-    title: "I try to connect research ideas with useful engineering.",
-    text: "Research matters more when it can become something practical. That is why many of my papers and GitHub projects focus on cloud security, serverless systems, threat intelligence, reproducibility, and AI-supported workflows that can turn into usable tools.",
+    label: "Research Style",
+    title: "I like research that moves from idea to implementation instead of staying abstract.",
+    text: "I care about papers, but I also care about what happens after a paper idea starts taking shape. That is why I build demos, prototype systems, and reproducible workflows. They help me understand the problem better and explain the work more clearly to other people.",
     points: [
-      "My research focus is physical and cloud network infrastructure security.",
-      "I build with Python, Java, JavaScript, C++, SQL, PL/SQL, and JSON when the problem needs them.",
-      "I like reproducible work because it makes results easier to trust, explain, and improve."
+      "My first-author work usually includes methodology design, implementation, experimentation, and writing.",
+      "I try to keep the systems visible so the ideas are easier to evaluate and discuss.",
+      "That implementation habit is one of the main things I want to carry into PhD work."
     ]
   }
 ];
 
 const works = [
   {
-    category: "mail",
-    label: "Mail Server",
-    title: "ARF Mail Server",
-    description: "I set up a business email environment for ARF Group so the team could use a stable company mail system with proper administration and day-to-day reliability.",
-    image: "https://marcbd.com/wp-content/uploads/2025/07/ARFGroupbd.png",
+    category: "firewall",
+    label: "Research Track",
+    title: "Serverless Intelligent Firewall Agenda",
+    description: "This is the longest-running first-author thread in my work. I use it to study how adaptive cloud defense, Zero Trust principles, and intelligent firewall behavior can be connected in one practical security architecture.",
+    visual: "linear-gradient(145deg, #1b2d45, #0f1726 48%, #122135 100%)",
     links: [
-      { label: "Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/ARFGroupbd.png" },
-      { label: "Open Work", href: "http://mail.arfgroupbd.com" }
+      { label: "Read Paper Note", href: "/blog/posts/firewall-zero-trust-paper/", internal: true, variant: "note" },
+      { label: "Open Demo", href: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-1/", variant: "live" }
     ]
   },
   {
-    category: "file",
-    label: "File Server",
-    title: "ARF File Server",
-    description: "This work focused on central file access for ARF Group, making storage and sharing easier for business teams while keeping the system structured and manageable.",
-    image: "https://marcbd.com/wp-content/uploads/2025/07/Arf-File-Server.png",
+    category: "trust",
+    label: "Research Track",
+    title: "Zero Trust and Continuous Verification",
+    description: "I keep coming back to Zero Trust because I do not think trust should be treated as a one-time decision. I want to study how verification can stay active in a system that is still usable, not only restrictive.",
+    visual: "linear-gradient(145deg, #3a1f15, #1c1720 44%, #112031 100%)",
     links: [
-      { label: "Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/Arf-File-Server.png" },
-      { label: "Open Work", href: "http://file.arfgroupbd.com" }
+      { label: "Read Related Note", href: "/blog/posts/cross-cloud-firewall-paper/", internal: true, variant: "note" },
+      { label: "Open Research Build", href: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-2/", variant: "live" }
     ]
   },
   {
-    category: "mail",
-    label: "Mail Server",
-    title: "TD Mail Server",
-    description: "For TD Group, I worked on a company mail setup that gave the organization a more professional and controlled email platform for daily communication.",
-    image: "https://marcbd.com/wp-content/uploads/2025/07/Screenshot-2024-03-22-121540.png",
+    category: "federated",
+    label: "Research Track",
+    title: "Federated Threat Intelligence for Multi-Cloud Security",
+    description: "This part of my pipeline is about sharing security intelligence across cloud environments without giving away too much sensitive information. I care about this theme because real cloud defense has to deal with distribution, coordination, and privacy together.",
+    visual: "linear-gradient(145deg, #10263a, #112031 46%, #253249 100%)",
     links: [
-      { label: "Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/Screenshot-2024-03-22-121540.png" },
-      { label: "Open Work", href: "http://mail.turkishdoc.com.bd" }
+      { label: "Read Related Note", href: "/blog/posts/cross-cloud-firewall-paper/", internal: true, variant: "note" },
+      { label: "Open Advanced Build", href: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-3/", variant: "live" }
     ]
   },
   {
-    category: "file",
-    label: "File Server",
-    title: "TD File Server",
-    description: "This file server work for TD Group was about giving people one place to store, access, and organize important business files with less confusion.",
-    image: "https://marcbd.com/wp-content/uploads/2025/07/Screenshot-2024-03-22-163028.png",
+    category: "llm",
+    label: "Research Track",
+    title: "LLM Reliability and Self-Correction",
+    description: "I am interested in what makes an AI system more dependable, especially when it has to reason carefully. That is why I built and wrote about self-correcting LLM workflows instead of treating model output as trustworthy by default.",
+    visual: "linear-gradient(145deg, #2c1637, #161929 46%, #1b2d45 100%)",
     links: [
-      { label: "Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/Screenshot-2024-03-22-163028.png" },
-      { label: "Open Work", href: "http://Cloud.turkishdoc.com.bd" }
+      { label: "Read Paper Note", href: "/blog/posts/self-correcting-math-paper/", internal: true, variant: "note" },
+      { label: "Open Demo", href: "https://anis151993.github.io/Self-Correcting-LLM-localhost/", variant: "live" }
     ]
   },
   {
-    category: "mail",
-    label: "Mail Server",
-    title: "S Alam Company Mail Server",
-    description: "Here I delivered a managed business email setup for S Alam Company, helping the organization use company-branded email in a cleaner and more reliable way.",
-    image: "https://marcbd.com/wp-content/uploads/2025/07/sAlamcompanybd-Admin-portal.png",
+    category: "agents",
+    label: "Research Track",
+    title: "Distributed Multi-Agent AI Systems",
+    description: "This theme comes from a systems question I care about: what happens when several models work together instead of one model working alone? I use this area to think about coordination, task structure, and local distributed AI behavior.",
+    visual: "linear-gradient(145deg, #152332, #12283a 40%, #233c4f 100%)",
     links: [
-      { label: "Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/sAlamcompanybd-Admin-portal.png" },
-      { label: "Open Work", href: "http://mail.s.alamcompanybd.com" }
+      { label: "Read Project Note", href: "/blog/posts/distributed-ai-ensemble/", internal: true, variant: "note" },
+      { label: "Open Demo", href: "https://anis151993.github.io/Distributed-AI/", variant: "live" }
     ]
   },
   {
-    category: "file",
-    label: "File Server",
-    title: "S Alam Company File Server",
-    description: "This was a file services setup for S Alam Company, designed to support internal sharing, structured access, and more organized digital work.",
-    image: "https://marcbd.com/wp-content/uploads/2025/07/Cloud-SAlamgroup-file-server.png",
+    category: "workflow",
+    label: "Research Track",
+    title: "Reproducible Research Workflow",
+    description: "I care about reproducibility because research becomes stronger when someone can inspect the process instead of trusting a final claim only. That is why I built workflow tools that help make data and notebook-based work easier to repeat and explain.",
+    visual: "linear-gradient(145deg, #2a2a18, #1a2532 45%, #2a3544 100%)",
     links: [
-      { label: "Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/Cloud-SAlamgroup-file-server.png" },
-      { label: "Open Work", href: "http://cloud.s.alamcompanybd.com" }
-    ]
-  },
-  {
-    category: "file",
-    label: "File Server",
-    title: "S Alam Group File Server",
-    description: "For S Alam Group, this work supported centralized file handling so teams could access shared documents in a more controlled and dependable way.",
-    image: "https://marcbd.com/wp-content/uploads/2025/07/SAlamgroup-file-server.png",
-    links: [
-      { label: "Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/SAlamgroup-file-server.png" },
-      { label: "Open Work", href: "http://file.s.alamgroupbd.com" }
-    ]
-  },
-  {
-    category: "mail",
-    label: "Mail Server",
-    title: "S Alam Group Mail Server",
-    description: "This mail setup helped S Alam Group use a dedicated business email system for day-to-day communication, identity, and communication flow.",
-    image: "https://marcbd.com/wp-content/uploads/2025/07/mail-salamgroup.png",
-    links: [
-      { label: "Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/mail-salamgroup.png" },
-      { label: "Open Work", href: "http://mail.s.alamgroupbd.com" }
-    ]
-  },
-  {
-    category: "voice",
-    label: "IP-Telephony",
-    title: "S Alam Group IP-Telephony",
-    description: "This work focused on voice communication through IP telephony so teams could communicate more easily inside the organization.",
-    image: "https://marcbd.com/wp-content/uploads/2025/07/hq720.jpg",
-    links: [
-      { label: "Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/hq720.jpg" }
-    ]
-  },
-  {
-    category: "voice",
-    label: "IP-Telephony",
-    title: "ARF Group IP-Telephony",
-    description: "For ARF Group, this project was about improving internal voice communication with an IP-based telephony setup that could support business operations better.",
-    image: "https://marcbd.com/wp-content/uploads/2025/07/Issabel1.avif",
-    links: [
-      { label: "Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/Issabel1.avif" }
-    ]
-  },
-  {
-    category: "voice",
-    label: "IP-Telephony",
-    title: "TD Group IP-Telephony",
-    description: "This telephony work for TD Group shows another side of my infrastructure background: not only data systems, but also voice systems used in real business settings.",
-    image: "https://marcbd.com/wp-content/uploads/2025/07/IP-Phone.png",
-    links: [
-      { label: "Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/IP-Phone.png" }
-    ]
-  },
-  {
-    category: "network",
-    label: "Network Architecture",
-    title: "S. ALAM Group Network Architecture",
-    description: "This architecture work was about designing network structure clearly so the organization could support secure connectivity, traffic flow, and future growth.",
-    image: "https://marcbd.com/wp-content/uploads/2025/07/SAG-Agrabad-Corporate-Office-Network-Topology.png",
-    links: [
-      { label: "Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/SAG-Agrabad-Corporate-Office-Network-Topology.png" }
-    ]
-  },
-  {
-    category: "network",
-    label: "Network Architecture",
-    title: "ARF Group Network Architecture",
-    description: "This topology design shows how I think about structure first. A good network map helps everything else become easier to build, secure, and maintain.",
-    image: "https://marcbd.com/wp-content/uploads/2025/07/ARF-Group-Factory-Network-Topology.jpg",
-    links: [
-      { label: "Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/ARF-Group-Factory-Network-Topology.jpg" }
-    ]
-  },
-  {
-    category: "network",
-    label: "Network Architecture",
-    title: "SAG Factory Network Architecture",
-    description: "Factory environments need reliable communication too. This work focused on a network design that fits operational needs in an industrial setup.",
-    image: "https://marcbd.com/wp-content/uploads/2025/07/SAG-Factory.png",
-    links: [
-      { label: "Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/SAG-Factory.png" }
-    ]
-  },
-  {
-    category: "cloud",
-    label: "Cloud Architecture",
-    title: "S. Alam Group Cloud Architecture",
-    description: "This architecture plan shows my cloud-side thinking: how services connect, how they scale, and how organizations can move forward in a more structured way.",
-    image: "https://marcbd.com/wp-content/uploads/2025/07/Cloud-Architechture.png",
-    links: [
-      { label: "Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/Cloud-Architechture.png" }
-    ]
-  },
-  {
-    category: "cloud",
-    label: "Cloud Architecture",
-    title: "Serverless, Real-Time Threat Detection and Protection System in AWS",
-    description: "This one is especially close to my research direction. It shows how cloud design and real-time security thinking can work together in one system.",
-    image: "https://marcbd.com/wp-content/uploads/2025/07/AWS-Cloud-Architechture.png",
-    links: [
-      { label: "Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/AWS-Cloud-Architechture.png" }
-    ]
-  },
-  {
-    category: "web",
-    label: "Web Development",
-    title: "Steelhead Inn",
-    description: "This website project shows my ability to present a business clearly online with a clean public-facing web experience.",
-    image: "https://marcbd.com/wp-content/uploads/2025/07/Steelhead-Inn.png",
-    links: [
-      { label: "Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/Steelhead-Inn.png" },
-      { label: "Open Work", href: "http://steelheadinn.us" }
-    ]
-  },
-  {
-    category: "web",
-    label: "Web Development",
-    title: "Inherentbd",
-    description: "For this site, the goal was simple: build a clear web presence that helps people understand the brand and its services quickly.",
-    image: "https://marcbd.com/wp-content/uploads/2025/07/Inherentbd.png",
-    links: [
-      { label: "Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/Inherentbd.png" },
-      { label: "Open Work", href: "http://inherentbd.com" }
-    ]
-  },
-  {
-    category: "web",
-    label: "Web Development",
-    title: "Savolabd",
-    description: "This work shows another business website where layout, identity, and clear presentation mattered more than visual noise.",
-    image: "https://marcbd.com/wp-content/uploads/2025/07/Savolabd.png",
-    links: [
-      { label: "Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/Savolabd.png" },
-      { label: "Open Work", href: "http://savolabd.com" }
-    ]
-  },
-  {
-    category: "web",
-    label: "Web Development",
-    title: "Deltaorlbd",
-    description: "This project focused on giving a business a clean digital front door that people can visit, understand, and trust.",
-    image: "https://marcbd.com/wp-content/uploads/2025/07/Deltaorlbd.png",
-    links: [
-      { label: "Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/Deltaorlbd.png" },
-      { label: "Open Work", href: "http://deltaorlbd.com" }
-    ]
-  },
-  {
-    category: "web",
-    label: "Web Development",
-    title: "MARCBD",
-    description: "My old portfolio website brought my services and work together in one place. It also helped me learn how to present technical work to different kinds of visitors.",
-    image: "https://marcbd.com/wp-content/uploads/2025/07/MARCbd.png",
-    links: [
-      { label: "Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/MARCbd.png" },
-      { label: "Open Work", href: "http://marcbd.com" }
+      { label: "Read Project Note", href: "/blog/posts/datamentor-notebook-studio/", internal: true, variant: "note" },
+      { label: "Open Demo", href: "https://anis151993.github.io/Notebook-Studio/", variant: "live" }
     ]
   }
 ];
 
-const workDetailMap = new Map([
-  ["mail", "/blog/posts/mail-server-works/"],
-  ["file", "/blog/posts/file-server-works/"],
-  ["voice", "/blog/posts/ip-telephony-works/"],
-  ["web", "/blog/posts/web-development-works/"],
-  ["network", "/blog/posts/network-architecture-works/"],
-  ["cloud", "/blog/posts/cloud-architecture-works/"]
-]);
-
 const workCategoryNotes = [
   {
-    category: "mail",
-    label: "Mail Server",
-    title: "Business Email Infrastructure",
-    text: "Read the longer note about production mail systems, domain-based communication, and operational administration.",
-    href: "/blog/posts/mail-server-works/"
+    category: "firewall",
+    label: "Firewall Research",
+    title: "First-Author Serverless Defense Path",
+    text: "Read the longer note about the main firewall paper and how that idea turned into a visible research system.",
+    href: "/blog/posts/firewall-zero-trust-paper/"
   },
   {
-    category: "file",
-    label: "File Server",
-    title: "Shared Storage and Access Control",
-    text: "Read the note about structured storage, file access, and dependable collaboration support for business teams.",
-    href: "/blog/posts/file-server-works/"
+    category: "trust",
+    label: "Zero Trust",
+    title: "Cross-Cloud Adaptation and Continuous Trust",
+    text: "Read the note about how the firewall agenda expanded into cross-cloud adaptation and stronger trust enforcement.",
+    href: "/blog/posts/cross-cloud-firewall-paper/"
   },
   {
-    category: "voice",
-    label: "IP-Telephony",
-    title: "Voice Infrastructure and VoIP",
-    text: "Read the note about business voice communication systems and practical telephony support work.",
-    href: "/blog/posts/ip-telephony-works/"
+    category: "federated",
+    label: "Federated Defense",
+    title: "Threat Intelligence Across Cloud Environments",
+    text: "Read the related note that best connects to the multi-cloud and distributed defense direction behind this theme.",
+    href: "/blog/posts/cross-cloud-firewall-paper/"
   },
   {
-    category: "web",
-    label: "Web Development",
-    title: "Business Website Delivery",
-    text: "Read the note about public-facing websites, brand clarity, and practical web delivery for businesses.",
-    href: "/blog/posts/web-development-works/"
+    category: "llm",
+    label: "LLM Reliability",
+    title: "Self-Correcting Reasoning Systems",
+    text: "Read the note about staged self-review and why I think reliability matters more than confident output alone.",
+    href: "/blog/posts/self-correcting-math-paper/"
   },
   {
-    category: "network",
-    label: "Network Architecture",
-    title: "Topology Planning and Design",
-    text: "Read the note about enterprise network structure, planning discipline, and topology design thinking.",
-    href: "/blog/posts/network-architecture-works/"
+    category: "agents",
+    label: "Agent Systems",
+    title: "Distributed AI Collaboration",
+    text: "Read the note about local multi-agent coordination and why I keep exploring AI as a system instead of one model only.",
+    href: "/blog/posts/distributed-ai-paper/"
   },
   {
-    category: "cloud",
-    label: "Cloud Architecture",
-    title: "Security-Oriented Cloud Planning",
-    text: "Read the note about scalable cloud design, service structure, and security-aware architecture planning.",
-    href: "/blog/posts/cloud-architecture-works/"
+    category: "workflow",
+    label: "Research Workflow",
+    title: "Reproducible Notebook and Data Flow",
+    text: "Read the note about DataMentor and why reproducibility is part of research quality for me.",
+    href: "/blog/posts/datamentor-notebook-studio/"
   }
 ];
 
 const projects = [
   {
-    label: "Cloud Security Engineering",
+    label: "Firewall Research Build",
     title: "Serverless Intelligent Firewall",
     browserLabel: "anis151993.github.io/Serverless-Intelligent-Firewall-Research-1/",
     demo: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-1/",
     repo: "https://github.com/ANIS151993/Serverless-Intelligent-Firewall-Research-1.git",
-    story: "This project shows one of my core interests very clearly: how to make cloud security smarter. I built it around the idea that security systems should not trust traffic too quickly and should make better decisions using intelligent logic.",
+    story: "I built this project because I wanted the firewall research to be visible as a system, not only as a paper title. It shows how I think about adaptive cloud security, Zero Trust enforcement, and a security architecture that can still be discussed in practical terms.",
     points: [
-      "The project combines serverless design, Zero Trust thinking, and practical cloud protection ideas.",
-      "It reflects how I try to connect research with something people can actually inspect and understand.",
-      "For me, this project is a good example of cloud security work that is both academic and practical."
+      "The build connects serverless design, cloud security, and Zero Trust ideas in one research prototype.",
+      "It helped me test how the research direction could be communicated more clearly through implementation.",
+      "For me, this project is one of the best examples of how I like to connect papers and systems."
     ]
   },
   {
-    label: "Multi-Cloud Security Research",
+    label: "Cross-Cloud Security Research",
     title: "Towards a Serverless Intelligent Firewall: Cross-Cloud Adaptation",
     browserLabel: "anis151993.github.io/Serverless-Intelligent-Firewall-Research-2/",
     demo: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-2/",
     repo: "https://github.com/ANIS151993/Serverless-Intelligent-Firewall-Research-2.git",
-    story: "The first firewall project gave me a base. This second one pushed the idea further into multi-cloud thinking. Real organizations often use more than one cloud environment, so security needs to adapt instead of staying fixed in one place.",
+    story: "The first firewall build gave me a base. This one pushed the same idea into a more distributed cloud setting, because real systems often span more than one environment and the defense model has to adapt with them.",
     points: [
-      "This project focuses on cross-cloud adaptation and stronger policy-aware security behavior.",
-      "It reflects my interest in cloud environments that are distributed and not simple to protect.",
-      "It also shows how I think in layers: not only threat detection, but also architecture and policy."
+      "This build focuses on cross-cloud adaptation and stronger policy-aware security behavior.",
+      "It reflects my interest in research problems that become harder when infrastructure is distributed.",
+      "It also shows that I like to study architecture and defense logic together, not separately."
     ]
   },
   {
@@ -354,24 +188,24 @@ const projects = [
     browserLabel: "anis151993.github.io/Serverless-Intelligent-Firewall-Research-3/",
     demo: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-3/",
     repo: "https://github.com/ANIS151993/Serverless-Intelligent-Firewall-Research-3.git",
-    story: "This project moves toward a more ambitious question: can a security system learn from new threat information and become better over time? That is the main idea behind this version.",
+    story: "This version moves the firewall agenda toward a more ambitious question: can a cloud defense system learn from new intelligence and become more adaptive over time instead of staying mostly static?",
     points: [
-      "It connects threat intelligence, machine learning, and Zero Trust ideas in one story.",
-      "The goal is to make cloud defense more adaptive instead of only rule-based.",
-      "It is closely connected to my long-term research direction in infrastructure security."
+      "It combines threat intelligence, machine learning, and Zero Trust ideas in one evolving architecture.",
+      "The project is closely connected to the next-stage paper and journal direction I am working toward.",
+      "It represents the more long-range side of the security research path I want to keep building."
     ]
   },
   {
-    label: "Reproducible Data Workflows",
+    label: "Research Workflow Tool",
     title: "DataMentor / Notebook Studio",
     browserLabel: "anis151993.github.io/Notebook-Studio/",
     demo: "https://anis151993.github.io/Notebook-Studio/",
     repo: "https://github.com/ANIS151993/Notebook-Studio.git",
-    story: "DataMentor is a different kind of project, but it matters a lot to me. Good technical work should be reproducible. This project helps make data and notebook workflows cleaner, easier to repeat, and easier to explain.",
+    story: "DataMentor matters to me because good research should be reproducible. I built this project to make notebook and data workflows cleaner, easier to repeat, and easier to explain to someone else later.",
     points: [
-      "It focuses on CSV intelligence, notebook execution, and automated workflow support.",
-      "It supports the kind of research and technical reporting that should be easy to repeat later.",
-      "It shows that my work is not only about security. It is also about useful engineering process."
+      "It focuses on CSV intelligence, notebook execution, and research-ready workflow support.",
+      "It supports the kind of analysis and technical reporting that should not depend on one-time manual steps.",
+      "It shows that I care about process quality as much as final results."
     ]
   },
   {
@@ -380,11 +214,11 @@ const projects = [
     browserLabel: "anis151993.github.io/Distributed-AI/",
     demo: "https://anis151993.github.io/Distributed-AI/",
     repo: "https://github.com/ANIS151993/Distributed-AI.git",
-    story: "This project explores what happens when more than one model or agent works together. I wanted to study how a local distributed AI setup can solve harder problems through collaboration instead of a single model doing everything alone.",
+    story: "This project explores what happens when several local agents work together instead of relying on one model only. I use it to study coordination, role structure, and how systems thinking changes the way AI can solve harder tasks.",
     points: [
       "It focuses on orchestration, task splitting, and collaborative reasoning between local agents.",
-      "I like this project because it mixes systems thinking with AI experimentation.",
-      "It also fits my broader interest in distributed systems and practical AI architecture."
+      "I like this project because it mixes AI experimentation with distributed systems thinking.",
+      "It fits my broader interest in practical AI architectures rather than isolated model demos."
     ]
   },
   {
@@ -393,11 +227,11 @@ const projects = [
     browserLabel: "anis151993.github.io/Self-Correcting-LLM-localhost/",
     demo: "https://anis151993.github.io/Self-Correcting-LLM-localhost/",
     repo: "https://github.com/ANIS151993/Self-Correcting-LLM-localhost.git",
-    story: "Large language models can sound confident even when they are wrong. This project explores a simpler and more careful idea: can a model review its own reasoning and improve the answer before giving it to the user?",
+    story: "This project asks a simple but important question: can a model become more reliable if it checks its own reasoning before giving a final answer? I like this work because it is really about trust, carefulness, and responsible AI behavior.",
     points: [
-      "The project follows a three-stage self-correction framework for more reliable reasoning.",
-      "It is especially useful for tasks where mistakes matter, like mathematics and structured logic.",
-      "I like this work because it focuses on trust, quality, and responsible AI behavior."
+      "The project follows a staged self-correction framework for more dependable reasoning.",
+      "It matters most in tasks where mistakes are costly, like mathematical or structured reasoning.",
+      "For me, it is one of the clearest ways to study reliability instead of surface fluency."
     ]
   }
 ];
@@ -630,6 +464,10 @@ const renderInternalAction = (label, href, className = "") =>
   `<a${className ? ` class="${className}"` : ""} href="${href}">${label}</a>`;
 
 const renderExpertise = () => {
+  if (!expertiseGrid) {
+    return;
+  }
+
   expertiseGrid.innerHTML = expertiseNotes
     .map(
       (item) => `
@@ -647,10 +485,14 @@ const renderExpertise = () => {
 };
 
 const renderWorks = () => {
+  if (!worksGrid) {
+    return;
+  }
+
   worksGrid.innerHTML = works
     .map(
       (item) => `
-        <article class="work-note reveal" data-workcat="${item.category}" style="--work-image: url('${item.image}');">
+        <article class="work-note reveal" data-workcat="${item.category}" style="--work-image:${item.visual};">
           <div class="work-note-card">
             <div class="work-note-copy">
               <p class="work-chip">${item.label}</p>
@@ -658,15 +500,17 @@ const renderWorks = () => {
               <p>${item.description}</p>
               <div class="work-links">
                 ${item.links
-                  .map((link) =>
-                    renderExternalAction(
+                  .map((link) => {
+                    if (link.internal) {
+                      return renderInternalAction(link.label, link.href, link.variant === "note" ? "link-note" : "link-source");
+                    }
+                    return renderExternalAction(
                       link.label,
                       link.href,
-                      link.label.includes("Open") ? "link-live" : "link-soft"
-                    )
-                  )
+                      link.variant === "live" ? "link-live" : "link-source"
+                    );
+                  })
                   .join("")}
-                ${workDetailMap.get(item.category) ? renderInternalAction("Read Category Note", workDetailMap.get(item.category), "link-note") : ""}
               </div>
             </div>
           </div>
@@ -689,7 +533,7 @@ const renderWorkCategoryNotes = () => {
           <h3>${item.title}</h3>
           <p>${item.text}</p>
           <div class="category-note-actions">
-            <a class="link-note" href="${item.href}">Read Full Category Note</a>
+            <a class="link-note" href="${item.href}">Read Full Theme Note</a>
           </div>
         </article>
       `
@@ -698,6 +542,10 @@ const renderWorkCategoryNotes = () => {
 };
 
 const renderProjects = () => {
+  if (!projectStoryGrid) {
+    return;
+  }
+
   projectStoryGrid.innerHTML = projects
     .map(
       (item) => `
@@ -729,6 +577,10 @@ const renderProjects = () => {
 };
 
 const renderPublications = () => {
+  if (!publicationStack) {
+    return;
+  }
+
   publicationStack.innerHTML = publications
     .map(
       (item, index) => `
@@ -751,7 +603,7 @@ const renderPublications = () => {
                       renderExternalAction(
                         link.label,
                         link.href,
-                        link.label === "IEEE Xplore" || link.label === "Venue" ? "link-live" : "link-source"
+                        link.label === "IEEE Xplore" || link.label === "Venue" || link.label === "Webpage" ? "link-live" : "link-source"
                       )
                     )
                     .join("")}
