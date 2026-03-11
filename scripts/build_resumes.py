@@ -93,14 +93,9 @@ li {
 .keywords {
   margin-top: 2px;
 }
-.keywords span {
-  display: inline-block;
-  margin: 0 8px 5px 0;
-  padding: 3px 8px;
-  border: 1px solid #d7dce3;
-  border-radius: 999px;
-  font-size: 9.2pt;
-  background: #f8fafc;
+.keyword-paragraph {
+  margin: 0;
+  text-align: justify;
 }
 .entry {
   margin: 0 0 10px;
@@ -135,11 +130,6 @@ li {
 .resume-job p,
 .resume-job ul {
   margin-bottom: 5px;
-}
-.resume-job .keywords span {
-  margin: 0 6px 4px 0;
-  padding: 2px 7px;
-  font-size: 8.8pt;
 }
 .resume-job .entry {
   margin-bottom: 8px;
@@ -181,6 +171,14 @@ def render_key_value_map(data: dict[str, str]) -> str:
     return '<ul class="compact-list">' + ''.join(items) + '</ul>'
 
 
+def render_terms_paragraph(items: list[str]) -> str:
+    if not items:
+        return ""
+    if len(items) == 1:
+        return escape(items[0]) + "."
+    return escape("; ".join(items[:-1]) + "; and " + items[-1] + ".")
+
+
 def render_job_html(d: dict[str, object], html_title: str) -> str:
     return f"""<!doctype html>
 <html lang=\"en\">
@@ -206,7 +204,7 @@ def render_job_html(d: dict[str, object], html_title: str) -> str:
 
     <section class=\"section\">
       <h2 class=\"section-title\">Core Expertise</h2>
-      <div class=\"keywords\">{''.join(f'<span>{escape(item)}</span>' for item in d['expertise'])}</div>
+      <p class=\"keyword-paragraph\">{render_terms_paragraph(d['expertise'])}</p>
     </section>
 
     <section class=\"section\">
@@ -270,7 +268,7 @@ def render_phd_html() -> str:
 
     <section class=\"section\">
       <h2 class=\"section-title\">Research Interests</h2>
-      <div class=\"keywords\">{''.join(f'<span>{escape(item)}</span>' for item in d['research_interests'])}</div>
+      <p class=\"keyword-paragraph\">{render_terms_paragraph(d['research_interests'])}</p>
     </section>
 
     <section class=\"section\">
@@ -420,7 +418,7 @@ def job_docx_lines(d: dict[str, object]) -> list[tuple[str, str]]:
     ]
     lines += [("normal", item) for item in d["summary"]]
     lines += [("heading", "Core Expertise")]
-    lines += [("bullet", item) for item in d["expertise"]]
+    lines.append(("normal", render_terms_paragraph(d["expertise"])))
     lines += [("heading", "Professional Experience")]
     for entry in d["experience"]:
         lines.append(("subheading", f"{entry['role']} | {entry['org']}"))
@@ -450,7 +448,7 @@ def phd_docx_lines() -> list[tuple[str, str]]:
     ]
     lines += [("normal", item) for item in d["profile"]]
     lines += [("heading", "Research Interests")]
-    lines += [("bullet", item) for item in d["research_interests"]]
+    lines.append(("normal", render_terms_paragraph(d["research_interests"])))
     lines += [("heading", "Education")]
     for item in d["education"]:
         lines.append(("subheading", item["degree"]))

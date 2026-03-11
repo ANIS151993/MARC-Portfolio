@@ -16,9 +16,9 @@ JOB_RESUME = {
     "title": "Network Security Engineer | Systems Administrator | Cloud Infrastructure Professional",
     "subtitle": "7+ years in enterprise IT and ISP environments across firewall operations, secure infrastructure, server administration, cloud-connected systems, and production support.",
     "summary": [
-        "Network security and infrastructure professional with 7+ years of experience across ISP operations, enterprise IT, systems administration, and cloud-connected production environments.",
+        "Network security and infrastructure professional with 7+ years of experience across ISP operations, enterprise IT, systems administration, and production support.",
         "Hands-on background in firewall policy management, routing and switching, VPN, Linux and Windows Server administration, Active Directory, mail systems, IP-PBX, network monitoring, and hybrid infrastructure support.",
-        "Graduate Research Assistant at Gannon University completing an M.S. in Information Technology on May 9, 2026, with research work in serverless security, Zero Trust architecture, distributed infrastructure protection, and practical cloud defense.",
+        "Currently completing an M.S. in Information Technology at Gannon University while extending industry experience through research in serverless security, Zero Trust architecture, distributed infrastructure protection, and practical cloud defense.",
     ],
     "expertise": [
         "Network Security Engineering",
@@ -42,9 +42,9 @@ JOB_RESUME = {
             "location": "Erie, Pennsylvania, USA",
             "dates": "Aug 2025 - Present",
             "bullets": [
-                "Designs and evaluates research systems for secure data transmission, traffic-flow optimization, and infrastructure-aware network defense.",
-                "Builds first-author security projects around serverless intelligent firewalls, Zero Trust automation, and cross-cloud protection models.",
-                "Authors and co-authors research papers in cloud security, edge systems, enterprise AI, and distributed infrastructure security.",
+                "Design and evaluate research systems for secure data transmission, traffic-flow optimization, and infrastructure-aware network defense.",
+                "Lead first-author security projects around serverless intelligent firewalls, Zero Trust automation, and cross-cloud protection models.",
+                "Write and co-author research papers in cloud security, edge systems, enterprise AI, and distributed infrastructure security.",
             ],
         },
         {
@@ -54,7 +54,7 @@ JOB_RESUME = {
             "dates": "Aug 2025 - Dec 2025",
             "bullets": [
                 "Delivered 15+ practical labs covering firewall configuration, network defense, threat detection, vulnerability management, and security operations workflows.",
-                "Translated technical security topics into hands-on lessons that matched industry practice and certification-oriented learning paths.",
+                "Translated technical security topics into hands-on lessons aligned with industry practice and certification-oriented learning paths.",
             ],
         },
         {
@@ -64,7 +64,7 @@ JOB_RESUME = {
             "dates": "Dec 2021 - Jul 2024",
             "bullets": [
                 "Administered Linux and Windows server environments, Active Directory, mail platforms, IP-PBX systems, and monitoring platforms for 500+ enterprise users.",
-                "Planned and supported LAN/WAN upgrades, access control improvements, and day-to-day infrastructure operations for multi-department business environments.",
+                "Planned and supported LAN/WAN upgrades, access-control improvements, and day-to-day infrastructure operations across multiple business units.",
                 "Maintained production mail, file, and communication systems with a focus on uptime, secure access, and service continuity.",
             ],
         },
@@ -76,13 +76,13 @@ JOB_RESUME = {
             "bullets": [
                 "Supported 100+ enterprise accounts across Cisco, MikroTik, Juniper, Fortinet, and Cyberoam environments in ISP and customer network settings.",
                 "Configured and maintained firewall policies, NAT, ACLs, VPN tunnels, bandwidth control, load balancing, and WAN failover for business clients.",
-                "Troubleshot fiber, wireless, and routed network incidents while documenting configurations and escalation steps for faster recovery.",
+                "Troubleshot fiber, wireless, and routed network incidents and documented configurations and escalation steps to speed up recovery.",
             ],
         },
     ],
     "contributions": [
-        "Contributed to the real operation of enterprise mail, file, telephony, directory, and network services used by business teams every day.",
-        "Connected production IT experience with current research in serverless security, Zero Trust, federated threat intelligence, and cloud infrastructure protection.",
+        "Supported enterprise mail, file, telephony, directory, and network services used across day-to-day business operations.",
+        "Combined production IT experience with current research in serverless security, Zero Trust, federated threat intelligence, and cloud infrastructure protection.",
         "Built public GitHub projects that show practical work in firewall design, notebook automation, and security-focused cloud engineering.",
         "Published first-author IEEE work in serverless security, edge computing, and enterprise systems while staying grounded in real infrastructure operations.",
     ],
@@ -116,7 +116,7 @@ JOB_RESUME_NETWORK_SECURITY = {
     "summary": [
         "Network Security Engineer with 7+ years of experience across ISP operations, enterprise IT, and production infrastructure support.",
         "Hands-on background in firewall policy administration, VPN, NAT, ACL, routing and switching, Linux and Windows Server administration, Active Directory, monitoring, and secure network troubleshooting.",
-        "Graduate Research Assistant at Gannon University extending practical industry experience into serverless security, Zero Trust enforcement, cross-cloud protection, and deployable network defense research.",
+        "Current graduate research adds depth in serverless security, Zero Trust enforcement, cross-cloud protection, and deployable network defense.",
     ],
     "expertise": [
         "Firewall Policy Management and Access Control",
@@ -136,7 +136,7 @@ JOB_RESUME_NETWORK_SECURITY = {
         "Supported 100+ enterprise accounts and 500+ users across customer, ISP, and enterprise network environments.",
         "Configured and maintained firewall policies, NAT, ACLs, VPN tunnels, bandwidth control, load balancing, and WAN failover for real business networks.",
         "Connected hands-on network operations experience with current research in serverless firewalls, Zero Trust, and cloud network defense.",
-        "Brings a practical security mindset shaped by production incidents, uptime responsibility, and infrastructure troubleshooting under pressure.",
+        "Built a practical security mindset through production incidents, uptime responsibility, and infrastructure troubleshooting under pressure.",
     ],
     "projects": [
         {
@@ -157,7 +157,7 @@ JOB_RESUME_SYSTEMS_ADMINISTRATOR = {
     "summary": [
         "Systems Administrator with 7+ years of experience across enterprise IT and ISP environments supporting production servers, infrastructure services, user access, and day-to-day operations.",
         "Hands-on background in Linux and Windows Server administration, Active Directory, DNS, DHCP, mail systems, file services, IP-PBX, monitoring, troubleshooting, and hybrid business infrastructure.",
-        "Graduate Research Assistant at Gannon University who brings research-backed knowledge in cloud security, serverless systems, and secure automation to practical systems operations work.",
+        "Current graduate research adds depth in cloud security, serverless systems, and secure automation while keeping the focus on practical systems operations.",
     ],
     "expertise": [
         "Linux and Windows Server Administration",
@@ -176,8 +176,8 @@ JOB_RESUME_SYSTEMS_ADMINISTRATOR = {
     "contributions": [
         "Administered enterprise server, communication, and identity platforms used by 500+ users across business operations.",
         "Maintained production mail, file, telephony, and monitoring systems with a strong focus on uptime, access control, and operational continuity.",
-        "Worked across both systems administration and network operations, giving strong cross-functional judgment in troubleshooting and support.",
-        "Brings practical infrastructure experience into current cloud-security and automation work without losing an operations-first mindset.",
+        "Worked across both systems administration and network operations, which strengthened cross-functional troubleshooting and support judgment.",
+        "Applied practical infrastructure experience to cloud-security and automation work without losing an operations-first mindset.",
     ],
     "projects": [
         {
@@ -198,7 +198,7 @@ JOB_RESUME_CLOUD_SECURITY = {
     "summary": [
         "Cloud Security Engineer profile built on 7+ years of enterprise IT and ISP experience, combined with active research in serverless security, Zero Trust, and cross-cloud protection.",
         "Hands-on background in firewall operations, network security, Linux and Windows Server administration, Active Directory, routing and switching, and cloud-connected infrastructure support.",
-        "Graduate Research Assistant at Gannon University developing first-author work in intelligent firewall systems, distributed infrastructure protection, and deployable cloud defense models.",
+        "Current first-author research focuses on intelligent firewall systems, distributed infrastructure protection, and deployable cloud defense models.",
     ],
     "expertise": [
         "Cloud Security and Hybrid Infrastructure Protection",
@@ -217,8 +217,8 @@ JOB_RESUME_CLOUD_SECURITY = {
     "contributions": [
         "Connected production infrastructure experience with current research in serverless intelligent firewalls, Zero Trust enforcement, and federated threat intelligence.",
         "Built public security projects that show cloud-native firewall behavior, cross-cloud adaptation, and deployable threat-defense ideas.",
-        "Brings practical experience in secure operations, access control, troubleshooting, and service reliability to cloud-focused security work.",
-        "Works comfortably at the boundary between infrastructure operations, security engineering, and research-driven implementation.",
+        "Applied practical experience in secure operations, access control, troubleshooting, and service reliability to cloud-focused security work.",
+        "Worked at the boundary between infrastructure operations, security engineering, and research-driven implementation.",
     ],
     "projects": [
         {
@@ -236,10 +236,10 @@ PHD_RESUME = {
     "title": "Researcher in Cloud Security, Serverless Systems, and Network Infrastructure Protection",
     "subtitle": "Graduate Research Assistant building first-author work in serverless security, Zero Trust architecture, physical and cloud network infrastructure security, and deployable AI-assisted defense systems.",
     "profile": [
-        "Graduate Research Assistant in the Computer and Information Science Department at Gannon University, with a research direction centered on physical and cloud network infrastructure security.",
-        "Research work combines system design, methodology, data collection, model training, implementation, experimentation, and academic writing across cloud security, Zero Trust, distributed systems, and AI-assisted infrastructure defense.",
+        "Graduate Research Assistant in the Computer and Information Science Department at Gannon University with a research direction centered on physical and cloud network infrastructure security.",
+        "Research work combines system design, methodology development, data collection, model training, implementation, experimentation, and academic writing across cloud security, Zero Trust, distributed systems, and AI-assisted infrastructure defense.",
         "Published first-author and co-authored work spans serverless security, edge computing, enterprise AI, IoT intrusion detection, digital forensics, adaptive network security, and applied intelligent systems.",
-        "Industry experience in enterprise IT and ISP operations informs a research agenda grounded in deployable systems rather than abstract security models alone.",
+        "Earlier industry experience in enterprise IT and ISP operations keeps the research agenda grounded in deployable systems rather than abstract security models alone.",
     ],
     "research_interests": [
         "Physical and cloud network infrastructure security",
@@ -271,10 +271,10 @@ PHD_RESUME = {
             "location": "Erie, Pennsylvania, USA",
             "dates": "Aug 2025 - Present",
             "bullets": [
-                "Works under Dr. Kefei Wang on cloud systems, AI-driven security, distributed infrastructure protection, and secure network design.",
-                "Leads first-author work from research idea through methodology, implementation, evaluation, and manuscript preparation.",
-                "Develops research prototypes and reproducible systems around serverless firewalls, Zero Trust automation, threat intelligence integration, and distributed AI models.",
-                "Supports academic collaboration through co-authored publications and technical research communication.",
+                "Conduct research under Dr. Kefei Wang on cloud systems, AI-driven security, distributed infrastructure protection, and secure network design.",
+                "Lead first-author work from research idea through methodology, implementation, evaluation, and manuscript preparation.",
+                "Develop research prototypes and reproducible systems around serverless firewalls, Zero Trust automation, threat intelligence integration, and distributed AI models.",
+                "Support academic collaboration through co-authored publications and technical research communication.",
             ],
         },
         {
