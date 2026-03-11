@@ -52,6 +52,86 @@ body.page-phd .about-intro {
     rgba(18, 22, 30, 0.9);
 }
 
+body.page-phd .about-intro,
+body.page-phd .publication-showcase,
+body.page-phd .resume-center-hero {
+  border-color: rgba(106, 143, 186, 0.2);
+  box-shadow: 0 24px 42px rgba(8, 12, 19, 0.28);
+}
+
+body.page-phd .about-intro .about-copy h3,
+body.page-phd .publication-showcase .publication-summary h3,
+body.page-phd .resume-center-hero .resume-center-copy h3 {
+  color: #f4f8fe;
+}
+
+body.page-phd .about-intro .about-copy p,
+body.page-phd .publication-showcase .publication-summary p,
+body.page-phd .resume-center-hero .resume-center-copy p,
+body.page-phd .resume-center-stats span {
+  color: #d8e1ee;
+}
+
+body.page-phd .about-intro .mini-label,
+body.page-phd .publication-showcase .mini-label {
+  color: #8fd4ff;
+}
+
+body.page-phd .about-callouts article,
+body.page-phd .publication-focus-grid article,
+body.page-phd .resume-center-stats article {
+  background:
+    linear-gradient(180deg, rgba(29, 35, 46, 0.96), rgba(18, 24, 33, 0.98)),
+    linear-gradient(135deg, rgba(72, 168, 255, 0.05), rgba(255, 119, 32, 0.04));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 14px 28px rgba(5, 10, 16, 0.18);
+}
+
+body.page-phd .about-callouts article p,
+body.page-phd .publication-focus-grid article p {
+  color: #dce5f2;
+}
+
+body.page-phd .publication-metric-row article strong,
+body.page-phd .resume-center-stats strong {
+  color: #f8fbff;
+}
+
+body.page-phd .publication-metric-row article span {
+  color: #d7e0eb;
+}
+
+body.page-phd .publication-metric-row article {
+  border-color: rgba(72, 168, 255, 0.16);
+  background:
+    linear-gradient(180deg, rgba(27, 33, 43, 0.96), rgba(18, 24, 33, 0.98)),
+    linear-gradient(135deg, rgba(72, 168, 255, 0.05), rgba(255, 119, 32, 0.04));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 14px 28px rgba(5, 10, 16, 0.16);
+}
+
+body.page-phd .publication-metric-row article:hover {
+  border-color: rgba(72, 168, 255, 0.34);
+  background:
+    linear-gradient(180deg, rgba(31, 39, 50, 0.98), rgba(20, 26, 35, 1)),
+    linear-gradient(135deg, rgba(72, 168, 255, 0.08), rgba(255, 119, 32, 0.06));
+}
+
+body.page-phd .publication-summary-actions .btn-ghost {
+  color: #eef5ff;
+  border-color: rgba(143, 212, 255, 0.28);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+body.page-phd .publication-summary-actions .btn-ghost:hover,
+body.page-phd .publication-summary-actions .btn-ghost:focus-visible {
+  color: #ffffff;
+  border-color: rgba(143, 212, 255, 0.46);
+  background: rgba(255, 255, 255, 0.12);
+}
+
 body.page-phd .section-light.section-about,
 body.page-phd .section-light.section-publications,
 body.page-phd .section-light.section-resumes,
