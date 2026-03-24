@@ -2,7 +2,7 @@ my all profile links here:
 LinkedIn: linkedin.com/in/md-anisur-rahman-chowdhury-15862420a
 GitHub: github.com/ANIS151993  
 Google Scholar: scholar.google.com/citations?user=NQyywPoAAAAJ
-Portfolio: marcbd.com  
+Portfolio: marcbd.site  
 ResearchGate: researchgate.net/profile/Md-Anisur-Rahman-Chowdhury
 
 
@@ -33,6 +33,15 @@ I am The First Author and This is my Idea and I did research, Data collection, M
 3) Continuous Verification in Zero Trust Security: A Model for Secure Automation
 venue quality: 2nd IEEE International Conference on Cognitive Computing in Engineering, Communications, Sciences and Biomedical Health Informatics (IC3ECSBHI-2026)
 I am The First Author and This is my Idea and I did research, Data collection, Methodology, model training, Implementation.
+4) Teaching Large Language Models to Think Twice: A Three-Stage Framework for Self-Correcting Mathematical Reasoning.
+venue quality: (CAC'26) (https://american-cse.org/drafts)
+I am The First Author and This is my Idea and I did research, Data collection, Methodology, model training, Implementation.
+repo link: https://github.com/ANIS151993/Self-Correcting-LLM-localhost.git
+webpage link: https://anis151993.github.io/Self-Correcting-LLM-localhost/
+5) A Local Distributed Multi-Agent LLM Ensemble System for Complex Problem Solving.
+repo link: https://github.com/ANIS151993/Distributed-AI.git
+webpage link: https://anis151993.github.io/Distributed-AI/
+
 
 In preparation:
 1) Autonomous Self-Learning Serverless Intelligent Firewall: Integrating REST API-Driven Open-Source Threat Intelligence, Multi-Paradigm Machine Learning, and Federated Zero-Trust Architectures

@@ -83,6 +83,7 @@ if (typedNode) {
     "Systems Administrator",
     "Cloud Infrastructure Engineer",
     "Cybersecurity Researcher",
+    "AI Automation Engineer",
     "IT Infrastructure Specialist"
   ];
 
