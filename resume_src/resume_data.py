@@ -1,12 +1,12 @@
 SHARED = {
     "name": "Md Anisur Rahman Chowdhury",
-    "location": "Erie, Pennsylvania, USA / Anywhere in USA",
+    "location": "Winnetka, California, USA / Anywhere in USA",
     "phone": "+1 814-737-5770",
     "emails": ["engr.aanis@gmail.com", "chowdhur014@gannon.edu"],
     "links": {
         "LinkedIn": "linkedin.com/in/md-anisur-rahman-chowdhury-15862420a",
         "GitHub": "github.com/ANIS151993",
-        "Portfolio": "marcbd.site",
+        "Portfolio": "marcbd.com",
         "Google Scholar": "scholar.google.com/citations?user=NQyywPoAAAAJ",
         "ResearchGate": "researchgate.net/profile/Md-Anisur-Rahman-Chowdhury",
     },
@@ -18,7 +18,7 @@ JOB_RESUME = {
     "summary": [
         "Network security and infrastructure professional with 7+ years of experience across ISP operations, enterprise IT, systems administration, and production support.",
         "Hands-on background in firewall policy management, routing and switching, VPN, Linux and Windows Server administration, Active Directory, mail systems, IP-PBX, network monitoring, and hybrid infrastructure support.",
-        "Currently completing an M.S. in Information Technology at Gannon University while extending industry experience through research in serverless security, Zero Trust architecture, distributed infrastructure protection, and practical cloud defense.",
+        "Currently serving as an IT Systems and Operations Engineer (OPT) at Adel Group Inc while completing an M.S. in Information Technology at Gannon University, extending industry experience through research in serverless security, Zero Trust architecture, distributed infrastructure protection, and practical cloud defense.",
     ],
     "expertise": [
         "Network Security Engineering",
@@ -36,6 +36,18 @@ JOB_RESUME = {
         "CCNA, JNCIA, and MTCNA",
     ],
     "experience": [
+        {
+            "role": "IT Systems and Operations Engineer (Part-Time, OPT)",
+            "org": "Adel Group Inc, IT Department",
+            "location": "Winnetka, California, USA",
+            "dates": "Jul 2026 - Present",
+            "bullets": [
+                "Support IT systems, platforms, and business applications for daily operations, and monitor and administer network infrastructure to catch and resolve incidents before they reach end users.",
+                "Manage endpoint protection, access control, and firewall policy enforcement across the environment.",
+                "Pilot automation workflows that route routine helpdesk requests to cut manual ticket handling, and deliver on-site support and helpdesk coverage.",
+                "Coordinate procurement, vendor relationships, and technology planning, and maintain network diagrams, SOPs, and runbooks.",
+            ],
+        },
         {
             "role": "Graduate Research Assistant",
             "org": "Gannon University, Computer and Information Science Department",
@@ -97,7 +109,7 @@ JOB_RESUME = {
         },
     ],
     "education": [
-        "Master of Science in Information Technology, Gannon University, Erie, Pennsylvania, USA. Expected May 9, 2026. Current GPA: 3.93/4.00 after third semester.",
+        "Master of Science in Information Technology, Gannon University, Erie, Pennsylvania, USA. Expected May 9, 2026. GPA: 3.95/4.00.",
         "Bachelor of Science in Electronics and Telecommunication Engineering, University of Science and Technology Chittagong (USTC), Bangladesh. 2017.",
     ],
     "technical_tools": {
@@ -255,7 +267,7 @@ PHD_RESUME = {
             "degree": "Master of Science in Information Technology",
             "institution": "Gannon University, Erie, Pennsylvania, USA",
             "dates": "Aug 2024 - May 9, 2026 (Expected)",
-            "detail": "Graduate Research Assistant in the Computer and Information Science Department. Current GPA: 3.93/4.00 after third semester. Coursework includes cloud computing, advanced networking, cybersecurity, distributed systems, and analytics.",
+            "detail": "Graduate Research Assistant in the Computer and Information Science Department. GPA: 3.95/4.00. Coursework includes cloud computing, advanced networking, cybersecurity, distributed systems, and analytics.",
         },
         {
             "degree": "Bachelor of Science in Electronics and Telecommunication Engineering",
@@ -265,6 +277,16 @@ PHD_RESUME = {
         },
     ],
     "research_experience": [
+        {
+            "role": "IT Systems and Operations Engineer (Part-Time, OPT)",
+            "org": "Adel Group Inc, IT Department",
+            "location": "Winnetka, California, USA",
+            "dates": "Jul 2026 - Present",
+            "bullets": [
+                "Support enterprise IT systems and network infrastructure, manage endpoint protection, access control, and firewall policy enforcement, and pilot helpdesk automation workflows.",
+                "Keep research grounded in real production systems by working directly with the operational security and infrastructure concerns that motivate it.",
+            ],
+        },
         {
             "role": "Graduate Research Assistant",
             "org": "Gannon University, Computer and Information Science Department",
@@ -306,6 +328,10 @@ PHD_RESUME = {
             "detail": "A three-stage framework for improving LLM reliability through review, correction, and answer refinement.",
         },
         {
+            "name": "LLM-Powered Automated Penetration Testing Platform (APTS)",
+            "detail": "A self-hosted LLM orchestration system for autonomous penetration testing with three-layer scope enforcement and tamper-evident cryptographic audit chains for authorized, auditable security testing.",
+        },
+        {
             "name": "DataMentor / Notebook Studio",
             "detail": "A reproducible notebook and CSV workflow environment that supports experimentation, analysis, and research reporting.",
         },
@@ -315,6 +341,7 @@ PHD_RESUME = {
         "Auction-Based Dynamic Resource Allocation for Optimized Edge Computing in Distributed Networks. 2025 9th International Conference on Computational System and Information Technology for Sustainable Solutions (CSITSS).",
         "AI and Cloud Computing in Business Systems: A Hybrid Model for Enhancing Enterprise Resource Planning. 2025 9th International Conference on Computational System and Information Technology for Sustainable Solutions (CSITSS).",
         "Deepfake Detection in MIS: Leveraging DenseNet and Multi-Scale Information for Enhanced Digital Forensics. IEEE COMPAS 2025.",
+        "Fed Threat-X: A Privacy-Preserving Federated Threat Intelligence Framework for Multi-Cloud Cybersecurity. IEEE QPAIN 2026.",
     ],
     "published_coauthored": [
         "Cloud-Based CRM Systems Enhanced by AI and Graph Theory: A Hybrid Model for Optimizing Customer Engagement. IEEE ISAECT 2025.",
@@ -325,17 +352,19 @@ PHD_RESUME = {
         "Leveraging Machine Learning and NLP for Adaptive Education Systems: A Personalized Approach for Children. IEEE QPAIN 2025.",
         "Attention-Enhanced U-Net Models for Breast Cancer Image Analysis: A Comparative Study. IEEE ECCE 2025.",
         "Enhanced Brain Tumor Detection Using Finetuned Transfer Learning Models: Achieving Superior Accuracy with Xception. IEEE ECCE 2025.",
+        "Fed-ZTA-Transformer: A Privacy-Preserving Federated Framework for Continuous Verification in Zero Trust Architectures. IEEE QPAIN 2026.",
+        "A Collaborative Hybrid CNN-LSTM Framework for Real-Time Multichannel Retail Demand Forecasting Using Edge-Cloud Computing. IEEE QPAIN 2026.",
     ],
     "under_review": [
-        "Towards a Serverless Intelligent Firewall: Integrating Cross-Cloud Adaptation, AI-Driven Security, and Zero-Trust Architectures. IEEE SmartCloud 2026. First Author.",
-        "Federated Threat Intelligence for Multi-Cloud Security: A Privacy-Preserving AI Approach. IEEE IC3ECSBHI 2026. First Author.",
-        "Continuous Verification in Zero Trust Security: A Model for Secure Automation. IEEE IC3ECSBHI 2026. First Author.",
-        "Teaching Large Language Models to Think Twice: A Three-Stage Framework for Self-Correcting Mathematical Reasoning. CAC 2026 draft submission. First Author.",
-        "A Local Distributed Multi-Agent LLM Ensemble System for Complex Problem Solving. Under review. First Author.",
+        "Towards a Serverless Intelligent Firewall: Integrating Cross-Cloud Adaptation, AI-Driven Security, and Zero-Trust Architectures. IEEE SmartCloud 2026. Accepted, awaiting publication. First Author.",
+        "Teaching Large Language Models to Think Twice: A Three-Stage Framework for Self-Correcting Mathematical Reasoning. American CSE AIR-RES / CAC 2026. Accepted, awaiting publication. First Author.",
+        "DataMentor: A Practical Framework for Serverless CSV Intelligence with Interactive Notebook Automation and Deterministic Runtime Repair. IEEE ISAIA 2026 (Submission 61). Under review. First Author.",
     ],
     "in_preparation": [
         "Autonomous Self-Learning Serverless Intelligent Firewall: Integrating REST API-Driven Open-Source Threat Intelligence, Multi-Paradigm Machine Learning, and Federated Zero-Trust Architectures. Target: Q1 Journal. First Author.",
-        "Building a Team of AI Models: A Literature Review on Distributed Agent Networks. Target: Conference submission. First Author.",
+        "Self-Hosted LLM Orchestration for Autonomous Penetration Testing with Three-Layer Scope Enforcement and Tamper-Evident Cryptographic Audit Chains. Target: IEEE Conference. First Author.",
+        "A Hybrid AI and Machine Learning Approach for Real-Time Anomaly Detection in IoT Networks. Target: IEEE Conference. First Author.",
+        "Building a Team of AI Models: A Literature Review on Distributed Agent Networks. Target: IEEE Conference. First Author.",
     ],
     "technical_tools": {
         "Programming": "Python, Java, JavaScript, C++, SQL, PL/SQL, JSON",

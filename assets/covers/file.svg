@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid slice" role="img" aria-label="File Server">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#141821"/><stop offset="0.55" stop-color="#1b2130"/><stop offset="1" stop-color="#0d1017"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffb687"/><stop offset="0.5" stop-color="#ff7720"/><stop offset="1" stop-color="#f74806"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0" stop-color="#ff7720" stop-opacity="0.35"/><stop offset="1" stop-color="#ff7720" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <g stroke="#2b3242" stroke-width="1" opacity="0.5">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200 M0 600 H1200"/>
+    <path d="M150 0 V750 M350 0 V750 M600 0 V750 M850 0 V750 M1050 0 V750"/>
+  </g>
+  <rect width="1200" height="750" fill="url(#glow)"/>
+  <g transform="translate(600 340)">
+    <path d="M-200 -110 h130 l34 40 h236 a18 18 0 0 1 18 18 v150 a18 18 0 0 1 -18 18 h-400 a18 18 0 0 1 -18 -18 v-190 a18 18 0 0 1 18 -18 z" fill="#10141d" stroke="url(#acc)" stroke-width="4"/>
+    <g stroke="url(#acc)" stroke-width="5" stroke-linecap="round">
+      <path d="M-120 30 H120"/><path d="M-120 70 H60"/>
+    </g>
+    <circle cx="150" cy="-40" r="34" fill="none" stroke="url(#acc)" stroke-width="5"/>
+    <path d="M136 -40 l10 12 20 -26" fill="none" stroke="url(#acc)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g fill="url(#acc)"><circle cx="180" cy="180" r="7"/><circle cx="1020" cy="560" r="7"/><circle cx="1000" cy="160" r="5"/><circle cx="200" cy="580" r="5"/></g>
+  <text x="600" y="610" font-family="Poppins,sans-serif" font-size="46" font-weight="800" fill="#f4f5f8" text-anchor="middle" letter-spacing="2">FILE SERVER</text>
+  <text x="600" y="648" font-family="Poppins,sans-serif" font-size="21" font-weight="500" fill="#ff9a55" text-anchor="middle" letter-spacing="5">RBAC · VERSIONING · ENCRYPTED SYNC</text>
+</svg>

@@ -397,7 +397,7 @@ def render_phd_html() -> str:
     </section>
 
     <section class=\"section\">
-      <h2 class=\"section-title\">Under Review</h2>
+      <h2 class=\"section-title\">Accepted and Under Review</h2>
       {ul(d['under_review'], 'compact-list')}
     </section>
 
@@ -653,7 +653,7 @@ def phd_docx_lines() -> list[tuple[str, str]]:
     lines += [("bullet", item) for item in d["published_first_author"]]
     lines += [("heading", "Published Co-Authored Papers")]
     lines += [("bullet", item) for item in d["published_coauthored"]]
-    lines += [("heading", "Under Review")]
+    lines += [("heading", "Accepted and Under Review")]
     lines += [("bullet", item) for item in d["under_review"]]
     lines += [("heading", "In Preparation")]
     lines += [("bullet", item) for item in d["in_preparation"]]

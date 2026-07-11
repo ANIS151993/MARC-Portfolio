@@ -1250,3 +1250,143 @@ const yearNode = document.getElementById("currentYear");
 if (yearNode) {
   yearNode.textContent = String(new Date().getFullYear());
 }
+
+/* ---------------------------------------------------------------
+   Interactive Order Builder + dynamic PayPal checkout
+   --------------------------------------------------------------- */
+(function initOrderBuilder() {
+  const builder = document.getElementById("orderBuilder");
+  if (!builder) return;
+
+  const svcButtons = Array.from(document.querySelectorAll(".svc-option"));
+  const weeksDisplay = document.getElementById("orderWeeks");
+  const weeksLabel = document.getElementById("orderWeeksLabel");
+  const weeksMinus = document.getElementById("weeksMinus");
+  const weeksPlus = document.getElementById("weeksPlus");
+  const presets = Array.from(document.querySelectorAll(".duration-preset"));
+  const addonInputs = Array.from(document.querySelectorAll(".addon-toggle input"));
+  const payBtn = document.getElementById("paypalCheckout");
+
+  const elService = document.getElementById("summaryService");
+  const elRate = document.getElementById("summaryRate");
+  const elWeeks = document.getElementById("summaryWeeks");
+  const elSubtotal = document.getElementById("summarySubtotal");
+  const elAddonsRow = document.getElementById("summaryAddonsRow");
+  const elAddons = document.getElementById("summaryAddons");
+  const elTotal = document.getElementById("summaryTotal");
+
+  const orderPackageField = document.getElementById("orderPackage");
+  const weeksInput = document.getElementById("orderWeeksInput");
+  const addonsInput = document.getElementById("orderAddonsInput");
+  const totalInput = document.getElementById("orderTotalInput");
+
+  const services = window.MARC_SERVICES || {};
+  const paypalBase = window.MARC_PAYPAL_BASE || "https://paypal.me/MdAnisurRahmanC";
+
+  const state = { pkg: null, price: 0, weeks: 1 };
+
+  const money = (n) => "$" + (Math.round(n * 100) / 100).toLocaleString("en-US");
+
+  function selectedAddons() {
+    return addonInputs
+      .filter((i) => i.checked)
+      .map((i) => ({
+        label: i.parentElement.querySelector(".addon-label").childNodes[0].textContent.trim(),
+        type: i.getAttribute("data-type"),
+        value: parseFloat(i.getAttribute("data-value")) || 0
+      }));
+  }
+
+  function compute() {
+    const subtotal = state.price * state.weeks;
+    const addons = selectedAddons();
+    let flat = 0;
+    let pct = 0;
+    addons.forEach((a) => {
+      if (a.type === "flat") flat += a.value;
+      else if (a.type === "percent") pct += subtotal * (a.value / 100);
+    });
+    const total = subtotal + flat + pct;
+    return { subtotal, addons, addonsAmount: flat + pct, total };
+  }
+
+  function render() {
+    weeksDisplay.textContent = String(state.weeks);
+    weeksLabel.textContent = state.weeks === 1 ? "week" : "weeks";
+    presets.forEach((p) => p.classList.toggle("active", parseInt(p.dataset.weeks, 10) === state.weeks));
+
+    if (!state.pkg) {
+      elService.textContent = "Not selected";
+      elRate.innerHTML = "&mdash;";
+      elWeeks.textContent = state.weeks + (state.weeks === 1 ? " week" : " weeks");
+      elSubtotal.textContent = money(0);
+      elAddonsRow.hidden = true;
+      elTotal.textContent = money(0);
+      payBtn.disabled = true;
+      payBtn.textContent = "Select a service to continue";
+      return;
+    }
+
+    const svc = services[state.pkg] || {};
+    const { subtotal, addons, total } = compute();
+    elService.textContent = svc.label || state.pkg;
+    elRate.textContent = money(state.price) + " / week";
+    elWeeks.textContent = state.weeks + (state.weeks === 1 ? " week" : " weeks");
+    elSubtotal.textContent = money(subtotal);
+
+    if (addons.length) {
+      elAddonsRow.hidden = false;
+      elAddons.textContent = addons.map((a) => a.type === "percent" ? `${a.label} (+${a.value}%)` : `${a.label} (+${money(a.value)})`).join(", ");
+    } else {
+      elAddonsRow.hidden = true;
+    }
+
+    elTotal.textContent = money(total);
+    payBtn.disabled = false;
+    payBtn.textContent = `Pay ${money(total)} with PayPal`;
+
+    // mirror into the request form so email includes the configuration
+    if (orderPackageField) orderPackageField.value = state.pkg;
+    if (weeksInput) weeksInput.value = String(state.weeks);
+    if (addonsInput) addonsInput.value = addons.length ? addons.map((a) => a.label).join(", ") : "None";
+    if (totalInput) totalInput.value = money(total);
+  }
+
+  function selectService(pkg) {
+    const btn = svcButtons.find((b) => b.dataset.package === pkg);
+    if (!btn) return;
+    state.pkg = pkg;
+    state.price = parseFloat(btn.dataset.price) || 0;
+    svcButtons.forEach((b) => {
+      const on = b === btn;
+      b.classList.toggle("selected", on);
+      b.setAttribute("aria-checked", on ? "true" : "false");
+    });
+    render();
+  }
+
+  svcButtons.forEach((b) => b.addEventListener("click", () => selectService(b.dataset.package)));
+
+  weeksMinus.addEventListener("click", () => { state.weeks = Math.max(1, state.weeks - 1); render(); });
+  weeksPlus.addEventListener("click", () => { state.weeks = Math.min(52, state.weeks + 1); render(); });
+  presets.forEach((p) => p.addEventListener("click", () => { state.weeks = parseInt(p.dataset.weeks, 10) || 1; render(); }));
+  addonInputs.forEach((i) => i.addEventListener("change", render));
+
+  payBtn.addEventListener("click", () => {
+    if (!state.pkg) return;
+    const { total } = compute();
+    if (orderPayment) orderPayment.value = "paypal";
+    const amount = Math.round(total * 100) / 100;
+    window.open(`${paypalBase}/${amount}`, "_blank", "noopener");
+  });
+
+  // Preselect from the pricing "Choose Plan" buttons
+  document.querySelectorAll(".plan-trigger").forEach((t) => {
+    t.addEventListener("click", () => {
+      const pkg = t.getAttribute("data-package");
+      if (pkg) selectService(pkg);
+    });
+  });
+
+  render();
+})();
