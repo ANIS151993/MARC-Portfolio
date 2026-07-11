@@ -3,13 +3,13 @@ window.blogPostCatalog = {
     type: "Project Deep Dive",
     kicker: "Cloud Security Engineering",
     title: "Serverless Intelligent Firewall",
-    summary: "I built this project to show the cloud security direction I care about most: Zero Trust thinking, serverless design, and AI-supported decision logic.",
-    metaDescription: "Detailed note on the Serverless Intelligent Firewall project by Md Anisur Rahman Chowdhury, covering cloud security, Zero Trust architecture, and AI-driven infrastructure defense.",
-    tags: ["Cloud Security", "Zero Trust", "Serverless", "Threat Detection", "Infrastructure Defense"],
+    summary: "This project is the cornerstone of my AI-driven network security work: a serverless, Zero Trust firewall where AI decides what to trust. It is where my career moved from traditional network security into AI networking and AI-driven defense.",
+    metaDescription: "Serverless Intelligent Firewall by Md Anisur Rahman Chowdhury (MARC): an AI-driven network security project combining Zero Trust, serverless architecture, and AI decision logic for autonomous cloud infrastructure defense.",
+    tags: ["AI-Driven Network Security", "Zero Trust", "Serverless", "AI Networking", "Cloud Security"],
     facts: [
-      { label: "Focus Area", value: "Cloud-native firewall design for secure workload protection" },
-      { label: "Main Skills", value: "Serverless architecture, policy logic, Zero Trust, cloud security engineering" },
-      { label: "Best Fit Roles", value: "Cloud Security Engineer, Network Security Engineer, Infrastructure Security Engineer" }
+      { label: "Career Focus", value: "AI-driven, cloud-native firewall decisions for autonomous network defense" },
+      { label: "Core Skills", value: "AI-driven network security, Zero Trust, serverless architecture, security policy automation" },
+      { label: "Best Fit Roles", value: "AI-Driven Network Security Engineer, AI Security Engineer, Cloud/Network AI Security Engineer" }
     ],
     sidebarStats: [
       { value: "Project", label: "Hands-on build" },
@@ -71,13 +71,13 @@ window.blogPostCatalog = {
     type: "Project Deep Dive",
     kicker: "Multi-Cloud Security Research",
     title: "Towards a Serverless Intelligent Firewall: Cross-Cloud Adaptation",
-    summary: "I used this project to extend my first firewall idea into a more realistic enterprise problem: security across more than one cloud environment.",
-    metaDescription: "Detailed note on the cross-cloud serverless intelligent firewall project covering adaptive security, multi-cloud infrastructure, and Zero Trust protection.",
-    tags: ["Multi-Cloud", "Serverless Security", "Zero Trust", "Adaptive Defense", "Cloud Infrastructure"],
+    summary: "Here I pushed my AI-driven firewall into the harder reality of multi-cloud, where an AI has to adapt its network-security decisions as trust boundaries move across platforms. It is central to my AI networking direction.",
+    metaDescription: "Cross-cloud serverless intelligent firewall by MARC: adaptive AI-driven network security and Agentic defense across multi-cloud infrastructure with Zero Trust protection.",
+    tags: ["AI-Driven Network Security", "AI Networking", "Multi-Cloud", "Adaptive Defense", "Zero Trust"],
     facts: [
-      { label: "Focus Area", value: "Cross-cloud security policy adaptation and protection logic" },
-      { label: "Main Skills", value: "Cloud architecture, security policy design, distributed protection, research engineering" },
-      { label: "Best Fit Roles", value: "Cloud Infrastructure Engineer, Cloud Security Engineer, Security Research Engineer" }
+      { label: "Career Focus", value: "Adaptive AI network-security policy across multi-cloud infrastructure" },
+      { label: "Core Skills", value: "AI networking, adaptive security decisions, cloud architecture, distributed protection" },
+      { label: "Best Fit Roles", value: "AI Networking Engineer, AI-Driven Network Security Engineer, ML Security Engineer" }
     ],
     sidebarStats: [
       { value: "Cross-Cloud", label: "Architecture scope" },
@@ -139,13 +139,13 @@ window.blogPostCatalog = {
     type: "Project Deep Dive",
     kicker: "Autonomous Security Systems",
     title: "Autonomous Self-Learning Serverless Intelligent Firewall",
-    summary: "I built this project to push my firewall research further toward adaptive behavior, threat intelligence integration, and self-improving cloud defense.",
-    metaDescription: "Detailed note on the autonomous self-learning serverless firewall project with threat intelligence, machine learning, and federated Zero Trust ideas.",
-    tags: ["Threat Intelligence", "Machine Learning", "Serverless Defense", "Federated Security", "Adaptive Firewall"],
+    summary: "This is my most Agentic build: a self-learning firewall that ingests live threat intelligence, trains on it, and improves its own defensive decisions. It ties together Agentic AI, AI automation, and AI-driven network security.",
+    metaDescription: "Autonomous self-learning serverless firewall by MARC: an Agentic AI defense that fuses REST-API threat intelligence, machine learning, and federated Zero Trust for AI-driven network security.",
+    tags: ["Agentic AI", "AI-Driven Network Security", "AI Automation", "Threat Intelligence", "Machine Learning"],
     facts: [
-      { label: "Focus Area", value: "Self-learning serverless defense with intelligence-driven behavior" },
-      { label: "Main Skills", value: "Threat intelligence integration, ML-supported security, cloud defense architecture" },
-      { label: "Best Fit Roles", value: "Cloud Security Engineer, Security Architect, Cybersecurity Research Engineer" }
+      { label: "Career Focus", value: "Agentic, self-learning network defense with AI-automated decisions" },
+      { label: "Core Skills", value: "Agentic AI, AI automation, threat-intel harnessing, ML security, federated Zero Trust" },
+      { label: "Best Fit Roles", value: "Agentic AI Security Engineer, AI Automation Engineer, ML Security Engineer" }
     ],
     sidebarStats: [
       { value: "ML", label: "Adaptive layer" },
@@ -155,8 +155,8 @@ window.blogPostCatalog = {
     preview: {
       type: "iframe",
       label: "Live Demo Preview",
-      url: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-3/",
-      browserLabel: "anis151993.github.io/Serverless-Intelligent-Firewall-Research-3/"
+      url: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-2/",
+      browserLabel: "anis151993.github.io/Serverless-Intelligent-Firewall-Research-2/"
     },
     sections: [
       {
@@ -197,7 +197,7 @@ window.blogPostCatalog = {
       }
     ],
     resources: [
-      { label: "Open Live Demo", href: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-3/" },
+      { label: "Open Live Demo", href: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-2/" },
       { label: "View Source Repo", href: "https://github.com/ANIS151993/Serverless-Intelligent-Firewall-Research-3.git" },
       { label: "Read Paper Pipeline Context", href: "/blog/posts/cross-cloud-firewall-paper/" }
     ],
@@ -207,13 +207,13 @@ window.blogPostCatalog = {
     type: "Project Deep Dive",
     kicker: "Reproducible Data Workflows",
     title: "DataMentor / Notebook Studio",
-    summary: "I built this project to show another side of my engineering work: reproducible data workflows, notebook automation, and practical tooling that keeps technical work clean and repeatable.",
-    metaDescription: "Detailed note on the DataMentor and Notebook Studio project covering reproducible workflows, notebook automation, and serverless CSV intelligence.",
-    tags: ["Data Engineering", "Notebook Automation", "Reproducibility", "CSV Intelligence", "Workflow Design"],
+    summary: "DataMentor is my AI automation and harness-engineering build: an LLM harness that runs notebook workflows, adds CSV intelligence, and self-repairs at runtime so an agent can operate data pipelines reliably.",
+    metaDescription: "DataMentor / Notebook Studio by MARC: an AI automation and LLM harness-engineering project with agentic notebook automation, serverless CSV intelligence, and deterministic runtime repair.",
+    tags: ["AI Automation", "Harness Engineering", "Agentic AI", "LLM Tooling", "CSV Intelligence"],
     facts: [
-      { label: "Focus Area", value: "Cleaner notebook workflows and repeatable data-processing support" },
-      { label: "Main Skills", value: "Automation, workflow design, reporting support, reproducibility" },
-      { label: "Best Fit Roles", value: "Data Engineer, Research Engineer, Platform Engineer, Applied AI Engineer" }
+      { label: "Career Focus", value: "LLM harness and AI automation for reliable, agent-run data workflows" },
+      { label: "Core Skills", value: "Harness engineering, AI automation, agentic runtime repair, LLM tooling" },
+      { label: "Best Fit Roles", value: "AI Automation Engineer, LLM Harness Engineer, Applied AI Engineer" }
     ],
     sidebarStats: [
       { value: "Clean", label: "Workflow focus" },
@@ -275,13 +275,13 @@ window.blogPostCatalog = {
     type: "Project Deep Dive",
     kicker: "Distributed AI Systems",
     title: "A Local Distributed Multi-Agent LLM Ensemble System for Complex Problem Solving",
-    summary: "In this project, I explored a practical systems question inside AI: can several local agents cooperate to solve harder tasks more effectively than one model acting alone?",
-    metaDescription: "Detailed note on the local distributed multi-agent LLM ensemble project covering orchestration, collaborative reasoning, and distributed AI system design.",
-    tags: ["Distributed AI", "Multi-Agent Systems", "LLM Orchestration", "Collaborative Reasoning", "Systems Design"],
+    summary: "This is my Agentic AI systems build: a local team of LLM agents that split work, check each other, and solve harder problems together. It is where my harness engineering and Agentic AI focus really shows.",
+    metaDescription: "Local distributed multi-agent LLM ensemble by MARC: Agentic AI orchestration, an LLM harness for collaborative reasoning, and distributed AI system design running fully local.",
+    tags: ["Agentic AI", "Harness Engineering", "Multi-Agent Systems", "LLM Orchestration", "Distributed AI"],
     facts: [
-      { label: "Focus Area", value: "Local multi-agent LLM orchestration for complex task solving" },
-      { label: "Main Skills", value: "Distributed systems thinking, agent coordination, AI workflow design" },
-      { label: "Best Fit Roles", value: "AI Engineer, Applied ML Engineer, Systems Engineer, Research Engineer" }
+      { label: "Career Focus", value: "Agentic AI orchestration and LLM harnessing for multi-agent problem solving" },
+      { label: "Core Skills", value: "Agentic AI, LLM harness engineering, agent coordination, distributed AI design" },
+      { label: "Best Fit Roles", value: "Agentic AI Engineer, LLM Orchestration/Harness Engineer, Applied ML Engineer" }
     ],
     sidebarStats: [
       { value: "Multi-Agent", label: "Core design" },
@@ -343,13 +343,13 @@ window.blogPostCatalog = {
     type: "Project Deep Dive",
     kicker: "LLM Reliability",
     title: "Teaching Large Language Models to Think Twice",
-    summary: "I built this project around a simple but important idea: if a model checks its own reasoning in stages, can it become more reliable before answering the user?",
-    metaDescription: "Detailed note on the self-correcting LLM project covering staged reasoning review, mathematical reliability, and trustworthy AI behavior.",
-    tags: ["LLM Reliability", "Self-Correction", "Mathematical Reasoning", "Trustworthy AI", "Evaluation"],
+    summary: "This project sits at the heart of my LLM training and reliability work: a staged self-correction harness that teaches a model to review its own reasoning before answering. It blends LLM training, harness engineering, and Agentic AI.",
+    metaDescription: "Self-Correcting LLM by MARC: an LLM training and harness-engineering project using a staged self-review loop to make Agentic reasoning more reliable on mathematical tasks.",
+    tags: ["LLM Training", "Harness Engineering", "Agentic AI", "Self-Correction", "Trustworthy AI"],
     facts: [
-      { label: "Focus Area", value: "More reliable language-model reasoning through staged self-review" },
-      { label: "Main Skills", value: "AI evaluation, reasoning workflows, reliability design, LLM experimentation" },
-      { label: "Best Fit Roles", value: "AI Engineer, Applied ML Engineer, Research Engineer, Trust and Safety Research" }
+      { label: "Career Focus", value: "LLM training and self-correction harnesses for reliable Agentic reasoning" },
+      { label: "Core Skills", value: "LLM training, harness engineering, reasoning-loop design, AI evaluation" },
+      { label: "Best Fit Roles", value: "LLM Engineer, Agentic AI Engineer, AI Evaluation/Research Engineer" }
     ],
     sidebarStats: [
       { value: "3-Stage", label: "Reasoning flow" },
@@ -411,13 +411,13 @@ window.blogPostCatalog = {
     type: "Paper Deep Dive",
     kicker: "Published First-Author Research",
     title: "Towards a Serverless Intelligent Firewall: AI-Driven Security, and Zero-Trust Architectures",
-    summary: "In this first-author IEEE paper, I present my core cloud security direction: a smarter firewall model built around AI-driven security thinking and Zero Trust architecture.",
-    metaDescription: "Detailed note on the IEEE paper Towards a Serverless Intelligent Firewall covering AI-driven security and Zero Trust architectures by Md Anisur Rahman Chowdhury.",
-    tags: ["IEEE", "First Author", "Cloud Security", "Zero Trust", "Serverless Firewall"],
+    summary: "This first-author IEEE paper is the research foundation of my AI-driven network security career: an intelligent, serverless firewall where AI-driven decisions and Zero Trust replace static rules.",
+    metaDescription: "IEEE paper Towards a Serverless Intelligent Firewall by MARC: AI-driven network security and Zero Trust architecture, the published foundation of an AI networking research agenda.",
+    tags: ["IEEE", "First Author", "AI-Driven Network Security", "Zero Trust", "AI Networking"],
     facts: [
       { label: "Venue", value: "IEEE CSCloud 2025" },
       { label: "My Contribution", value: "First author, idea origin, research, methodology, and implementation direction" },
-      { label: "Research Fit", value: "Cloud security, network defense, infrastructure protection" }
+      { label: "Career Fit", value: "AI-driven network security, AI networking, autonomous infrastructure defense" }
     ],
     sidebarStats: [
       { value: "IEEE", label: "Published" },
@@ -480,13 +480,13 @@ window.blogPostCatalog = {
     type: "Paper Deep Dive",
     kicker: "Published First-Author Research",
     title: "Auction-Based Dynamic Resource Allocation for Optimized Edge Computing in Distributed Networks",
-    summary: "In this paper, I studied a practical distributed-systems problem: how to allocate limited edge resources more intelligently when many workloads compete at the same time.",
-    metaDescription: "Detailed note on the IEEE paper about auction-based dynamic resource allocation for optimized edge computing in distributed networks.",
-    tags: ["IEEE", "Edge Computing", "Distributed Networks", "Optimization", "Resource Allocation"],
+    summary: "This first-author IEEE paper is part of my AI networking work: intelligent, auction-based allocation of scarce edge resources across a distributed network so compute is placed where AI workloads need it.",
+    metaDescription: "IEEE paper on auction-based dynamic resource allocation for edge computing by MARC: AI networking and intelligent optimization for distributed, edge-cloud AI infrastructure.",
+    tags: ["IEEE", "AI Networking", "Edge Computing", "Distributed Networks", "Optimization"],
     facts: [
       { label: "Venue", value: "IEEE CSITSS 2025" },
       { label: "My Contribution", value: "First author with idea, research direction, methodology, and implementation framing" },
-      { label: "Research Fit", value: "Distributed systems, edge computing, optimization-aware infrastructure" }
+      { label: "Career Fit", value: "AI networking, edge-cloud AI infrastructure, intelligent resource optimization" }
     ],
     sidebarStats: [
       { value: "Edge", label: "Computing focus" },
@@ -549,13 +549,13 @@ window.blogPostCatalog = {
     type: "Paper Deep Dive",
     kicker: "Published First-Author Research",
     title: "AI and Cloud Computing in Business Systems: A Hybrid Model for Enhancing Enterprise Resource Planning",
-    summary: "In this paper, I explored how AI and cloud computing can improve ERP systems so business platforms become more adaptive, scalable, and more useful for decision-making.",
-    metaDescription: "Detailed note on the IEEE paper about AI and cloud computing in business systems for enhancing enterprise resource planning.",
-    tags: ["IEEE", "Enterprise AI", "Cloud Systems", "ERP", "Business Platforms"],
+    summary: "This first-author IEEE paper is part of my AI automation work: a hybrid AI-plus-cloud model that automates and augments enterprise ERP workflows for adaptive, intelligent business operations.",
+    metaDescription: "IEEE paper on AI and cloud computing for ERP by MARC: AI automation and applied AI that make enterprise business systems adaptive, intelligent, and decision-ready.",
+    tags: ["IEEE", "AI Automation", "Applied AI", "Enterprise AI", "Cloud Systems"],
     facts: [
       { label: "Venue", value: "IEEE CSITSS 2025" },
       { label: "My Contribution", value: "First author and idea contributor with research, methodology, and implementation direction" },
-      { label: "Research Fit", value: "Enterprise systems, applied AI, cloud-supported business workflows" }
+      { label: "Career Fit", value: "AI automation, applied AI, intelligent enterprise workflows" }
     ],
     sidebarStats: [
       { value: "ERP", label: "System focus" },
@@ -618,13 +618,13 @@ window.blogPostCatalog = {
     type: "Paper Deep Dive",
     kicker: "Published First-Author Research",
     title: "Deepfake Detection in MIS: Leveraging DenseNet and Multi-Scale Information for Enhanced Digital Forensics",
-    summary: "In this paper, I worked on a growing security and trust problem: manipulated media. I explored a deep-learning-based approach for stronger deepfake detection and digital forensics support.",
-    metaDescription: "Detailed note on the IEEE paper about deepfake detection in MIS using DenseNet and multi-scale information for enhanced digital forensics.",
-    tags: ["IEEE", "Deepfake Detection", "Digital Forensics", "Computer Vision", "Security Analytics"],
+    summary: "This first-author IEEE paper applies AI-driven detection to a real security problem: catching manipulated media. It extends my AI-driven security focus from the network into media and information integrity.",
+    metaDescription: "IEEE paper on deepfake detection in MIS by MARC: AI-driven security analytics using DenseNet and multi-scale learning for digital forensics and trustworthy AI.",
+    tags: ["IEEE", "AI-Driven Security", "Deepfake Detection", "Applied AI", "Digital Forensics"],
     facts: [
       { label: "Venue", value: "IEEE COMPAS 2025" },
       { label: "My Contribution", value: "First author with research ownership and implementation framing" },
-      { label: "Research Fit", value: "Digital forensics, AI-based detection, security analytics" }
+      { label: "Career Fit", value: "AI-driven security analytics, applied AI and ML, trustworthy detection" }
     ],
     sidebarStats: [
       { value: "Forensics", label: "Security domain" },
@@ -687,13 +687,13 @@ window.blogPostCatalog = {
     type: "Paper Deep Dive",
     kicker: "Under Review First-Author Research",
     title: "Towards a Serverless Intelligent Firewall: Integrating Cross-Cloud Adaptation, AI-Driven Security, and Zero-Trust Architectures",
-    summary: "In this under-review paper, I extend my firewall research into cross-cloud protection, where distributed infrastructure creates a more demanding security environment.",
-    metaDescription: "Detailed note on the under-review cross-cloud serverless firewall paper covering adaptation, AI-driven security, and Zero Trust architectures.",
-    tags: ["Under Review", "Multi-Cloud Security", "Zero Trust", "Adaptive Firewall", "Serverless Research"],
+    summary: "This under-review first-author paper carries my AI-driven network security into multi-cloud reality, where an AI firewall must adapt its defensive decisions as workloads and trust boundaries span several clouds.",
+    metaDescription: "Under-review IEEE paper on cross-cloud serverless firewall by MARC: adaptive AI-driven network security and AI networking with Zero Trust across multi-cloud infrastructure.",
+    tags: ["Under Review", "AI-Driven Network Security", "AI Networking", "Multi-Cloud", "Zero Trust"],
     facts: [
       { label: "Venue Target", value: "IEEE SmartCloud 2026" },
       { label: "My Contribution", value: "First author and primary idea contributor" },
-      { label: "Research Fit", value: "Cross-cloud defense, adaptive security, infrastructure protection" }
+      { label: "Career Fit", value: "AI-driven network security, AI networking, adaptive multi-cloud defense" }
     ],
     sidebarStats: [
       { value: "SmartCloud", label: "Venue target" },
@@ -756,13 +756,13 @@ window.blogPostCatalog = {
     type: "Paper Deep Dive",
     kicker: "Under Review First-Author Research",
     title: "Teaching Large Language Models to Think Twice: A Three-Stage Framework for Self-Correcting Mathematical Reasoning",
-    summary: "In this under-review paper, I study how a staged self-correction framework can improve large language model reasoning quality, especially in mathematical tasks where mistakes are easy to notice and important to reduce.",
-    metaDescription: "Detailed note on the under-review paper about teaching large language models to think twice with a three-stage self-correcting mathematical reasoning framework.",
-    tags: ["Under Review", "LLM Reliability", "Mathematical Reasoning", "Self-Correction", "Trustworthy AI"],
+    summary: "This under-review first-author paper is core to my LLM training and reliability focus: a three-stage self-correction framework that teaches a language model to review its own reasoning before it answers.",
+    metaDescription: "Under-review paper by MARC on teaching LLMs to think twice: an LLM training and self-correction framework for reliable Agentic reasoning on mathematical tasks.",
+    tags: ["Under Review", "LLM Training", "Agentic AI", "Self-Correction", "Trustworthy AI"],
     facts: [
       { label: "Venue Target", value: "CAC'26 draft submission" },
       { label: "My Contribution", value: "First author, idea origin, research, data collection, methodology, training, implementation" },
-      { label: "Research Fit", value: "Reliable AI systems, model evaluation, careful reasoning design" }
+      { label: "Career Fit", value: "LLM training, reliable Agentic reasoning, model evaluation" }
     ],
     sidebarStats: [
       { value: "3-Stage", label: "Framework" },
@@ -825,13 +825,13 @@ window.blogPostCatalog = {
     type: "Paper Deep Dive",
     kicker: "Under Review First-Author Research",
     title: "A Local Distributed Multi-Agent LLM Ensemble System for Complex Problem Solving",
-    summary: "In this under-review paper, I explore how a local team of language-model agents can collaborate on hard tasks through orchestration, structured roles, and multi-step coordination.",
-    metaDescription: "Detailed note on the under-review paper about a local distributed multi-agent LLM ensemble system for complex problem solving.",
-    tags: ["Under Review", "Distributed AI", "Multi-Agent Systems", "LLM Orchestration", "Complex Problem Solving"],
+    summary: "This under-review first-author paper formalizes my Agentic AI work: a local, multi-agent LLM ensemble that coordinates, divides work, and solves complex problems through an orchestration harness.",
+    metaDescription: "Under-review paper by MARC on a local distributed multi-agent LLM ensemble: Agentic AI, LLM orchestration, and harness engineering for complex problem solving.",
+    tags: ["Under Review", "Agentic AI", "Harness Engineering", "Multi-Agent Systems", "LLM Orchestration"],
     facts: [
       { label: "Status", value: "Under Review" },
       { label: "My Contribution", value: "First author and primary research driver" },
-      { label: "Research Fit", value: "Distributed AI, coordination systems, local AI architecture" }
+      { label: "Career Fit", value: "Agentic AI, LLM orchestration harnesses, distributed AI" }
     ],
     sidebarStats: [
       { value: "Multi-Agent", label: "Architecture" },
@@ -894,13 +894,13 @@ window.blogPostCatalog = {
     type: "Systems Background Note",
     kicker: "Operational Systems Background",
     title: "Mail Infrastructure, Identity, and Service Continuity",
-    summary: "I keep this note because a lot of my later interest in trust, policy, and dependable infrastructure came from real mail-service work, where identity, deliverability, and communication continuity mattered every day.",
-    metaDescription: "Research-connected systems background note on mail infrastructure, identity, deliverability, and operational continuity by Md Anisur Rahman Chowdhury.",
-    tags: ["Mail Infrastructure", "Identity and Trust", "Service Continuity", "Systems Administration", "Communication Security"],
+    summary: "I keep this note because mail infrastructure is where I first learned identity, trust boundaries, and deliverability at scale - the exact networking fundamentals my AI-driven network security and AI networking work now automates.",
+    metaDescription: "Systems background note by MARC on mail infrastructure and identity - the networking foundation behind an AI-driven network security and AI networking career.",
+    tags: ["AI-Driven Network Security", "AI Networking", "Identity and Trust", "Mail Infrastructure", "Network Automation"],
     facts: [
-      { label: "Research Bridge", value: "Identity, continuity, and controlled communication in production systems" },
-      { label: "Main Skills", value: "Mail administration, domain integration, deliverability control, account governance, service continuity" },
-      { label: "Why I Keep It Here", value: "It shaped how I think about trust boundaries, reliability, and user-facing infrastructure." }
+      { label: "Career Bridge", value: "Identity, trust boundaries, and continuity - the fundamentals my AI security now automates" },
+      { label: "Core Skills", value: "Mail and identity administration, domain and trust management, service continuity" },
+      { label: "Why It Matters Now", value: "It grounds my AI-driven network security and network-automation work in real production identity and trust." }
     ],
     sidebarStats: [
       { value: "4", label: "Mail deployments" },
@@ -910,7 +910,7 @@ window.blogPostCatalog = {
     preview: {
       type: "image",
       label: "Operational Snapshot",
-      src: "https://marcbd.com/wp-content/uploads/2025/07/ARFGroupbd.png",
+      src: "/assets/covers/mail.svg",
       alt: "ARF Group mail server administration panel",
       title: "Production Mail Service with Governance and Stability",
       note: "This work mattered because email is one of the clearest places where identity, reliability, access, and trust meet in a live production service."
@@ -964,13 +964,13 @@ window.blogPostCatalog = {
     type: "Systems Background Note",
     kicker: "Operational Systems Background",
     title: "Shared Storage, Access Control, and Service Dependability",
-    summary: "I keep this note because real file-service work taught me a lot about permissions, controlled access, information flow, and why dependable infrastructure matters long after a system is deployed.",
-    metaDescription: "Research-connected systems background note on shared storage, access control, and dependable file-service infrastructure by Md Anisur Rahman Chowdhury.",
-    tags: ["Shared Storage", "Access Control", "Service Dependability", "Systems Administration", "Information Governance"],
+    summary: "I keep this note because file infrastructure taught me access control, permissions, and reliable data flow - the storage and governance layer my AI automation and AI data pipelines now build on.",
+    metaDescription: "Systems background note by MARC on shared storage and access control - the data and governance foundation behind AI automation and AI data pipelines.",
+    tags: ["AI Automation", "Access Control", "Data Infrastructure", "Shared Storage", "Information Governance"],
     facts: [
-      { label: "Research Bridge", value: "Permissions, governance, and dependable access in production environments" },
-      { label: "Main Skills", value: "Centralized storage, access design, operational support, continuity planning, service structure" },
-      { label: "Why I Keep It Here", value: "It influenced how I think about control, coordination, and reliable infrastructure behavior." }
+      { label: "Career Bridge", value: "Permissions, governance, and dependable data access that AI automation depends on" },
+      { label: "Core Skills", value: "Centralized storage, access design, data governance, operational continuity" },
+      { label: "Why It Matters Now", value: "It underpins the reliable data layer my AI automation and pipeline work runs on." }
     ],
     sidebarStats: [
       { value: "4", label: "Storage deployments" },
@@ -980,7 +980,7 @@ window.blogPostCatalog = {
     preview: {
       type: "image",
       label: "Operational Snapshot",
-      src: "https://marcbd.com/wp-content/uploads/2025/07/Arf-File-Server.png",
+      src: "/assets/covers/file.svg",
       alt: "ARF file server interface",
       title: "Structured File Access with Governance in Mind",
       note: "This work stayed important to me because it made access control, storage discipline, and day-to-day dependability visible in a very practical way."
@@ -1034,13 +1034,13 @@ window.blogPostCatalog = {
     type: "Systems Background Note",
     kicker: "Operational Systems Background",
     title: "IP Telephony, Real-Time Service Reliability, and Communication Networks",
-    summary: "I keep this note because voice systems taught me to think about infrastructure as a live service where continuity, segmentation, and reliability matter immediately, not after the fact.",
-    metaDescription: "Research-connected systems background note on IP telephony, service reliability, and communication infrastructure by Md Anisur Rahman Chowdhury.",
-    tags: ["IP Telephony", "Service Reliability", "Network Segmentation", "Operational Continuity", "Communication Systems"],
+    summary: "I keep this note because real-time voice networks taught me segmentation, QoS, and continuity under live load - the networking discipline my AI networking work now optimizes and automates.",
+    metaDescription: "Systems background note by MARC on IP telephony and real-time networking - the segmentation and continuity foundation behind AI networking.",
+    tags: ["AI Networking", "Network Segmentation", "Real-Time Networks", "Service Reliability", "Network Automation"],
     facts: [
-      { label: "Research Bridge", value: "Real-time service continuity, segmentation, and dependable infrastructure behavior" },
-      { label: "Main Skills", value: "Voice systems support, communication infrastructure, operational continuity, service coordination" },
-      { label: "Why I Keep It Here", value: "It reinforced my interest in infrastructure that has to stay reliable under real operational use." }
+      { label: "Career Bridge", value: "Real-time continuity, segmentation, and QoS - the network behavior AI networking optimizes" },
+      { label: "Core Skills", value: "Voice and real-time networking, segmentation, continuity, service coordination" },
+      { label: "Why It Matters Now", value: "It gives my AI networking work a real feel for live, latency-sensitive network behavior." }
     ],
     sidebarStats: [
       { value: "3", label: "Voice environments" },
@@ -1050,7 +1050,7 @@ window.blogPostCatalog = {
     preview: {
       type: "image",
       label: "Operational Snapshot",
-      src: "https://marcbd.com/wp-content/uploads/2025/07/IP-Phone.png",
+      src: "/assets/covers/voice.svg",
       alt: "IP phone setup illustration",
       title: "Voice Infrastructure That Has to Work in Real Time",
       note: "Voice systems pushed me to think about availability, internal coordination, and operational reliability as part of the infrastructure story, not as separate concerns."
@@ -1094,8 +1094,8 @@ window.blogPostCatalog = {
       }
     ],
     resources: [
-      { label: "Voice Work Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/IP-Phone.png" },
-      { label: "Additional Telephony Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/Issabel1.avif" },
+      { label: "Voice Work Snapshot", href: "/assets/covers/voice.svg" },
+      { label: "Additional Telephony Snapshot", href: "/assets/covers/voice.svg" },
       { label: "Read Network Architecture Note", href: "/blog/posts/network-architecture-works/" }
     ],
     related: ["network-architecture-works", "mail-server-works", "cloud-architecture-works"]
@@ -1104,13 +1104,13 @@ window.blogPostCatalog = {
     type: "Systems Background Note",
     kicker: "Operational Systems Background",
     title: "Web Delivery, Technical Communication, and Public-Facing Systems",
-    summary: "I keep this note because building public-facing websites taught me how to present technical ideas clearly, turn systems into understandable interfaces, and make complex work easier for people to read and trust.",
-    metaDescription: "Research-connected systems background note on web delivery, technical communication, and public-facing systems by Md Anisur Rahman Chowdhury.",
-    tags: ["Web Delivery", "Technical Communication", "Public Interfaces", "Prototype Design", "Digital Presentation"],
+    summary: "I keep this note because shipping public-facing products taught me to turn complex systems into clear interfaces - exactly the skill I use to deliver usable front ends for my AI tools, agents, and automation.",
+    metaDescription: "Systems background note by MARC on web delivery and technical communication - how I ship usable interfaces for AI tools, agents, and AI automation.",
+    tags: ["AI Automation", "AI Tooling UX", "Web Delivery", "Technical Communication", "Product Interfaces"],
     facts: [
-      { label: "Research Bridge", value: "Clear technical communication, visible prototypes, and usable public interfaces" },
-      { label: "Main Skills", value: "Public web delivery, technical presentation, interface clarity, explainable system framing" },
-      { label: "Why I Keep It Here", value: "It shaped how I present research systems and make technical work easier to understand." }
+      { label: "Career Bridge", value: "Turning complex systems into clear interfaces for AI tools and agents" },
+      { label: "Core Skills", value: "Product web delivery, interface clarity, explainable AI-tool framing, front-end delivery" },
+      { label: "Why It Matters Now", value: "It is why my AI demos, agent tools, and automation ship with usable, readable front ends." }
     ],
     sidebarStats: [
       { value: "5", label: "Web builds" },
@@ -1120,7 +1120,7 @@ window.blogPostCatalog = {
     preview: {
       type: "image",
       label: "Operational Snapshot",
-      src: "https://marcbd.com/wp-content/uploads/2025/07/Steelhead-Inn.png",
+      src: "/assets/covers/web.svg",
       alt: "Steelhead Inn website screenshot",
       title: "Public Interfaces That Make Systems Easier to Read",
       note: "This work matters in my archive because it taught me that good technical work also needs good explanation, clear interfaces, and a readable public layer."
@@ -1174,13 +1174,13 @@ window.blogPostCatalog = {
     type: "Systems Background Note",
     kicker: "Operational Systems Background",
     title: "Network Architecture as the Foundation of My Security Thinking",
-    summary: "I keep this note because topology design, segmentation, and network structure are some of the clearest operational roots behind my later interest in Zero Trust, firewall design, and secure infrastructure research.",
-    metaDescription: "Research-connected systems background note on network architecture, segmentation, and infrastructure design by Md Anisur Rahman Chowdhury.",
-    tags: ["Network Architecture", "Segmentation", "Trust Boundaries", "Routing and Switching", "Infrastructure Design"],
+    summary: "I keep this note because network architecture - topology, segmentation, trust boundaries - is the literal foundation of my AI networking and AI-driven network security career. Everything I automate with AI sits on top of it.",
+    metaDescription: "Systems background note by MARC on network architecture and segmentation - the direct foundation of an AI networking and AI-driven network security career.",
+    tags: ["AI Networking", "AI-Driven Network Security", "Network Architecture", "Segmentation", "Trust Boundaries"],
     facts: [
-      { label: "Research Bridge", value: "Segmentation, trust boundaries, and secure network structure" },
-      { label: "Main Skills", value: "Topology planning, connectivity design, routing and switching structure, security-aware architecture" },
-      { label: "Why I Keep It Here", value: "It is one of the clearest practical foundations behind my current research direction." }
+      { label: "Career Bridge", value: "Topology, segmentation, and trust boundaries - the network my AI now secures and automates" },
+      { label: "Core Skills", value: "Topology and routing/switching design, segmentation, security-aware architecture" },
+      { label: "Why It Matters Now", value: "It is the clearest foundation under my AI networking and AI-driven network security work." }
     ],
     sidebarStats: [
       { value: "3", label: "Topology designs" },
@@ -1190,7 +1190,7 @@ window.blogPostCatalog = {
     preview: {
       type: "image",
       label: "Design Snapshot",
-      src: "https://marcbd.com/wp-content/uploads/2025/07/SAG-Agrabad-Corporate-Office-Network-Topology.png",
+      src: "/assets/covers/network.svg",
       alt: "S Alam Group network topology diagram",
       title: "Topology, Structure, and Trust Boundaries Before Deployment",
       note: "This is one of the strongest bridges between my hands-on background and my later research in infrastructure security, Zero Trust, and cloud-aware defense."
@@ -1234,8 +1234,8 @@ window.blogPostCatalog = {
       }
     ],
     resources: [
-      { label: "Open S. Alam Topology Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/SAG-Agrabad-Corporate-Office-Network-Topology.png" },
-      { label: "Open ARF Topology Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/ARF-Group-Factory-Network-Topology.jpg" },
+      { label: "Open S. Alam Topology Snapshot", href: "/assets/covers/network.svg" },
+      { label: "Open ARF Topology Snapshot", href: "/assets/covers/network.svg" },
       { label: "Read Cross-Cloud Firewall Note", href: "/blog/posts/cross-cloud-firewall/" }
     ],
     related: ["cloud-architecture-works", "cross-cloud-firewall", "firewall-zero-trust-paper"]
@@ -1244,13 +1244,13 @@ window.blogPostCatalog = {
     type: "Systems Background Note",
     kicker: "Operational Systems Background",
     title: "Cloud Architecture as the Bridge to My Research Direction",
-    summary: "I keep this note because cloud architecture is where my operational background and my research direction come together most clearly. It connects service design, distributed trust, and security-by-design in one place.",
-    metaDescription: "Research-connected systems background note on cloud architecture, distributed trust, and security-aware service design by Md Anisur Rahman Chowdhury.",
-    tags: ["Cloud Architecture", "Security by Design", "Distributed Trust", "Service Relationships", "Modern Infrastructure"],
+    summary: "I keep this note because cloud architecture is where my infrastructure background meets my AI focus: distributed, security-by-design systems that my AI-driven network security and AI networking work now runs on and defends.",
+    metaDescription: "Systems background note by MARC on cloud architecture and security-by-design - the distributed foundation behind AI-driven network security and AI networking.",
+    tags: ["AI Networking", "AI-Driven Network Security", "Cloud Architecture", "Security by Design", "Distributed Trust"],
     facts: [
-      { label: "Research Bridge", value: "Distributed cloud design, service trust, and security-by-design" },
-      { label: "Main Skills", value: "Cloud planning, service relationships, scalability thinking, security-aware architecture" },
-      { label: "Why I Keep It Here", value: "It is the clearest operational bridge into my serverless and cloud-security research." }
+      { label: "Career Bridge", value: "Distributed, security-by-design cloud structure that AI-driven defense builds on" },
+      { label: "Core Skills", value: "Cloud architecture, distributed trust, scalability, security-aware design" },
+      { label: "Why It Matters Now", value: "It is the operational bridge into my serverless, AI-driven cloud security and AI networking work." }
     ],
     sidebarStats: [
       { value: "2", label: "Cloud designs" },
@@ -1260,7 +1260,7 @@ window.blogPostCatalog = {
     preview: {
       type: "image",
       label: "Design Snapshot",
-      src: "https://marcbd.com/wp-content/uploads/2025/07/AWS-Cloud-Architechture.png",
+      src: "/assets/covers/cloud.svg",
       alt: "AWS cloud architecture diagram",
       title: "Cloud Structure, Service Flow, and Security by Design",
       note: "This note sits closest to my research path because it shows how architecture, trust, and protection start to merge in modern distributed systems."
@@ -1304,8 +1304,8 @@ window.blogPostCatalog = {
       }
     ],
     resources: [
-      { label: "Open AWS Architecture Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/AWS-Cloud-Architechture.png" },
-      { label: "Open Cloud Architecture Snapshot", href: "https://marcbd.com/wp-content/uploads/2025/07/Cloud-Architechture.png" },
+      { label: "Open AWS Architecture Snapshot", href: "/assets/covers/cloud.svg" },
+      { label: "Open Cloud Architecture Snapshot", href: "/assets/covers/cloud.svg" },
       { label: "Read Serverless Firewall Note", href: "/blog/posts/serverless-intelligent-firewall/" }
     ],
     related: ["serverless-intelligent-firewall", "cross-cloud-firewall", "cross-cloud-firewall-paper"]
@@ -1488,140 +1488,140 @@ const noteGalleries = {
   ],
   "mail-server-works": [
     {
-      src: "https://marcbd.com/wp-content/uploads/2025/07/ARFGroupbd.png",
+      src: "/assets/covers/mail.svg",
       alt: "ARF group mail server work",
       title: "Enterprise mail deployment",
       caption: "A representative business email deployment showing reliable mail flow and production support.",
-      href: "https://marcbd.com/wp-content/uploads/2025/07/ARFGroupbd.png"
+      href: "/assets/covers/mail.svg"
     },
     {
-      src: "https://marcbd.com/wp-content/uploads/2025/07/mail-salamgroup.png",
+      src: "/assets/covers/mail.svg",
       alt: "S Alam Group mail server work",
       title: "Mail service continuity",
       caption: "Shows how email systems were delivered with practical business continuity and communication needs in mind.",
-      href: "https://marcbd.com/wp-content/uploads/2025/07/mail-salamgroup.png"
+      href: "/assets/covers/mail.svg"
     },
     {
-      src: "https://marcbd.com/wp-content/uploads/2025/07/SAlamgroup-file-server.png",
+      src: "/assets/covers/file.svg",
       alt: "Associated infrastructure environment",
       title: "Mail and infrastructure alignment",
       caption: "Mail systems work best when they are aligned with the wider server environment and user support process.",
-      href: "https://marcbd.com/wp-content/uploads/2025/07/SAlamgroup-file-server.png"
+      href: "/assets/covers/file.svg"
     }
   ],
   "file-server-works": [
     {
-      src: "https://marcbd.com/wp-content/uploads/2025/07/Arf-File-Server.png",
+      src: "/assets/covers/file.svg",
       alt: "ARF file server work",
       title: "Centralized file access",
       caption: "A representative file server deployment focused on business access, stability, and organized storage workflows.",
-      href: "https://marcbd.com/wp-content/uploads/2025/07/Arf-File-Server.png"
+      href: "/assets/covers/file.svg"
     },
     {
-      src: "https://marcbd.com/wp-content/uploads/2025/07/Cloud-SAlamgroup-file-server.png",
+      src: "/assets/covers/file.svg",
       alt: "Cloud-connected file server work",
       title: "Hybrid file service",
       caption: "This visual supports the hybrid infrastructure side of my file and storage delivery work.",
-      href: "https://marcbd.com/wp-content/uploads/2025/07/Cloud-SAlamgroup-file-server.png"
+      href: "/assets/covers/file.svg"
     },
     {
-      src: "https://marcbd.com/wp-content/uploads/2025/07/SAlamgroup-file-server.png",
+      src: "/assets/covers/file.svg",
       alt: "S Alam Group file server work",
       title: "Operational file workflow",
       caption: "The work reflects practical systems administration and real organizational file-sharing needs.",
-      href: "https://marcbd.com/wp-content/uploads/2025/07/SAlamgroup-file-server.png"
+      href: "/assets/covers/file.svg"
     }
   ],
   "ip-telephony-works": [
     {
-      src: "https://marcbd.com/wp-content/uploads/2025/07/IP-Phone.png",
+      src: "/assets/covers/voice.svg",
       alt: "IP phone infrastructure",
       title: "IP phone endpoint layer",
       caption: "Shows the practical endpoint side of VoIP and enterprise telephony implementation work.",
-      href: "https://marcbd.com/wp-content/uploads/2025/07/IP-Phone.png"
+      href: "/assets/covers/voice.svg"
     },
     {
-      src: "https://marcbd.com/wp-content/uploads/2025/07/Issabel1.avif",
+      src: "/assets/covers/voice.svg",
       alt: "Issabel telephony platform",
       title: "Telephony platform support",
       caption: "This represents the PBX and service management side of my telephony delivery work.",
-      href: "https://marcbd.com/wp-content/uploads/2025/07/Issabel1.avif"
+      href: "/assets/covers/voice.svg"
     },
     {
-      src: "https://marcbd.com/wp-content/uploads/2025/07/hq720.jpg",
+      src: "/assets/covers/voice.svg",
       alt: "Voice communication infrastructure",
       title: "Communication reliability",
       caption: "Telephony work is not only hardware. It is also about reliable communication flow for teams and offices.",
-      href: "https://marcbd.com/wp-content/uploads/2025/07/hq720.jpg"
+      href: "/assets/covers/voice.svg"
     }
   ],
   "web-development-works": [
     {
-      src: "https://marcbd.com/wp-content/uploads/2025/07/Steelhead-Inn.png",
+      src: "/assets/covers/web.svg",
       alt: "Steelhead Inn website",
       title: "Public-facing web delivery",
       caption: "This represents the website delivery side of my client work with a clear public-facing interface.",
-      href: "https://marcbd.com/wp-content/uploads/2025/07/Steelhead-Inn.png"
+      href: "/assets/covers/web.svg"
     },
     {
-      src: "https://marcbd.com/wp-content/uploads/2025/07/Inherentbd.png",
+      src: "/assets/covers/web.svg",
       alt: "Inherent site work",
       title: "Business website build",
       caption: "Shows practical website work for brand presence, information delivery, and business communication.",
-      href: "https://marcbd.com/wp-content/uploads/2025/07/Inherentbd.png"
+      href: "/assets/covers/web.svg"
     },
     {
-      src: "https://marcbd.com/wp-content/uploads/2025/07/Savolabd.png",
+      src: "/assets/covers/web.svg",
       alt: "Savola site work",
       title: "Interface and delivery quality",
       caption: "This visual supports the user-facing side of my portfolio and delivery background.",
-      href: "https://marcbd.com/wp-content/uploads/2025/07/Savolabd.png"
+      href: "/assets/covers/web.svg"
     }
   ],
   "network-architecture-works": [
     {
-      src: "https://marcbd.com/wp-content/uploads/2025/07/SAG-Agrabad-Corporate-Office-Network-Topology.png",
+      src: "/assets/covers/network.svg",
       alt: "Corporate office network topology",
       title: "Corporate office topology",
       caption: "Shows clear network planning and structured topology design for an enterprise office environment.",
-      href: "https://marcbd.com/wp-content/uploads/2025/07/SAG-Agrabad-Corporate-Office-Network-Topology.png"
+      href: "/assets/covers/network.svg"
     },
     {
-      src: "https://marcbd.com/wp-content/uploads/2025/07/ARF-Group-Factory-Network-Topology.jpg",
+      src: "/assets/covers/network.svg",
       alt: "Factory network topology",
       title: "Factory network planning",
       caption: "Represents physical network infrastructure thinking for industrial or factory operations.",
-      href: "https://marcbd.com/wp-content/uploads/2025/07/ARF-Group-Factory-Network-Topology.jpg"
+      href: "/assets/covers/network.svg"
     },
     {
-      src: "https://marcbd.com/wp-content/uploads/2025/07/SAG-Factory.png",
+      src: "/assets/covers/network.svg",
       alt: "Factory infrastructure layout",
       title: "Infrastructure visibility",
       caption: "I use this visual to support my fit for network infrastructure, systems administration, and enterprise operations work.",
-      href: "https://marcbd.com/wp-content/uploads/2025/07/SAG-Factory.png"
+      href: "/assets/covers/network.svg"
     }
   ],
   "cloud-architecture-works": [
     {
-      src: "https://marcbd.com/wp-content/uploads/2025/07/AWS-Cloud-Architechture.png",
+      src: "/assets/covers/cloud.svg",
       alt: "AWS cloud architecture",
       title: "AWS-oriented design",
       caption: "Shows structured cloud planning, service relationships, and scalable architecture thinking.",
-      href: "https://marcbd.com/wp-content/uploads/2025/07/AWS-Cloud-Architechture.png"
+      href: "/assets/covers/cloud.svg"
     },
     {
-      src: "https://marcbd.com/wp-content/uploads/2025/07/Cloud-Architechture.png",
+      src: "/assets/covers/cloud.svg",
       alt: "Cloud architecture diagram",
       title: "Scalable cloud structure",
       caption: "I use this visual to support my positioning for cloud engineering and cloud security engineering roles.",
-      href: "https://marcbd.com/wp-content/uploads/2025/07/Cloud-Architechture.png"
+      href: "/assets/covers/cloud.svg"
     },
     {
-      src: "https://marcbd.com/wp-content/uploads/2025/07/Cloud-SAlamgroup-file-server.png",
+      src: "/assets/covers/file.svg",
       alt: "Cloud-connected service environment",
       title: "Architecture to implementation",
       caption: "Helps connect abstract architecture planning with real service delivery and systems work.",
-      href: "https://marcbd.com/wp-content/uploads/2025/07/Cloud-SAlamgroup-file-server.png"
+      href: "/assets/covers/file.svg"
     }
   ]
 };
