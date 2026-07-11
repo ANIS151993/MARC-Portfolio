@@ -1423,3 +1423,87 @@ if (yearNode) {
 
   onScroll();
 })();
+
+/* ---------------------------------------------------------------
+   Animate Google Scholar citation bars on scroll into view
+   --------------------------------------------------------------- */
+(function initCitationBars() {
+  const bars = document.querySelectorAll(".cited-bar[data-cites]");
+  if (!bars.length) return;
+  const obs = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("filled");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  bars.forEach((b) => obs.observe(b));
+})();
+
+/* ---------------------------------------------------------------
+   Interactive showcase: 3D mouse-tilt + autoplay (pause on hover)
+   --------------------------------------------------------------- */
+(function initShowcaseInteractions() {
+  const stages = [
+    { stage: ".works-slider-stage", active: ".work-card.active-slide", next: "#workNext" },
+    { stage: ".projects-slider-stage", active: ".portfolio-card.active-slide", next: "#projectNext" },
+    { stage: ".publications-slider-stage", active: ".publication-card.active-slide", next: "#publicationNext" },
+    { stage: ".blog-slider-stage", active: ".blog-lane-card.active-slide", next: "#blogNext" }
+  ];
+
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const MAX_TILT = 4.5;
+
+  stages.forEach(({ stage, active, next }) => {
+    const stageEl = document.querySelector(stage);
+    const nextBtn = document.querySelector(next);
+    if (!stageEl) return;
+
+    let hovering = false;
+
+    // 3D tilt on mouse move over the active card
+    if (!reduce) {
+      stageEl.addEventListener("mousemove", (e) => {
+        const card = stageEl.querySelector(active);
+        if (!card) return;
+        const r = stageEl.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width - 0.5;
+        const py = (e.clientY - r.top) / r.height - 0.5;
+        card.style.setProperty("--tilt-y", (px * MAX_TILT).toFixed(2) + "deg");
+        card.style.setProperty("--tilt-x", (-py * MAX_TILT).toFixed(2) + "deg");
+        card.style.setProperty("--tilt-scale", "1.015");
+      });
+      const resetTilt = () => {
+        stageEl.querySelectorAll("[style*='--tilt']").forEach((c) => {
+          c.style.setProperty("--tilt-x", "0deg");
+          c.style.setProperty("--tilt-y", "0deg");
+          c.style.setProperty("--tilt-scale", "1");
+        });
+      };
+      stageEl.addEventListener("mouseleave", resetTilt);
+    }
+
+    // Gentle autoplay, paused while interacting
+    if (nextBtn) {
+      const shell = stageEl.closest("[class*='slider-shell']") || stageEl;
+      let timer = null;
+      const start = () => {
+        if (reduce || timer) return;
+        timer = setInterval(() => {
+          if (!hovering && !document.hidden) nextBtn.click();
+        }, 6500);
+      };
+      const stop = () => { if (timer) { clearInterval(timer); timer = null; } };
+      shell.addEventListener("mouseenter", () => { hovering = true; });
+      shell.addEventListener("mouseleave", () => { hovering = false; });
+      shell.addEventListener("focusin", () => { hovering = true; });
+      shell.addEventListener("focusout", () => { hovering = false; });
+      // Start autoplay only when the shell scrolls into view
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((en) => (en.isIntersecting ? start() : stop()));
+      }, { threshold: 0.25 });
+      io.observe(shell);
+    }
+  });
+})();
