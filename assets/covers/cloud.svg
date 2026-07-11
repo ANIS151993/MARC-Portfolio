@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Cloud Architecture">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#141821"/><stop offset="0.55" stop-color="#1b2130"/><stop offset="1" stop-color="#0d1017"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffb687"/><stop offset="0.5" stop-color="#ff7720"/><stop offset="1" stop-color="#f74806"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0" stop-color="#ff7720" stop-opacity="0.35"/><stop offset="1" stop-color="#ff7720" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <g stroke="#2b3242" stroke-width="1" opacity="0.5">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200 M0 600 H1200"/>
+    <path d="M150 0 V750 M350 0 V750 M600 0 V750 M850 0 V750 M1050 0 V750"/>
+  </g>
+  <rect width="1200" height="750" fill="url(#glow)"/>
+  <g transform="translate(600 320)">
+    <path d="M-210 60 a95 95 0 0 1 30 -186 a120 120 0 0 1 226 30 a80 80 0 0 1 -4 156 z" fill="#10141d" stroke="url(#acc)" stroke-width="5"/>
+    <path d="M0 -46 l70 40 v82 l-70 40 l-70 -40 v-82 z" fill="none" stroke="url(#acc)" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M-26 22 l16 18 34 -44" fill="none" stroke="url(#acc)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g fill="url(#acc)"><circle cx="180" cy="180" r="7"/><circle cx="1020" cy="560" r="7"/><circle cx="1000" cy="160" r="5"/><circle cx="200" cy="580" r="5"/></g>
+  <text x="600" y="620" font-family="Poppins,sans-serif" font-size="44" font-weight="800" fill="#f4f5f8" text-anchor="middle" letter-spacing="2">CLOUD ARCHITECTURE</text>
+  <text x="600" y="658" font-family="Poppins,sans-serif" font-size="21" font-weight="500" fill="#ff9a55" text-anchor="middle" letter-spacing="5">AWS · SERVERLESS · ZERO-TRUST · HA</text>
+</svg>

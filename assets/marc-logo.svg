@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" role="img" aria-label="MARC">
+  <defs>
+    <linearGradient id="marcOrange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffb687"/>
+      <stop offset="0.45" stop-color="#ff7720"/>
+      <stop offset="1" stop-color="#f74806"/>
+    </linearGradient>
+    <linearGradient id="marcSteel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#c9d0dc"/>
+    </linearGradient>
+    <filter id="marcGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#f74806" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Hex badge with circuit "M" monogram -->
+  <g filter="url(#marcGlow)">
+    <path d="M44 6 L78 26 L78 70 L44 90 L10 70 L10 26 Z"
+          fill="url(#marcOrange)" stroke="#ffd3b2" stroke-width="1.5" stroke-opacity="0.35"/>
+    <path d="M44 6 L78 26 L78 70 L44 90 L10 70 L10 26 Z"
+          fill="none" stroke="#0b0d12" stroke-width="1" stroke-opacity="0.25"/>
+  </g>
+
+  <!-- circuit-style M -->
+  <g fill="none" stroke="#0b0d12" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M24 66 L24 32 L44 52 L64 32 L64 66"/>
+  </g>
+  <g fill="#0b0d12" fill-opacity="0.92">
+    <circle cx="24" cy="32" r="4.6"/>
+    <circle cx="64" cy="32" r="4.6"/>
+    <circle cx="44" cy="52" r="4.6"/>
+    <circle cx="24" cy="66" r="4.6"/>
+    <circle cx="64" cy="66" r="4.6"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="96" y="52" font-family="'Poppins','Segoe UI',sans-serif" font-weight="800"
+        font-size="42" letter-spacing="1.5" fill="url(#marcSteel)">MAR<tspan fill="#ff7720">C</tspan></text>
+  <text x="98" y="76" font-family="'Poppins','Segoe UI',sans-serif" font-weight="600"
+        font-size="12.5" letter-spacing="4.2" fill="#ff9a55">NETWORK · CLOUD · AI</text>
+</svg>
