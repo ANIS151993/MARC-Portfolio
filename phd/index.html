@@ -9,10 +9,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto+Slab:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=20260710order2">
-  <link rel="stylesheet" href="/phd/styles.css?v=20260710order2">
+  <link rel="stylesheet" href="/styles.css?v=20260710order3">
+  <link rel="stylesheet" href="/phd/styles.css?v=20260710order3">
 </head>
 <body class="page-phd">
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
   <header class="site-header" id="top">
     <div class="container nav-wrap">
       <a class="brand" href="#top" aria-label="MARC home">
@@ -374,7 +375,7 @@
             <div class="publications-slider-intro">
               <p class="publications-slider-label">Research Showcase</p>
               <h3 id="publicationSliderTitle">Featured Publication</h3>
-              <p id="publicationSliderMeta">A closer look at two research items at a time.</p>
+              <p id="publicationSliderMeta">One highlighted paper at a time.</p>
             </div>
             <div class="publications-slider-controls" aria-label="Research Publication Controls">
               <button id="publicationPrev" class="slider-btn publication-slider-btn" type="button" aria-label="Show previous publication">
@@ -622,8 +623,13 @@
         <article class="publication-pipeline card reveal interactive-card publication-pipeline-standalone" id="publicationPipeline">
           <div class="publication-pipeline-head">
             <p class="pill">Research Pipeline</p>
-            <h3>Under Review and In Preparation</h3>
-            <p>This is the part of my current research agenda that I am actively moving forward now. Most of it stays close to cloud security, Zero Trust automation, federated intelligence, reliable LLM systems, and AI-assisted infrastructure defense.</p>
+            <h3>Accepted, Under Review, and In Preparation</h3>
+            <p>Beyond the 15 published papers, this is my active research agenda, split into three clear stages. Most of it stays close to cloud security, Zero Trust automation, federated intelligence, reliable LLM systems, and AI-assisted infrastructure defense.</p>
+            <div class="pipeline-stage-summary">
+              <span class="pipeline-stage-chip"><strong>2</strong> Accepted / Awaiting</span>
+              <span class="pipeline-stage-chip"><strong>1</strong> Under Review</span>
+              <span class="pipeline-stage-chip"><strong>4</strong> In Preparation</span>
+            </div>
           </div>
           <div class="pipeline-columns">
             <div class="pipeline-group">
@@ -705,15 +711,15 @@
           </div>
           <div class="project-signal-grid">
             <article class="project-signal">
-              <strong>6</strong>
+              <strong>8</strong>
               <span>Live research showcases</span>
             </article>
             <article class="project-signal">
-              <strong>3</strong>
-              <span>Firewall and cloud security builds</span>
+              <strong>4</strong>
+              <span>Security and firewall builds</span>
             </article>
             <article class="project-signal">
-              <strong>2</strong>
+              <strong>3</strong>
               <span>LLM and distributed AI systems</span>
             </article>
             <article class="project-signal">
@@ -734,7 +740,7 @@
             <div class="projects-slider-intro">
               <p class="projects-slider-label">Project Showcase</p>
               <h3 id="projectSliderTitle">Featured Project</h3>
-              <p id="projectSliderMeta">A focused look at two projects at a time.</p>
+              <p id="projectSliderMeta">One highlighted project at a time.</p>
             </div>
             <div class="projects-slider-controls" aria-label="Portfolio Project Controls">
               <button id="projectPrev" class="slider-btn project-slider-btn" type="button" aria-label="Show previous project">
@@ -754,6 +760,74 @@
 
           <div class="projects-slider-stage">
             <div class="portfolio-grid" id="projectGrid">
+              <article class="portfolio-card reveal interactive-card" data-cat="security llm">
+                <div class="project-preview-shell">
+                  <div class="project-browser-bar" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <p>apts.marcbd.site</p>
+                  </div>
+                  <div class="project-preview">
+                    <iframe class="project-frame" src="https://apts.marcbd.site/" title="Live preview of the LLM-Powered Automated Penetration Testing Platform" loading="lazy" tabindex="-1"></iframe>
+                    <div class="project-preview-overlay"></div>
+                    <div class="project-preview-copy">
+                      <span class="project-short-name">APTS</span>
+                      <strong>Autonomous Pentesting</strong>
+                      <p>Self-hosted LLM orchestration with scope enforcement</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <p class="project-role">First-Author LLM Security Research Build</p>
+                  <h3>LLM-Powered Automated Penetration Testing Platform</h3>
+                  <p>A research system that orchestrates self-hosted LLMs for autonomous penetration testing with three-layer scope enforcement and tamper-evident cryptographic audit chains, so security testing stays authorized, auditable, and reproducible. This work anchors an in-preparation IEEE paper.</p>
+                  <div class="project-tags">
+                    <span>Autonomous Pentesting</span>
+                    <span>LLM Orchestration</span>
+                    <span>Zero Trust Scope</span>
+                  </div>
+                  <div class="project-actions">
+                    <a class="project-link" href="https://github.com/ANIS151993/Automated-Penetration-Testing-system" target="_blank" rel="noopener">View Repo</a>
+                    <a class="project-link project-link-live" href="https://apts.marcbd.site/" target="_blank" rel="noopener">Open Live Demo</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="portfolio-card reveal interactive-card" data-cat="llm">
+                <div class="project-preview-shell">
+                  <div class="project-browser-bar" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <p>anis151993.github.io/Deepfake-Detection-in-MIS/</p>
+                  </div>
+                  <div class="project-preview">
+                    <iframe class="project-frame" src="https://anis151993.github.io/Deepfake-Detection-in-MIS/" title="Live preview of Deepfake Detection in MIS" loading="lazy" tabindex="-1"></iframe>
+                    <div class="project-preview-overlay"></div>
+                    <div class="project-preview-copy">
+                      <span class="project-short-name">DFD</span>
+                      <strong>Deepfake Detection</strong>
+                      <p>DenseNet and multi-scale digital forensics</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <p class="project-role">First-Author Applied AI Research Build</p>
+                  <h3>Deepfake Detection in MIS</h3>
+                  <p>The research system behind my first-author IEEE COMPAS 2025 paper: a deepfake detection model for management information systems that leverages DenseNet with multi-scale information fusion to strengthen digital forensics and media trust.</p>
+                  <div class="project-tags">
+                    <span>Deepfake Detection</span>
+                    <span>DenseNet</span>
+                    <span>Digital Forensics</span>
+                  </div>
+                  <div class="project-actions">
+                    <a class="project-link" href="https://github.com/ANIS151993/Deepfake-Detection-in-MIS" target="_blank" rel="noopener">View Repo</a>
+                    <a class="project-link project-link-live" href="https://anis151993.github.io/Deepfake-Detection-in-MIS/" target="_blank" rel="noopener">Open Live Demo</a>
+                  </div>
+                </div>
+              </article>
+
               <article class="portfolio-card reveal interactive-card" data-cat="security">
                 <div class="project-preview-shell">
                   <div class="project-browser-bar" aria-hidden="true">
@@ -992,7 +1066,7 @@
                 <span>research lanes I explain here</span>
               </article>
               <article>
-                <strong>12 + 7</strong>
+                <strong>15 + 7</strong>
                 <span>papers and pipeline items</span>
               </article>
               <article>
@@ -1031,7 +1105,7 @@
             <div class="blog-slider-intro">
               <p class="blog-slider-label">Blog Showcase</p>
               <h3 id="blogSliderTitle">Featured Reading Lane</h3>
-              <p id="blogSliderMeta">Two reading lanes at a time, with the same compact flow as the rest of the site.</p>
+              <p id="blogSliderMeta">One highlighted read at a time, with the same compact flow as the rest of the site.</p>
             </div>
             <div class="blog-slider-controls" aria-label="Blog Showcase Controls">
               <button id="blogPrev" class="slider-btn blog-slider-btn" type="button" aria-label="Show previous blog lane">
@@ -1206,7 +1280,7 @@
           </div>
           <div class="resume-center-stats">
             <article>
-              <strong>12</strong>
+              <strong>15</strong>
               <span>published papers</span>
             </article>
             <article>
@@ -1230,7 +1304,7 @@
               <h3>PhD Resume</h3>
               <p class="resume-card-copy">Focused on research direction, first-author work, co-authored publications, ongoing submissions, reproducible systems, and the areas where I want to contribute in future academic work.</p>
               <div class="resume-chip-row">
-                <span>12 Published</span>
+                <span>15 Published</span>
                 <span>7 In Pipeline</span>
                 <span>Cloud + Security + AI</span>
                 <span>Faculty Review Ready</span>
@@ -1316,6 +1390,9 @@
     </div>
   </footer>
 
-  <script src="/script.js?v=20260710order1"></script>
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+    <span aria-hidden="true">&#8593;</span>
+  </button>
+  <script src="/script.js?v=20260710order3"></script>
 </body>
 </html>

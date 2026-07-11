@@ -247,7 +247,7 @@ let visibleWorkCards = [];
 let workIndex = 0;
 let workSliderTimer = null;
 
-const getShowcaseItemsPerView = () => (window.innerWidth <= 900 ? 1 : 2);
+const getShowcaseItemsPerView = () => 1;
 
 const getShowcaseLaneCount = (cards) => {
   if (!cards.length) {
@@ -1389,4 +1389,37 @@ if (yearNode) {
   });
 
   render();
+})();
+
+/* ---------------------------------------------------------------
+   Scroll progress bar + back-to-top button (easy navigation)
+   --------------------------------------------------------------- */
+(function initScrollNav() {
+  const progress = document.getElementById("scrollProgress");
+  const toTop = document.getElementById("backToTop");
+  if (!progress && !toTop) return;
+
+  const onScroll = () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = height > 0 ? (scrollTop / height) * 100 : 0;
+    if (progress) progress.style.width = pct + "%";
+    if (toTop) toTop.classList.toggle("visible", scrollTop > 600);
+  };
+
+  let ticking = false;
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => { onScroll(); ticking = false; });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  if (toTop) {
+    toTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  onScroll();
 })();
