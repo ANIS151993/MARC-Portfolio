@@ -9,9 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto+Slab:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260710order2">
+  <link rel="stylesheet" href="styles.css?v=20260710order3">
 </head>
 <body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
   <header class="site-header" id="top">
     <div class="container nav-wrap">
       <a class="brand" href="#top" aria-label="MARC home">
@@ -74,8 +75,8 @@
           <p>Published Research Papers</p>
         </article>
         <article>
-          <h2 data-counter="4" data-decimals="2">0</h2>
-          <p>Final Master's CGPA Target (4.00/4.00)</p>
+          <h2 data-counter="3.95" data-decimals="2">0</h2>
+          <p>Master's GPA (out of 4.00)</p>
         </article>
         <article>
           <h2>May 9, 2026</h2>
@@ -522,10 +523,10 @@
     <section id="latest-works" class="section section-light section-latest-works">
       <div class="container">
         <header class="section-head reveal">
-          <p class="subtext">Take A Look</p>
-          <h2><span>Latest</span> Works</h2>
+          <p class="subtext">Client &amp; Enterprise Delivery</p>
+          <h2><span>Completed</span> Works</h2>
           <div class="works-divider" aria-hidden="true"></div>
-          <p class="section-intro">This is a quick view of the work I have actually delivered across mail infrastructure, file services, IP telephony, network architecture, cloud architecture, AI automation platforms, and business web development. I kept the spirit of the old works gallery, but I rewrote this version so visitors can understand the work faster and see the range more clearly.</p>
+          <p class="section-intro">Real work I have delivered for companies and clients &mdash; mail infrastructure, file services, IP telephony, network and cloud architecture, AI automation platforms, and business websites. These are production deployments and live sites, separate from the open-source builds you will find in the <a href="#projects">Projects</a> section below.</p>
         </header>
 
         <div class="filter-row works-filter-row reveal" id="workFilters">
@@ -543,8 +544,8 @@
           <div class="works-slider-topbar">
             <div class="works-slider-intro">
               <p class="works-slider-label">Compact Work Showcase</p>
-              <h3 id="workSliderTitle">Latest Delivery</h3>
-              <p id="workSliderMeta">A focused look at two deployments at a time.</p>
+              <h3 id="workSliderTitle">Featured Delivery</h3>
+              <p id="workSliderMeta">One highlighted delivery at a time.</p>
             </div>
             <div class="works-slider-controls" aria-label="Latest Works Controls">
               <button id="workPrev" class="slider-btn work-slider-btn" type="button" aria-label="Show previous work">
@@ -999,7 +1000,7 @@
             </div>
             <div class="works-slider-status">
               <p id="workSliderCount">1 / 1</p>
-              <p id="workSliderCategory">Latest Works</p>
+              <p id="workSliderCategory">Completed Works</p>
             </div>
           </div>
           <div class="works-slider-thumbs" id="workSliderThumbs" aria-label="Latest Works Thumbnails"></div>
@@ -1010,9 +1011,9 @@
     <section id="projects" class="section section-dark section-projects">
       <div class="container">
         <header class="section-head reveal">
-          <p class="subtext">GitHub Highlights</p>
+          <p class="subtext">GitHub Highlights &amp; Open-Source Builds</p>
           <h2><span>Portfolio</span> Projects</h2>
-          <p class="section-intro">These are the projects I usually point people to when I want them to understand how I think. They sit around cloud infrastructure, network security, AI automation, data workflow design, applied AI, and API-driven web development, and they show the ideas I cared enough about to build properly.</p>
+          <p class="section-intro">Separate from the client work in <a href="#latest-works">Completed Works</a> above, these are my own open-source builds and research systems &mdash; cloud infrastructure, network security, AI automation, data workflow tooling, applied AI, and API-driven web apps. Each one is live and shows how I think through a problem.</p>
         </header>
         <article class="project-showcase reveal interactive-card">
           <div class="project-showcase-copy">
@@ -1053,7 +1054,7 @@
             <div class="projects-slider-intro">
               <p class="projects-slider-label">Project Showcase</p>
               <h3 id="projectSliderTitle">Featured Project</h3>
-              <p id="projectSliderMeta">A focused look at two projects at a time.</p>
+              <p id="projectSliderMeta">One highlighted project at a time.</p>
             </div>
             <div class="projects-slider-controls" aria-label="Portfolio Project Controls">
               <button id="projectPrev" class="slider-btn project-slider-btn" type="button" aria-label="Show previous project">
@@ -1601,7 +1602,7 @@
             <div class="publications-slider-intro">
               <p class="publications-slider-label">Research Showcase</p>
               <h3 id="publicationSliderTitle">Featured Publication</h3>
-              <p id="publicationSliderMeta">A closer look at two research items at a time.</p>
+              <p id="publicationSliderMeta">One highlighted paper at a time.</p>
             </div>
             <div class="publications-slider-controls" aria-label="Research Publication Controls">
               <button id="publicationPrev" class="slider-btn publication-slider-btn" type="button" aria-label="Show previous publication">
@@ -1849,8 +1850,13 @@
         <article class="publication-pipeline card reveal interactive-card publication-pipeline-standalone" id="publicationPipeline">
           <div class="publication-pipeline-head">
             <p class="pill">Research Pipeline</p>
-            <h3>Under Review and In Preparation</h3>
-            <p>Beyond the published work, this is the part of the pipeline I am actively trying to move forward now. Most of it still stays close to cloud security, Zero Trust automation, federated intelligence, and AI-assisted infrastructure defense.</p>
+            <h3>Accepted, Under Review, and In Preparation</h3>
+            <p>Beyond the 15 published papers, this is the active pipeline, split into three clear stages. Most of it stays close to cloud security, Zero Trust automation, federated intelligence, and AI-assisted infrastructure defense.</p>
+            <div class="pipeline-stage-summary">
+              <span class="pipeline-stage-chip"><strong>2</strong> Accepted / Awaiting</span>
+              <span class="pipeline-stage-chip"><strong>1</strong> Under Review</span>
+              <span class="pipeline-stage-chip"><strong>4</strong> In Preparation</span>
+            </div>
           </div>
           <div class="pipeline-columns">
             <div class="pipeline-group">
@@ -1936,15 +1942,15 @@
               <span>years of industry work</span>
             </article>
             <article>
-              <strong>12</strong>
+              <strong>15</strong>
               <span>published papers</span>
             </article>
             <article>
-              <strong>5</strong>
-              <span>under review</span>
+              <strong>3</strong>
+              <span>accepted / under review</span>
             </article>
             <article>
-              <strong>2</strong>
+              <strong>4</strong>
               <span>in preparation</span>
             </article>
           </div>
@@ -1982,9 +1988,9 @@
               <h3>PhD Resume</h3>
               <p class="resume-card-copy">Focused on research direction, first-author work, co-authored publications, ongoing submissions, research systems, and the areas where I want to contribute in future academic work.</p>
               <div class="resume-chip-row">
-                <span>12 Published</span>
-                <span>5 Under Review</span>
-                <span>2 In Preparation</span>
+                <span>15 Published</span>
+                <span>3 Accepted / Under Review</span>
+                <span>4 In Preparation</span>
                 <span>Security + Cloud + Research</span>
               </div>
             </div>
@@ -2023,15 +2029,15 @@
                 <span>main areas I write about</span>
               </article>
               <article>
-                <strong>21</strong>
+                <strong>31</strong>
                 <span>work examples I can explain</span>
               </article>
               <article>
-                <strong>6</strong>
+                <strong>13</strong>
                 <span>project demos with context</span>
               </article>
               <article>
-                <strong>19</strong>
+                <strong>22</strong>
                 <span>research items and notes</span>
               </article>
             </div>
@@ -2062,7 +2068,7 @@
             <div class="blog-slider-intro">
               <p class="blog-slider-label">Blog Showcase</p>
               <h3 id="blogSliderTitle">Featured Reading Lane</h3>
-              <p id="blogSliderMeta">Two reading lanes at a time, with the same compact flow as the rest of the site.</p>
+              <p id="blogSliderMeta">One highlighted read at a time, with the same compact flow as the rest of the site.</p>
             </div>
             <div class="blog-slider-controls" aria-label="Blog Showcase Controls">
               <button id="blogPrev" class="slider-btn blog-slider-btn" type="button" aria-label="Show previous blog lane">
@@ -2662,7 +2668,10 @@
     </div>
   </footer>
 
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+    <span aria-hidden="true">&#8593;</span>
+  </button>
   <script src="checkout-links.js"></script>
-  <script src="script.js?v=20260710order1"></script>
+  <script src="script.js?v=20260710order3"></script>
 </body>
 </html>
