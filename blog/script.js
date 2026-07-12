@@ -72,7 +72,7 @@ const works = [
     visual: "linear-gradient(145deg, #10263a, #112031 46%, #253249 100%)",
     links: [
       { label: "Read Related Note", href: "/blog/posts/cross-cloud-firewall-paper/", internal: true, variant: "note" },
-      { label: "Open Advanced Build", href: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-3/", variant: "live" }
+      { label: "Open Advanced Build", href: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-2/", variant: "live" }
     ]
   },
   {
@@ -185,8 +185,8 @@ const projects = [
   {
     label: "Autonomous Security Systems",
     title: "Autonomous Self-Learning Serverless Intelligent Firewall",
-    browserLabel: "anis151993.github.io/Serverless-Intelligent-Firewall-Research-3/",
-    demo: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-3/",
+    browserLabel: "anis151993.github.io/Serverless-Intelligent-Firewall-Research-2/",
+    demo: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-2/",
     repo: "https://github.com/ANIS151993/Serverless-Intelligent-Firewall-Research-3.git",
     story: "This version moves the firewall agenda toward a more ambitious question: can a cloud defense system learn from new intelligence and become more adaptive over time instead of staying mostly static?",
     points: [
@@ -424,7 +424,7 @@ const publications = [
     text: "This is one of my larger ongoing ideas. The goal is to bring together self-learning behavior, open-source threat intelligence, and federated Zero Trust thinking in one stronger serverless defense model.",
     links: [
       { label: "Repo", href: "https://github.com/ANIS151993/Serverless-Intelligent-Firewall-Research-3.git" },
-      { label: "Webpage", href: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-3/" }
+      { label: "Webpage", href: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-2/" }
     ]
   },
   {
