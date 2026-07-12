@@ -8,7 +8,10 @@ window.MARC_SERVICES = {
   "web-development": { label: "Web Development", price: 70, unit: "week" },
   "ip-telephony": { label: "IP-Telephony", price: 50, unit: "week" },
   "system-architecture": { label: "System Architecture", price: 50, unit: "week" },
-  "software-app-development": { label: "Software and App Development", price: 99, unit: "week" }
+  "software-app-development": { label: "Software and App Development", price: 99, unit: "week" },
+  "ai-automation": { label: "AI Automation", price: 120, unit: "week" },
+  "ai-networking": { label: "AI Networking", price: 150, unit: "week" },
+  "personal-ai-assistant": { label: "Personal AI Assistant", price: 99, unit: "week" }
 };
 
 // Optional add-ons that can be attached to any order.
@@ -25,5 +28,8 @@ window.MARC_CHECKOUT_LINKS = {
   "web-development": { paypal: "https://paypal.me/MdAnisurRahmanC/70" },
   "ip-telephony": { paypal: "https://paypal.me/MdAnisurRahmanC/50" },
   "system-architecture": { paypal: "https://paypal.me/MdAnisurRahmanC/50" },
-  "software-app-development": { paypal: "https://paypal.me/MdAnisurRahmanC/99" }
+  "software-app-development": { paypal: "https://paypal.me/MdAnisurRahmanC/99" },
+  "ai-automation": { paypal: "https://paypal.me/MdAnisurRahmanC/120" },
+  "ai-networking": { paypal: "https://paypal.me/MdAnisurRahmanC/150" },
+  "personal-ai-assistant": { paypal: "https://paypal.me/MdAnisurRahmanC/99" }
 };
