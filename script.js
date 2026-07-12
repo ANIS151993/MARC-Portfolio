@@ -1507,3 +1507,49 @@ if (yearNode) {
     }
   });
 })();
+
+/* ---------------------------------------------------------------
+   Hero profile auto slideshow (crossfade + dots + pause on hover)
+   --------------------------------------------------------------- */
+(function initHeroSlideshow() {
+  const shell = document.getElementById("heroSlideshow");
+  if (!shell) return;
+  const slides = Array.from(shell.querySelectorAll(".slide"));
+  const dotsWrap = document.getElementById("heroSlideDots");
+  if (slides.length < 2) return;
+
+  let idx = 0, timer = null, hover = false;
+
+  if (dotsWrap) {
+    slides.forEach((_, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.setAttribute("aria-label", "Show portrait " + (i + 1));
+      if (i === 0) b.classList.add("active");
+      b.addEventListener("click", () => { go(i); restart(); });
+      dotsWrap.appendChild(b);
+    });
+  }
+  const dots = dotsWrap ? Array.from(dotsWrap.children) : [];
+
+  function go(n) {
+    slides[idx].classList.remove("is-active");
+    dots[idx] && dots[idx].classList.remove("active");
+    idx = (n + slides.length) % slides.length;
+    slides[idx].classList.add("is-active");
+    dots[idx] && dots[idx].classList.add("active");
+  }
+  function next() { if (!hover && !document.hidden) go(idx + 1); }
+  function start() { if (!timer) timer = setInterval(next, 3800); }
+  function stop() { if (timer) { clearInterval(timer); timer = null; } }
+  function restart() { stop(); start(); }
+
+  shell.addEventListener("mouseenter", () => { hover = true; });
+  shell.addEventListener("mouseleave", () => { hover = false; });
+
+  const io = new IntersectionObserver(
+    (entries) => entries.forEach((e) => (e.isIntersecting ? start() : stop())),
+    { threshold: 0.2 }
+  );
+  io.observe(shell);
+})();

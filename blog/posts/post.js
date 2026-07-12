@@ -29,39 +29,39 @@ const getGroup = (note) => {
 
 const NOTE_META = {
   project: {
-    displayType: "Research Project",
-    previewLabel: "Research Build Preview",
-    contextKicker: "Research Fit",
-    contextTitle: "How this project fits my research path",
-    contextText: "I use project notes to show that the research direction is not only theoretical. These builds let me test, explain, and refine the ideas in a form that a reviewer can inspect directly.",
+    displayType: "AI Project",
+    previewLabel: "AI Build Preview",
+    contextKicker: "AI Career Focus",
+    contextTitle: "How this project fits my AI career focus",
+    contextText: "I use project notes to show my AI career focus in a form a reviewer can inspect directly: AI networking, LLM training, harness engineering, Agentic AI, AI automation, and AI-driven network security, built as working systems rather than slides.",
     bullets: [
-      "The system view matters because I want my research to stay close to implementation, not only paper language.",
-      "A working build helps show how I think about architecture, security logic, and design tradeoffs together.",
-      "I treat these project notes as evidence of how I move from a question to a technical system."
+      "Each build puts AI at the decision or automation layer, not as an afterthought.",
+      "A running system shows how I combine architecture, AI logic, and reliable execution.",
+      "These notes are evidence of how I move from an AI idea to a working system."
     ]
   },
   paper: {
-    displayType: "Publication Note",
+    displayType: "Research Publication",
     previewLabel: "Publication Snapshot",
-    contextKicker: "Research Fit",
-    contextTitle: "How this publication fits my research path",
-    contextText: "I use publication notes to explain the actual research question, the reason I worked on it, and how the paper connects back to the broader direction I want to keep building in a PhD.",
+    contextKicker: "AI Career Focus",
+    contextTitle: "How this publication fits my AI career focus",
+    contextText: "I use publication notes to explain the AI question behind the paper and how it advances my career focus: AI-driven network security, AI networking, LLM training, Agentic AI, and AI automation, backed by peer-reviewed research.",
     bullets: [
-      "The publication note gives more context than a citation line or title alone can provide.",
-      "I want a professor or admissions reviewer to see both the technical topic and the reason it matters to my larger research path.",
+      "The note gives more context than a citation line or title alone.",
+      "It shows the AI topic and why it matters to my larger AI direction.",
       "When a paper connects to a demo or system build, I keep that link visible here."
     ]
   },
   background: {
-    displayType: "Systems Background",
-    previewLabel: "Systems Snapshot",
-    contextKicker: "Research Fit",
-    contextTitle: "Why this systems background still matters to my research",
-    contextText: "These notes show the operational and infrastructure experience that shaped the questions I care about in research. I keep them in the archive because they explain where many of my cloud security and systems ideas came from.",
+    displayType: "Foundations for AI",
+    previewLabel: "Foundation Snapshot",
+    contextKicker: "AI Career Focus",
+    contextTitle: "Why this foundation powers my AI work",
+    contextText: "These notes show the network, systems, and infrastructure experience my AI work is built on. I keep them because AI networking and AI-driven network security only make sense on top of real, production-grade infrastructure.",
     bullets: [
-      "Real infrastructure work helped me see which problems matter outside a paper or lab setting.",
-      "I keep these notes because my research direction grew out of practical systems, network, and security work.",
-      "They provide context for why I care about cloud defense, trust boundaries, reliability, and secure architecture."
+      "Real infrastructure work is the layer my AI now automates and defends.",
+      "It grounds my AI networking and AI-driven security in production reality.",
+      "It explains why I care about trust boundaries, reliability, and secure architecture in AI systems."
     ]
   }
 };
@@ -187,7 +187,7 @@ const renderGallery = (gallery) => {
     <div class="gallery-head">
       <p class="section-kicker">Visual Walkthrough</p>
       <h2>Images and supporting visuals</h2>
-      <p>I added a small visual gallery here so the note is easier to scan and the system or research direction is easier to understand.</p>
+      <p>I added a small visual gallery here so the note is easier to scan and the system and its place in my AI direction are easier to understand.</p>
     </div>
     <div class="mini-gallery">
       ${gallery
