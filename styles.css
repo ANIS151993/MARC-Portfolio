@@ -104,8 +104,9 @@ img {
   width: auto;
   max-width: 300px;
   display: block;
-  /* White logo on a transparent background, legible on the dark header. */
-  filter: brightness(0) invert(1) drop-shadow(0 3px 10px rgba(0, 0, 0, 0.5));
+  /* Logo art is baked white with a transparent name knockout, so the name
+     reads through the bar on the dark header. No color filter needed. */
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.5));
   transition: filter 0.3s ease;
 }
 
@@ -114,7 +115,7 @@ img {
 }
 
 .brand:hover img {
-  filter: brightness(0) invert(1) drop-shadow(0 5px 14px rgba(247, 72, 6, 0.5));
+  filter: drop-shadow(0 5px 14px rgba(247, 72, 6, 0.5));
 }
 
 .main-nav {
