@@ -97,8 +97,7 @@ img {
   align-items: center;
   padding: 7px 16px;
   border-radius: 12px;
-  /* Light plate so the logo keeps its original gray-and-black colors and the
-     dark name text stays legible on the dark header. */
+  /* Light plate so the darker gray/black logo stays legible on the dark header. */
   background: linear-gradient(180deg, #ffffff, #f2f2f4);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.9);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
