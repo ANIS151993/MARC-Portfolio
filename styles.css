@@ -95,27 +95,26 @@ img {
   flex: 0 0 auto;
   display: flex;
   align-items: center;
-  background: transparent;
-  transition: transform 0.3s ease;
+  padding: 7px 16px;
+  border-radius: 12px;
+  /* Light plate so the logo keeps its original gray-and-black colors and the
+     dark name text stays legible on the dark header. */
+  background: linear-gradient(180deg, #ffffff, #f2f2f4);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .brand img {
-  height: 44px;
+  height: 34px;
   width: auto;
-  max-width: 232px;
+  max-width: 220px;
   display: block;
-  /* Transparent-background logo on a dark header: render it as a clean white
-     mark so it stays legible with no plate behind it. */
-  filter: brightness(0) invert(1) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.45));
-  transition: filter 0.3s ease;
+  filter: none;
 }
 
 .brand:hover {
   transform: translateY(-1px);
-}
-
-.brand:hover img {
-  filter: brightness(0) invert(1) drop-shadow(0 6px 16px rgba(247, 72, 6, 0.5));
+  box-shadow: 0 10px 24px rgba(247, 72, 6, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 .main-nav {
@@ -5890,9 +5889,13 @@ body.page-phd .publication-thumb.active {
     gap: 0.5rem;
   }
 
+  .brand {
+    padding: 5px 11px;
+  }
+
   .brand img {
-    height: 36px;
-    max-width: 190px;
+    height: 28px;
+    max-width: 172px;
   }
 
   .main-nav {
