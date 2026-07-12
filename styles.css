@@ -100,9 +100,9 @@ img {
 }
 
 .brand img {
-  height: 42px;
+  height: 50px;
   width: auto;
-  max-width: 230px;
+  max-width: 300px;
   display: block;
   /* White logo on a transparent background, legible on the dark header. */
   filter: brightness(0) invert(1) drop-shadow(0 3px 10px rgba(0, 0, 0, 0.5));
@@ -5890,8 +5890,8 @@ body.page-phd .publication-thumb.active {
   }
 
   .brand img {
-    height: 34px;
-    max-width: 185px;
+    height: 42px;
+    max-width: 210px;
   }
 
   .main-nav {
