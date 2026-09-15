@@ -12,9 +12,9 @@ window.blogPostCatalog = {
       { label: "Best Fit Roles", value: "AI-Driven Network Security Engineer, AI Security Engineer, Cloud/Network AI Security Engineer" }
     ],
     sidebarStats: [
-      { value: "Project", label: "Hands-on build" },
-      { value: "Cloud", label: "Security-first scope" },
-      { value: "Live", label: "Demo available" }
+      { value: "98%", label: "Detection accuracy" },
+      { value: "0.990", label: "ROC-AUC (CICIDS2017)" },
+      { value: "135 ms", label: "Avg. response latency" }
     ],
     preview: {
       type: "iframe",
@@ -34,7 +34,7 @@ window.blogPostCatalog = {
       },
       {
         heading: "How the AI-driven defense works",
-        text: "The firewall runs serverless and applies Zero Trust by default: every request is scored and verified in context instead of being trusted because of where it came from. AI decision logic sits at the center of that scoring.",
+        text: "The firewall runs on AWS Lambda, WAF, IAM, and S3 and applies Zero Trust by default: every request is scored in context. LSTM, BiGRU, and XGBoost classifiers feed one detection pipeline that reached 98% multi-class accuracy and 0.990 ROC-AUC across five attack categories on CICIDS2017, at a 135 ms average response latency.",
         bullets: [
           "Serverless keeps the defense elastic and cloud-native.",
           "Zero Trust removes implicit internal trust, so the AI evaluates every flow.",
@@ -83,7 +83,7 @@ window.blogPostCatalog = {
     sidebarStats: [
       { value: "Cross-Cloud", label: "Architecture scope" },
       { value: "Policy", label: "Adaptive focus" },
-      { value: "Under Review", label: "Paper linked" }
+      { value: "IEEE", label: "SmartCloud 2026" }
     ],
     preview: {
       type: "iframe",
@@ -133,7 +133,8 @@ window.blogPostCatalog = {
     resources: [
       { label: "Open Live Demo", href: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-2/" },
       { label: "View Source Repo", href: "https://github.com/ANIS151993/Serverless-Intelligent-Firewall-Research-2.git" },
-      { label: "Read Related Paper Note", href: "/blog/posts/cross-cloud-firewall-paper/" }
+      { label: "Read Related Paper Note", href: "/blog/posts/cross-cloud-firewall-paper/" },
+      { label: "Open IEEE Xplore", href: "https://ieeexplore.ieee.org/document/11638707" }
     ],
     related: ["serverless-intelligent-firewall", "autonomous-firewall", "cross-cloud-firewall-paper"]
   },
@@ -155,10 +156,11 @@ window.blogPostCatalog = {
       { value: "Q1", label: "Journal target" }
     ],
     preview: {
-      type: "iframe",
-      label: "Live Demo Preview",
-      url: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-2/",
-      browserLabel: "anis151993.github.io/Serverless-Intelligent-Firewall-Research-2/"
+      type: "citation",
+      label: "Research Snapshot",
+      title: "Target: Q1 Journal",
+      note: "The third firewall generation: live REST API threat intelligence, multi-paradigm machine learning, and federated Zero Trust in one self-learning serverless defense. Paper in preparation with Dr. Kefei Wang.",
+      pills: ["Threat Intelligence", "Self-Learning", "Federated Zero Trust"]
     },
     sections: [
       {
@@ -200,9 +202,9 @@ window.blogPostCatalog = {
     
     ],
     resources: [
-      { label: "Open Live Demo", href: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-2/" },
-      { label: "View Source Repo", href: "https://github.com/ANIS151993/Serverless-Intelligent-Firewall-Research-3.git" },
-      { label: "Read Paper Pipeline Context", href: "/blog/posts/cross-cloud-firewall-paper/" }
+      { label: "View Source Repo", href: "https://github.com/ANIS151993/Serverless-Intelligent-Firewall-Research-3" },
+      { label: "Read the Published SIF-2 Paper Note", href: "/blog/posts/cross-cloud-firewall-paper/" },
+      { label: "Read the FedThreat-X Paper Note", href: "/blog/posts/fedthreatx-paper/" }
     ],
     related: ["serverless-intelligent-firewall", "cross-cloud-firewall", "self-correcting-llm"]
   },
@@ -219,9 +221,9 @@ window.blogPostCatalog = {
       { label: "Best Fit Roles", value: "AI Automation Engineer, LLM Harness Engineer, Applied AI Engineer" }
     ],
     sidebarStats: [
-      { value: "Clean", label: "Workflow focus" },
+      { value: "Under Review", label: "IEEE ISAIA 2026" },
       { value: "Repeatable", label: "Output standard" },
-      { value: "Demo", label: "Public build" }
+      { value: "Live", label: "Public app" }
     ],
     preview: {
       type: "iframe",
@@ -269,9 +271,9 @@ window.blogPostCatalog = {
     
     ],
     resources: [
-      { label: "Open Live Demo", href: "https://anis151993.github.io/Notebook-Studio/" },
-      { label: "View Source Repo", href: "https://github.com/ANIS151993/Notebook-Studio.git" },
-      { label: "Back to My Blog", href: "/blog/" }
+      { label: "Open Live App", href: "https://datamentor.marcbd.site/" },
+      { label: "Open Project Page", href: "https://anis151993.github.io/Notebook-Studio/" },
+      { label: "View Source Repo", href: "https://github.com/ANIS151993/DataMentor" }
     ],
     related: ["distributed-ai-ensemble", "self-correcting-llm", "enterprise-ai-erp-paper"]
   },
@@ -288,9 +290,9 @@ window.blogPostCatalog = {
       { label: "Best Fit Roles", value: "Agentic AI Engineer, LLM Orchestration/Harness Engineer, Applied ML Engineer" }
     ],
     sidebarStats: [
-      { value: "Multi-Agent", label: "Core design" },
-      { value: "Local", label: "Execution model" },
-      { value: "Under Review", label: "Paper linked" }
+      { value: "4", label: "Local inference agents" },
+      { value: "5", label: "Aggregation strategies" },
+      { value: "In Prep", label: "IEEE paper" }
     ],
     preview: {
       type: "iframe",
@@ -310,7 +312,7 @@ window.blogPostCatalog = {
       },
       {
         heading: "How the orchestration harness works",
-        text: "The system routes tasks to specialized agents, coordinates their reasoning, and reconciles their outputs. Building that orchestration harness is where the real engineering lives.",
+        text: "Four independently run local agents answer the same task, and the harness reconciles them through five aggregation strategies, including majority voting, dynamic weighted voting, and a two-round debate. Results are validated with paired t-tests and Wilcoxon signed-rank tests on MMLU, GSM8K, and TruthfulQA.",
         bullets: [
           "Task splitting enables specialized, parallel reasoning.",
           "Agent collaboration compares and improves candidate answers.",
@@ -319,7 +321,7 @@ window.blogPostCatalog = {
       },
       {
         heading: "What I owned",
-        text: "I am first author on the related paper and drove the design. It connects to my planned literature review on distributed agent networks, extending my Agentic AI research line.",
+        text: "I am first author on the related IEEE paper in preparation with Dr. Kefei Wang, covering design, optimization, reproducibility, and statistical evaluation of the ensemble.",
         bullets: [
           "I shaped the multi-agent architecture and the coordination logic.",
           "The demo makes the orchestration inspectable and easy to discuss.",
@@ -357,9 +359,9 @@ window.blogPostCatalog = {
       { label: "Best Fit Roles", value: "LLM Engineer, Agentic AI Engineer, AI Evaluation/Research Engineer" }
     ],
     sidebarStats: [
-      { value: "3-Stage", label: "Reasoning flow" },
-      { value: "Math", label: "Problem focus" },
-      { value: "CAC'26", label: "Draft venue" }
+      { value: "31.2 → 49.9%", label: "GSM8K accuracy" },
+      { value: "78%", label: "Errors corrected" },
+      { value: "Accepted", label: "AIR-RES/CAC 2026" }
     ],
     preview: {
       type: "iframe",
@@ -379,7 +381,7 @@ window.blogPostCatalog = {
       },
       {
         heading: "How the self-correction harness works",
-        text: "A three-stage loop - attempt, review, refine - wraps the model so it pauses and checks itself. Designing that loop is harness engineering applied to LLM training and evaluation.",
+        text: "A three-stage Generator, Critic, Synthesizer loop wraps the model so producing an answer and reviewing it are separate jobs, reconciled in a third stage. On GSM8K it lifted accuracy from 31.2% to 49.9% (a 60% relative gain) with a 78% error-correction rate.",
         bullets: [
           "Staged review exposes weak reasoning before the final answer.",
           "The loop reduces confident-but-wrong outputs.",
@@ -548,7 +550,7 @@ window.blogPostCatalog = {
     ],
     resources: [
       { label: "Open IEEE Xplore", href: "https://ieeexplore.ieee.org/abstract/document/11294238/" },
-      { label: "View Google Scholar", href: "https://scholar.google.com/citations?user=NQyywPoAAAAJ" },
+      { label: "Open Project Page", href: "https://anis151993.github.io/Distributed-Networks/" },
       { label: "Back to My Blog", href: "/blog/" }
     ],
     related: ["enterprise-ai-erp-paper", "distributed-ai-paper", "cross-cloud-firewall"]
@@ -566,7 +568,7 @@ window.blogPostCatalog = {
       { label: "Career Fit", value: "AI automation, applied AI, intelligent enterprise workflows" }
     ],
     sidebarStats: [
-      { value: "ERP", label: "System focus" },
+      { value: "21", label: "Google Scholar citations" },
       { value: "AI + Cloud", label: "Hybrid model" },
       { value: "IEEE", label: "Published" }
     ],
@@ -618,7 +620,7 @@ window.blogPostCatalog = {
     ],
     resources: [
       { label: "Open IEEE Xplore", href: "https://ieeexplore.ieee.org/abstract/document/11295090/" },
-      { label: "View Google Scholar", href: "https://scholar.google.com/citations?user=NQyywPoAAAAJ" },
+      { label: "Open Project Page", href: "https://anis151993.github.io/AI-and-Cloud-Computing-in-Business-Systems-A-Hybrid-Model-for-Enhancing-Enterprise-Resource-Planning/" },
       { label: "See Data Workflow Project", href: "/blog/posts/datamentor-notebook-studio/" }
     ],
     related: ["datamentor-notebook-studio", "edge-resource-allocation-paper", "deepfake-detection-paper"]
@@ -636,7 +638,7 @@ window.blogPostCatalog = {
       { label: "Career Fit", value: "AI-driven security analytics, applied AI and ML, trustworthy detection" }
     ],
     sidebarStats: [
-      { value: "Forensics", label: "Security domain" },
+      { value: "10", label: "Google Scholar citations" },
       { value: "Deep Learning", label: "Method family" },
       { value: "IEEE", label: "Published" }
     ],
@@ -688,27 +690,27 @@ window.blogPostCatalog = {
     ],
     resources: [
       { label: "Open IEEE Xplore", href: "https://ieeexplore.ieee.org/abstract/document/11381812/" },
-      { label: "View Google Scholar", href: "https://scholar.google.com/citations?user=NQyywPoAAAAJ" },
+      { label: "Open Project Page", href: "https://anis151993.github.io/Deepfake-Detection-in-MIS/" },
       { label: "Back to My Blog", href: "/blog/" }
     ],
     related: ["enterprise-ai-erp-paper", "self-correcting-math-paper", "self-correcting-llm"]
   },
   "cross-cloud-firewall-paper": {
     type: "Paper Deep Dive",
-    kicker: "Under Review First-Author Research",
+    kicker: "Published First-Author Research",
     title: "Towards a Serverless Intelligent Firewall: Integrating Cross-Cloud Adaptation, AI-Driven Security, and Zero-Trust Architectures",
-    summary: "This under-review first-author paper carries my AI-driven network security into multi-cloud reality, where an AI firewall must adapt its defensive decisions as workloads and trust boundaries span several clouds.",
-    metaDescription: "Under-review IEEE paper on cross-cloud serverless firewall by MARC: adaptive AI-driven network security and AI networking with Zero Trust across multi-cloud infrastructure.",
-    tags: ["Under Review", "AI-Driven Network Security", "AI Networking", "Multi-Cloud", "Zero Trust"],
+    summary: "This published first-author IEEE SmartCloud 2026 paper carries my AI-driven network security into multi-cloud reality, where an AI firewall must adapt its defensive decisions as workloads and trust boundaries span several clouds.",
+    metaDescription: "IEEE SmartCloud 2026 paper on cross-cloud serverless firewall by MARC: adaptive AI-driven network security and AI networking with Zero Trust across multi-cloud infrastructure.",
+    tags: ["IEEE", "First Author", "AI-Driven Network Security", "Multi-Cloud", "Zero Trust"],
     facts: [
-      { label: "Venue Target", value: "IEEE SmartCloud 2026" },
-      { label: "My Contribution", value: "First author and primary idea contributor" },
+      { label: "Venue", value: "2026 IEEE 11th International Conference on Smart Cloud (SmartCloud)" },
+      { label: "My Contribution", value: "First author, idea origin, research, methodology, and implementation (with Dr. Kefei Wang)" },
       { label: "Career Fit", value: "AI-driven network security, AI networking, adaptive multi-cloud defense" }
     ],
     sidebarStats: [
-      { value: "SmartCloud", label: "Venue target" },
-      { value: "Cross-Cloud", label: "Main theme" },
-      { value: "First Author", label: "Ownership" }
+      { value: "IEEE", label: "Published" },
+      { value: "First Author", label: "Ownership" },
+      { value: "May 2026", label: "Publication date" }
     ],
     preview: {
       type: "citation",
@@ -720,7 +722,7 @@ window.blogPostCatalog = {
     sections: [
       {
         heading: "Carrying AI-driven defense into multi-cloud",
-        text: "My published firewall paper gave a strong base, but organizations run across clouds. This under-review first-author paper extends my AI-driven network security into that harder, distributed reality.",
+        text: "My first firewall paper gave a strong base, but organizations run across clouds. This published first-author paper extends my AI-driven network security into that harder, distributed reality.",
         bullets: [
           "Security assumptions change from cloud to cloud.",
           "Adaptation is essential when workloads are spread out.",
@@ -757,40 +759,40 @@ window.blogPostCatalog = {
     
     ],
     resources: [
+      { label: "Open IEEE Xplore", href: "https://ieeexplore.ieee.org/document/11638707" },
       { label: "See Related Project", href: "/blog/posts/cross-cloud-firewall/" },
-      { label: "Open Project Repo", href: "https://github.com/ANIS151993/Serverless-Intelligent-Firewall-Research-2.git" },
       { label: "Open Project Demo", href: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-2/" }
     ],
     related: ["serverless-intelligent-firewall", "cross-cloud-firewall", "firewall-zero-trust-paper"]
   },
   "self-correcting-math-paper": {
     type: "Paper Deep Dive",
-    kicker: "Under Review First-Author Research",
+    kicker: "Accepted First-Author Research",
     title: "Teaching Large Language Models to Think Twice: A Three-Stage Framework for Self-Correcting Mathematical Reasoning",
-    summary: "This under-review first-author paper is core to my LLM training and reliability focus: a three-stage self-correction framework that teaches a language model to review its own reasoning before it answers.",
-    metaDescription: "Under-review paper by MARC on teaching LLMs to think twice: an LLM training and self-correction framework for reliable Agentic reasoning on mathematical tasks.",
-    tags: ["Under Review", "LLM Training", "Agentic AI", "Self-Correction", "Trustworthy AI"],
+    summary: "This accepted first-author paper is core to my LLM training and reliability focus: a three-stage self-correction framework that teaches a language model to review its own reasoning before it answers.",
+    metaDescription: "Accepted paper (AIR-RES/CAC 2026) by MARC on teaching LLMs to think twice: an LLM training and self-correction framework for reliable Agentic reasoning on mathematical tasks.",
+    tags: ["Accepted", "LLM Training", "Agentic AI", "Self-Correction", "Trustworthy AI"],
     facts: [
-      { label: "Venue Target", value: "CAC'26 draft submission" },
+      { label: "Venue", value: "American Council on Science & Education, AIR-RES/CAC 2026 (accepted, with Dr. Kefei Wang)" },
       { label: "My Contribution", value: "First author, idea origin, research, data collection, methodology, training, implementation" },
       { label: "Career Fit", value: "LLM training, reliable Agentic reasoning, model evaluation" }
     ],
     sidebarStats: [
-      { value: "3-Stage", label: "Framework" },
-      { value: "LLM", label: "Model focus" },
-      { value: "First Author", label: "Ownership" }
+      { value: "Accepted", label: "AIR-RES/CAC 2026" },
+      { value: "+60%", label: "Relative GSM8K gain" },
+      { value: "78%", label: "Error-correction rate" }
     ],
     preview: {
       type: "citation",
       label: "Paper Snapshot",
-      title: "CAC'26 Draft Submission",
+      title: "AIR-RES/CAC 2026 · Accepted",
       note: "In this paper, I ask whether a model can improve by reviewing its own reasoning. The idea is simple, but the goal is important: more dependable AI behavior.",
       pills: ["Self-Correction", "Math Reasoning", "Reliable AI"]
     },
     sections: [
       {
         heading: "The LLM reliability question",
-        text: "This under-review first-author paper is core to my LLM-training focus: can a model become more reliable by reviewing its own reasoning before answering? I test it on math, where mistakes are measurable.",
+        text: "This accepted first-author paper is core to my LLM-training focus: can a model become more reliable by reviewing its own reasoning before answering? I test it on math, where mistakes are measurable.",
         bullets: [
           "Math gives a clean way to measure reasoning quality.",
           "Reliability matters more than fluency when answers must be correct.",
@@ -799,7 +801,7 @@ window.blogPostCatalog = {
       },
       {
         heading: "The three-stage framework",
-        text: "The core is a three-stage loop - attempt, review, refine - that wraps the model so it reflects before finalizing. That reflection step is the heart of the paper and a reusable LLM-training pattern.",
+        text: "The core is a three-stage Generator, Critic, Synthesizer loop that wraps the model so it reflects before finalizing. On GSM8K, accuracy rose from 31.2% to 49.9% - a 60% relative gain - and 78% of detected errors were corrected.",
         bullets: [
           "Reduces confident-but-wrong outputs.",
           "Makes reasoning more deliberate and auditable.",
@@ -827,28 +829,28 @@ window.blogPostCatalog = {
     
     ],
     resources: [
-      { label: "Open Venue Page", href: "https://american-cse.org/drafts" },
-      { label: "View Source Repo", href: "https://github.com/ANIS151993/Self-Correcting-LLM-localhost.git" },
-      { label: "Open Live Demo", href: "https://anis151993.github.io/Self-Correcting-LLM-localhost/" }
+      { label: "Open Project Page", href: "https://anis151993.github.io/Self-Correcting-LLM-localhost/" },
+      { label: "View Source Repo", href: "https://github.com/ANIS151993/Self-Correcting-LLM-localhost" },
+      { label: "See Related Project", href: "/blog/posts/self-correcting-llm/" }
     ],
     related: ["self-correcting-llm", "distributed-ai-paper", "deepfake-detection-paper"]
   },
   "distributed-ai-paper": {
     type: "Paper Deep Dive",
-    kicker: "Under Review First-Author Research",
-    title: "A Local Distributed Multi-Agent LLM Ensemble System for Complex Problem Solving",
-    summary: "This under-review first-author paper formalizes my Agentic AI work: a local, multi-agent LLM ensemble that coordinates, divides work, and solves complex problems through an orchestration harness.",
-    metaDescription: "Under-review paper by MARC on a local distributed multi-agent LLM ensemble: Agentic AI, LLM orchestration, and harness engineering for complex problem solving.",
-    tags: ["Under Review", "Agentic AI", "Harness Engineering", "Multi-Agent Systems", "LLM Orchestration"],
+    kicker: "In-Preparation First-Author Research",
+    title: "A Local Distributed Multi-Agent LLM Ensemble System: Design, Optimization, Reproducibility, and Statistical Evaluation",
+    summary: "This in-preparation first-author IEEE paper formalizes my Agentic AI work: a local, multi-agent LLM ensemble that coordinates, divides work, and solves complex problems through an orchestration harness.",
+    metaDescription: "In-preparation paper by MARC on a local distributed multi-agent LLM ensemble: Agentic AI, LLM orchestration, and harness engineering for complex problem solving.",
+    tags: ["In Preparation", "Agentic AI", "Harness Engineering", "Multi-Agent Systems", "LLM Orchestration"],
     facts: [
-      { label: "Status", value: "Under Review" },
+      { label: "Status", value: "In preparation · target IEEE conference (with Dr. Kefei Wang)" },
       { label: "My Contribution", value: "First author and primary research driver" },
       { label: "Career Fit", value: "Agentic AI, LLM orchestration harnesses, distributed AI" }
     ],
     sidebarStats: [
-      { value: "Multi-Agent", label: "Architecture" },
-      { value: "Local", label: "Execution model" },
-      { value: "First Author", label: "Ownership" }
+      { value: "4", label: "Local agents" },
+      { value: "5", label: "Aggregation strategies" },
+      { value: "3", label: "Benchmarks (MMLU, GSM8K, TruthfulQA)" }
     ],
     preview: {
       type: "citation",
@@ -860,7 +862,7 @@ window.blogPostCatalog = {
     sections: [
       {
         heading: "Formalizing my Agentic AI work",
-        text: "This under-review first-author paper formalizes my Agentic AI direction: a local, multi-agent LLM ensemble that coordinates, divides work, and solves complex problems through an orchestration harness.",
+        text: "This in-preparation first-author paper formalizes my Agentic AI direction: a local, multi-agent LLM ensemble that coordinates, divides work, and solves complex problems through an orchestration harness.",
         bullets: [
           "It treats AI as a coordinated system, not one model.",
           "Local execution supports control, privacy, and customization.",
@@ -873,7 +875,7 @@ window.blogPostCatalog = {
         bullets: [
           "Focuses on orchestration and inter-agent collaboration.",
           "Connects AI reasoning to systems architecture.",
-          "Feeds my planned work on distributed agent networks."
+          "Validated with paired t-tests and Wilcoxon signed-rank tests."
         ]
       },
       {
@@ -902,6 +904,124 @@ window.blogPostCatalog = {
       { label: "See Related Project", href: "/blog/posts/distributed-ai-ensemble/" }
     ],
     related: ["distributed-ai-ensemble", "self-correcting-math-paper", "datamentor-notebook-studio"]
+  },
+  "pentai-pro": {
+    type: "Project Deep Dive",
+    kicker: "LLM Security Automation",
+    title: "PentAI Pro: LLM-Powered Automated Penetration Testing",
+    summary: "PentAI Pro runs self-hosted LLM agents across three isolated VMs to carry out a full penetration-testing sequence, with scope checked three times before any tool runs and every step signed into a tamper-evident audit chain.",
+    metaDescription: "PentAI Pro by MARC: self-hosted LLM orchestration for autonomous penetration testing with three-layer scope enforcement and SHA-256 tamper-evident audit chains.",
+    tags: ["Agentic AI", "AI-Driven Network Security", "LLM Orchestration", "Penetration Testing", "Audit Logging"],
+    facts: [
+      { label: "Career Focus", value: "Agentic AI that performs authorized offensive-security work safely and auditably" },
+      { label: "Core Skills", value: "Local LLM orchestration (Ollama), scope enforcement, cryptographic audit logs, prompt-injection defense" },
+      { label: "Best Fit Roles", value: "AI Security Engineer, Agentic AI Engineer, Offensive Security Automation Engineer" }
+    ],
+    sidebarStats: [
+      { value: "3×", label: "Scope checks per tool run" },
+      { value: "108", label: "Tests passing in < 44 s" },
+      { value: "SHA-256", label: "Tamper-evident audit chain" }
+    ],
+    preview: {
+      type: "iframe",
+      label: "Live App Preview",
+      url: "https://apts.marcbd.site/",
+      browserLabel: "apts.marcbd.site"
+    },
+    sections: [
+      {
+        heading: "Why I built it",
+        text: "LLM agents can chain reconnaissance, enumeration, and exploitation planning faster than a person, but only if they stay inside an authorized scope and leave evidence of every action. PentAI Pro is my answer to that trust problem.",
+        bullets: [
+          "Autonomous security testing is only useful if it is provably authorized.",
+          "Nothing leaves the lab: all inference runs on local models.",
+          "It extends my AI-driven network security work to the offensive side."
+        ]
+      },
+      {
+        heading: "How it works",
+        text: "A local Ollama deployment plans with qwen2.5:14b and classifies quickly with llama3.2:3b across a three-node Proxmox setup. Scope is verified at three separate layers before a tool executes, and each step is signed and hash-chained into an audit log.",
+        bullets: [
+          "Recon, enumeration, vulnerability mapping, and exploitation planning in one flow.",
+          "Three-layer scope enforcement plus prompt-injection defenses.",
+          "A 108-test suite passes in under 44 seconds."
+        ]
+      },
+      {
+        heading: "What I owned",
+        text: "The idea, architecture, and implementation are mine. It anchors a first-author IEEE paper in preparation with Dr. Ronny Bazan-Antequera on self-hosted LLM orchestration for autonomous penetration testing.",
+        bullets: [
+          "Designed the agent workflow and the scope-enforcement layers.",
+          "Built the cryptographic audit chain and the test suite.",
+          "Deployed it as a working app, not only a paper idea."
+        ]
+      }
+    ],
+    resources: [
+      { label: "Open Live App", href: "https://apts.marcbd.site/" },
+      { label: "Open Project Page", href: "https://anis151993.github.io/Automated-Penetration-Testing-system/" },
+      { label: "View Source Repo", href: "https://github.com/ANIS151993/Automated-Penetration-Testing-system" }
+    ],
+    related: ["autonomous-firewall", "distributed-ai-ensemble", "fedthreatx-paper"]
+  },
+  "fedthreatx-paper": {
+    type: "Paper Deep Dive",
+    kicker: "Published First-Author Research",
+    title: "FedThreat-X: A Privacy-Preserving Federated Threat Intelligence Framework for Multi-Cloud Cybersecurity",
+    summary: "This first-author IEEE QPAIN 2026 paper lets several cloud tenants train one shared threat-detection model without exposing their own network traffic to each other.",
+    metaDescription: "IEEE QPAIN 2026 paper FedThreat-X by MARC: privacy-preserving federated threat intelligence for multi-cloud cybersecurity.",
+    tags: ["IEEE", "First Author", "Federated Learning", "Threat Intelligence", "Multi-Cloud"],
+    facts: [
+      { label: "Venue", value: "2026 IEEE 2nd International Conference on Quantum Photonics, Artificial Intelligence & Networking (QPAIN)" },
+      { label: "My Contribution", value: "First author, idea origin, research, data collection, methodology, training, implementation (with Dr. Kefei Wang)" },
+      { label: "Career Fit", value: "Federated security, privacy-preserving ML, multi-cloud threat detection" }
+    ],
+    sidebarStats: [
+      { value: "IEEE", label: "Published" },
+      { value: "First Author", label: "Ownership" },
+      { value: "Apr 2026", label: "Publication date" }
+    ],
+    preview: {
+      type: "iframe",
+      label: "Project Page Preview",
+      url: "https://anis151993.github.io/FedThreat-X/",
+      browserLabel: "anis151993.github.io/FedThreat-X/"
+    },
+    sections: [
+      {
+        heading: "The problem",
+        text: "Each organization sees only part of an attack campaign, and there is rarely a practical, legal way to pool raw traffic. That leaves every tenant defending with an incomplete picture.",
+        bullets: [
+          "Attack patterns span tenants and clouds.",
+          "Raw traffic sharing needs formal data-sharing agreements.",
+          "Privacy and detection quality usually pull in opposite directions."
+        ]
+      },
+      {
+        heading: "The approach",
+        text: "FedThreat-X uses federated learning: tenants train locally and share model updates, not data, so the shared detector learns from everyone while each tenant keeps its traffic private.",
+        bullets: [
+          "Collaborative detection without centralizing sensitive data.",
+          "Designed for multi-cloud, multi-tenant deployments.",
+          "Feeds the federated Zero Trust layer of my self-learning firewall work."
+        ]
+      },
+      {
+        heading: "Where it fits",
+        text: "It is the privacy-preserving pillar of my research agenda, sitting between the serverless firewall papers and the autonomous, self-learning firewall now in preparation.",
+        bullets: [
+          "Published first-author IEEE work.",
+          "Direct link to my PhD interest in federated, privacy-preserving learning.",
+          "Companion to the co-authored Fed-ZTA-Transformer paper at the same venue."
+        ]
+      }
+    ],
+    resources: [
+      { label: "Open IEEE Xplore", href: "https://ieeexplore.ieee.org/abstract/document/11546478" },
+      { label: "Open Project Page", href: "https://anis151993.github.io/FedThreat-X/" },
+      { label: "View Source Repo", href: "https://github.com/ANIS151993/FedThreat-X" }
+    ],
+    related: ["cross-cloud-firewall-paper", "autonomous-firewall", "firewall-zero-trust-paper"]
   },
   "mail-server-works": {
     type: "Systems Background Note",
@@ -968,8 +1088,8 @@ window.blogPostCatalog = {
     
     ],
     resources: [
-      { label: "Open ARF Mail Server", href: "http://mail.arfgroupbd.com" },
-      { label: "Open S. Alam Group Mail Server", href: "http://mail.s.alamgroupbd.com" },
+      { label: "Open TD Group Webmail", href: "https://mail.turkishdoc.com.bd/" },
+      { label: "Open S. Alam Group Webmail", href: "http://mail.s.alamgroupbd.com/" },
       { label: "Read Network Architecture Note", href: "/blog/posts/network-architecture-works/" }
     ],
     related: ["network-architecture-works", "cloud-architecture-works", "firewall-zero-trust-paper"]
@@ -1039,8 +1159,7 @@ window.blogPostCatalog = {
     
     ],
     resources: [
-      { label: "Open ARF File Server", href: "http://file.arfgroupbd.com" },
-      { label: "Open S. Alam Group File Server", href: "http://file.s.alamgroupbd.com" },
+      { label: "See All Completed Works", href: "/#latest-works" },
       { label: "Read DataMentor Note", href: "/blog/posts/datamentor-notebook-studio/" }
     ],
     related: ["mail-server-works", "network-architecture-works", "datamentor-notebook-studio"]
@@ -1110,8 +1229,7 @@ window.blogPostCatalog = {
     
     ],
     resources: [
-      { label: "Voice Work Snapshot", href: "/assets/covers/voice.svg" },
-      { label: "Additional Telephony Snapshot", href: "/assets/covers/voice.svg" },
+      { label: "See All Completed Works", href: "/#latest-works" },
       { label: "Read Network Architecture Note", href: "/blog/posts/network-architecture-works/" }
     ],
     related: ["network-architecture-works", "mail-server-works", "cloud-architecture-works"]
@@ -1129,7 +1247,7 @@ window.blogPostCatalog = {
       { label: "Why It Matters Now", value: "It is why my AI demos, agent tools, and automation ship with usable, readable front ends." }
     ],
     sidebarStats: [
-      { value: "5", label: "Web builds" },
+      { value: "9", label: "Client web builds" },
       { value: "Public", label: "Interface layer" },
       { value: "Clarity", label: "Communication focus" }
     ],
@@ -1181,8 +1299,9 @@ window.blogPostCatalog = {
     
     ],
     resources: [
-      { label: "Open Steelhead Inn", href: "http://steelheadinn.us" },
-      { label: "Open Old MARCBD Site", href: "http://marcbd.com" },
+      { label: "Open Adel Group Website", href: "https://wfau.axzro.com/" },
+      { label: "Open AXZRO", href: "https://axzro.com/" },
+      { label: "Open Steelhead Inn", href: "https://steelheadinn.us/" },
       { label: "Read DataMentor Note", href: "/blog/posts/datamentor-notebook-studio/" }
     ],
     related: ["datamentor-notebook-studio", "enterprise-ai-erp-paper", "self-correcting-llm"]
@@ -1252,8 +1371,7 @@ window.blogPostCatalog = {
     
     ],
     resources: [
-      { label: "Open S. Alam Topology Snapshot", href: "/assets/covers/network.svg" },
-      { label: "Open ARF Topology Snapshot", href: "/assets/covers/network.svg" },
+      { label: "See All Completed Works", href: "/#latest-works" },
       { label: "Read Cross-Cloud Firewall Note", href: "/blog/posts/cross-cloud-firewall/" }
     ],
     related: ["cloud-architecture-works", "cross-cloud-firewall", "firewall-zero-trust-paper"]
@@ -1271,7 +1389,7 @@ window.blogPostCatalog = {
       { label: "Why It Matters Now", value: "It is the operational bridge into my serverless, AI-driven cloud security and AI networking work." }
     ],
     sidebarStats: [
-      { value: "2", label: "Cloud designs" },
+      { value: "SAG + AWS", label: "Cloud designs" },
       { value: "Bridge", label: "Research link" },
       { value: "Security", label: "Design lens" }
     ],
@@ -1323,8 +1441,7 @@ window.blogPostCatalog = {
     
     ],
     resources: [
-      { label: "Open AWS Architecture Snapshot", href: "/assets/covers/cloud.svg" },
-      { label: "Open Cloud Architecture Snapshot", href: "/assets/covers/cloud.svg" },
+      { label: "See All Completed Works", href: "/#latest-works" },
       { label: "Read Serverless Firewall Note", href: "/blog/posts/serverless-intelligent-firewall/" }
     ],
     related: ["serverless-intelligent-firewall", "cross-cloud-firewall", "cross-cloud-firewall-paper"]

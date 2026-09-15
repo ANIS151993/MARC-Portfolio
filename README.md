@@ -13,8 +13,10 @@ This repository contains two portfolio sites:
 - `phd/index.html` -> PhD-focused portfolio
 - `phd/styles.css` -> PhD site design
 - `phd/script.js` -> PhD interactions
-- `Job-Resume/Resume.pdf` -> Job resume
-- `PhD-Resume/Resume of MARC.pdf` -> PhD resume
+- `assets/data/portfolio-data.js` -> single source of truth for Works, Projects, Publications, Scholar metrics (both sites)
+- `assets/js/portfolio-ui.js` + `assets/css/portfolio-ui.css` -> renders those as filterable grids, charts, and stat tiles
+- `Job-Resume/MARC-Resume.pdf` -> Job resume
+- `PhD-Resume/MARC-PhD-CV.pdf` -> PhD CV
 
 ## Features Implemented
 
@@ -83,8 +85,9 @@ If a link is empty, the site automatically falls back to the order form.
 
 ## Updating Content
 
-- Job portfolio content: `index.html`
-- PhD portfolio content: `phd/index.html`
+- Works, projects, publications, citation counts: `assets/data/portfolio-data.js` (all counters and charts update automatically)
+- Job portfolio page copy: `index.html`
+- PhD portfolio page copy: `phd/index.html`
 - Styling updates: `styles.css`, `phd/styles.css`
 
 Push to `main` to trigger automatic deployment.

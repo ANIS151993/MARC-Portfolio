@@ -1124,3 +1124,35 @@ body.page-research-blog .top-links a:hover,
 body.page-research-blog .top-links a:focus-visible {
   background: #162235;
 }
+
+/* Click-to-load live previews (keeps the page light) */
+.project-frame-load {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  color: #f4f5f8;
+  font: 600 0.95rem "Poppins", sans-serif;
+  background:
+    radial-gradient(circle at 70% 25%, rgba(255, 122, 31, 0.35), transparent 55%),
+    linear-gradient(145deg, #1b2d45, #0f1726);
+  transition: filter 0.2s;
+}
+.project-frame-load:hover { filter: brightness(1.15); }
+.project-frame-static { cursor: default; color: #b9c3d2; }
+.project-frame-play {
+  display: grid;
+  place-items: center;
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff7a1f, #f74806);
+  font-size: 1.2rem;
+  box-shadow: 0 12px 26px rgba(255, 122, 31, 0.35);
+}
+.project-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin: 0.2rem 0 0.8rem; }
+.project-metrics div { text-align: center; padding: 0.5rem 0.3rem; border-radius: 12px; background: rgba(255, 122, 31, 0.08); border: 1px solid rgba(255, 122, 31, 0.22); }
+.project-metrics strong { display: block; font-size: 1.1rem; color: #e2600c; line-height: 1.2; }
+.project-metrics span { display: block; font-size: 0.72rem; color: #5a6170; }

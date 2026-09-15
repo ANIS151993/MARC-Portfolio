@@ -68,11 +68,11 @@ const works = [
     category: "federated",
     label: "Research Track",
     title: "Federated Threat Intelligence for Multi-Cloud Security",
-    description: "This part of my pipeline is about sharing security intelligence across cloud environments without giving away too much sensitive information. I care about this theme because real cloud defense has to deal with distribution, coordination, and privacy together.",
+    description: "This published line of work is about sharing security intelligence across cloud environments without giving away too much sensitive information. I care about this theme because real cloud defense has to deal with distribution, coordination, and privacy together.",
     visual: "linear-gradient(145deg, #10263a, #112031 46%, #253249 100%)",
     links: [
-      { label: "Read Related Note", href: "/blog/posts/cross-cloud-firewall-paper/", internal: true, variant: "note" },
-      { label: "Open Advanced Build", href: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-2/", variant: "live" }
+      { label: "Read Paper Note", href: "/blog/posts/fedthreatx-paper/", internal: true, variant: "note" },
+      { label: "Open Project Page", href: "https://anis151993.github.io/FedThreat-X/", variant: "live" }
     ]
   },
   {
@@ -129,8 +129,8 @@ const workCategoryNotes = [
     category: "federated",
     label: "Federated Defense",
     title: "Threat Intelligence Across Cloud Environments",
-    text: "Read the related note that best connects to the multi-cloud and distributed defense direction behind this theme.",
-    href: "/blog/posts/cross-cloud-firewall-paper/"
+    text: "Read the note on FedThreat-X, my published first-author paper on privacy-preserving threat intelligence across clouds.",
+    href: "/blog/posts/fedthreatx-paper/"
   },
   {
     category: "llm",
@@ -161,12 +161,14 @@ const projects = [
     title: "Serverless Intelligent Firewall",
     browserLabel: "anis151993.github.io/Serverless-Intelligent-Firewall-Research-1/",
     demo: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-1/",
-    repo: "https://github.com/ANIS151993/Serverless-Intelligent-Firewall-Research-1.git",
-    story: "I built this project because I wanted the firewall research to be visible as a system, not only as a paper title. It shows how I think about adaptive cloud security, Zero Trust enforcement, and a security architecture that can still be discussed in practical terms.",
+    repo: "https://github.com/ANIS151993/Serverless-Intelligent-Firewall-Research-1",
+    note: "/blog/posts/serverless-intelligent-firewall/",
+    metrics: [["98%", "detection accuracy"], ["0.990", "ROC-AUC"], ["135 ms", "avg. response"]],
+    story: "I built this so the firewall research would be visible as a system, not only a paper title: AWS Lambda, WAF, IAM, and S3 with LSTM, BiGRU, and XGBoost detection and Zero Trust enforcement.",
     points: [
-      "The build connects serverless design, cloud security, and Zero Trust ideas in one research prototype.",
-      "It helped me test how the research direction could be communicated more clearly through implementation.",
-      "For me, this project is one of the best examples of how I like to connect papers and systems."
+      "Published as my first-author IEEE CSCloud 2025 paper.",
+      "Five attack categories on the CICIDS2017 benchmark.",
+      "The base for the cross-cloud and self-learning versions."
     ]
   },
   {
@@ -174,51 +176,40 @@ const projects = [
     title: "Towards a Serverless Intelligent Firewall: Cross-Cloud Adaptation",
     browserLabel: "anis151993.github.io/Serverless-Intelligent-Firewall-Research-2/",
     demo: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-2/",
-    repo: "https://github.com/ANIS151993/Serverless-Intelligent-Firewall-Research-2.git",
-    story: "The first firewall build gave me a base. This one pushed the same idea into a more distributed cloud setting, because real systems often span more than one environment and the defense model has to adapt with them.",
+    repo: "https://github.com/ANIS151993/Serverless-Intelligent-Firewall-Research-2",
+    note: "/blog/posts/cross-cloud-firewall/",
+    story: "This version pushes the firewall into a distributed, multi-cloud setting where policy has to adapt as trust boundaries move between providers.",
     points: [
-      "This build focuses on cross-cloud adaptation and stronger policy-aware security behavior.",
-      "It reflects my interest in research problems that become harder when infrastructure is distributed.",
-      "It also shows that I like to study architecture and defense logic together, not separately."
+      "Published at IEEE SmartCloud 2026.",
+      "Cross-cloud adaptation with policy-aware security behavior.",
+      "Architecture and defense logic studied together."
     ]
   },
   {
     label: "Autonomous Security Systems",
     title: "Autonomous Self-Learning Serverless Intelligent Firewall",
-    browserLabel: "anis151993.github.io/Serverless-Intelligent-Firewall-Research-2/",
-    demo: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-2/",
-    repo: "https://github.com/ANIS151993/Serverless-Intelligent-Firewall-Research-3.git",
-    story: "This version moves the firewall agenda toward a more ambitious question: can a cloud defense system learn from new intelligence and become more adaptive over time instead of staying mostly static?",
+    repo: "https://github.com/ANIS151993/Serverless-Intelligent-Firewall-Research-3",
+    note: "/blog/posts/autonomous-firewall/",
+    story: "The third generation asks whether a cloud defense can keep learning from new threat intelligence instead of staying static.",
     points: [
-      "It combines threat intelligence, machine learning, and Zero Trust ideas in one evolving architecture.",
-      "The project is closely connected to the next-stage paper and journal direction I am working toward.",
-      "It represents the more long-range side of the security research path I want to keep building."
+      "REST API threat intelligence + multi-paradigm ML + federated Zero Trust.",
+      "Target: Q1 journal (in preparation).",
+      "Builds on the published FedThreat-X federated work."
     ]
   },
   {
-    label: "Research Workflow Tool",
-    title: "DataMentor / Notebook Studio",
-    browserLabel: "anis151993.github.io/Notebook-Studio/",
-    demo: "https://anis151993.github.io/Notebook-Studio/",
-    repo: "https://github.com/ANIS151993/Notebook-Studio.git",
-    story: "DataMentor matters to me because good research should be reproducible. I built this project to make notebook and data workflows cleaner, easier to repeat, and easier to explain to someone else later.",
+    label: "LLM Security Automation",
+    title: "PentAI Pro: LLM-Powered Automated Penetration Testing",
+    browserLabel: "apts.marcbd.site",
+    demo: "https://apts.marcbd.site/",
+    repo: "https://github.com/ANIS151993/Automated-Penetration-Testing-system",
+    note: "/blog/posts/pentai-pro/",
+    metrics: [["3×", "scope checks"], ["108", "tests < 44 s"], ["SHA-256", "audit chain"]],
+    story: "Self-hosted LLM agents run a full penetration-testing sequence across three isolated VMs without sending data to any outside service.",
     points: [
-      "It focuses on CSV intelligence, notebook execution, and research-ready workflow support.",
-      "It supports the kind of analysis and technical reporting that should not depend on one-time manual steps.",
-      "It shows that I care about process quality as much as final results."
-    ]
-  },
-  {
-    label: "Distributed AI Systems",
-    title: "A Local Distributed Multi-Agent LLM Ensemble System for Complex Problem Solving",
-    browserLabel: "anis151993.github.io/Distributed-AI/",
-    demo: "https://anis151993.github.io/Distributed-AI/",
-    repo: "https://github.com/ANIS151993/Distributed-AI.git",
-    story: "This project explores what happens when several local agents work together instead of relying on one model only. I use it to study coordination, role structure, and how systems thinking changes the way AI can solve harder tasks.",
-    points: [
-      "It focuses on orchestration, task splitting, and collaborative reasoning between local agents.",
-      "I like this project because it mixes AI experimentation with distributed systems thinking.",
-      "It fits my broader interest in practical AI architectures rather than isolated model demos."
+      "Scope is verified at three layers before any tool runs.",
+      "Every step is signed into a tamper-evident audit chain.",
+      "IEEE paper in preparation."
     ]
   },
   {
@@ -226,216 +217,76 @@ const projects = [
     title: "Teaching Large Language Models to Think Twice",
     browserLabel: "anis151993.github.io/Self-Correcting-LLM-localhost/",
     demo: "https://anis151993.github.io/Self-Correcting-LLM-localhost/",
-    repo: "https://github.com/ANIS151993/Self-Correcting-LLM-localhost.git",
-    story: "This project asks a simple but important question: can a model become more reliable if it checks its own reasoning before giving a final answer? I like this work because it is really about trust, carefulness, and responsible AI behavior.",
+    repo: "https://github.com/ANIS151993/Self-Correcting-LLM-localhost",
+    note: "/blog/posts/self-correcting-llm/",
+    metrics: [["31→50%", "GSM8K accuracy"], ["+60%", "relative gain"], ["78%", "errors corrected"]],
+    story: "A Generator, Critic, Synthesizer pipeline that separates producing an answer from reviewing it, then reconciles both.",
     points: [
-      "The project follows a staged self-correction framework for more dependable reasoning.",
-      "It matters most in tasks where mistakes are costly, like mathematical or structured reasoning.",
-      "For me, it is one of the clearest ways to study reliability instead of surface fluency."
+      "Accepted at AIR-RES/CAC 2026.",
+      "Reliability measured, not assumed.",
+      "Runs on local models."
+    ]
+  },
+  {
+    label: "Distributed AI Systems",
+    title: "A Local Distributed Multi-Agent LLM Ensemble System",
+    browserLabel: "anis151993.github.io/Distributed-AI/",
+    demo: "https://anis151993.github.io/Distributed-AI/",
+    repo: "https://github.com/ANIS151993/Distributed-AI",
+    note: "/blog/posts/distributed-ai-ensemble/",
+    metrics: [["4", "local agents"], ["5", "strategies"], ["3", "benchmarks"]],
+    story: "Four local agents combined through majority voting, weighted voting, and two-round debate, validated with paired t-tests and Wilcoxon tests.",
+    points: [
+      "MMLU, GSM8K, and TruthfulQA evaluation.",
+      "IEEE paper in preparation.",
+      "Distributed systems thinking applied to LLMs."
+    ]
+  },
+  {
+    label: "Research Workflow Tool",
+    title: "DataMentor / Notebook Studio",
+    browserLabel: "datamentor.marcbd.site",
+    demo: "https://datamentor.marcbd.site/",
+    repo: "https://github.com/ANIS151993/DataMentor",
+    note: "/blog/posts/datamentor-notebook-studio/",
+    story: "Serverless CSV intelligence with notebook automation and deterministic runtime repair, so analysis is easy to repeat and inspect.",
+    points: [
+      "Under review at IEEE ISAIA 2026.",
+      "Reproducibility treated as part of research quality.",
+      "Live public app."
     ]
   }
 ];
 
-const projectDetailMap = new Map([
-  ["Serverless Intelligent Firewall", "/blog/posts/serverless-intelligent-firewall/"],
-  ["Towards a Serverless Intelligent Firewall: Cross-Cloud Adaptation", "/blog/posts/cross-cloud-firewall/"],
-  ["Autonomous Self-Learning Serverless Intelligent Firewall", "/blog/posts/autonomous-firewall/"],
-  ["DataMentor / Notebook Studio", "/blog/posts/datamentor-notebook-studio/"],
-  ["A Local Distributed Multi-Agent LLM Ensemble System for Complex Problem Solving", "/blog/posts/distributed-ai-ensemble/"],
-  ["Teaching Large Language Models to Think Twice", "/blog/posts/self-correcting-llm/"]
-]);
-
-const publications = [
-  {
-    categories: ["published", "first-author"],
-    pill: "Published | First Author",
-    title: "Towards a Serverless Intelligent Firewall: AI-Driven Security, and Zero-Trust Architectures",
-    meta: ["IEEE CSCloud 2025", "Nov 7, 2025", "First Author"],
-    text: "In simple words, this paper asks how we can build a smarter cloud firewall that does not trust every request by default. I focused on using intelligent security logic and Zero Trust thinking to protect cloud-native systems better.",
-    links: [
-      { label: "IEEE Xplore", href: "https://ieeexplore.ieee.org/abstract/document/11261452/" }
-    ]
-  },
-  {
-    categories: ["published", "first-author"],
-    pill: "Published | First Author",
-    title: "Auction-Based Dynamic Resource Allocation for Optimized Edge Computing in Distributed Networks",
-    meta: ["IEEE CSITSS 2025", "Nov 20, 2025", "First Author"],
-    text: "This paper studies a practical problem in edge computing: many devices want service at the same time, but resources are limited. I explored a smarter way to allocate those resources so the system can work more fairly and efficiently.",
-    links: [
-      { label: "IEEE Xplore", href: "https://ieeexplore.ieee.org/abstract/document/11294238/" }
-    ]
-  },
-  {
-    categories: ["published", "first-author"],
-    pill: "Published | First Author",
-    title: "AI and Cloud Computing in Business Systems: A Hybrid Model for Enhancing Enterprise Resource Planning",
-    meta: ["IEEE CSITSS 2025", "Nov 20, 2025", "First Author"],
-    text: "Here I looked at how AI and cloud systems can improve ERP platforms. The main idea was to make enterprise systems more adaptive, more useful, and better at supporting business decisions.",
-    links: [
-      { label: "IEEE Xplore", href: "https://ieeexplore.ieee.org/abstract/document/11295090/" }
-    ]
-  },
-  {
-    categories: ["published", "first-author"],
-    pill: "Published | First Author",
-    title: "Deepfake Detection in MIS: Leveraging DenseNet and Multi-Scale Information for Enhanced Digital Forensics",
-    meta: ["IEEE COMPAS 2025", "Oct 23, 2025", "First Author"],
-    text: "This paper deals with a growing digital problem: fake and manipulated media. I worked on a deep-learning-based approach that helps improve detection and supports stronger digital forensics work.",
-    links: [
-      { label: "IEEE Xplore", href: "https://ieeexplore.ieee.org/abstract/document/11381812/" }
-    ]
-  },
-  {
-    categories: ["published", "co-authored"],
-    pill: "Published | Co-Authored",
-    title: "Cloud-Based CRM Systems Enhanced by AI and Graph Theory: A Hybrid Model for Optimizing Customer Engagement",
-    meta: ["IEEE ISAECT 2025", "Dec 18, 2025", "Co-Authored"],
-    text: "This work explores how AI and graph theory can help CRM platforms understand customer relationships and engagement more clearly. It connects business systems thinking with cloud-based intelligence.",
-    links: [
-      { label: "IEEE Xplore", href: "https://ieeexplore.ieee.org/abstract/document/11318795/" }
-    ]
-  },
-  {
-    categories: ["published", "co-authored"],
-    pill: "Published | Co-Authored",
-    title: "Enhancing Signature-Based Intrusive Detection System (IDS) for IoT Networks Using Machine Learning Algorithm",
-    meta: ["IEEE QPAIN 2025", "Jul 31, 2025", "Co-Authored"],
-    text: "This paper improves IDS thinking for IoT environments. The basic idea is to make traditional detection more useful by adding machine learning support in networks that face many changing threats.",
-    links: [
-      { label: "IEEE Xplore", href: "https://ieeexplore.ieee.org/abstract/document/11172064/" }
-    ]
-  },
-  {
-    categories: ["published", "co-authored"],
-    pill: "Published | Co-Authored",
-    title: "AI-Enhanced Adaptive Network Security for 6G and Edge Computing",
-    meta: ["IEEE QPAIN 2025", "Jul 31, 2025", "Co-Authored"],
-    text: "In this paper, the focus is future-ready network security. We looked at how AI can help protect new environments like 6G and edge systems where speed and adaptability matter a lot.",
-    links: [
-      { label: "IEEE Xplore", href: "https://ieeexplore.ieee.org/abstract/document/11172162/" }
-    ]
-  },
-  {
-    categories: ["published", "co-authored"],
-    pill: "Published | Co-Authored",
-    title: "Detecting misinformation with multimodal AI: leveraging vision and NLP for fact-checking",
-    meta: ["IEEE QPAIN 2025", "Jul 31, 2025", "Co-Authored"],
-    text: "This paper looks at misinformation from a practical angle. Instead of depending on text only, it brings together image understanding and language processing to improve fact-checking.",
-    links: [
-      { label: "IEEE Xplore", href: "https://ieeexplore.ieee.org/abstract/document/11171663/" }
-    ]
-  },
-  {
-    categories: ["published", "co-authored"],
-    pill: "Published | Co-Authored",
-    title: "Driving Industry 4.0 with Digital Twins: Enhancing Predictive Maintenance and Operational Performance Through IoT and Machine Learning",
-    meta: ["IEEE QPAIN 2025", "Jul 31, 2025", "Co-Authored"],
-    text: "This work explores how digital twins, IoT data, and machine learning can help organizations predict issues earlier and improve operations before problems become expensive.",
-    links: [
-      { label: "IEEE Xplore", href: "https://ieeexplore.ieee.org/abstract/document/11172010/" }
-    ]
-  },
-  {
-    categories: ["published", "co-authored"],
-    pill: "Published | Co-Authored",
-    title: "Leveraging Machine Learning and NLP for Adaptive Education Systems: A Personalized Approach for Children",
-    meta: ["IEEE QPAIN 2025", "Jul 31, 2025", "Co-Authored"],
-    text: "This paper is about adaptive education. The goal was to use machine learning and NLP to make learning systems more personal and more useful for children.",
-    links: [
-      { label: "IEEE Xplore", href: "https://ieeexplore.ieee.org/abstract/document/11172258/" }
-    ]
-  },
-  {
-    categories: ["published", "co-authored"],
-    pill: "Published | Co-Authored",
-    title: "Attention-Enhanced U-Net Models for Breast Cancer Image Analysis: A Comparative Study",
-    meta: ["IEEE ECCE 2025", "Feb 13, 2025", "Co-Authored"],
-    text: "This medical imaging paper compares deep-learning approaches for breast cancer image analysis. The main goal was to improve detection quality through stronger model design.",
-    links: [
-      { label: "IEEE Xplore", href: "https://ieeexplore.ieee.org/abstract/document/11013847/" }
-    ]
-  },
-  {
-    categories: ["published", "co-authored"],
-    pill: "Published | Co-Authored",
-    title: "Enhanced Brain Tumor Detection Using Finetuned Transfer Learning Models: Achieving Superior Accuracy with Xception",
-    meta: ["IEEE ECCE 2025", "Feb 13, 2025", "Co-Authored"],
-    text: "This work uses transfer learning for brain tumor detection. In plain terms, it studies how we can fine-tune strong existing models to get better accuracy in medical image tasks.",
-    links: [
-      { label: "IEEE Xplore", href: "https://ieeexplore.ieee.org/abstract/document/11012947/" }
-    ]
-  },
-  {
-    categories: ["under-review", "first-author"],
-    pill: "Under Review | First Author",
-    title: "Towards a Serverless Intelligent Firewall: Integrating Cross-Cloud Adaptation, AI-Driven Security, and Zero-Trust Architectures",
-    meta: ["IEEE SmartCloud 2026", "Under Review", "First Author"],
-    text: "This paper extends my firewall research into cross-cloud environments. The question is simple: how can a smart firewall stay useful when systems are spread across different cloud settings?",
-    links: [
-      { label: "Repo", href: "https://github.com/ANIS151993/Serverless-Intelligent-Firewall-Research-2.git" },
-      { label: "Webpage", href: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-2/" }
-    ]
-  },
-  {
-    categories: ["under-review", "first-author"],
-    pill: "Under Review | First Author",
-    title: "Federated Threat Intelligence for Multi-Cloud Security: A Privacy-Preserving AI Approach",
-    meta: ["IEEE IC3ECSBHI 2026", "Under Review", "First Author"],
-    text: "This paper studies how threat intelligence can be shared across multiple cloud environments without giving away more sensitive information than necessary. The privacy side is an important part of the idea.",
-    links: []
-  },
-  {
-    categories: ["under-review", "first-author"],
-    pill: "Under Review | First Author",
-    title: "Continuous Verification in Zero Trust Security: A Model for Secure Automation",
-    meta: ["IEEE IC3ECSBHI 2026", "Under Review", "First Author"],
-    text: "This paper is about keeping trust active instead of assuming it forever. It explores how continuous verification can support safer automation in Zero Trust environments.",
-    links: []
-  },
-  {
-    categories: ["under-review", "first-author"],
-    pill: "Under Review | First Author",
-    title: "Teaching Large Language Models to Think Twice: A Three-Stage Framework for Self-Correcting Mathematical Reasoning",
-    meta: ["CAC'26", "American CSE Draft Submission", "First Author"],
-    text: "This paper asks whether a model can become more reliable by checking its own reasoning before giving a final answer. I like this work because it is really about trust, accuracy, and careful AI behavior.",
-    links: [
-      { label: "Venue", href: "https://american-cse.org/drafts" },
-      { label: "Repo", href: "https://github.com/ANIS151993/Self-Correcting-LLM-localhost.git" },
-      { label: "Webpage", href: "https://anis151993.github.io/Self-Correcting-LLM-localhost/" }
-    ]
-  },
-  {
-    categories: ["under-review", "first-author"],
-    pill: "Under Review | First Author",
-    title: "A Local Distributed Multi-Agent LLM Ensemble System for Complex Problem Solving",
-    meta: ["Under Review", "Distributed AI Systems", "First Author"],
-    text: "This work explores how multiple local agents can work together on harder tasks. It is part of my interest in distributed systems, coordination, and practical AI architecture.",
-    links: [
-      { label: "Repo", href: "https://github.com/ANIS151993/Distributed-AI.git" },
-      { label: "Webpage", href: "https://anis151993.github.io/Distributed-AI/" }
-    ]
-  },
-  {
-    categories: ["in-preparation", "first-author"],
-    pill: "In Preparation | First Author",
-    title: "Autonomous Self-Learning Serverless Intelligent Firewall: Integrating REST API-Driven Open-Source Threat Intelligence, Multi-Paradigm Machine Learning, and Federated Zero-Trust Architectures",
-    meta: ["Target: Q1 Journal", "In Preparation", "First Author"],
-    text: "This is one of my larger ongoing ideas. The goal is to bring together self-learning behavior, open-source threat intelligence, and federated Zero Trust thinking in one stronger serverless defense model.",
-    links: [
-      { label: "Repo", href: "https://github.com/ANIS151993/Serverless-Intelligent-Firewall-Research-3.git" },
-      { label: "Webpage", href: "https://anis151993.github.io/Serverless-Intelligent-Firewall-Research-2/" }
-    ]
-  },
-  {
-    categories: ["in-preparation", "first-author"],
-    pill: "In Preparation | First Author",
-    title: "Building a Team of AI Models: A Literature Review on Distributed Agent Networks",
-    meta: ["Target: Conference Submission", "In Preparation", "First Author"],
-    text: "This planned paper steps back and looks at the bigger picture. I want to study how teams of AI models are designed, why they work, and where distributed agent systems are going next.",
-    links: []
-  }
-];
+/* Plain-language explanations keyed by paper title. Status, venue, dates and
+   links come from the shared /assets/data/portfolio-data.js file. */
+const publicationStories = {
+  "Towards a Serverless Intelligent Firewall: AI-Driven Security, and Zero-Trust Architectures": "In simple words, this paper asks how we can build a smarter cloud firewall that does not trust every request by default, using intelligent security logic and Zero Trust thinking.",
+  "Towards a Serverless Intelligent Firewall: Integrating Cross-Cloud Adaptation, AI-Driven Security, and Zero-Trust Architectures": "This paper extends the firewall into cross-cloud environments: how does a smart firewall stay useful when systems are spread across different cloud providers?",
+  "FedThreat-X: A Privacy-Preserving Federated Threat Intelligence Framework for Multi-Cloud Cybersecurity": "Cloud tenants train one shared threat-detection model without exposing their own traffic to each other, so defense improves without giving up privacy.",
+  "Auction-Based Dynamic Resource Allocation for Optimized Edge Computing in Distributed Networks": "Many devices want edge resources at the same time, but resources are limited. This paper uses an auction model to allocate them more fairly and efficiently.",
+  "AI and Cloud Computing in Business Systems: A Hybrid Model for Enhancing Enterprise Resource Planning": "How AI and cloud systems can make ERP platforms more adaptive and better at supporting business decisions.",
+  "Deepfake Detection in MIS: Leveraging DenseNet and Multi-Scale Information for Enhanced Digital Forensics": "A deep-learning approach using DenseNet and multi-scale features to detect manipulated media and support digital forensics.",
+  "Enhancing Signature-Based Intrusive Detection System (IDS) for IoT Networks Using Machine Learning Algorithm": "Makes traditional signature-based detection more useful for IoT networks by adding machine learning support. My most-cited paper.",
+  "Cloud-Based CRM Systems Enhanced by AI and Graph Theory: A Hybrid Model for Optimizing Customer Engagement": "Uses AI and graph theory so cloud CRM platforms can understand customer relationships and engagement more clearly.",
+  "Attention-Enhanced U-Net Models for Breast Cancer Image Analysis: A Comparative Study": "Compares attention-enhanced U-Net models for breast cancer image analysis to improve detection quality.",
+  "Fed-ZTA-Transformer: A Privacy-Preserving Federated Framework for Continuous Verification in Zero Trust Architectures": "A transformer-based federated model that keeps verifying trust continuously across distributed systems while preserving privacy.",
+  "Detecting Misinformation with Multimodal AI: Leveraging Vision and NLP for Fact-Checking": "Brings together image understanding and language processing to improve automated fact-checking.",
+  "A Collaborative Hybrid CNN–LSTM Framework for Real-Time Multichannel Retail Demand Forecasting Using Edge–Cloud Computing": "Combines CNN and LSTM models with edge and cloud computing to forecast retail demand in real time.",
+  "AI-Enhanced Adaptive Network Security for 6G and Edge Computing": "How AI can protect fast-changing 6G and edge environments where speed and adaptability matter.",
+  "Leveraging Machine Learning and NLP for Adaptive Education Systems: A Personalized Approach for Children": "Uses machine learning and NLP to make learning systems more personal for children.",
+  "Enhanced Brain Tumor Detection Using Finetuned Transfer Learning Models: Achieving Superior Accuracy with Xception": "Fine-tunes strong pretrained models such as Xception for more accurate brain tumor detection.",
+  "Driving Industry 4.0 with Digital Twins: Enhancing Predictive Maintenance and Operational Performance Through IoT and Machine Learning": "Digital twins, IoT data, and machine learning help organizations predict equipment issues before they become expensive.",
+  "Teaching Large Language Models to Think Twice: A Three-Stage Framework for Self-Correcting Mathematical Reasoning": "Can a model become more reliable by checking its own reasoning first? On GSM8K, accuracy rose from 31.2% to 49.9% with a 78% error-correction rate.",
+  "DataMentor: A Practical Framework for Serverless CSV Intelligence with Interactive Notebook Automation and Deterministic Runtime Repair": "A serverless framework that analyzes CSV data through automated notebooks and repairs runtime failures deterministically.",
+  "Autonomous Self-Learning Serverless Intelligent Firewall: Integrating REST API-Driven Open-Source Threat Intelligence, Multi-Paradigm Machine Learning, and Federated Zero-Trust Architectures": "One of my larger ongoing ideas: a serverless defense that keeps learning from open-source threat intelligence with federated Zero Trust.",
+  "A Local Distributed Multi-Agent LLM Ensemble System: Design, Optimization, Reproducibility, and Statistical Evaluation": "How several local LLM agents can check and improve on each other's work, with a statistically rigorous evaluation.",
+  "Self-Hosted LLM Orchestration for Autonomous Penetration Testing with Three-Layer Scope Enforcement and Tamper-Evident Cryptographic Audit Chains": "The paper behind PentAI Pro: autonomous penetration testing that stays in scope and leaves a tamper-evident trail.",
+  "A Hybrid AI/Machine Learning Approach for Real-Time Anomaly Detection in IoT Networks": "Combining AI and classic machine learning to spot anomalies in IoT traffic as they happen.",
+  "AI-Based Intrusion Detection for IoT Networks": "AI-based intrusion detection tailored to the constraints of IoT networks.",
+  "Open-Source Web Application Firewall Implementation Using ModSecurity Engine: A Performance and Security Evaluation Framework": "A reproducible benchmark of how ModSecurity rule sets trade detection coverage against latency and throughput.",
+  "Trust-Based Video Management Framework for Social Multimedia Networks": "A trust-scoring framework for managing video in social multimedia networks."
+};
 
 const publicationDetailMap = new Map([
   ["Towards a Serverless Intelligent Firewall: AI-Driven Security, and Zero-Trust Architectures", "/blog/posts/firewall-zero-trust-paper/"],
@@ -443,9 +294,59 @@ const publicationDetailMap = new Map([
   ["AI and Cloud Computing in Business Systems: A Hybrid Model for Enhancing Enterprise Resource Planning", "/blog/posts/enterprise-ai-erp-paper/"],
   ["Deepfake Detection in MIS: Leveraging DenseNet and Multi-Scale Information for Enhanced Digital Forensics", "/blog/posts/deepfake-detection-paper/"],
   ["Towards a Serverless Intelligent Firewall: Integrating Cross-Cloud Adaptation, AI-Driven Security, and Zero-Trust Architectures", "/blog/posts/cross-cloud-firewall-paper/"],
+  ["FedThreat-X: A Privacy-Preserving Federated Threat Intelligence Framework for Multi-Cloud Cybersecurity", "/blog/posts/fedthreatx-paper/"],
   ["Teaching Large Language Models to Think Twice: A Three-Stage Framework for Self-Correcting Mathematical Reasoning", "/blog/posts/self-correcting-math-paper/"],
-  ["A Local Distributed Multi-Agent LLM Ensemble System for Complex Problem Solving", "/blog/posts/distributed-ai-paper/"]
+  ["A Local Distributed Multi-Agent LLM Ensemble System: Design, Optimization, Reproducibility, and Statistical Evaluation", "/blog/posts/distributed-ai-paper/"],
+  ["Self-Hosted LLM Orchestration for Autonomous Penetration Testing with Three-Layer Scope Enforcement and Tamper-Evident Cryptographic Audit Chains", "/blog/posts/pentai-pro/"],
+  ["DataMentor: A Practical Framework for Serverless CSV Intelligence with Interactive Notebook Automation and Deterministic Runtime Repair", "/blog/posts/datamentor-notebook-studio/"]
 ]);
+
+const PUB_STATUS = {
+  published: ["published", "Published"],
+  accepted: ["accepted", "Accepted"],
+  review: ["under-review", "Under Review"],
+  prep: ["in-preparation", "In Preparation"]
+};
+const ordinal = (n) => `${n}${n === 1 ? "st" : n === 2 ? "nd" : n === 3 ? "rd" : "th"}`;
+const sharedData = window.MARC_DATA || { publications: [], scholar: {} };
+const statusOrder = { published: 0, accepted: 1, review: 2, prep: 3 };
+
+const publications = sharedData.publications
+  .slice()
+  .sort((a, b) => statusOrder[a.status] - statusOrder[b.status] || a.pos - b.pos || b.date.localeCompare(a.date))
+  .map((p) => {
+    const [statusKey, statusLabel] = PUB_STATUS[p.status];
+    const authorship = p.pos === 1 ? "First Author" : `${ordinal(p.pos)} Author`;
+    const date = p.status === "published"
+      ? new Date(`${p.date}T00:00:00`).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })
+      : statusLabel;
+    const meta = [p.venue, date, authorship];
+    if (p.cites) meta.push(`${p.cites} citations`);
+    return {
+      categories: [statusKey, p.pos === 1 ? "first-author" : "co-authored"],
+      pill: `${statusLabel} | ${p.pos === 1 ? "First Author" : "Co-Authored"}`,
+      title: p.title,
+      meta,
+      text: publicationStories[p.title] || "",
+      links: [
+        p.ieee ? { label: "IEEE Xplore", href: p.ieee } : null,
+        p.page ? { label: "Webpage", href: p.page } : null
+      ].filter(Boolean)
+    };
+  });
+
+/* Blog-wide counters: <strong data-blog-stat="key"> */
+const blogStats = {
+  published: sharedData.publications.filter((p) => p.status === "published").length,
+  pipeline: sharedData.publications.filter((p) => p.status !== "published").length,
+  firstPublished: sharedData.publications.filter((p) => p.status === "published" && p.pos === 1).length,
+  citations: sharedData.scholar.citations,
+  projects: projects.length
+};
+document.querySelectorAll("[data-blog-stat]").forEach((node) => {
+  const value = blogStats[node.getAttribute("data-blog-stat")];
+  if (value !== undefined) node.textContent = String(value);
+});
 
 const expertiseGrid = document.getElementById("expertiseGrid");
 const worksGrid = document.getElementById("worksGrid");
@@ -553,27 +454,45 @@ const renderProjects = () => {
           <div class="browser-shell">
             <div class="browser-bar" aria-hidden="true">
               <span></span><span></span><span></span>
-              <p>${item.browserLabel}</p>
+              <p>${item.browserLabel || "github.com/ANIS151993"}</p>
             </div>
-            <iframe class="project-frame" src="${item.demo}" title="Live preview of ${item.title}" loading="lazy"></iframe>
+            ${item.demo
+              ? `<button class="project-frame project-frame-load" type="button" data-src="${item.demo}" data-title="Live preview of ${item.title}">
+                  <span class="project-frame-play" aria-hidden="true">&#9654;</span>
+                  <span>Load live preview</span>
+                </button>`
+              : `<div class="project-frame project-frame-load project-frame-static"><span>Code-only research build</span></div>`}
           </div>
           <div class="project-story-copy">
             <p class="project-pill">${item.label}</p>
             <h3>${item.title}</h3>
+            ${item.metrics ? `<div class="project-metrics">${item.metrics.map(([v, k]) => `<div><strong>${v}</strong><span>${k}</span></div>`).join("")}</div>` : ""}
             <p>${item.story}</p>
             <ul class="project-points">
               ${item.points.map((point) => `<li>${point}</li>`).join("")}
             </ul>
             <div class="project-links">
               ${renderExternalAction("View Repo", item.repo, "link-source")}
-              ${renderExternalAction("Open Live Demo", item.demo, "link-live")}
-              ${projectDetailMap.get(item.title) ? renderInternalAction("Read Full Note", projectDetailMap.get(item.title), "link-note") : ""}
+              ${item.demo ? renderExternalAction("Open Live Demo", item.demo, "link-live") : ""}
+              ${item.note ? renderInternalAction("Read Full Note", item.note, "link-note") : ""}
             </div>
           </div>
         </article>
       `
     )
     .join("");
+
+  projectStoryGrid.addEventListener("click", (event) => {
+    const button = event.target.closest("button.project-frame-load");
+    if (!button) {
+      return;
+    }
+    const frame = document.createElement("iframe");
+    frame.className = "project-frame";
+    frame.src = button.dataset.src;
+    frame.title = button.dataset.title;
+    button.replaceWith(frame);
+  });
 };
 
 const renderPublications = () => {
@@ -603,7 +522,7 @@ const renderPublications = () => {
                       renderExternalAction(
                         link.label,
                         link.href,
-                        link.label === "IEEE Xplore" || link.label === "Venue" || link.label === "Webpage" ? "link-live" : "link-source"
+                        link.label === "IEEE Xplore" || link.label === "Webpage" ? "link-live" : "link-source"
                       )
                     )
                     .join("")}
